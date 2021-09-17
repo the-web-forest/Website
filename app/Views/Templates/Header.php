@@ -8,7 +8,7 @@
 <meta name="author" content="Matheus de Barros"/>
 
 <!-- Page Title -->
-<title>The Web Forest | <?=$Title?></title>
+<title><?=$Title?></title>
 
 <!-- Favicon and Touch Icons -->
 <link href="images/favicon.png" rel="shortcut icon" type="image/png">

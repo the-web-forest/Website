@@ -2,18 +2,22 @@
 
 require_once('phpmailer/class.phpmailer.php');
 require_once('phpmailer/class.smtp.php');
+require_once('config/EmailConfig.php');
 
+$mailConfig = new EmailConfig();
 $mail = new PHPMailer();
 
-
-//$mail->SMTPDebug = 3;                               // Enable verbose debug output
+$mail->SMTPDebug = 0;                                 // Enable verbose debug output
 $mail->isSMTP();                                      // Set mailer to use SMTP
-$mail->Host = 'just55.justhost.com';                  // Specify main and backup SMTP servers
 $mail->SMTPAuth = true;                               // Enable SMTP authentication
-$mail->Username = 'themeforest@ismail-hossain.me';    // SMTP username
-$mail->Password = 'AsDf12**';                         // SMTP password
 $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
 $mail->Port = 465;                                    // TCP port to connect to
+
+$mail->Host = $mailConfig->getHost();                // Specify main and backup SMTP servers
+$mail->Username = $mailConfig->getUsername();         // SMTP username
+$mail->Password = $mailConfig->getPassword();                     // SMTP password
+
+$mail->CharSet = 'UTF-8';
 
 $message = "";
 $status = "false";
@@ -31,8 +35,8 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
 
         $botcheck = $_POST['form_botcheck'];
 
-        $toemail = 'spam.thememascot@gmail.com'; // Your Email Address
-        $toname = 'ThemeMascot'; // Your Name
+        $toemail = $mailConfig->getUsername(); // Your Email Address
+        $toname = $mailConfig->getName(); // Your Name
 
         if( $botcheck == '' ) {
 
@@ -51,13 +55,14 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
             $body = "$name $email $phone $message $referrer";
 
             $mail->MsgHTML( $body );
+
             $sendEmail = $mail->Send();
 
             if( $sendEmail == true ):
-                $message = 'We have <strong>successfully</strong> received your Message and will get Back to you as soon as possible.';
+                $message = 'Nós <strong>recebemos</strong> seu e-mail e iremos responder o mais rápido possível!';
                 $status = "true";
             else:
-                $message = 'Email <strong>could not</strong> be sent due to some Unexpected Error. Please Try Again later.<br /><br /><strong>Reason:</strong><br />' . $mail->ErrorInfo . '';
+                $message = 'Seu e-mail <strong>não pode</strong> ser enviado devido a um erro intesperado. Por favor, tente novamente mais tarde.<br /><br /><strong>Motivo:</strong><br />' . $mail->ErrorInfo . '';
                 $status = "false";
             endif;
         } else {
@@ -65,11 +70,11 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
             $status = "false";
         }
     } else {
-        $message = 'Please <strong>Fill up</strong> all the Fields and Try Again.';
+        $message = 'Por favor <strong>Preencha todos</strong> os campos e tente novamente';
         $status = "false";
     }
 } else {
-    $message = 'An <strong>unexpected error</strong> occured. Please Try Again later.';
+    $message = 'Um <strong>erro inesperado</strong> ocorreu. Por favor, tente novamente mais tarde.';
     $status = "false";
 }
 
