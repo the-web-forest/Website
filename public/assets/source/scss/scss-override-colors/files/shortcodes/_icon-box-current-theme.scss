@@ -1,0 +1,26 @@
+/*
+ * Shortcode: Icon Boxe current theme
+ * -----------------------------------------------
+*/
+.icon-box {
+	&.iconbox-current-theme-style1 {
+		.icon-box-wrapper {
+			.icon-wrapper {
+				.icon {
+				}
+			}
+			.icon-box-title {
+			}
+		}
+		&:hover {
+			.icon-box-wrapper {
+				.icon-wrapper {
+					.icon {
+					}
+				}
+			}
+		}
+		&.icon-left .icon {
+		}
+	}
+}

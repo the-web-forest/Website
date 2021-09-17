@@ -1,0 +1,83 @@
+/*
+ * Shortcode: campaign-shortcode.scss
+ * -----------------------------------------------
+*/
+.tm-sc-causes-campaign {
+	.each-campaign {
+		margin-bottom: 15px;
+		padding-bottom: 15px;
+		&:last-child {
+			margin-bottom: 0;
+			padding-bottom: 0;
+		}
+		.campaign-inner {
+			background: #fff;
+			.campaign-content {
+				padding: 30px;
+			}
+			.campaign-title {
+				margin-top: 0;
+			}
+			.campaign-donation-stats {
+			}
+			.campaign-meta {
+				font-size: 14px;
+				color: #888;
+				margin-bottom: 10px;
+				.each-meta {
+					a {
+						color: #888;
+					}
+					display: inline-block;
+					margin-right: 10px;
+					i {
+						margin-right: 3px;
+					}
+				}
+			}
+			.btn {
+				margin-top: 15px;
+				margin-right: 5px;
+				margin-bottom: 5px;
+			}
+		}
+
+
+		.campaign-donation-stats {
+			margin-top: 10px;
+			.donation-raised,
+			.donation-goal {
+				text-align: center;
+				padding: 10px 0;
+				display: table-cell;
+				vertical-align: middle;
+				width: 49%;
+				.progress-title {
+				}
+				.amount {
+					font-weight: bold;
+				}
+			}
+			.donation-raised {
+				text-align: center;
+				border-right: 1px solid #eee;
+			}
+			.donation-goal {
+				text-align: center;
+			}
+		}
+	}
+	&.tm-sc-causes-campaign-masonry {
+		.each-campaign {
+			margin-bottom: 10px;
+			padding-bottom: 10px;
+		}
+	}
+	&.tm-sc-causes-campaign-horizontal {
+		.each-campaign {
+			.campaign-content {
+				padding-left: 0;
+			}
+		}
+	}
+}

@@ -1,0 +1,275 @@
+/*
+ * Shortcode: styled-icons.scss
+ * -----------------------------------------------
+*/
+
+.styled-icons {
+	li {
+		display: inline-block;
+		margin-bottom: 5px;
+		margin-top: 0;
+		padding-left: 0;
+	}
+	a {
+		border: 2px solid transparent;
+		color: $black-333;
+		display: inline-block;
+		font-size: 16px;
+		height: 36px;
+		line-height: 2;
+		margin-right: 4px;
+		position: relative;
+		text-align: center;
+		text-decoration: none;
+		width: 36px;
+
+		@include transition(all .2s ease);
+
+		i {
+			height: 100%;
+			line-height: 2;
+			position: relative;
+			top: 0;
+			width: 100%;
+		}
+
+		&:hover {
+			background-color: $black-333;
+			color: $white-base;
+		}
+	}
+	
+	&.styled-icons-effect-rollover {
+		a {
+			overflow: hidden;
+			vertical-align: middle;
+			i {
+			}
+			&:hover {
+				i {
+					top: -100%;
+				}
+				
+			}
+		}
+	}
+	
+	&.styled-icons-effect-rotate {
+		a {
+			i {
+			}
+			&:hover {
+				i {
+					@include rotate(360);
+				}
+				
+			}
+		}
+	}
+
+
+
+	// Icon bordered
+	&.icon-bordered {
+		a {
+			border-color: $black-555;
+
+			&:hover {
+				background-color: $black-555;
+				color: $white-base;
+			}
+		}
+	}
+
+
+
+	// Icon gray
+	&.icon-gray {
+		$icon-gray-bg: $gray-eee;
+		$icon-gray-color: $black-111;
+
+		a {
+			background-color: $icon-gray-bg;
+			color: #8a7c7c;
+
+			&:hover {
+				background-color: darken($icon-gray-bg, 10%);
+				color: darken($icon-gray-color, 20%);
+			}
+		}
+
+		//icon bordered
+		&.icon-bordered {
+			a {
+				background-color: transparent;
+				border-color: $icon-gray-bg;
+				color: $icon-gray-bg;
+
+				&:hover {
+					background-color: $icon-gray-bg;
+					border-color: $icon-gray-bg;
+					color: $icon-gray-color;
+				}
+			}
+
+		}
+	}
+
+
+
+	// Icon white
+	&.icon-white {
+		$icon-white-bg: #fff;
+		$icon-white-color: $black-222;
+
+		a {
+			background-color: $icon-white-bg;
+			color: $icon-white-color;
+
+			&:hover {
+				background-color: darken($icon-white-bg, 10%);
+				color: darken($icon-white-color, 20%);
+			}
+		}
+
+		//icon bordered
+		&.icon-bordered {
+			a {
+				background-color: transparent;
+				border-color: $icon-white-bg;
+				color: $icon-white-bg;
+
+				&:hover {
+					background-color: $icon-white-bg;
+					border-color: $icon-white-bg;
+					color: $icon-white-color;
+				}
+			}
+
+		}
+	}
+
+
+
+
+	// Icon dark
+	&.icon-dark {
+		$icon-dark-bg: $black-333;
+		$icon-dark-color: $white-base;
+
+		a {
+			background-color: $icon-dark-bg;
+			color: $icon-dark-color;
+
+			&:hover {
+				background-color: darken($icon-dark-bg, 20%);
+				color: darken($icon-dark-color, 5%);
+			}
+		}
+
+		//icon bordered
+		&.icon-bordered {
+			a {
+				background-color: transparent;
+				border-color: $icon-dark-bg;
+				color: $icon-dark-bg;
+				
+				&:hover {
+					background-color: $icon-dark-bg;
+					color: $icon-dark-color;
+				}
+			}
+
+		}
+	}
+
+
+
+
+	// Icon default
+	&.icon-default {
+		a {
+			height: 32px;
+			margin-right: 0;
+			width: 32px;
+		}
+	}
+
+	// Icon rounded
+	&.icon-rounded {
+		a {
+			border-radius: 3px;
+		}		
+	}
+
+
+
+	// Icon rounded
+	&.icon-circled {
+		a {
+			border-radius: 50%;
+		}		
+	}
+
+
+
+	// Icon xs
+	&.icon-xs {
+		a {
+			font-size: 12px;
+			height: 25px;
+			width: 25px;
+		}
+	}
+
+
+
+	// Icon sm
+	&.icon-sm {
+		a {
+			font-size: 14px;
+			height: 30px;
+			width: 30px;
+		}
+	}
+
+
+
+	// Icon md
+	&.icon-md {
+		a {
+			font-size: 20px;
+			height: 45px;
+			width: 45px;
+		}
+	}
+
+
+
+	// Icon lg
+	&.icon-lg {
+		a {
+			font-size: 23px;
+			height: 50px;
+			width: 50px;
+		}
+	}
+
+
+
+	// Icon xl
+	&.icon-xl {
+		a {
+			font-size: 28px;
+			height: 60px;
+			width: 60px;
+		}
+	}
+
+	// icon brand
+	&.styled-icons-brand {
+		a {
+			color: #fff;
+		}
+	}
+}

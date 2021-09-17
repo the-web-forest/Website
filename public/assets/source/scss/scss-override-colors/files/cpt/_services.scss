@@ -1,0 +1,25 @@
+/*
+ * Shortcode: services.scss
+ * -----------------------------------------------
+*/
+
+.service-item {
+	.service-content {
+		.service-text {
+		}
+	}
+	.service-thumb {
+		img {
+		}
+	}
+	.service-link {
+	    &:after {
+	    background: $theme-color2;
+		}
+		&:hover {
+		    &:after {
+	    	background: $theme-color1;
+			}
+		}
+	}
+}

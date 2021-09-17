@@ -1,0 +1,11 @@
+/*
+ * Shortcode: instagram-feed.scss
+ * -----------------------------------------------
+*/
+.instagram-feed {
+  figure {
+    &:after {
+      background: $theme-color1;
+    }
+  }
+}

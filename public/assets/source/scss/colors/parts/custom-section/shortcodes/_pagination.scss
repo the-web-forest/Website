@@ -1,0 +1,19 @@
+/*
+ * Shortcode: pagination.scss
+ * -----------------------------------------------
+*/
+.pagination {
+	> .page-item {
+		.page-link {
+			&:hover {
+				background-color: $theme-color1;
+				border-color: $theme-color1;
+			}
+		}
+		&.active {
+			.page-link {
+				border-color: $theme-color1;
+			}
+		}
+	}
+}

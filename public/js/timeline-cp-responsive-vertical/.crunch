@@ -1,0 +1,19 @@
+{
+	"files": {
+		"timeline-cp-responsive-vertical.scss": {
+			"engines": [
+				{
+					"compiler": "scss",
+					"output": "timeline-cp-responsive-vertical.css",
+					"options": {
+						"style": 0,
+						"comments": false
+					}
+				}
+			],
+			"sources": [
+				"timeline-cp-responsive-vertical.scss"
+			]
+		}
+	}
+}

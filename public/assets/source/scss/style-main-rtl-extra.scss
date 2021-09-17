@@ -1,0 +1,70 @@
+/* --------------------------------------
+$Author: ThemeMascot
+$URL: https://themeforest.net/user/ThemeMascot
+----------------------------------------- */
+/*
+ * rtl.scss
+ * -----------------------------------------------
+*/
+
+html,
+body { direction: rtl; }
+
+html[dir="rtl"] {
+	.bx-wrapper {
+		direction: ltr;
+	}
+	/* breadcrumb */
+	.breadcrumb {
+		> li + li::before {
+			content: "";
+			padding: 0;
+		}
+		> li + li::after {
+			content: "\f053";
+			font-family: "Font Awesome 5 Free";
+			color: #aaa;
+			font-size: 8px;
+			padding: 0 10px;
+		}
+	}
+
+	.btn-read-more::after {
+		content: "\f177";
+	}
+	[type=email], [type=file], [type=password], [type=tel], [type=url], code, samp {
+		text-align: right;
+		direction: rtl;
+	}
+
+	/* widget */
+	.widget {
+		&.widget_archive,
+		&.widget_categories,
+		&.widget_pages,
+		&.widget_meta,
+		&.widget_recent_comments,
+		&.widget_recent_entries,
+		&.widget_rss,
+		&.widget_nav_menu {
+			ul {
+				> li  {
+					&::before {
+						content: "\f0d9";
+					}
+				}
+			}
+		}
+		
+		&.widget_recent_comments {
+			ul {
+				> li  {
+					&::before {
+						content: "\f104";
+						padding-left: 5px;
+					}
+				}
+			}
+		}
+	}
+}

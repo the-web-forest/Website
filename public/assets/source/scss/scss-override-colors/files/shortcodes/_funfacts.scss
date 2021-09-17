@@ -1,0 +1,23 @@
+/*
+ * Shortcode: funfacts.scss
+ * -----------------------------------------------
+*/
+.tm-sc-funfact {
+	&.funfact-current-style {
+		&:after {
+			background-image: -moz-linear-gradient(0deg, $theme-color1 0%, lighten($theme-color1, 30.5%) 100%);
+			background-image: -webkit-linear-gradient(0deg, $theme-color1 0%, lighten($theme-color1, 30.5%) 100%);
+			background-image: -ms-linear-gradient(0deg, $theme-color1 0%, lighten($theme-color1, 30.5%) 100%);
+		}
+		&:hover {
+			.funfact-icon {
+				i {
+				}
+			}
+		}
+	}
+}
+
+.funfact-area:after {
+	background: $theme-color4;
+}

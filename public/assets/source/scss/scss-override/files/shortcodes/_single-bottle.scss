@@ -1,0 +1,37 @@
+/*
+ * Shortcode: single-bottle.scss
+ * -----------------------------------------------
+*/
+
+.single-bottle-inner {
+	background-color: rgba(255, 255, 255, 0.8);
+	box-shadow: 0px 10px 60px 0px rgba(37, 39, 88, 0.1);
+	border: 1px solid #dae0ef;
+	padding: 60px 60px 50px;
+	margin-bottom: 30px;
+	transition: .3s all linear;
+	border-radius: 15px;
+	&:hover {
+		box-shadow: 0px 10px 30px rgba(218,224,239,.4);
+	}
+	.icon-text {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		border-top: 1px solid #eff0f7;
+		padding-top: 20px;
+		margin-top: 20px;
+		position: relative;
+		&:after {
+			content: '';
+			width: 80px;
+			height: 1px;
+			background-color: #a461e5;
+			position: absolute;
+			top: -1px;
+			left: 50%;
+			-webkit-transform: translateX(-50%);
+			transform: translateX(-50%);
+		}
+	}
+}

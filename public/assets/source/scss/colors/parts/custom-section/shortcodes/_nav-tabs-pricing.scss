@@ -1,0 +1,55 @@
+/*
+ * Shortcode: nav-tabs-pricing.scss
+ * -----------------------------------------------
+*/
+.tm-sc-nav-tabs-pricing {
+	.nav-tabs2 {
+		li {
+			a {
+				&:hover {
+					border-color: $theme-color1;
+					background: $theme-color1;
+				}
+				&.active {
+					border-color: $theme-color1;
+					background: $theme-color1 !important;
+				}
+			}
+		}
+	}
+
+	&.nav-tab-btn-button {
+		.nav-tabs {
+			li {
+				a {
+					&:hover {
+						background: $theme-color1;
+						border-color: $theme-color1;
+					}
+
+					&.active {
+						background: $theme-color1;
+						border-color: $theme-color1;
+					}
+				}
+			}
+		}
+	}
+	&.nav-tab-btn-switch {
+		.nav-tabs {
+			&:before{
+				background-image: -webkit-linear-gradient( 0deg, rgba($theme-color1, 100%) 30%, rgba($theme-color1, 80%) 100%);
+				background-image: -ms-linear-gradient( 0deg, rgba($theme-color1, 100%) 30%, rgba($theme-color1, 80%) 100%);
+			}
+		}
+	}
+	&.nav-tab-btn-bullet {
+		.nav-tabs {
+			li {
+				&:last-child:before {
+					background: $theme-color1;
+				}
+			}
+		}
+	}
+}

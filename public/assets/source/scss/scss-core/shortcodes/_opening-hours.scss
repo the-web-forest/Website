@@ -1,0 +1,42 @@
+/*
+ * Shortcode: opening-hours.scss
+ * -----------------------------------------------
+*/
+.opening-hours, .working-hours {
+	list-style: none;
+	padding: 0;
+	
+	li {
+		border-bottom: 1px solid $gray-eee;
+		padding: 8px 0;
+		margin-bottom: 0;
+		&:last-child {
+			border-bottom: 0;
+		}
+		span {
+			float: left;
+		}
+		.value {
+			float: right;
+		}
+		&.active {
+			font-weight: bold;
+		}
+	}
+	&.border-light li {
+		border-bottom-color: $gray-ddd;
+	}
+	&.border-dark li {
+		border-bottom-color: #333;
+	}
+}
+.widget {
+	.opening-hours, .working-hours {
+		li {
+			padding: 5px 0;
+			* {
+				line-height: $line-height-widget-li;
+			}
+		}
+	}
+}

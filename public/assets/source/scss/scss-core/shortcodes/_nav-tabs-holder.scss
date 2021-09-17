@@ -1,0 +1,39 @@
+/*
+ * Shortcode: nav-tabs-holder.scss
+ * -----------------------------------------------
+*/
+.tm-sc-nav-tabs-holder {
+	.nav-tabs {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		> li {
+			float: left;
+			width: 20%;
+			text-align: center;
+			padding-left: 0;
+			padding-right: 0;
+			> a {
+				display: block;
+				border: 1px solid #eee;
+				padding: 30px 0;
+				margin-bottom: 0;
+				img {
+					margin-bottom: 5px;
+					max-width: 80px;
+					display: inline-block;
+				}
+				span {
+					display: block;
+				}
+				&.active {
+					border-bottom: transparent;
+					background: #eee;
+				}
+			}
+		}
+	}
+	.tab-content {
+		padding: 50px;
+	}
+}

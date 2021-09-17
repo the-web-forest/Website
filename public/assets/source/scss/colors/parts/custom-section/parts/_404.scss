@@ -1,0 +1,23 @@
+/*
+ * 404.scss
+ * -----------------------------------------------
+*/
+.page-404-wrapper {
+	.page-404-main-content {
+		.title {
+			color: $theme-color1;
+		}
+	}
+	.helpful-links {
+		ul {
+			li {
+				&::before {
+					color: $theme-color1;
+				}
+				a:hover {
+					color: $theme-color1;
+				}
+			}
+		}
+	}
+}

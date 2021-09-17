@@ -1,0 +1,220 @@
+/* typography */
+
+
+/* get your beautiful color names from: http://www.colors.commutercreative.com/grid/ */
+$headline: dimgrey;
+$primary-color: cadetblue;
+// $secondary-color: bisque;
+// $tertiary-color: burlywood;
+// $background-color: oldlace;
+$matching-palette: honeydew;
+
+/* media queries */
+
+$tablet-width: 768px;
+$desktop-width: 1200px;
+@mixin tablet {
+	@media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+		@content;
+	}
+}
+
+@mixin desktop {
+	@media (min-width: #{$desktop-width}) {
+		@content;
+	}
+}
+
+
+.tm-timeline-responsive-vertical-cp {
+	position: relative;
+	margin-top: 55px;
+	margin-left: 15px;
+	&:before {
+		/* vertical line*/
+		content: '';
+		position: absolute;
+		top: 10px;
+		/* to align with midline*/
+		left: 7px;
+		width: 2px;
+		height: 97%;
+		background-color: #cad2d6;
+	}
+	.timeline__block {
+		position: relative;
+		margin-top: 42px;
+		margin-bottom: 42px;
+		padding-left: 15px;
+		&:last-child {
+			margin-bottom: 3em;
+		}
+		&:after {
+			content: "";
+			display: table;
+			clear: both;
+		}
+	}
+	.timeline__midpoint {
+		position: absolute;
+		top: 6px;
+		left: 0;
+		width: 16px;
+		height: 16px;
+		border-radius: 50%;
+		background-color: $primary-color;
+		&:before {
+			content: "";
+			position: absolute;
+			top: 50%;
+			left: 16px;
+			width: 15px;
+			border-top: 1px solid #c5e1ec;
+		}
+	}
+
+	.timeline__content {
+		position: relative;
+		margin-left: 20px;
+		p + p {
+			padding-top: 0;
+		}
+		&:after {
+			content: "";
+			display: table;
+			clear: both;
+		}
+	}
+
+	.timeline__midpoint--withtext > .timeline__year {
+		display: none;
+	}
+
+	/* timeline typography */
+
+	.timeline__content .timeline__year {
+		padding-top: 6px;
+		color: $primary-color;
+		text-align: left;
+	}
+
+	.timeline__midpoint--withtext .timeline__year {
+		color: #fff;
+	}
+
+	.timeline__year,
+	.timeline__midpoint--withtext + .timeline__content {
+		font-weight: 600;
+	}
+
+	.timeline__content > p {
+	}
+
+
+	.timeline__midpoint--highlight {
+		box-shadow: 0 0 20px rgba(0,0,0,0.5);
+		border: 2px solid #333;
+	}
+
+}
+
+
+
+
+
+/* timeline layout for desktop */
+@include desktop {
+	.tm-timeline-responsive-vertical-cp {
+		margin-left: 0;
+		&:before {
+			/* vertical line */
+			left: 50%;
+			margin-left: -1px;
+		}
+		.timeline__midpoint {
+			left: 50%;
+			margin-left: -8px;
+			&:before {
+				width: 20px;
+			}
+			&:after {
+				content: "";
+				position: absolute;
+				top: 50%;
+				right: 16px;
+				width: 20px;
+				border-top: 1px solid #c5e1ec;
+			}
+		}
+		.timeline__midpoint--withtext {
+			top: 0;
+			width: 76px;
+			height: 76px;
+			margin-left: -29px;
+			margin-left: -38px;
+			text-align: center;
+			&.no-top-margin {
+				margin-top: 0;
+			}
+			.timeline__year {
+				display: block;
+				p {
+					margin-bottom: 0;
+				}
+			}
+		}
+		.timeline__midpoint--withtext:before,
+		.timeline__midpoint.timeline__midpoint--withtext:after {
+			content: none;
+		}
+		.timeline__midpoint--withtext,
+		.timeline__midpoint--withtext + .timeline__content {
+			margin-top: 30px;
+			margin-bottom: 30px;
+		}
+		.timeline__content {
+			width: 50%;
+			.timeline__year--mobile {
+				display: none;
+			}
+		}
+		.timeline__content--left {
+			margin-left: -6%;
+			.timeline__year {
+				left: 128%;
+			}
+		}
+		.timeline__year {
+			position: absolute;
+			width: 100%;
+			margin-top: 0;
+		}
+		.timeline__text--left {
+			padding-right: 25px;
+			text-align: right;
+		}
+		.timeline__content--right {
+			float: right;
+			width: 53%;
+			left: 11%;
+			.timeline__year {
+				right: 134%;
+				text-align: right;
+			}
+			.timeline__text--right {
+				margin-top: 0;
+			}
+		}
+		.timeline__img {
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+		.timeline__content--left .timeline__img {
+			left: 127%;
+		}
+		.timeline__content--right .timeline__img {
+			right: 133.5%;
+		}
+	}
+}

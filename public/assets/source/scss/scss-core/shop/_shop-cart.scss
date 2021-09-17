@@ -1,0 +1,46 @@
+/*
+ * shop-catalog-layouts.scss
+ * -----------------------------------------------
+*/
+
+table.tbl-shopping-cart {
+	.product-thumbnail {
+		min-width: 64px;
+	}
+
+	img {
+		width: 64px;
+		box-shadow: none;
+	}
+
+	th,
+	td {
+		vertical-align: middle;
+	}
+	.product-name {
+		a {
+			color: $headings-color;
+		}
+		.variation {
+			font-size: 0.9rem;
+			list-style: none;
+		}
+	}
+
+	.product-remove a {
+		display: inline-block;
+		width: 24px;
+		height: 24px;
+		line-height: 24px;
+		border-radius: 24px;
+		transition: all 300ms ease-out;
+		background-color: #757575;
+		color: #ffffff;
+		text-align: center;
+	}
+}
+table.tbl-shopping-cart > thead > tr > th,
+table.tbl-shopping-cart > tbody > tr > th,
+table.tbl-shopping-cart > tfoot > tr > th	{
+	color: #444;
+}

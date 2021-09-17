@@ -1,0 +1,256 @@
+/*
+ * video-popup.scss
+ * -----------------------------------------------
+*/
+.nivo-lightbox-theme-default .nivo-lightbox-close {
+	background-position: 0 0;
+	width: 45px;
+	height: 45px;
+}
+
+/* Individual effect = play-video-button */
+.tm-sc-video-popup {
+	position: relative;
+	display: block;
+	.hover-link {
+		z-index: 14;
+	}
+	.thumb {
+		@include scale(1);
+	}
+
+	&:hover .thumb {
+		@include scale(1);
+	}
+
+	/* Text Holder */
+	.text-holder {
+		opacity: 1;
+	}
+	.text-holder-middle {
+		top: 50%;
+		margin-top: -36px;
+		@include scale(1);
+	}
+	&:hover .text-holder-middle {
+		top: 50%;
+		@include scale(1.07);
+	}
+	.video-button-text {
+	}
+
+	&.tm-sc-video-popup-button-over-image {
+		overflow: hidden;
+		border-radius: 15px;
+		&:before {
+			position: absolute;
+			content: '';
+			left: 0px;
+			top: 0px;
+			right: 0px;
+			bottom: 0px;
+			z-index: 10;
+			background-color: rgba(0,0,0,0.20);
+		}
+		.video-button-holder {
+			position: absolute;
+			opacity: 0.8;
+			top: 50%;
+			left: 50%;
+			-webkit-transform: translate(-50%, -50%);
+			transform: translate(-50%, -50%);
+			z-index: 11;
+		}
+		.video-button-text {
+			color: #fff;
+			position: absolute;
+			bottom: 12%;
+			z-index: 10;
+			text-align: center;
+			width: 100%;
+		}
+		.animated-css-play-button {
+			z-index: 11;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			width: 80px;
+			height: 80px;
+			border-radius: 100%;
+			-webkit-transform: translate(-50%, -50%);
+			transform: translate(-50%, -50%);
+			background-color: #333;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			z-index: 10;
+			opacity: 1;
+			color: #fff;
+			font-size: 16px;
+			@include transition( all .4s ease 0s);
+
+			.play-icon,
+			.play-icon:before,
+			.play-icon:after {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				width: 80px;
+				height: 80px;
+				-webkit-transform: translate(-50%, -50%);
+				-moz-transform: translate(-50%, -50%);
+				-ms-transform: translate(-50%, -50%);
+				-o-transform: translate(-50%, -50%);
+				transform: translate(-50%, -50%);
+				-webkit-border-radius: 50%;
+				-moz-border-radius: 50%;
+				-ms-border-radius: 50%;
+				-o-border-radius: 50%;
+				border-radius: 50%;
+				-webkit-box-shadow: 0 0 0 0 rgba(255, 255, 255, .6);
+				-moz-box-shadow: 0 0 0 0 rgba(255, 255, 255, .6);
+				-ms-box-shadow: 0 0 0 0 rgba(255, 255, 255, .6);
+				-o-box-shadow: 0 0 0 0 rgba(255, 255, 255, .6);
+				box-shadow: 0 0 0 0 rgba(255, 255, 255, .6);
+				-webkit-animation: videoplayanimation 3s infinite;
+				-moz-animation: videoplayanimation 3s infinite;
+				-ms-animation: videoplayanimation 3s infinite;
+				-o-animation: videoplayanimation 3s infinite;
+				animation: videoplayanimation 3s infinite;
+			}
+
+			.play-icon:before {
+				-webkit-animation-delay: .9s;
+				-moz-animation-delay: .9s;
+				-ms-animation-delay: .9s;
+				-o-animation-delay: .9s;
+				animation-delay: .9s;
+				content: "";
+				position: absolute;
+			}
+
+			.play-icon:after {
+				-webkit-animation-delay: .6s;
+				-moz-animation-delay: .6s;
+				-ms-animation-delay: .6s;
+				-o-animation-delay: .6s;
+				animation-delay: .6s;
+				content: "";
+				position: absolute;
+			}
+
+			@-webkit-keyframes videoplayanimation {
+				60% {box-shadow: 0 0 0 60px rgba(255, 255, 255, 0);}
+				100% {box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);}
+			}
+
+			@keyframes videoplayanimation {
+				60% {box-shadow: 0 0 0 60px rgba(255, 255, 255, 0);}
+				100% {box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);}
+			}
+			i {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				-webkit-transform: translate(-50%, -50%);
+				transform: translate(-50%, -50%);
+				font-size: 30px;
+				color: #fff;
+			}
+		}
+		&:hover {
+			.animated-css-play-button {
+				background: rgba(255, 51, 51, 0.9);
+			}
+			.video-button-holder {
+				opacity: 0.95;
+				top: 50%;
+				left: 50%;
+			}
+		}
+	}
+
+	&.tm-sc-video-popup-button-with-text-right {
+		display: inline-block;
+		.effect-wrapper {
+		}
+		.thumb {
+			img {
+			}
+			margin-right: 10px;
+		}
+		.video-button-text {
+			line-height: 70px;
+		}
+		&:hover {
+			.thumb {
+				@include scale(0.95);
+			}
+		}
+	}
+
+
+	&.tm-sc-video-popup-css-button {
+		display: inline-block;
+		.animated-css-play-button {
+			position: relative;
+			width: 80px;
+			height: 80px;
+			border-radius: 100%;
+			background-color: #ff3333;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			z-index: 10;
+			opacity: 1;
+			margin: 40px;
+			color: #fff;
+			font-size: 16px;
+			@include transition( all .4s ease 0s);
+
+			&:before {
+				content: ' ';
+				display: block;
+				position: absolute;
+				border-radius: 100%;
+				z-index: -1;
+				opacity: 0.3;
+				width: 110px;
+				height: 110px;
+				@include transition( all .4s ease 0s);
+			}
+			&:after {
+				content: ' ';
+				display: block;
+				position: absolute;
+				border-radius: 100%;
+				background-color: #ff3333;
+				z-index: -1;
+				@include transition( all .4s ease 0s);
+				animation: video-play-button-animate 1.2s ease-in infinite forwards;
+			}
+			i {
+				font-size: 30px;
+				color: #fff;
+			}
+		}
+		&:hover {
+			.animated-css-play-button {
+				width: 82px;
+				height: 82px;
+			}
+		}
+	}
+}
+@keyframes video-play-button-animate {
+	0% {
+		width:10px;
+		height:10px;
+		opacity:.8
+	}
+	100% {
+		width:160px;
+		height:160px;
+		opacity:0
+	}
+}

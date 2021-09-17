@@ -1,0 +1,39 @@
+/* --------------------------------------
+$Author: ThemeMascot
+$URL: https://themeforest.net/user/ThemeMascot
+
+----------------------------------------- */
+$total-theme-colors: 4;
+
+$theme-color1: #077ad8;
+$theme-color2: #0069BA;
+$theme-color3: #27243B;
+$theme-color4: #3E5D76;
+
+@function hexToRGB($hex) {
+  @return red($hex), green($hex), blue($hex);
+}
+
+// text color over theme color bg
+$text-color-over-bg-theme-color1: #fff;
+$text-color-over-bg-theme-color2: #fff;
+$text-color-over-bg-theme-color3: #fff;
+$text-color-over-bg-theme-color4: #fff;
+
+
+:root{
+	--theme-color1: #{$theme-color1};
+	--theme-color1-rgb: #{hexToRGB($theme-color1)};
+	--theme-color2: #{$theme-color2};
+	--theme-color2-rgb: #{hexToRGB($theme-color2)};
+	--theme-color3: #{$theme-color3};
+	--theme-color3-rgb: #{hexToRGB($theme-color3)};
+	--theme-color4: #{$theme-color4};
+	--theme-color4-rgb: #{hexToRGB($theme-color4)};
+
+	--text-color-bg-theme-color1: #{$text-color-over-bg-theme-color1};
+	--text-color-bg-theme-color2: #{$text-color-over-bg-theme-color2};
+	--text-color-bg-theme-color3: #{$text-color-over-bg-theme-color3};
+	--text-color-bg-theme-color4: #{$text-color-over-bg-theme-color4};
+}
+@import "parts/loader";

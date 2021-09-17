@@ -1,0 +1,279 @@
+
+<!-- Color Switcher Starts | Only for demo purpose and not included in main file -->
+
+<!-- switcher html -->
+<link href="color-switcher/css/color-switcher.css" rel="stylesheet" type="text/css">
+<script>
+(function($) {
+  var url = "color-switcher/js/color-switcher.js";
+  $.getScript(url);
+})(jQuery);
+</script>
+<div id="style-switcher">
+  <a href="#" class="switcher-toggle closed"> <span class="icon-switcher"><i class="fas fa-cog"></i></span></a>
+  <div class="style-switcher-wrap">
+    <h3 class="">Style Switcher</h3>
+    <h4 class="switcher-title">Theme Color Set <br>(You can create your own set easily):</h4>
+    <ul class="switcher-style-list" id="switcher-theme-custom-color">
+      <li class="active"><a title="Color Set 1" href="#" class="theme-skin-color-set1"><div class="color color1" data-color="#1196CC"></div><div class="color color2" data-color="#202c45"></div></a></li>
+      <li><a title="Color Set 1" href="#" class="theme-skin-color-set2"><div class="color color1" data-color="#5FC7AE"></div><div class="color color2" data-color="#59b473"></div></a></li>
+      <li><a title="Color Set 1" href="#" class="theme-skin-color-set3"><div class="color color1" data-color="#077ad8"></div><div class="color color2" data-color="#0069BA"></div></a></li>
+      <li><a title="Color Set 1" href="#" class="theme-skin-color-set4"><div class="color color1" data-color="#664871"></div><div class="color color2" data-color="#ca67c8"></div></a></li>
+      <li><a title="Color Set 1" href="#" class="theme-skin-color-set5"><div class="color color1" data-color="#f55e45"></div><div class="color color2" data-color="#664871"></div></a></li>
+    </ul>
+    <h4 class="switcher-title">Top Menu Color Skins:</h4>
+    <ul class="switcher-style-list" id="switcher-menu-custom-color">
+      <li><a title="default" href="#" class="menu-skin-default"></a></li>
+      <li><a title="blue" href="#" class="menu-skin-blue"></a></li>
+      <li><a title="green" href="#" class="menu-skin-green"></a></li>
+      <li><a title="red" href="#" class="menu-skin-red"></a></li>
+      <li><a title="orange" href="#" class="menu-skin-orange"></a></li>
+      <li><a title="yellow" href="#" class="menu-skin-yellow"></a></li>
+      <li><a title="purple" href="#" class="menu-skin-purple"></a></li>
+      <li><a title="pink" href="#" class="menu-skin-pink"></a></li>
+    </ul>
+    <h4 class="switcher-title">Top Menu Style:</h4>
+    <select class="switcher-select-form" name="switcher-menu-style" id="switcher-menu-style">
+      <option value="default">Default</option>
+      <option value="menuzord-border-top">Border Top</option>
+      <option value="menuzord-border-bottom">Border Bottom</option>
+      <option value="menuzord-border-boxed">Border Boxed</option>
+      <option value="menuzord-border-left">Border Left</option>
+      <option value="menuzord-border-top-bottom">Border Top Bottom</option>
+      <option value="menuzord-bottom-trace">Bottom Trace</option>
+      <option value="menuzord-boxed">Boxed</option>
+      <option value="menuzord-colored">Colored</option>
+      <option value="menuzord-dark">Dark</option>
+      <option value="menuzord-gradient">Gradient</option>
+      <option value="menuzord-rounded-boxed">Rounded Boxed</option>
+      <option value="menuzord-shadow">Shadow</option>
+      <option value="menuzord-strip">Strip</option>
+      <option value="menuzord-subcolored">Sub-Colored</option>
+      <option value="menuzord-top-bottom-boxed-border">Top Bottom Boxed Border</option>
+    </select>
+    <!-- <h4 class="switcher-title">Background Color:</h4>
+    <div id="switcher-bgcolor">
+      <a class="btn btn-light btn-xs mt-0" data-bgcolor-type="light">Light</a>
+      <a class="btn btn-dark btn-xs mt-0" data-bgcolor-type="dark">Dark</a>
+    </div> -->
+    <h4 class="switcher-title">Direction:</h4>
+    <div id="switcher-rtl">
+      <a class="btn btn-light btn-xs mt-0" data-direction-type="ltr">LTR</a>
+      <a class="btn btn-dark btn-xs mt-0" data-direction-type="rtl">RTL</a>
+    </div>
+    <h4 class="switcher-title">Layout Mode:</h4>
+    <div id="switcher-layout-mode">
+      <a class="btn btn-light btn-xs mt-0" data-layout-mode="wide">Wide</a>
+      <a class="btn btn-dark btn-xs mt-0" data-layout-mode="boxed">Boxed</a>
+    </div>
+    <div class="boxed-layout-variations-wrapper">
+      <h4 class="switcher-title">Container Width Variations:</h4>
+      <select class="switcher-select-form" id="switcher-boxed-layout-variations">
+        <option value="tm-container-1340px">1340px</option>
+        <option value="tm-container-1600px">1600px</option>
+        <option value="tm-container-1500px">1500px</option>
+        <option value="tm-container-1440px">1440px</option>
+        <option value="tm-container-1230px">1230px</option>
+        <option value="tm-container-970px">970px</option>
+        <option value="tm-container-100pr">100%</option>
+      </select>
+    </div>
+    <h4 class="switcher-title">Background Patterns:</h4>
+    <ul class="switcher-style-list" id="switcher-boxed-layout-bg-pattern">
+      <li><a title="Pattern 1" href="#" data-bg="images/pattern/p1.png"></a></li>
+      <li><a title="Pattern 2" href="#" data-bg="images/pattern/p2.png"></a></li>
+      <li><a title="Pattern 3" href="#" data-bg="images/pattern/p3.png"></a></li>
+      <li><a title="Pattern 4" href="#" data-bg="images/pattern/p4.png"></a></li>
+      <li><a title="Pattern 5" href="#" data-bg="images/pattern/p5.png"></a></li>
+      <li><a title="Pattern 6" href="#" data-bg="images/pattern/p6.png"></a></li>
+      <li><a title="Pattern 7" href="#" data-bg="images/pattern/p7.png"></a></li>
+      <li><a title="Pattern 8" href="#" data-bg="images/pattern/p8.png"></a></li>
+      <li><a title="Pattern 9" href="#" data-bg="images/pattern/p9.png"></a></li>
+      <li><a title="Pattern 10" href="#" data-bg="images/pattern/p10.png"></a></li>
+      <li><a title="Pattern 11" href="#" data-bg="images/pattern/p11.png"></a></li>
+      <li><a title="Pattern 12" href="#" data-bg="images/pattern/p12.png"></a></li>
+      <li><a title="Pattern 13" href="#" data-bg="images/pattern/p13.png"></a></li>
+      <li><a title="Pattern 14" href="#" data-bg="images/pattern/p14.png"></a></li>
+      <li><a title="Pattern 15" href="#" data-bg="images/pattern/p15.png"></a></li>
+    </ul>
+    <h4 class="switcher-title">Background Image (Boxed Layout):</h4>
+    <ul class="switcher-style-list" id="switcher-boxed-layout-bg-img">
+      <li><a title="Bg 1" href="#" data-bg="images/bg/bg1.jpg"></a></li>
+      <li><a title="Bg 2" href="#" data-bg="images/bg/bg2.jpg"></a></li>
+      <li><a title="Bg 3" href="#" data-bg="images/bg/bg3.jpg"></a></li>
+      <li><a title="Bg 4" href="#" data-bg="images/bg/bg4.jpg"></a></li>
+      <li><a title="Bg 5" href="#" data-bg="images/bg/bg5.jpg"></a></li>
+    </ul>
+    <h4 class="switcher-title">Background Color (Boxed Layout):</h4>
+    <ul class="switcher-style-list" id="switcher-boxed-layout-bg-color">
+      <li><a title="black-111" href="#" class="bg-black-111"></a></li>
+      <li><a title="black-222" href="#" class="bg-black-222"></a></li>
+      <li><a title="black-333" href="#" class="bg-black-333"></a></li>
+      <li><a title="black-444" href="#" class="bg-black-444"></a></li>
+      <li><a title="black-555" href="#" class="bg-black-555"></a></li>
+      <li><a title="bg-gray-dimgray" href="#" class="bg-gray-dimgray"></a></li>
+      <li><a title="bg-gray-light" href="#" class="bg-gray-light"></a></li>
+      <li><a title="bg-gray" href="#" class="bg-gray"></a></li>
+      <li><a title="bg-gray-darkgray" href="#" class="bg-gray-darkgray"></a></li>
+      <li><a title="bg-gray-silver" href="#" class="bg-gray-silver"></a></li>
+      <li><a title="bg-gray-lightgray" href="#" class="bg-gray-lightgray"></a></li>
+      <li><a title="bg-gray-gainsboro" href="#" class="bg-gray-gainsboro"></a></li>
+    </ul>
+    <h4 class="switcher-title">Heading Font-Family:</h4>
+    <select class="switcher-select-form" name="switcher-heading-fontfamily" id="switcher-heading-fontfamily">
+      <option value="'Open Sans', sans-serif|https://fonts.googleapis.com/css?family=Open+Sans">Open Sans</option>
+      <option value="'Droid Sans', sans-serif|https://fonts.googleapis.com/css?family=Droid+Sans">Droid Sans</option>
+      <option value="'PT Sans', sans-serif|https://fonts.googleapis.com/css?family=PT+Sans">PT Sans</option>
+      <option value="'Source Sans Pro', sans-serif|https://fonts.googleapis.com/css?family=Source+Sans+Pro">Source Sans Pro</option>
+      <option value="'Raleway', sans-serif|https://fonts.googleapis.com/css?family=Raleway">Raleway</option>
+      <option value="'Josefin Slab', serif|https://fonts.googleapis.com/css?family=Josefin+Slab">Josefin Slab</option>
+      <option value="'Roboto', sans-serif|https://fonts.googleapis.com/css?family=Roboto">Roboto</option>
+      <option value="'Droid Serif', serif|https://fonts.googleapis.com/css?family=Droid+Serif">Droid Serif</option>
+      <option value="'Oswald', sans-serif|https://fonts.googleapis.com/css?family=Oswald">Oswald</option>
+      <option value="'Lato', sans-serif|https://fonts.googleapis.com/css?family=Lato">Lato</option>
+      <option value="'Arvo', serif|https://fonts.googleapis.com/css?family=Arvo">Arvo</option>
+    </select>
+    <h4 class="switcher-title">Body Font-Family:</h4>
+    <select class="switcher-select-form" name="switcher-body-fontfamily" id="switcher-body-fontfamily">
+      <option value="'Open Sans', sans-serif|https://fonts.googleapis.com/css?family=Open+Sans">Open Sans</option>
+      <option value="'Droid Sans', sans-serif|https://fonts.googleapis.com/css?family=Droid+Sans">Droid Sans</option>
+      <option value="'PT Sans', sans-serif|https://fonts.googleapis.com/css?family=PT+Sans">PT Sans</option>
+      <option value="'Source Sans Pro', sans-serif|https://fonts.googleapis.com/css?family=Source+Sans+Pro">Source Sans Pro</option>
+      <option value="'Raleway', sans-serif|https://fonts.googleapis.com/css?family=Raleway">Raleway</option>
+      <option value="'Josefin Slab', serif|https://fonts.googleapis.com/css?family=Josefin+Slab">Josefin Slab</option>
+      <option value="'Roboto', sans-serif|https://fonts.googleapis.com/css?family=Roboto">Roboto</option>
+      <option value="'Droid Serif', serif|https://fonts.googleapis.com/css?family=Droid+Serif">Droid Serif</option>
+      <option value="'Oswald', sans-serif|https://fonts.googleapis.com/css?family=Oswald">Oswald</option>
+      <option value="'Lato', sans-serif|https://fonts.googleapis.com/css?family=Lato">Lato</option>
+      <option value="'Arvo', serif|https://fonts.googleapis.com/css?family=Arvo">Arvo</option>
+    </select>
+
+    <h4 class="switcher-title">Preloader Examples:</h4>
+    <a href="page-preloader.html" target="_blank" class="btn btn-light btn-xs mt-0" data-bgcolor-type="dark">Preloaders</a>
+  </div>
+</div>
+
+
+<div class="tm-purchase-floating-box">
+  <a id="purchase-html-url" href="#" target="_blank" class="tm-floating-box-icon">
+    <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+    <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+       viewBox="0 0 512.008 512.008" style="enable-background:new 0 0 512.008 512.008;" xml:space="preserve">
+      <path style="fill:#FFC107;" d="M508.288,85.764c-3.04-3.648-7.552-5.76-12.288-5.76H107.52c-4.96,0-9.664,2.304-12.704,6.24
+        c-3.008,3.968-4.032,9.088-2.752,13.888l51.2,191.36c1.888,7.04,8.224,11.872,15.456,11.872c0.256,0,0.544,0,0.8-0.032l305.28-15.36
+        c7.392-0.384,13.6-5.792,14.944-13.088l32-176C512.608,94.18,511.328,89.38,508.288,85.764z"/>
+      <g>
+        <path style="fill:#FAFAFA;" d="M400,240.004c-8.832,0-16-7.168-16-16v-64c0-8.832,7.168-16,16-16s16,7.168,16,16v64
+          C416,232.836,408.832,240.004,400,240.004z"/>
+        <path style="fill:#FAFAFA;" d="M304,240.004c-8.832,0-16-7.168-16-16v-64c0-8.832,7.168-16,16-16s16,7.168,16,16v64
+          C320,232.836,312.832,240.004,304,240.004z"/>
+        <path style="fill:#FAFAFA;" d="M208,240.004c-8.832,0-16-7.168-16-16v-64c0-8.832,7.168-16,16-16s16,7.168,16,16v64
+          C224,232.836,216.832,240.004,208,240.004z"/>
+      </g>
+      <g>
+        <circle style="fill:#455A64;" cx="208" cy="448.004" r="48"/>
+        <circle style="fill:#455A64;" cx="400" cy="448.004" r="48"/>
+        <path style="fill:#455A64;" d="M432,368.004H176c-7.264,0-13.6-4.864-15.456-11.872L78.272,48.004H16c-8.832,0-16-7.168-16-16
+          s7.168-16,16-16h74.56c7.264,0,13.6,4.864,15.456,11.872l82.272,308.128H432c8.832,0,16,7.168,16,16S440.832,368.004,432,368.004z"
+          />
+      </g>
+    </svg>
+    <span>Buy HTML</span>
+  </a>
+
+
+  <a id="check-wp-url" href="#" target="_blank" class="tm-floating-box-icon">
+    <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+       viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+    <style type="text/css">
+      .st0{fill:#FAFAFA;}
+      .st1{fill:#455A64;}
+      .st2{fill:#1C769B;}
+      .st3{fill:#2795B7;}
+      .st4{fill:#3FB5D1;}
+    </style>
+    <g>
+      <path class="st2" d="M102.7,325.1c0,69.3,40.3,129.2,98.7,157.6l-83.6-228.9C108.2,275.6,102.7,299.7,102.7,325.1z"/>
+      <path class="st2" d="M280.9,340.5l-52.6,152.7c15.7,4.6,32.3,7.1,49.5,7.1c20.4,0,40-3.5,58.2-9.9c-0.5-0.8-0.9-1.5-1.2-2.4
+        L280.9,340.5z"/>
+      <path class="st2" d="M396.1,316.3c0-21.7-7.8-36.6-14.4-48.3c-8.9-14.4-17.2-26.7-17.2-41.1c0-16.1,12.2-31.1,29.4-31.1
+        c0.8,0,1.5,0.1,2.3,0.1c-31.1-28.6-72.7-46-118.3-46c-61.2,0-115,31.4-146.3,78.9c4.1,0.1,8,0.2,11.3,0.2c18.3,0,46.7-2.2,46.7-2.2
+        c9.4-0.6,10.5,13.3,1.1,14.4c0,0-9.5,1.1-20,1.7l63.8,189.7l38.3-115L245.4,243c-9.4-0.6-18.4-1.7-18.4-1.7
+        c-9.4-0.6-8.3-15,1.1-14.4c0,0,28.9,2.2,46.1,2.2c18.3,0,46.7-2.2,46.7-2.2c9.4-0.6,10.6,13.3,1.1,14.4c0,0-9.5,1.1-20,1.7
+        l63.3,188.3l17.5-58.4C390.3,348.7,396.1,331.3,396.1,316.3z"/>
+      <path class="st2" d="M432.7,259.1c0,17.8-3.3,37.7-13.3,62.7l-53.5,154.7C418,446.2,453,389.8,453,325.1c0-30.5-7.8-59.1-21.5-84
+        C432.3,246.7,432.7,252.7,432.7,259.1z"/>
+    </g>
+    </svg>
+    <span>Check WP</span>
+  </a>
+
+
+  <a id="purchase-wp-url" href="#" target="_blank" class="tm-floating-box-icon">
+    <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+       viewBox="-49 141 512 512" style="enable-background:new -49 141 512 512;" xml:space="preserve">
+    <style type="text/css">
+      .st0{fill:#FAFAFA;}
+      .st1{fill:#455A64;}
+      .st2{fill:#1C769B;}
+      .st3{fill:#2795B7;}
+      .st4{fill:#3FB5D1;}
+    </style>
+    <g>
+      <path class="st0" d="M297.9,424.5c-7.4,0-13.3-6-13.3-13.3v-53.4c0-7.4,6-13.3,13.3-13.3s13.3,6,13.3,13.3v53.4
+        C311.2,418.5,305.2,424.5,297.9,424.5z"/>
+      <path class="st0" d="M217.8,424.5c-7.4,0-13.3-6-13.3-13.3v-53.4c0-7.4,6-13.3,13.3-13.3s13.3,6,13.3,13.3v53.4
+        C231.2,418.5,225.2,424.5,217.8,424.5z"/>
+      <path class="st0" d="M137.8,424.5c-7.4,0-13.3-6-13.3-13.3v-53.4c0-7.4,6-13.3,13.3-13.3s13.3,6,13.3,13.3v53.4
+        C151.1,418.5,145.1,424.5,137.8,424.5z"/>
+    </g>
+    <g>
+      <circle class="st1" cx="130.2" cy="598.1" r="39.2"/>
+      <circle class="st1" cx="287.2" cy="598.1" r="39.2"/>
+      <path class="st1" d="M313.3,532.7H104.1c-5.9,0-11.1-4-12.6-9.7L24.2,271.1h-50.9c-7.2,0-13.1-5.9-13.1-13.1s5.9-13.1,13.1-13.1
+        h60.9c5.9,0,11.1,4,12.6,9.7l67.2,251.9h199.2c7.2,0,13.1,5.9,13.1,13.1S320.5,532.7,313.3,532.7z"/>
+    </g>
+    <g>
+      <path class="st2" d="M102.7,325.1c0,69.3,40.3,129.2,98.7,157.6l-83.6-228.9C108.2,275.6,102.7,299.7,102.7,325.1z"/>
+      <path class="st2" d="M280.9,340.5l-52.6,152.7c15.7,4.6,32.3,7.1,49.5,7.1c20.4,0,40-3.5,58.2-9.9c-0.5-0.8-0.9-1.5-1.2-2.4
+        L280.9,340.5z"/>
+      <path class="st2" d="M396.1,316.3c0-21.7-7.8-36.6-14.4-48.3c-8.9-14.4-17.2-26.7-17.2-41.1c0-16.1,12.2-31.1,29.4-31.1
+        c0.8,0,1.5,0.1,2.3,0.1c-31.1-28.6-72.7-46-118.3-46c-61.2,0-115,31.4-146.3,78.9c4.1,0.1,8,0.2,11.3,0.2c18.3,0,46.7-2.2,46.7-2.2
+        c9.4-0.6,10.5,13.3,1.1,14.4c0,0-9.5,1.1-20,1.7l63.8,189.7l38.3-115L245.4,243c-9.4-0.6-18.4-1.7-18.4-1.7
+        c-9.4-0.6-8.3-15,1.1-14.4c0,0,28.9,2.2,46.1,2.2c18.3,0,46.7-2.2,46.7-2.2c9.4-0.6,10.6,13.3,1.1,14.4c0,0-9.5,1.1-20,1.7
+        l63.3,188.3l17.5-58.4C390.3,348.7,396.1,331.3,396.1,316.3z"/>
+      <path class="st2" d="M432.7,259.1c0,17.8-3.3,37.7-13.3,62.7l-53.5,154.7C418,446.2,453,389.8,453,325.1c0-30.5-7.8-59.1-21.5-84
+        C432.3,246.7,432.7,252.7,432.7,259.1z"/>
+    </g>
+    <path class="st3" d="M364.5,226.9c0-16.1,12.2-31.1,29.4-31.1c0.8,0,1.5,0.1,2.3,0.1c-31.1-28.5-72.7-46-118.3-46
+      c-61.2,0-115,31.4-146.3,78.9c4.1,0.1,8,0.2,11.3,0.2c18.3,0,46.7-2.2,46.7-2.2c9.4-0.6,10.5,13.3,1.1,14.4c0,0-9.5,1.1-20,1.7
+      l24.3,72.3c16.5,5.8,34.5,9.1,53.2,9.1c7.8,0,15.4-0.6,22.9-1.6l1.7-5L245.4,243c-9.4-0.6-18.4-1.7-18.4-1.7
+      c-9.4-0.6-8.3-15,1.1-14.4c0,0,28.9,2.2,46.1,2.2c18.3,0,46.7-2.2,46.7-2.2c9.4-0.6,10.6,13.3,1.1,14.4c0,0-9.5,1.1-20,1.7
+      l21.1,62.7c21.4-11.5,39.5-27.7,52.7-47.2C369.4,247.9,364.5,238.1,364.5,226.9z"/>
+    <path class="st4" d="M277.9,150c-55,0-103.9,25.4-136,65c28.2,5.9,59.1,9.1,91.6,9.1c61.5,0,117.6-11.6,159.7-30.7
+      C362.4,166.4,322,150,277.9,150z"/>
+    </svg>
+    <span>Buy WP</span>
+  </a>
+
+
+  
+  <a id="documentation-url" href="http://docs.kodesolution.info/html/kb/" target="_blank" class="tm-floating-box-icon">
+    <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+       viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+      <path style="fill:#518EF8;" d="M441.412,140.235v338.781c0,18.219-14.778,32.983-32.983,32.983H103.572
+        c-18.219,0-32.983-14.764-32.983-32.983V32.983C70.588,14.764,85.352,0,103.572,0h197.605L441.412,140.235z"/>
+      <g>
+        <rect x="161.18" y="257.054" style="fill:#FFFFFF;" width="189.626" height="21.071"/>
+        <rect x="161.18" y="304.112" style="fill:#FFFFFF;" width="189.626" height="21.071"/>
+        <rect x="161.18" y="351.171" style="fill:#FFFFFF;" width="189.626" height="21.071"/>
+        <rect x="161.18" y="398.23" style="fill:#FFFFFF;" width="134.855" height="21.071"/>
+      </g>
+      <polygon style="fill:#3A5BBC;" points="320.31,137.188 441.412,187.079 441.412,140.235 372.751,119.962 "/>
+      <path style="fill:#ACD1FC;" d="M441.412,140.235H334.16c-18.22,0-32.983-14.764-32.983-32.983V0L441.412,140.235z"/>
+    </svg>
+    <span>Docs</span>
+  </a>
+</div>
+<!-- Color Switcher Ends-->

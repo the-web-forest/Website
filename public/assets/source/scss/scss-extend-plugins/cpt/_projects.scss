@@ -1,0 +1,90 @@
+/*
+ * Shortcode: projects.scss
+ * -----------------------------------------------
+*/
+.projects-item {
+	margin-bottom: 40px;
+}
+.owl-carousel .projects-item {
+	margin-bottom: 30px;
+}
+
+.tm-sc-projects {
+	.tm-project {
+		position: relative;
+		.details {
+			.cat-list {
+				list-style: none;
+				font-size: 0.8rem;
+				color: #444;
+				text-transform: uppercase;
+				li {
+					display: inline-block;
+					margin-right: 7px;
+					a {
+						font-weight: normal;
+					}
+					&:last-child {
+						span {
+							display: none;
+						}
+					}
+				}
+			}
+			.cat-list + .title {
+				margin-top: 5px;
+			}
+		}
+	}
+	&.border-radius-around-box {
+		.tm-project {
+			border-radius: 15px;
+			overflow: hidden;
+		}
+	}
+	&.projects-style1-simple {
+		.box-hover-effect {
+			.effect-wrapper {
+				border-radius: 5px;
+			}
+		}
+	}
+	&.projects-style2-classic {
+		.tm-project {
+			background-color: #fff;
+			@include box-shadow( 0px 0px 50px rgba(5, 5, 5, 0.08) );
+			.details {
+				padding: 18px 30px 30px 30px;
+				.title {
+					margin-top: 0;
+				}
+			}
+		}
+	}
+	&.projects-style3-modern {
+		.tm-project {
+			@include box-shadow( 0px 0px 50px rgba(5, 5, 5, 0.08) );
+			.details {
+				position: absolute;
+				bottom: 40px;
+				left: 0;
+				padding: 0 30px 0 30px;
+				opacity: 1;
+				@include transition(all .4s ease-in-out);
+				.title, .excerpt, .btn-plain-text, .btn-plain-text-with-arrow {
+					color:  #fff;
+				}
+			}
+			&:hover {
+				.thumb {
+					&:before {
+						height: 0;
+					}
+				}
+				.details {
+					bottom: 50px;
+				}
+			}
+		}
+	}
+}

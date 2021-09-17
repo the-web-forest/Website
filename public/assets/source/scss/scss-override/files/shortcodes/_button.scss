@@ -1,0 +1,77 @@
+/*
+ * Shortcode: button.scss
+ * -----------------------------------------------
+*/
+/* btn-plain-text*/
+.btn-plain-text {
+	color: #aaa;
+	font-size: 1rem;
+	padding: 0;
+	border: 0;
+	padding-bottom: 3px;
+	vertical-align: initial;
+	&.focus, &:focus {
+		box-shadow: none;
+	}
+}
+.btn-plain-text-with-arrow {
+	color: #31333e;
+	font-size: 1rem;
+	padding: 0;
+	border: 0;
+	vertical-align: initial;
+	&:before {
+		color: #ffae1d;
+		display: inline-block;
+		content: "\f35a";
+		font-family: "Font Awesome 5 Free";
+		font-size: 16px;
+		font-variant: normal;
+		font-weight: normal;
+		line-height: 1;
+		margin-right: 3px;
+		position: relative;
+		text-shadow: none;
+		text-transform: none;
+		@include transition(all 0.3s ease 0s);
+	}
+
+	&:focus, &:hover {
+		&:before {
+			transform: rotateX(180deg);
+		}
+		&:after {
+			-webkit-animation: moveArrow 1s;
+			-moz-animation: moveArrow 1s;
+			animation: moveArrow 1s
+		}
+	}
+	&.focus, &:focus {
+		box-shadow: none;
+	}
+	&.text-white {
+		&:after {
+			color: #fff !important;
+		}
+	}
+}
+@keyframes moveArrow {
+	0%, 55% {
+		opacity:1;
+		-webkit-transform:translateX(0) scale(1);
+		-moz-transform:translateX(0) scale(1);
+		transform:translateX(0) scale(1)
+	}
+	25% {
+		opacity:0;
+		-webkit-transform:translateX(13px) scale(.9);
+		-moz-transform:translateX(13px) scale(.9);
+		transform:translateX(13px) scale(.9)
+	}
+	26% {
+		opacity:0;
+		-webkit-transform:translateX(-13px) scale(.9);
+		-moz-transform:translateX(-13px) scale(.9);
+		transform:translateX(-13px) scale(.9)
+	}
+}

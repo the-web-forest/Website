@@ -1,0 +1,109 @@
+/*==================================================
+=            Bootstrap 5 Media Queries             =
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+);
+==================================================*/
+ 
+ 
+/*==========  Mobile First Method  ==========*/
+ 
+// X-Small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap
+
+// Small devices (landscape phones, 576px and up)
+@include media-breakpoint-up(sm) {
+}
+
+// Medium devices (tablets, 768px and up)
+@include media-breakpoint-up(md) {
+}
+
+// Large devices (desktops, 992px and up)
+@include media-breakpoint-up(lg) {
+}
+
+// X-Large devices (large desktops, 1200px and up)
+@include media-breakpoint-up(xl) {
+}
+
+// XX-Large devices (larger desktops, 1400px and up)
+@include media-breakpoint-up(xxl) {
+}
+
+/*==========  Non-Mobile First Method  ==========*/
+
+// XX-Large devices (larger desktops)
+// No media query since the xxl breakpoint has no upper bound on its width
+
+// X-Large devices (large desktops, less than 1400px)
+@include media-breakpoint-down(xxl) {
+}
+
+// Large devices (desktops, less than 1200px)
+@include media-breakpoint-down(xl) {
+}
+
+// Medium devices (tablets, less than 992px)
+@include media-breakpoint-down(lg) {
+}
+
+// Small devices (landscape phones, less than 768px)
+@include media-breakpoint-down(md) {
+}
+
+// X-Small devices (portrait phones, less than 576px)
+@include media-breakpoint-down(sm) {
+}
+
+/*==========  minimum and maximum breakpoint Method  ==========*/
+// Extra large devices (large desktops, 1400px and up)
+//@media (min-width: 1400px) { ... }
+@include media-breakpoint-only(xxl) {
+}
+// Extra large devices (large desktops, 1200px and up)
+//@media (min-width: 1200px) and (max-width: 1399.98px) { ... }
+@include media-breakpoint-only(xl) {
+}
+
+// Large devices (desktops, 992px and up)
+//@media (min-width: 992px) and (max-width: 1199.98px) { ... }
+@include media-breakpoint-only(lg) {
+	body {	font-size: 1rem; }
+	h1 { font-size:3.3rem; }
+	h2 { font-size:2.5rem; }
+	h3 { font-size:2.2rem; }
+}
+
+// Medium devices (tablets, 768px and up)
+//@media (min-width: 768px) and (max-width: 991.98px) { ... }
+@include media-breakpoint-only(md) {
+	body {	font-size: 1rem; }
+	h1 { font-size:3.1rem; }
+	h2 { font-size:2.3rem; }
+	h3 { font-size:2.1rem; }
+}
+
+// Small devices (landscape phones, 576px and up)
+//@media (min-width: 576px) and (max-width: 767.98px) { ... }
+@include media-breakpoint-down(sm) {
+	body {	font-size: 1rem; }
+	h1 { font-size:3.0rem; }
+	h2 { font-size:2.2rem; }
+	h3 { font-size:2.0rem; }
+}
+
+// Extra small devices (portrait phones, less than 576px)
+//@media (max-width: 575.98px) { ... }
+@include media-breakpoint-only(xs) {
+}
+
+//Between breakpoints
+//@media (min-width: 768px) and (max-width: 1199.98px) { ... }
+@include media-breakpoint-between(md, xl) {
+}

@@ -1,0 +1,62 @@
+/*
+ * Shortcode: icon-box.scss
+ * -----------------------------------------------
+*/
+.icon-box {
+	&.iconbox-style3-moving-border-bottom {
+		&:after {
+			background-image: -moz-linear-gradient(0deg, $theme-color1 0%, lighten($theme-color1, 20%) 100%);
+			background-image: -webkit-linear-gradient(0deg, $theme-color1 0%, lighten($theme-color1, 20%) 100%);
+			background-image: -ms-linear-gradient(0deg, $theme-color1 0%, lighten($theme-color1, 20%) 100%);
+			background-image: gradient(0deg, $theme-color1 0%, lighten($theme-color1, 20%) 100%);
+		}
+	}
+
+	&.iconbox-style4-bgcolor {
+		&:before {
+			background-color: $theme-color2;
+		}
+	}
+
+	&.iconbox-style5-moving-bgcolor {
+		&:before {
+			background-color: $theme-color2;
+		}
+	}
+
+	&.iconbox-style6-moving-double-bgcolor {
+		&:before,
+		&:after {
+			background-color: $theme-color1;
+		}
+		&:after {
+			background-color: $theme-color2;
+		}
+	}
+
+	&.iconbox-style7-hover-moving-border {
+		&:after {
+			border-right-color: rgba($theme-color1, .70);
+			border-left-color: rgba($theme-color1, .70);
+		}
+		&:before {
+			border-top-color: rgba($theme-color1, .70);
+			border-bottom-color: rgba($theme-color1, .70);
+		}
+	}
+
+}
+
+
+.tm-features-icon-box {
+	.icon-box-wrapper {
+		&:after {
+			color: $theme-color1;
+		}
+	}
+
+	&:before,
+	&:after {
+		background-color: $theme-color1;;
+	}
+}

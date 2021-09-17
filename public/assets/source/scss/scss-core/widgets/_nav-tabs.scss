@@ -1,0 +1,33 @@
+/*
+ * nav-tabs.scss
+ * -----------------------------------------------
+*/
+.widget {
+	.nav-tabs {
+		border-bottom: 1px solid #ddd;
+		.nav-item {
+			.nav-link {
+				padding: 0 15px;
+				height: 40px;
+				line-height: 40px;
+				border-radius: 0;
+				color: #444;
+				background-color: #f2f2f2;
+				font-size: 0.95rem;
+				font-weight: bold;
+				&.active {
+					position: relative;
+					top: 1px;
+					background-color: #fff;
+				}
+				i {
+					line-height: inherit;
+				}
+			}
+		}
+	}
+	.tab-content {
+		border-top: 0;
+		padding: 20px;
+	}
+}

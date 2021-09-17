@@ -1,0 +1,99 @@
+/*
+* Shortcode: final-countdown.scss
+* -----------------------------------------------
+*/
+.tm-sc-countdown-timer {
+	.countdown-container {
+		font-size: 20px;
+		span {
+			display: inline-block;
+			font-size: 28px;
+			line-height: 2;
+			padding: 0 5px;
+			text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
+		}
+	}
+}
+
+.final-countdown-modern-circular {
+	.countdown-container {
+		width: 100%;
+		position: relative;
+
+		.clock-item {
+			position: relative;
+			.inner {
+				position: relative;	
+				text-align: center;
+				.clock-canvas {
+					background-color: rgba(255, 255, 255, .7);
+					border-radius: 50%;
+					height: 0;
+					padding-bottom: 100%;
+				}
+				.text {
+					position: absolute;
+					left: 50%;
+					-webkit-transform: translateX(-50%) translateY(-50%);
+					transform: translateX(-50%) translateY(-50%);
+					top: 50%;
+					.val {
+						font-size: 36px;
+						line-height: 1.4;
+						font-weight: 500;
+						margin-bottom: 0;
+					}
+
+					.type-time {
+						font-size: 13px;
+						margin-bottom: 0
+					}
+				}
+			}
+
+			@media (min-width: 768px) and (max-width: 991px) {
+				margin-bottom: 30px;
+			}
+
+			@media (max-width: 767px) {
+				margin: 0px 30px 30px 30px;
+			}
+		}
+	}
+}
+
+
+
+
+.final-countdown-smart-style {
+	.countdown-timer {
+		display: flex;
+		justify-content: flex-start;
+		flex-wrap: wrap;
+		.counter {
+			background-color: rgba(0,0,0,.2);
+			text-align: center;
+			position: relative;
+			border-radius: 3px;
+			padding: 0;
+			margin-right: 10px;
+			margin-bottom: 20px;
+			overflow: hidden;
+			.value {
+				font-family: $heading-font;
+				color: #fff;
+				display: block;
+				font-size: 3rem;
+				padding: 15px 0;
+			}
+			.label {
+				font-size: 1.2rem;
+				background: #111;
+				color: #fff;
+				display: block;
+				padding: 5px 40px;
+				text-transform: capitalize;
+			}
+		}
+	}
+}

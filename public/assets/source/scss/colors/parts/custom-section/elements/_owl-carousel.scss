@@ -1,0 +1,28 @@
+/*
+ * elements: owl-carousel.scss
+ * -----------------------------------------------
+*/
+
+.owl-carousel {
+	.owl-dots {
+		.owl-dot {
+			span {
+			}
+			&.active,
+			&:hover {
+				span {
+				}
+			}
+		}
+	}
+	.owl-nav {
+		button {
+			i {
+			}
+			&.owl-prev, &.owl-next {
+				background: $theme-color1 !important;
+			}
+		}
+
+	}
+}

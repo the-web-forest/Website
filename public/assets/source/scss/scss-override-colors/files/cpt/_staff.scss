@@ -1,0 +1,13 @@
+/*
+ * Shortcode: staff.scss
+ * -----------------------------------------------
+*/
+.styled-icons.icon-team-list li a:hover {
+	background: $theme-color2;
+}
+.team-item:hover .team-content {
+	border-bottom-color: $theme-color1;
+}
+.team-item:hover {
+    background: $theme-color1;
+}

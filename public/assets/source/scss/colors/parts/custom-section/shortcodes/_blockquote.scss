@@ -1,0 +1,23 @@
+/*
+ * Shortcode: blockquote.scss
+ * -----------------------------------------------
+*/
+
+blockquote {
+	&:before {
+		color: $theme-color1;
+	}
+	&.border-left-theme-colored {
+		border-left-color: $theme-color1;
+	}
+	&.quote-icon-theme-colored {
+		&:before {
+			color: $theme-color1;
+		}
+	}
+	&.footer-cite-theme-colored {
+		footer {
+			color: $theme-color1;
+		}
+	}
+}

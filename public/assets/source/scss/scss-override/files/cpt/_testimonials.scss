@@ -1,0 +1,116 @@
+/*
+ * Shortcode: testimonials.scss
+ * -----------------------------------------------
+*/
+
+.testimonial-item {
+	background-color: $white;
+	padding: 40px 50px;
+	box-shadow: 0px 20px 20px 0px rgba($black, .04);
+	position: relative;
+	@include transition(all .2s ease-in-out);
+	z-index: 1;
+	@include media-breakpoint-down(lg) {
+		padding: 30px;
+	}
+	&:after {
+		border: 1px solid #f4f3ef;
+		content: "";
+		position: absolute;
+		z-index: -1;
+		width: calc(100% - 20px);
+		height: calc(100% - 20px);
+		top: 50%;
+		left: 50%;
+		@include translate(-50%, -50%);
+		@include transition(all .2s ease-in-out);
+	}
+	.author-text {
+		font-size: 1.125rem;
+		@include transition(all .2s ease-in-out);
+	}
+	.author-info {
+		position: relative;
+		.name {
+			color: #3d9c4d;
+			font-size: 1.125rem;
+			line-height: 1;
+			@include transition(all .2s ease-in-out);
+		}
+		.job-position {
+			font-size: 14px;
+			@include transition(all .2s ease-in-out);
+		}
+
+		&:after {
+			content: "“";
+			color: #3d9c4d;
+            font-size: 6.25rem;
+			font-family: $font-current-theme1;
+			position: absolute;
+			line-height: 24px;
+			right: 7px;
+			bottom: -22px;
+			@include transition(all .2s ease-in-out);
+		}
+	}
+	.author-thumb {
+		box-shadow: 0px 20px 20px 0px rgba($black, .04);
+		height: 116px;
+		width: 116px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-color: $white;
+		position: absolute;
+		top: 100%;
+		left: 0;
+		z-index: 1;
+		@include transition(all .2s ease-in-out);
+		&:after {
+			border-color: #fff #f4f3ef #f4f3ef;
+			border-width: 1px;
+			border-style: solid;
+			bottom: 10px;
+			content: "";
+			height: calc(100% + 1px);
+			position: absolute;
+			left: 50%;
+			top: auto;
+			@include translate(-50%, 0px);
+			width: calc(100% - 19px);
+			z-index: -1;
+			@include transition(all .2s ease-in-out);
+		}
+		img {
+			border-radius: 50%;
+		}
+	}
+
+	&:hover {
+		background-color: #3d9c4d;
+		&:after {
+			border-color: #b3ff66;
+		}
+		.author-text {
+			color: $white;
+		}
+		.author-info {
+			.name {
+				color: $white;
+			}
+			.job-position {
+				color: $white;
+			}
+			&:after {
+				color: #b3ff66;
+			}
+		}
+		.author-thumb {
+			background-color: #3d9c4d;
+			&:after {
+				border-color: #3d9c4d #b3ff66 #b3ff66;
+			}
+		}
+	}
+}

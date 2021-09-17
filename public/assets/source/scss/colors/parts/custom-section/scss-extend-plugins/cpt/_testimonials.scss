@@ -1,0 +1,26 @@
+/*
+ * Shortcode: testimonials.scss
+ * -----------------------------------------------
+*/
+.tm-sc-testimonials {
+	/* Style 7 - Current Theme */
+	&.testimonial-style7-current-theme {
+		.tm-testimonial {
+			.testimonial-inner {
+			}
+			.testimonial-author-details {
+				.testimonial-header {
+					.testimonial-image-holder {
+					}
+				}
+			}
+			&:hover {
+				.testimonial-inner {}
+				.testimonial-author-details {
+					&:after {
+					}
+				}
+			}
+		}
+	}
+}

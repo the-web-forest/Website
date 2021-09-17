@@ -1,0 +1,102 @@
+/*
+* Shortcode Theme Color: current-theme.scss
+* -----------------------------------------------
+*/
+
+a:hover, a:focus {
+  color: $theme-color1;
+}
+
+/* About */
+.about-image-layer1 {
+  &:after {
+    background-color: $theme-color2;
+  }
+}
+.trusted-number {
+  .number {
+    color: $theme-color1;
+  }
+}
+.progress-item {
+  &-current-style1 {
+    .tm-sc-progress-bar {
+      .progress-holder {
+        background-color: rgba($theme-color3, .2);
+        .progress-content {
+          background-color: $theme-color2;
+        }
+      }
+    }
+  }
+}
+.about-current-theme-style1 {
+  .feature-causes-current-style1 {
+    &:after {
+      background-color: $theme-color1;
+    }
+  }
+}
+
+/* Service */
+.service-item-current-style1 {
+  .service-icon {
+    background-color: $theme-color1;
+  }
+}
+.service-item-current-style1 {
+  &:after {
+    background-color: $theme-color1;
+  }
+  .line-style {
+    &:before {
+      background-color: $theme-color2;
+    }
+  }
+  &:hover {
+    .service-icon {
+      background-color: $theme-color2;
+    }
+  }
+}
+
+/* Project */
+.service-list-item-style1 {
+    .number {
+        background-color: $theme-color1;
+    }
+}
+.become-volunteer-style1 {
+    a {
+        i {
+          background-color: $theme-color1;
+        }
+    }
+}
+
+/* Testimonial */
+.testimonial-item {}
+
+/* Gallery */
+.tm-sc-gallery {
+  &.gallery-current-style1 {
+    .tm-gallery {
+      .tm-gallery-inner {
+        .tm-gallery-content-wrapper {
+          .tm-gallery-content {
+            &:after {
+              background-color: rgba($theme-color2, .9);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/*Feature*/
+.video-button-style1 {
+    .play-button {
+        background-color: $theme-color1;
+    }
+}

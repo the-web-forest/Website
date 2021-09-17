@@ -1,0 +1,762 @@
+/*
+ * ThemeMascot Utility Classes
+ * -----------------------------------------------
+*/
+
+// Import bootstrap variables and mixins for reference
+@import "scss-bootstrap/functions";
+@import "scss-bootstrap/variables";
+@import "scss-bootstrap/mixins";
+
+@import "scss-core/variables";
+
+/* -------- Font Size ---------- */
+$custom-font-size: () !default;
+$custom-font-size: map-merge(
+  (
+	"10" : 10,
+	"11" : 11,
+	"12" : 12,
+	"13" : 13,
+	"14" : 14,
+	"15" : 15,
+	"16" : 16,
+	"17" : 17,
+	"18" : 18,
+	"19" : 19,
+	"20" : 20,
+	"21" : 21,
+	"22" : 22,
+	"23" : 23,
+	"24" : 24,
+	"25" : 25,
+	"26" : 26,
+	"27" : 27,
+	"28" : 28,
+	"29" : 29,
+	"30" : 30,
+	"32" : 32,
+	"36" : 36,
+	"38" : 38,
+	"40" : 40,
+	"42" : 42,
+	"44" : 44,
+	"46" : 46,
+	"48" : 48,
+	"50" : 50,
+	"54" : 54,
+	"60" : 60,
+	"64" : 64,
+	"70" : 70,
+	"72" : 72,
+	"78" : 78,
+	"80" : 80,
+	"84" : 84,
+	"86" : 86,
+	"90" : 90,
+	"100" : 100,
+	"120" : 120,
+	"130" : 130,
+	"140" : 140,
+	"150" : 150,
+	"200" : 200,
+	"220" : 220,
+	"240" : 240,
+	"250" : 250
+  ),
+  $custom-font-size
+);
+
+@each $item, $value in $custom-font-size {
+	.font-size-#{$item} {
+		font-size: #{$item}px !important;
+	}
+}
+
+/* -------- Text Colors ---------- */
+
+/* Text Black & Gray Color*/
+.text-black {
+	color: $black !important;
+}
+.text-black-111 {
+	color: $black-111 !important;
+}
+.text-black-222 {
+	color: $black-222 !important;
+}
+.text-black-333 {
+	color: $black-333 !important;
+}
+.text-black-444 {
+	color: $black-444 !important;
+}
+.text-black-555 {
+	color: $black-555 !important;
+}
+.text-black-666 {
+	color: $black-666 !important;
+}
+.text-black-777 {
+	color: $black-777 !important;
+}
+.text-black-888 {
+	color: $black-888 !important;
+}
+.text-black-999 {
+	color: $black-999 !important;
+}
+.text-gray-dimgray {
+	color: $gray-dimgray !important;
+}
+.text-gray-light {
+	color: $gray-light !important;
+}
+.text-gray {
+	color: $gray-base !important;
+}
+.text-gray-darkgray {
+	color: $gray-darkgray !important;
+}
+.text-gray-silver {
+	color: $gray-silver !important;
+}
+.text-gray-lightgray {
+	color: $gray-lightgray !important;
+}
+.text-gray-gainsboro {
+	color: $white-base !important;
+}
+.text-gray-lighter {
+	color: $gray-lighter !important;
+}
+.text-gray-aaa {
+	color: $gray-aaa !important;
+}
+.text-gray-bbb {
+	color: $gray-bbb !important;
+}
+.text-gray-ccc {
+	color: $gray-ccc !important;
+}
+.text-gray-ddd {
+	color: $gray-ddd !important;
+}
+.text-gray-eee {
+	color: $gray-eee !important;
+}
+
+/* Text White Color*/
+.text-white-f1 {
+	color: $white-f1 !important;
+}
+.text-white-f2 {
+	color: $white-f2 !important;
+}
+.text-white-f3 {
+	color: $white-f3 !important;
+}
+.text-white-f4 {
+	color: $white-f4 !important;
+}
+.text-white-f5 {
+	color: $white-f5 !important;
+}
+.text-white-f6 {
+	color: $white-f6 !important;
+}
+.text-white-f7 {
+	color: $white-f7 !important;
+}
+.text-white-f8 {
+	color: $white-f8 !important;
+}
+.text-white-f9 {
+	color: $white-f9 !important;
+}
+.text-white-fa {
+	color: $white-fa !important;
+}
+.text-white-fc {
+	color: $white-fc !important;
+}
+.text-white-fd {
+	color: $white-fd !important;
+}
+.text-white-fe {
+	color: $white-fe !important;
+}
+
+/* -------- Solid Color Background ---------- */
+.bg-black {
+	background-color: $black !important;
+}
+.bg-black-111 {
+	background-color: $black-111 !important;
+}
+.bg-black-222 {
+	background-color: $black-222 !important;
+}
+.bg-black-333 {
+	background-color: $black-333 !important;
+}
+.bg-black-444 {
+	background-color: $black-444 !important;
+}
+.bg-black-555 {
+	background-color: $black-555 !important;
+}
+.bg-silver-light {
+	background-color: $gray-silver-light !important;
+}
+
+/* Bg White Color*/
+.bg-white {
+	background-color: $white-base !important;
+}
+.bg-white-f1 {
+	background-color: $white-f1 !important;
+}
+.bg-white-f2 {
+	background-color: $white-f2 !important;
+}
+.bg-white-f3 {
+	background-color: $white-f3 !important;
+}
+.bg-white-f4 {
+	background-color: $white-f4 !important;
+}
+.bg-white-f5 {
+	background-color: $white-f5 !important;
+}
+.bg-white-f6 {
+	background-color: $white-f6 !important;
+}
+.bg-white-f7 {
+	background-color: $white-f7 !important;
+}
+.bg-white-f8 {
+	background-color: $white-f8 !important;
+}
+.bg-white-f9 {
+	background-color: $white-f9 !important;
+}
+.bg-white-fa {
+	background-color: $white-fa !important;
+}
+.bg-white-fb {
+	background-color: $white-fb !important;
+}
+.bg-white-fc {
+	background-color: $white-fc !important;
+}
+.bg-white-fd {
+	background-color: $white-fd !important;
+}
+.bg-white-fe {
+	background-color: $white-fe !important;
+}
+
+/* -------- Transparent Background Color ---------- */
+.bg-white-transparent-9 {
+	background-color: rgba($white-base, .90) !important;
+}
+.bg-white-transparent-8 {
+	background-color: rgba($white-base, .80) !important;
+}
+.bg-white-transparent-7 {
+	background-color: rgba($white-base, .70) !important;
+}
+.bg-white-transparent-6 {
+	background-color: rgba($white-base, .60) !important;
+}
+.bg-white-transparent-5 {
+	background-color: rgba($white-base, .50) !important;
+}
+.bg-white-transparent-4 {
+	background-color: rgba($white-base, .40) !important;
+}
+.bg-white-transparent-3 {
+	background-color: rgba($white-base, .30) !important;
+}
+.bg-white-transparent-2 {
+	background-color: rgba($white-base, .20) !important;
+}
+.bg-white-transparent-1 {
+	background-color: rgba($white-base, .10) !important;
+}
+.bg-dark-transparent-9 {
+	background-color: rgba($black, .90) !important;
+}
+.bg-dark-transparent-8 {
+	background-color: rgba($black, .80) !important;
+}
+.bg-dark-transparent-7 {
+	background-color: rgba($black, .70) !important;
+}
+.bg-dark-transparent-6 {
+	background-color: rgba($black, .60) !important;
+}
+.bg-dark-transparent-5 {
+	background-color: rgba($black, .50) !important;
+}
+.bg-dark-transparent-4 {
+	background-color: rgba($black, .40) !important;
+}
+.bg-dark-transparent-3 {
+	background-color: rgba($black, .30) !important;
+}
+.bg-dark-transparent-2 {
+	background-color: rgba($black, .20) !important;
+}
+.bg-dark-transparent-1 {
+	background-color: rgba($black, .10) !important;
+}
+
+
+/* -------- box-shadow ---------- */
+.box-shadow {
+	@include box-shadow( 0px 0px 25px rgba(5, 5, 5, 0.1) !important);
+}
+.box-shadow-2 {
+	@include box-shadow( 0px 0px 30px rgba(5, 5, 5, 0.2) !important);
+}
+.box-shadow-10 {
+	@include box-shadow( 0px 0px 10px rgba(5, 5, 5, 0.1) );
+}
+.box-shadow-20 {
+	@include box-shadow( 0px 0px 20px rgba(5, 5, 5, 0.1) );
+}
+.box-shadow-30 {
+	@include box-shadow( 0px 0px 30px rgba(5, 5, 5, 0.1) );
+}
+.box-shadow-40 {
+	@include box-shadow( 0px 0px 40px rgba(5, 5, 5, 0.1) );
+}
+.box-shadow-50 {
+	@include box-shadow( 0px 0px 50px rgba(5, 5, 5, 0.1) );
+}
+
+
+/* -------- Letter Spacing ---------- */
+.letter-space-0 {
+	letter-spacing: 0px;
+}
+.letter-space-1 {
+	letter-spacing: 1px;
+}
+.letter-space-2 {
+	letter-spacing: 2px;
+}
+.letter-space-3 {
+	letter-spacing: 3px;
+}
+.letter-space-4 {
+	letter-spacing: 4px;
+}
+.letter-space-5 {
+	letter-spacing: 5px;
+}
+.letter-space-6 {
+	letter-spacing: 6px;
+}
+.letter-space-7 {
+	letter-spacing: 7px;
+}
+.letter-space-8 {
+	letter-spacing: 8px;
+}
+.letter-space-9 {
+	letter-spacing: 9px;
+}
+.letter-space-10 {
+	letter-spacing: 10px;
+}
+
+/* -------- z-index ---------- */
+.z-index--1 {
+	z-index: -1 !important;
+}
+.z-index-0 {
+	z-index: 0 !important;
+}
+.z-index-1 {
+	z-index: 1 !important;
+}
+.z-index-2 {
+	z-index: 2 !important;
+}
+.z-index-3 {
+	z-index: 3 !important;
+}
+.z-index-4 {
+	z-index: 4 !important;
+}
+.z-index-5 {
+	z-index: 5 !important;
+}
+.z-index-99 {
+	z-index: 99 !important;
+}
+.z-index-111 {
+	z-index: 111 !important;
+}
+.z-index-1111 {
+	z-index: 1111 !important;
+}
+.z-index-9999 {
+	z-index: 9999 !important;
+}
+
+/* -------- Font Weight ---------- */
+.font-weight-100 {
+	font-weight: 100 !important;
+}
+.font-weight-200 {
+	font-weight: 200 !important;
+}
+.font-weight-300 {
+	font-weight: 300 !important;
+}
+.font-weight-400 {
+	font-weight: 400 !important;
+}
+.font-weight-500 {
+	font-weight: 500 !important;
+}
+.font-weight-600 {
+	font-weight: 600 !important;
+}
+.font-weight-700 {
+	font-weight: 700 !important;
+}
+.font-weight-800 {
+	font-weight: 800 !important;
+}
+.font-weight-900 {
+	font-weight: 900 !important;
+}
+
+/* -------- Line Height ---------- */
+.line-height-0 {
+	line-height: 0px;
+}
+.line-height-1 {
+	line-height: 1 !important;
+}
+.line-height-1-5 {
+	line-height: 1.5 !important;
+}
+.line-height-2 {
+	line-height: 2 !important;
+}
+
+
+/* -------- Border ---------- */
+.no-border {
+	border: none !important;
+}
+.border-1px {
+	border: 1px solid $gray-silver-light !important;
+}
+.border-2px {
+	border: 2px solid $gray-silver-light !important;
+}
+.border-3px {
+	border: 3px solid $gray-silver-light !important;
+}
+.border-4px {
+	border: 4px solid $gray-silver-light !important;
+}
+.border-5px {
+	border: 5px solid $gray-silver-light !important;
+}
+.border-6px {
+	border: 6px solid $gray-silver-light !important;
+}
+.border-7px {
+	border: 7px solid $gray-silver-light !important;
+}
+.border-8px {
+	border: 8px solid $gray-silver-light !important;
+}
+.border-9px {
+	border: 9px solid $gray-silver-light !important;
+}
+.border-10px {
+	border: 10px solid $gray-silver-light !important;
+}
+
+.border-8px-white {
+	border: 8px solid $white-base !important;
+}
+
+.border-top-1px {
+	border-top: 1px solid #eee !important;
+}
+.border-top-2px {
+	border-top: 2px solid #eee !important;
+}
+.border-top-3px {
+	border-top: 3px solid #eee !important;
+}
+.border-top-5px {
+	border-top: 5px solid $gray-silver-light !important;
+}
+
+.border-right-1px {
+	border-right: 1px solid #eee !important;
+}
+.border-right-2px {
+	border-right: 2px solid #eee !important;
+}
+.border-right-3px {
+	border-right: 3px solid #eee !important;
+}
+
+.border-bottom-1px {
+	border-bottom: 1px solid #eee !important;
+}
+.border-bottom-2px {
+	border-bottom: 2px solid #eee !important;
+}
+.border-bottom-3px {
+	border-bottom: 3px solid #eee !important;
+}
+
+.border-left-1px {
+	border-left: 1px solid #eee !important;
+}
+.border-left-2px {
+	border-left: 2px solid #eee !important;
+}
+.border-left-3px {
+	border-left: 3px solid #eee !important;
+}
+
+
+
+/* -------- Border Outline---------- */
+.outline-border {
+    outline: 5px solid #f1f1f1;
+    outline-offset: 5px;
+}
+.outline-border-1px {
+    outline: 1px solid #f1f1f1;
+    outline-offset: 1px;
+}
+.outline-border-2px {
+    outline: 2px solid #f1f1f1;
+    outline-offset: 2px;
+}
+.outline-border-3px {
+    outline: 3px solid #f1f1f1;
+    outline-offset: 3px;
+}
+.outline-border-4px {
+    outline: 4px solid #f1f1f1;
+    outline-offset: 4px;
+}
+.outline-border-5px {
+    outline: 5px solid #f1f1f1;
+    outline-offset: 5px;
+}
+/* -------- Background Image ---------- */
+.no-bg {
+	background: none !important;
+}
+
+@include media-breakpoint-down(xl) {
+	.lg-no-bg {
+		background: none !important;
+	}
+}
+@include media-breakpoint-down(lg) {
+	.md-no-bg {
+		background: none !important;
+	}
+}
+@include media-breakpoint-down(md) {
+	.sm-no-bg {
+		background: none !important;
+	}
+}
+@include media-breakpoint-down(sm) {
+	.xs-no-bg {
+		background: none !important;
+	}
+}
+
+.bg-no-repeat, .bg-img-no-repeat {
+	background-repeat: no-repeat !important;
+}
+.bg-img-fixed {
+	background-attachment: fixed !important;
+}
+.bg-img-cover {
+	background-size: cover !important;
+}
+
+.bg-img-center {
+	background-position: center !important;
+}
+.bg-img-center-top {
+	background-position: center top !important;
+}
+.bg-img-center-bottom {
+	background-position: center bottom !important;
+}
+
+
+.bg-img-left {
+	background-position: left !important;
+}
+.bg-img-left-top {
+	background-position: left top !important;
+}
+.bg-img-left-bottom {
+	background-position: left bottom !important;
+}
+
+
+.bg-img-right {
+	background-position: right !important;
+}
+.bg-img-right-top {
+	background-position: right top !important;
+}
+.bg-img-right-bottom {
+	background-position: right bottom !important;
+}
+
+.tm-fullwidth, .img-fullwidth {
+	width: 100% !important;
+}
+
+/* -------- Absolute Image Positioning ---------- */
+.overflow-visible {
+	overflow: visible !important;
+}
+.overflow-hidden {
+  overflow: hidden !important;
+}
+.overflow-x-hidden {
+  overflow-x: hidden !important;
+}
+.overflow-y-hidden {
+  overflow-y: hidden !important;
+}
+.text-left {
+	text-align: left !important;
+}
+.text-right {
+	text-align: right !important;
+}
+
+
+
+@include media-breakpoint-down(md) {
+	.float-xs-center {
+		display: table;
+		float: none !important;
+		margin-left: auto !important;
+		margin-right: auto !important;
+	}
+	.xs-fullwidth {
+		width: 100%;
+	}
+	.xs-height-auto {
+		min-height: auto !important;
+	}
+	.xs-hide-bg-img {
+		background: none !important;
+	}
+	.xs-hide-child-bg-img {
+		> div {
+			background: none !important;
+		}
+	}
+}
+
+@include media-breakpoint-down(md) {
+	.float-sm-center {
+		display: table;
+		float: none !important;
+		margin-left: auto !important;
+		margin-right: auto !important;
+	}
+	.sm-fullwidth {
+		width: 100%;
+	}
+	.sm-height-auto {
+		min-height: auto !important;
+	}
+	.sm-hide-bg-img {
+		background: none !important;
+	}
+	.sm-hide-child-bg-img {
+		> div {
+			background: none !important;
+		}
+	}
+}
+
+@include media-breakpoint-down(lg) {
+	.float-md-center {
+		display: table;
+		float: none !important;
+		margin-left: auto !important;
+		margin-right: auto !important;
+	}
+	.md-fullwidth {
+		width: 100%;
+	}
+	.md-height-auto {
+		min-height: auto !important;
+	}
+	.md-hide-bg-img {
+		background: none !important;
+	}
+	.md-hide-child-bg-img {
+		> div {
+			background: none !important;
+		}
+	}
+}
+
+@include media-breakpoint-down(xl) {
+	.float-lg-center {
+		display: table;
+		float: none !important;
+		margin-left: auto !important;
+		margin-right: auto !important;
+	}
+	.lg-fullwidth {
+		width: 100%;
+	}
+	.lg-height-auto {
+		min-height: auto !important;
+	}
+	.lg-hide-bg-img {
+		background: none !important;
+	}
+	.lg-hide-child-bg-img {
+		> div {
+			background: none !important;
+		}
+	}
+}
+
+//position
+.position-inherit {
+	position: inherit !important
+}
+
+.box-shadow {
+		@include box-shadow( 0 14px 18px 0 rgba(0,0,0,.1) !important );
+}
+.hover-box-shadow {
+	&:hover {
+		@include box-shadow( 0 14px 18px 0 rgba(0,0,0,.1) !important );
+	}
+}

@@ -1,0 +1,63 @@
+/*
+ * Shortcode: funfacts.scss
+ * -----------------------------------------------
+*/
+.tm-sc-funfact {
+	@include transition(all 0.5s ease);
+	position: relative;
+
+	.funfact-icon {
+		opacity: 0.8;
+		@include transition( all .3s ease-in-out);
+		i {
+			font-size: 45px;
+			@include transition( all .3s ease-in-out);
+		}
+	}
+	.counter {
+		margin-top: 0;
+		display: flex;
+		flex-wrap: nowrap;
+		align-items: flex-start;
+		justify-content: center;
+		font-weight: 700;
+		.animate-number {
+			line-height: 1;
+		}
+		.counter-postfix,
+		.counter-prefix {
+			font-size: 1rem;
+			margin: 0 4px;
+		}
+	}
+	.title {
+	}
+	&.funfact-lefticon {
+		display: flex;
+		flex-wrap: nowrap;
+		align-items: center;
+		justify-content: left;
+		.funfact-icon {
+			margin-right: 20px;
+		}
+		.details {
+			overflow: hidden;
+			.counter {
+				justify-content: left;
+			}
+		}
+	}
+	:last-child {
+		margin-bottom: 0;
+	}
+	.funfact-inner {
+	}
+
+	&:hover {
+		.funfact-icon {
+			opacity: 1;
+			animation:swing 0.8s ease-out infinite;
+			-webkit-animation:swing 0.8s ease-out infinite;
+		}
+	}
+}

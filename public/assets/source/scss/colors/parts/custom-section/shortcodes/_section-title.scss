@@ -1,0 +1,55 @@
+/*
+ * Shortcode: section-title.scss
+ * -----------------------------------------------
+*/
+.tm-sc-section-title {
+	&.line-bottom-style2-solid-line {
+		.title-wrapper {
+			&:after {
+				background-color: $theme-color1;
+			}
+		}
+	}
+	&.line-bottom-style3-bordered-line {
+		.title-wrapper {
+			&:after {
+				border-color: $theme-color1;
+			}
+		}
+	}
+	&.line-bottom-style4-attached-double-lines1 {
+		.title-wrapper {
+			&:after {
+				background-color: $theme-color1;
+			}
+		}
+	}
+	&.line-bottom-style5-attached-double-lines2 {
+		.title-wrapper {
+			&:after {
+				background-color: $theme-color1;
+			}
+		}
+	}
+	&.line-bottom-style7-double-lines {
+		.title-wrapper {
+			&:after {
+				background-color: $theme-color1;
+			}
+		}
+	}
+	&.line-bottom-style8-line-with-circle {
+		.title-wrapper {
+			&:after {
+				background-color: $theme-color1;
+			}
+		}
+	}
+	&.line-bottom-style9-line-with-square {
+		.title-wrapper {
+			&:after {
+				background-color: $theme-color1;
+			}
+		}
+	}
+}

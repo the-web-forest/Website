@@ -1,0 +1,14 @@
+/*
+ * Shortcode: single-feature.scss
+ * -----------------------------------------------
+*/
+.single-feature-inner {
+	.icon {
+		background-image: linear-gradient(to right, $theme-color1 0%, lighten($theme-color1, 30.5%) 100%, $theme-color1 100%);
+	}
+	&:hover {
+		.icon {
+			background-image: linear-gradient(to right, $theme-color2 0%, lighten($theme-color2, 15.5%) 100%, $theme-color2 100%);
+		}
+	}
+}

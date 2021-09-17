@@ -1,0 +1,280 @@
+/*
+ * Shortcode: unordered-list.scss
+ * -----------------------------------------------
+*/
+$font_family_list_fw: 'Font Awesome 5 Free';
+.tm-list {
+	ul > li,
+	ol > li {
+		margin-bottom: 12px;
+		> ul, > ol {
+			margin-top: 12px;
+		}
+	}
+}
+.list-style-none {
+	list-style: none;
+}
+.tm-ordered-list {
+	ol {
+		list-style: none;
+		counter-reset: li;
+		li {
+			position: relative;
+			counter-increment: li;
+			&:before {
+				content: "." counter(li);
+				color: #333;
+				display: inline-block;
+				width: 1em;
+				margin-left: -1.5em;
+				margin-right: .5em;
+				font-weight: 600;
+				direction: rtl;
+			}
+		}
+	}
+	ul > li,
+	ol > li {
+		margin-bottom: 12px;
+		> ul, > ol {
+			margin-top: 12px;
+		}
+	}
+}
+
+@mixin unordered-list-common() {
+	ul {
+		list-style: none;
+		>li {
+			position: relative;
+		}
+		li {
+			list-style-type: none;
+			&:before {
+				z-index: 0;
+				content: "\f058";
+				font-family: $font_family_list_fw;
+				font-weight: 900;
+				font-size: 95%;
+				padding-right: 10px;
+				vertical-align: middle;
+			}
+			li {
+				padding-left: 15px;
+			}
+		}
+	}
+}
+.tm-sc-unordered-list {
+	ul > li,
+	ol > li {
+		margin-bottom: 12px;
+		> ul, > ol {
+			margin-top: 12px;
+		}
+	}
+	ul {
+		li {
+			&:before {
+				display: inline-block;
+			}
+		}
+	}
+	&.list-style1 {
+		@include unordered-list-common();
+		ul {
+			li {
+				&:before {
+					content: "\f058";
+				}
+			}
+		}
+	}
+	&.list-style2 {
+		@include unordered-list-common();
+		ul {
+			li {
+				&:before {
+					content: "\f058";
+					font-family: $font_family_list_fw;
+					font-weight: 400;
+				}
+			}
+		}
+	}
+	&.list-style3 {
+		@include unordered-list-common();
+		ul {
+			li {
+				&:before {
+					content: "\f14a";
+				}
+			}
+		}
+	}
+	&.list-style4 {
+		@include unordered-list-common();
+		ul {
+			li {
+				&:before {
+					content: "\f14a";
+					font-family: $font_family_list_fw;
+					font-weight: 400;
+				}
+			}
+		}
+	}
+	&.list-style5 {
+		@include unordered-list-common();
+		ul {
+			li {
+				&:before {
+					content: "\f00c";
+				}
+			}
+		}
+	}
+	&.list-style6 {
+		@include unordered-list-common();
+		ul {
+			li {
+				&:before {
+					content: "\f560";
+				}
+			}
+		}
+	}
+	&.list-style7 {
+		@include unordered-list-common();
+		ul {
+			li {
+				&:before {
+					content: "\f35a";
+				}
+			}
+		}
+	}
+	&.list-style8 {
+		@include unordered-list-common();
+		ul {
+			li {
+				&:before {
+					content: "\f30b";
+				}
+			}
+		}
+	}
+	&.list-style9 {
+		@include unordered-list-common();
+		ul {
+			li {
+				&:before {
+					content: "\f054";
+				}
+			}
+		}
+	}
+	&.list-style10 {
+		@include unordered-list-common();
+		ul {
+			li {
+				&:before {
+					content: "\f138";
+				}
+			}
+		}
+	}
+	&.list-style11 {
+		@include unordered-list-common();
+		ul {
+			li {
+				&:before {
+					content: "\f152";
+				}
+			}
+		}
+	}
+	&.list-style12 {
+		@include unordered-list-common();
+		ul {
+			li {
+				&:before {
+					content: "\f0da";
+				}
+			}
+		}
+	}
+	&.list-style11 {
+		@include unordered-list-common();
+		ul {
+			li {
+				&:before {
+					content: "\f105";
+				}
+			}
+		}
+	}
+	&.list-style13 {
+		@include unordered-list-common();
+		ul {
+			li {
+				&:before {
+					content: "\f101";
+				}
+			}
+		}
+	}
+	&.list-style14 {
+		@include unordered-list-common();
+		ul {
+			li {
+				&:before {
+					content: "\f152";
+					font-family: $font_family_list_fw;
+					font-weight: 400;
+				}
+			}
+		}
+	}
+	&.list-style15 {
+		@include unordered-list-common();
+		ul {
+			li {
+				&:before {
+					content: "\f152";
+				}
+			}
+		}
+	}
+	&.list-style16 {
+		@include unordered-list-common();
+		ul {
+			li {
+				&:before {
+					content: "\f140";
+				}
+			}
+		}
+	}
+}
+
+
+.list-with-image {
+	ul {
+		list-style: none;
+	}
+	li { 
+		img {
+			float: left;
+		}
+		strong {
+			font-weight: 600;
+			color: #111c16;
+			margin-top: 8px;
+			display: block;
+			width: calc(100% - 64px);
+			float: left;
+		}
+	}
+}

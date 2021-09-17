@@ -1,0 +1,547 @@
+/* Modern Header */
+.modern-header {
+  &.modern-header-theme-colored3 {
+    .header-nav {
+      .header-nav-wrapper {
+        &:not(.scroll-to-fixed-fixed) {
+          nav {
+            background: $theme-color3;
+          }
+        }
+        .menuzord-menu > li:not(.active):not(:hover) {
+          > a {
+            @include media-breakpoint-up(lg) {
+            }
+          }
+        }
+        &.scroll-to-fixed-fixed {
+          background: $theme-color3;
+        }
+      }
+    }
+  }
+}
+
+/* -------- Text Theme Color ---------- */
+.text-theme-colored3 {
+  color: $theme-color3 !important;
+}
+.text-hover-theme-colored3 {
+  &:hover {
+    color: $theme-color3 !important;
+  }
+}
+ul.list.theme-colored3 li:before,
+ul.list.theme-colored3.angle-double-right li:before,
+ul.list.theme-colored3.angle-right li:before,
+ul.list.theme-colored3.check-circle li:before,
+ul.list.theme-colored3.check li:before,
+.list-icon.theme-colored3 li i {
+  color: $theme-color3;
+}
+
+/* -------- border-theme-color ---------- */
+.border-theme-colored3 {
+  border-color: $theme-color3 !important;
+}
+.border-1px-theme-colored3 {
+  border: 1px solid $theme-color3;
+}
+
+
+
+/* -------- bg-theme-color ---------- */
+.bg-theme-colored3 {
+  background-color: $theme-color3 !important;
+}
+.bg-hover-theme-colored3 {
+  &:hover {
+    background: $theme-color3 !important;
+    border-color: $theme-color3 !important;
+    color: $white-base !important;
+    
+    h1,h2,h3,h4,h5,h6,p,a,i {
+      color: $white-base !important;
+    }
+  }
+}
+.list-icon.theme-colored3.square li i,
+.list-icon.theme-colored3.rounded li i {
+  background: $theme-color3;
+}
+/* -------- lighter/darker bg Color ---------- */
+.bg-theme-colored3-lighter2 {
+  background-color: lighten($theme-color3, 2%) !important;
+}
+.bg-theme-colored3-lighter3 {
+  background-color: lighten($theme-color3, 3%) !important;
+}
+.bg-theme-colored3-lighter4 {
+  background-color: lighten($theme-color3, 4%) !important;
+}
+.bg-theme-colored3-lighter5 {
+  background-color: lighten($theme-color3, 5%) !important;
+}
+.bg-theme-colored3-lighter6 {
+  background-color: lighten($theme-color3, 6%) !important;
+}
+.bg-theme-colored3-lighter7 {
+  background-color: lighten($theme-color3, 7%) !important;
+}
+.bg-theme-colored3-lighter8 {
+  background-color: lighten($theme-color3, 8%) !important;
+}
+.bg-theme-colored3-lighter9 {
+  background-color: lighten($theme-color3, 9%) !important;
+}
+.bg-theme-colored3-darker2 {
+  background-color: darken($theme-color3, 2%) !important;
+}
+.bg-theme-colored3-darker3 {
+  background-color: darken($theme-color3, 3%) !important;
+}
+.bg-theme-colored3-darker4 {
+  background-color: darken($theme-color3, 4%) !important;
+}
+.bg-theme-colored3-darker5 {
+  background-color: darken($theme-color3, 5%) !important;
+}
+.bg-theme-colored3-darker6 {
+  background-color: darken($theme-color3, 6%) !important;
+}
+.bg-theme-colored3-darker7 {
+  background-color: darken($theme-color3, 7%) !important;
+}
+.bg-theme-colored3-darker8 {
+  background-color: darken($theme-color3, 8%) !important;
+}
+.bg-theme-colored3-darker9 {
+  background-color: darken($theme-color3, 9%) !important;
+}
+
+/* -------- Transparent bg Color ---------- */
+.bg-theme-colored3-transparent-9 {
+  background-color: rgba($theme-color3, .90) !important;
+}
+.bg-theme-colored3-transparent-8 {
+  background-color: rgba($theme-color3, .80) !important;
+}
+.bg-theme-colored3-transparent-7 {
+  background-color: rgba($theme-color3, .70) !important;
+}
+.bg-theme-colored3-transparent-6 {
+  background-color: rgba($theme-color3, .60) !important;
+}
+.bg-theme-colored3-transparent-5 {
+  background-color: rgba($theme-color3, .50) !important;
+}
+.bg-theme-colored3-transparent-4 {
+  background-color: rgba($theme-color3, .40) !important;
+}
+.bg-theme-colored3-transparent-3 {
+  background-color: rgba($theme-color3, .30) !important;
+}
+.bg-theme-colored3-transparent-2 {
+  background-color: rgba($theme-color3, .20) !important;
+}
+.bg-theme-colored3-transparent-1 {
+  background-color: rgba($theme-color3, .10) !important;
+}
+.bg-theme-colored3-transparent {
+  background-color: rgba($theme-color3, .50) !important;
+}
+
+/* -------- btn-themr-color ---------- */
+.text-theme-colored3 {
+  .btn-plain-text,
+  .btn-plain-text-with-arrow {
+      color: $theme-color3 !important;
+  }
+}
+
+/* -------- layer overlay Color ---------- */
+.layer-overlay {
+  /* .overlay-theme-colored3 */
+  &.overlay-theme-colored3 {
+    &::before {
+      background-color: rgba($theme-color3, .80) !important;
+    }
+  }
+  &.overlay-theme-colored3-1 {
+    &::before {
+      background-color: rgba($theme-color3, .10);
+    }
+  }
+  &.overlay-theme-colored3-2 {
+    &::before {
+      background-color: rgba($theme-color3, .20);
+    }
+  }
+  &.overlay-theme-colored3-3 {
+    &::before {
+      background-color: rgba($theme-color3, .30);
+    }
+  }
+  &.overlay-theme-colored3-4 {
+    &::before {
+      background-color: rgba($theme-color3, .40);
+    }
+  }
+  &.overlay-theme-colored3-5 {
+    &::before {
+      background-color: rgba($theme-color3, .50);
+    }
+  }
+  &.overlay-theme-colored3-6 {
+    &::before {
+      background-color: rgba($theme-color3, .60);
+    }
+  }
+  &.overlay-theme-colored3-7 {
+    &::before {
+      background-color: rgba($theme-color3, .70);
+    }
+  }
+  &.overlay-theme-colored3-8 {
+    &::before {
+      background-color: rgba($theme-color3, .80);
+    }
+  }
+  &.overlay-theme-colored3-9 {
+    &::before {
+      background-color: rgba($theme-color3, .90);
+    }
+  }
+}
+
+
+
+
+/*
+ * Shortcode: styled-icons Theme Colored
+ * -----------------------------------------------
+*/
+.icon-theme-colored3 {
+  a {
+    color: $theme-color3;
+  }
+
+  &.icon-bordered {
+    a {
+      border-color: $theme-color3;
+
+      &:hover {
+        background-color: $theme-color3;
+        color: $white-base;
+      }
+    }
+  }
+
+  &.icon-dark {
+    a {
+      background-color: $theme-color3;
+      color: $white-base;
+
+      &:hover {
+        background-color: darken($theme-color3, 10%);
+      }
+    }
+
+    &.icon-bordered {
+      a {
+        border-color: $theme-color3;
+        color: $theme-color3;
+
+        &:hover {
+          background-color: $theme-color3;
+          border-color: $theme-color3;
+          color: $white-base;
+        }
+      }
+    }
+  }
+
+  &.icon-gray {
+    a {
+      color: $theme-color3;
+
+      &:hover {
+        color: #fff;
+        background-color: $theme-color3;
+      }
+    }
+
+    &.icon-bordered {
+      a {
+        color: $theme-color3;
+
+        &:hover {
+          background-color: $gray-lighter;
+          border-color: $gray-lighter;
+          color: $theme-color3;
+        }
+      }
+    }
+  }
+}
+
+.icon-theme-colored3 {
+  a {
+    &:hover {
+    }
+  }  
+}
+
+.icon-hover-theme-colored3 {
+  a {
+    &:hover {
+      background-color: $theme-color3;
+      border-color: $theme-color3;
+      color: $white-base;
+    }
+  }  
+}
+
+.styled-icons.icon-hover-theme-colored3 {
+  a {
+    &:hover {
+      background-color: $theme-color3;
+      border-color: $theme-color3;
+      color: $white-base;
+    }
+  }  
+}
+
+/*
+ * Shortcode: Icon Boxes Theme Colored
+ * -----------------------------------------------
+*/
+$icon-box: '.icon-box.iconbox-theme-colored3';
+.icon-box{
+  &.iconbox-theme-colored3 {
+    .icon {
+      color: $theme-color3;
+
+      &.icon-border-effect {
+        &::after {
+          box-shadow: 0 0 0 3px $theme-color3;
+        }
+      }
+
+      &.icon-bordered {
+        border-color: $theme-color3;
+      
+        @at-root {
+          #{$icon-box}:hover .icon {
+            &.icon-bordered {
+              background-color: $theme-color3;
+              color: $white-base;
+            }
+          }
+        }
+      }
+
+      &.icon-gray {
+        &.icon-bordered {
+          border-color: $gray-lighter;
+        }
+      
+        @at-root {
+          #{$icon-box}:hover .icon {
+            &.icon-gray {
+              background-color: $theme-color3;
+              color: $white-base;
+
+              //icon bordered
+              &.icon-bordered {
+                background-color: $theme-color3;
+                border-color: $theme-color3;
+                color: $white-base;
+              }
+            }
+          }
+        }
+      }
+
+      &.icon-dark {
+        background-color: $theme-color3;
+        color: $white-base;
+
+        &.icon-bordered {
+          background-color: transparent;
+          border-color: $theme-color3;
+          color: $theme-color3;
+        }
+      
+        @at-root {
+          #{$icon-box}:hover .icon {
+            &.icon-dark {
+              color: $white-base;
+
+              //icon bordered
+              &.icon-bordered {
+                background-color: $theme-color3;
+                border-color: $theme-color3;
+                color: $white-base;
+              }
+            }
+          }
+        }
+      }
+
+
+
+      &.icon-white {
+        background-color: $white-base;
+        color: $theme-color3;
+
+        &.icon-bordered {
+          background-color: transparent;
+          border-color: $theme-color3;
+          color: $white-base;
+        }
+      
+        @at-root {
+          #{$icon-box}:hover .icon {
+            &.icon-white {
+              background-color: $theme-color3;
+              color: $white-base;
+
+              //icon bordered
+              &.icon-bordered {
+                background-color: $theme-color3;
+                border-color: $theme-color3;
+                color: $white-base;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &.iconbox-border {
+      border-color: $theme-color3;
+    }
+  }
+}
+
+
+
+/*
+ *  accordion.scss
+ * -----------------------------------------------
+*/
+.accordion-theme-colored3 {
+  .panel-default > .panel-heading {
+    background-color:$theme-color3;
+    .panel-title > a,
+    .panel-title > a:hover,
+    .panel-title > a:focus {
+      color: #fff;
+    }
+  }
+}
+
+.panel-group {
+  &.accordion-classic-theme-colored3 {
+    .panel-heading {
+      .panel-title {
+        a {
+          &.active {
+            &:before {
+              background: $theme-color3;
+            }
+          }
+        }
+      }
+    }
+  }
+  &.accordion-classic-theme-colored3-filled {
+    .panel-heading {
+      background: $theme-color3;
+      .panel-title {
+        a {
+          color: #fff;
+          &:before {
+            background: darken($theme-color3, 3%);
+              color: #fff;
+          }
+          &.active {
+            &:before {
+              background: darken($theme-color3, 13%);
+            }
+          }
+        }
+      }
+    }
+  }
+  &.accordion-classic-theme-colored31 {
+    .panel-heading {
+      background: $theme-color3;
+      .panel-title {
+        a {
+          color: #fff;
+          &:before {
+            background: darken($theme-color3, 5%);
+              color: #fff;
+          }
+          &.active {
+            &:before {
+              background: $theme-color1;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.panel-group {
+  &.accordion-icon-filled {
+    &.accordion-icon-left {
+      &.accordion-icon-filled-theme-colored3 {
+        .panel-heading {
+          .panel-title {
+            a {
+              &:before {
+                background-color:$theme-color3;
+              }
+            }
+          }
+        }
+      }
+    }
+    &.accordion-icon-right {
+      &.accordion-icon-filled-theme-colored3 {
+        .panel-heading {
+          .panel-title {
+            a {
+              &:after {
+                background-color:$theme-color3;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+.line-bottom-theme-colored3 {
+	&:after {
+		background: $theme-color3;
+	}
+}
+/*
+ * widget
+ * -----------------------------------------------
+*/
+.widget, footer#footer .widget {
+  .widget-title {
+    &.widget-title-line-bottom.line-bottom-theme-colored3 {
+      &:after {
+        background: $theme-color3;
+      }
+    }
+  }
+}

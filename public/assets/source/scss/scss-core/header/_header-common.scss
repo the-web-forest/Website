@@ -1,0 +1,83 @@
+/*
+ * header-other.scss
+ * -----------------------------------------------
+*/
+header#header {
+	.header-top,
+	.header-middle,
+	.header-nav {
+		.container-fluid {
+			padding: 0 100px;
+			@include media-breakpoint-down(xl) {
+				padding: 0 20px;
+			}
+		}
+	}
+}
+
+
+/* Top Nav Search Button & Form */
+#top-nav-search-btn {
+  .search-icon {
+    color: $headings-nav-side-icons-color;
+    font-size: 18px;
+    line-height: 1;
+    padding: 3px;
+    &:hover {
+      color: #888;
+    }
+  }
+  @include media-breakpoint-down(xl) {
+    margin-top: 12px;
+  }
+}
+#top-nav-search-form {
+  background: rgba(254, 254, 254, 0.97);
+  display: none;
+  height: 200px;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 99991;
+  form {
+    margin-bottom: 0;
+  }
+
+  input[type="text"] {
+    background: transparent;
+    border: medium none;
+    border-radius: 0;
+    box-shadow: none;
+    color: #292929;
+    font-size: 24px;
+    height: 100%;
+    left: 15px;
+    line-height: normal;
+    outline: medium none;
+    padding: 0;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    vertical-align: middle;
+    width: 90%;
+    @include media-breakpoint-down(xl) {
+      font-size: 18px;
+      width: 80%;
+    }
+  }
+  #close-search-btn {
+    color: #bbbbbb;
+    float: right;
+    font-size: 28px;
+    line-height: 75px;
+    margin: 0 15px 0 0;
+    padding: 0;
+    &:hover {
+      color: #555;
+    }
+    @include media-breakpoint-down(xl) {
+      line-height: 60px;
+    }
+  }
+}

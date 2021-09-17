@@ -1,0 +1,128 @@
+/*
+ * footer.scss
+ * -----------------------------------------------
+*/
+
+footer#footer {
+	background-color: $footer-bg-color;
+	color: $footer-primary-text-color;
+	a:not(.social-link):not(.icon) {
+		color: $footer-link-color;
+		font-weight: $font-weight-normal;
+		&:focus,
+		&:hover,
+		&:active {
+			color: lighten($footer-link-color, 20%);
+		}
+	}
+	.footer-widget-area {
+		> .container,
+		> .container-fluid {
+		}
+		.footer-widget-area-column-separator {
+			border-left: 1px solid rgba(255, 255, 255, 0.1);
+			padding: 0 30px;
+			&:first-child {
+				border: none;
+			}
+		}
+		.widget {
+			margin-bottom: $footer-widget-margin-bottom;
+			.widget-title {
+				color: $footer-widget-title-color;
+				margin-bottom: 35px;
+				&.widget-title-line-bottom {
+					&:after,
+					&:before {
+						background: #666;
+					}
+
+					&:before {
+						background: rgba(65, 65, 65, 0.3);
+					}
+				}
+			}
+		}
+	}
+}
+
+/* fixed footer */
+footer#footer {
+	&.fixed-footer {
+		bottom: 0;
+		left: 0;
+		position: fixed;
+		right: 0;
+		z-index: 1;
+		@include media-breakpoint-down(xl) {
+			position: relative;
+		}
+	}
+}
+
+body.has-fixed-footer {
+	.main-content-area {
+		background-color: #fff;
+		position: relative;
+		z-index: 2;
+	}
+	&.tm-boxed-layout {
+		.fixed-footer {
+			overflow: hidden;
+			margin: 0 auto;
+			max-width: 1170px;
+		}
+	}
+}
+
+
+/* Footer Inverted*/
+$inverted-footer-bg-color:				 	#f9f9f9;
+$inverted-footer-primary-text-color:	 	$black-666;
+$inverted-footer-link-color:	 			$black-222;
+$inverted-footer-widget-title-color:	 	$black-222;
+
+
+$inverted-footer-bottom-bg-color:			$gray-eee;
+$inverted-footer-bottom-text-color:			$black-666;
+
+footer#footer {
+	&.footer-inverted {
+		background-color: $inverted-footer-bg-color;
+		border-top: 1px solid #eee;
+		color: $inverted-footer-primary-text-color;
+		a {
+			color: $inverted-footer-link-color;
+			&:focus,
+			&:hover,
+			&:active {
+				color: darken($inverted-footer-link-color, 20%);
+			}
+		}
+		.footer-widget-area {
+			.footer-widget-area-column-separator {
+				border-left-color: rgba(65, 65, 65, 0.1);
+			}
+			.widget {
+				.widget-title {
+					&.widget-title-line-bottom {
+						&:before {
+							background: rgba(65, 65, 65, 0.1);
+						}
+					}
+				}
+			}
+		}
+		.footer-widget-area .widget .widget-title,
+		.footer-widget-area .widget .post .post-title a {
+			color: $inverted-footer-widget-title-color;
+		}
+		.footer-bottom {
+			background-color: $inverted-footer-bottom-bg-color;
+			color: $inverted-footer-bottom-text-color;
+		}
+		.styled-icons.icon-dark:not(.icon-bordered) a {
+			color: #fff;
+		}	
+	}
+}

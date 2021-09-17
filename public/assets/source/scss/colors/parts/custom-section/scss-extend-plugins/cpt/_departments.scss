@@ -1,0 +1,17 @@
+/*
+ *  cpt-departments.scss
+ * -----------------------------------------------
+*/
+
+.tm-sc-departments-tab {
+	.nav-tabs {
+		>li.active, >li:hover {
+			>a.active {
+				i {
+					color: $theme-color2;
+				}
+			}
+			border-bottom-color: $theme-color1;
+		}
+	}
+}

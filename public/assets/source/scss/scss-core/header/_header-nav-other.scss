@@ -1,0 +1,40 @@
+/*
+ * header-other.scss
+ * -----------------------------------------------
+*/
+
+@media (max-width: 1199.98px){
+  .menuzord-responsive .menuzord-menu li .indicator{
+		color: #111;
+		background: var(--theme-color1);
+  }
+}
+
+
+header#header {
+	.header-nav {
+		.header-nav-container {
+			box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+			.custom-button {
+			}
+		}
+	}
+	.nav-side-icon-list {
+		display: inline-block;
+		@include media-breakpoint-down(xl) {
+			float: left;
+		}
+		> li {
+			padding: 0 12px;
+			margin-top: -4px;
+
+			.custom-button {
+				margin-top: -5px;
+				margin-left: 30px;
+			}
+			&:last-child {
+				padding-right: 0;
+			}
+		}
+	}
+}

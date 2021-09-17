@@ -1,0 +1,34 @@
+/*
+ * elements: forms.scss
+ * -----------------------------------------------
+*/
+.woocommerce {
+	.woocommerce-form-login {
+		.input-text {
+			&:active, &:focus {
+				box-shadow: 0 0 0 2px $theme-color1;
+			}
+		}
+	}
+	
+}
+.form-control {
+	&:active, &:focus {
+		box-shadow: 0 0 0 2px $theme-color1;
+	}
+}
+.tm-contact-form-transparent,
+.tm-request-a-call-back-form1 {
+	.form-submit-btn {
+		background-color: $theme-color1;
+		&:hover {
+			border-color: $theme-color1;
+			color: $theme-color1;
+		}
+	}
+	input[type=text]:focus,
+	input[type=email]:focus,
+	textarea:focus {
+		border-bottom-color: $theme-color1;
+	}
+}

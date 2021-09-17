@@ -1,0 +1,26 @@
+/*
+ *  cpt-staff.scss
+ * -----------------------------------------------
+*/
+.sidebar-staff {
+	.widget-staff {
+		&.staff-contact-info {
+			.dl-horizontal {
+				dt {
+					i {
+						color: $theme-color1;
+					}
+				}
+			}
+		}
+	}
+}
+.tm-sc-staff {
+	.contact-info {
+		li {
+			i {
+				color: $theme-color1;
+			}
+		}
+	}
+}

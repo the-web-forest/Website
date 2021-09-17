@@ -1,0 +1,36 @@
+/* --------------------------------------
+$Author: ThemeMascot
+$URL: https://themeforest.net/user/ThemeMascot
+----------------------------------------- */
+/*
+ * rtl.scss
+ * -----------------------------------------------
+*/
+html,
+body {
+  direction: rtl; }
+
+html[dir="rtl"] {
+  /* breadcrumb */
+  /* widget */ }
+  html[dir="rtl"] .bx-wrapper {
+    direction: ltr; }
+  html[dir="rtl"] .breadcrumb > li + li::before {
+    content: "";
+    padding: 0; }
+  html[dir="rtl"] .breadcrumb > li + li::after {
+    content: "\f053";
+    font-family: "Font Awesome 5 Free";
+    color: #aaa;
+    font-size: 8px;
+    padding: 0 10px; }
+  html[dir="rtl"] .btn-read-more::after {
+    content: "\f177"; }
+  html[dir="rtl"] [type=email], html[dir="rtl"] [type=file], html[dir="rtl"] [type=password], html[dir="rtl"] [type=tel], html[dir="rtl"] [type=url], html[dir="rtl"] code, html[dir="rtl"] samp {
+    text-align: right;
+    direction: rtl; }
+  html[dir="rtl"] .widget.widget_archive ul > li::before, html[dir="rtl"] .widget.widget_categories ul > li::before, html[dir="rtl"] .widget.widget_pages ul > li::before, html[dir="rtl"] .widget.widget_meta ul > li::before, html[dir="rtl"] .widget.widget_recent_comments ul > li::before, html[dir="rtl"] .widget.widget_recent_entries ul > li::before, html[dir="rtl"] .widget.widget_rss ul > li::before, html[dir="rtl"] .widget.widget_nav_menu ul > li::before {
+    content: "\f0d9"; }
+  html[dir="rtl"] .widget.widget_recent_comments ul > li::before {
+    content: "\f104";
+    padding-left: 5px; }

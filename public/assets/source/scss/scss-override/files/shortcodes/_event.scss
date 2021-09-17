@@ -1,0 +1,28 @@
+/*
+ * event.scss
+ * -----------------------------------------------
+*/
+.upcoming-events {
+	background: #fff;
+	box-shadow: 0 20px 30px rgba(0,0,0,.15);
+	border-radius: 10px;
+	overflow: hidden;
+	.thumb {
+	}
+	.event-details {
+		padding: 30px;
+	}
+	.event-meta {
+		list-style: none;
+		color: #aaa;
+		margin-bottom: 15px;
+		font-size: 14px;
+		li {
+			display: inline-block;
+			margin-right: 10px;
+			i {
+				margin-right: 5px;
+			}
+		}
+	}
+}

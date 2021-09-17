@@ -1,0 +1,55 @@
+/*
+ * Shortcode: screenshot-gallery.scss
+ * -----------------------------------------------
+*/
+.tm-sc-screenshot-gallery {
+	position: relative;
+	padding: 0;
+	max-width: 1800px;
+	margin: 0 auto;
+	.screenshot-gallery-inner {
+		.screenshot-mockup-holder {
+			position: absolute;
+			top: -7%;
+			width: 27%;
+			left: 50%;
+			-webkit-transform: translateX(-50%);
+			transform: translateX(-50%);
+			z-index: 9;
+			text-align: center;
+			@media (max-width: 1650px) and (min-width: 1200px) {
+				width: 29%;
+			}
+			@media (max-width: 1440px) and (min-width: 1024px) {
+				width: 20%;
+			}
+			@include media-breakpoint-down(xl) {
+				width: 49%;
+			}
+			@include media-breakpoint-down(lg) {
+				display: none;
+			}
+		}
+		.screenshots-slider {
+			.item {
+				margin: 40px 0;
+				text-align: center;
+				@include transition(all .3s ease);
+				img {
+					margin: 0 auto;
+					max-width: 100%;
+					box-shadow: 0px 5px 40px 0px rgba(0,0,0,.15);
+				}
+			}
+		}
+		.screenshot-mockup-holder + .screenshots-slider {
+			.item {
+				margin: 40px 20px;
+				img {
+					width: 290px;
+				}
+			}
+		}
+
+	}
+}

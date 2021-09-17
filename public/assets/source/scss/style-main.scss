@@ -1,0 +1,82 @@
+/*------------------------------------------------------------------
+[Master Stylesheet]
+
+Project:        Kologi
+Version:        2.0
+Last change:    06.16.2021
+Primary use:    HTML Template
+Author:         ThemeMascot
+URL:            https://themeforest.net/user/ThemeMascot
+-------------------------------------------------------------------*/
+
+@import "preloader.css";
+@import "font-awesome5.css";
+@import "pe-icon-7-stroke.css";
+@import "elegant-icons.css";
+@import "icomoon.css";
+@import "flaticon-set-current-theme.css";
+@import "flaticon-set-communication.css";
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,500,600,700,700i|Roboto:400,500,600,700,900');
+
+// Table of contents
+@import "scss-core/table-of-content";
+
+// Import bootstrap variables and mixins for reference
+@import "scss-bootstrap/functions";
+@import "scss-bootstrap/variables";
+@import "scss-bootstrap/mixins";
+
+// Initialize Variables
+@import "scss-core/mixins/transform";
+@import "scss-core/mixins/mixins";
+@import "scss-core/variables";
+
+// Typography
+@import "scss-core/reset";
+@import "scss-core/typography";
+
+// Common Styles
+@import "scss-core/common";
+@import "scss-core/container";
+@import "scss-core/overlay";
+
+// Header
+@import "scss-core/header/loader";
+
+// Content Blocks
+@import "scss-core/news/loader";
+@import "scss-core/page-title";
+@import "scss-core/boxed-layout";
+@import "scss-core/dark-layout";
+@import "scss-core/form";
+@import "scss-core/isotope-layout";
+@import "scss-core/owl-carousel";
+@import "scss-core/sliders";
+@import "scss-core/404";
+@import "scss-core/archive";
+@import "scss-core/page";
+@import "scss-core/parts/parts";
+
+
+// Shortcodes
+@import "scss-core/shortcodes/loader";
+
+// Widgets
+@import "scss-core/widgets/loader";
+
+// Shop
+@import "scss-core/shop/loader";
+
+// theme css loader
+@import "scss-extend-plugins/loader";
+
+// Footer
+@import "scss-core/footer/loader";
+
+// override
+@import "scss-override/loader";
+
+// custom bootstrap margin padding
+@import "scss-core/responsive";
+@import "tm-bs-mp.css";
+@import "tm-utility-classes.css";

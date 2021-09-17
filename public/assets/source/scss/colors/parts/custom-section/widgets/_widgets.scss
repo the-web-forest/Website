@@ -1,0 +1,72 @@
+/*
+ * widgets.scss
+ * -----------------------------------------------
+*/
+
+.widget {
+	&.widget_tag_cloud,
+	&.widget_product_tag_cloud {
+		.tagcloud {
+			> a {
+				&:hover {
+					background: $theme-color1;
+				}
+			}
+		}
+	}
+	&.widget_calendar {
+		#today {
+			background: $theme-color1;
+		}
+		tfoot {
+			a:hover {
+				color: $theme-color1;
+			}
+		}
+	}
+}
+
+.widget {
+	&.widget_archive,
+	&.widget_categories,
+	&.widget_pages,
+	&.widget_meta,
+	&.widget_recent_comments,
+	&.widget_rss,
+	&.widget_nav_menu {
+		ul {
+			> li {
+				&::before {
+					color: $theme-color1;
+				}
+			}
+		}
+	}
+	
+	ul {
+		> li {
+			&:hover {
+				&::before {
+					color: $theme-color1;
+				}
+				> a {
+					color: $theme-color1;
+				}
+			}
+		}
+	}
+}
+
+.widget {
+	&.widget_nav_menu {
+		ul {
+			> li {
+				&.current-menu-item {
+					&:before {
+						color: $theme-color1;
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,22 @@
+/*
+ * Shortcode: common.scss
+ * -----------------------------------------------
+*/
+
+.widget {
+	&.widget_archive,
+	&.widget_categories,
+	&.widget_pages,
+	&.widget_meta,
+	&.widget_recent_comments,
+	&.widget_rss,
+	&.widget_nav_menu {
+		ul {
+			> li {
+				&::before {
+					color: $theme-color3;
+				}
+			}
+		}
+	}
+}

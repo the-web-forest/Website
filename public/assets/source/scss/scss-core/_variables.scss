@@ -1,0 +1,143 @@
+//
+// variables
+// --------------------------------------------------
+
+
+//== Colors
+//
+//## Gray and brand colors for use across Bootstrap.
+
+$black:					#000;
+$black-111:				#111;
+$black-222:				#222;
+$black-333:				#333;
+$black-444:				#444;
+$black-555:				#555;
+$black-666:				#666;
+$black-777:				#777;
+$black-888:				#888;
+$black-999:				#999;
+
+$gray-dimgray:			#696969;
+$gray-light:			#777;
+$gray-base:			 	#808080;
+
+$gray-darkgray:			#a9a9a9;
+$gray-bbb:				#bbb;
+$gray-silver:			#9cadc2;
+$gray-lightgray:		#d3d3d3;
+$gray-gainsboro:		#dcdcdc;
+$gray-silver-light:		#EBEEF5;
+
+$gray-lighter:			#eee;
+
+$gray-aaa:				#aaa;
+$gray-bbb:				#bbb;
+$gray-ccc:				#ccc;
+$gray-ddd:				#ddd;
+$gray-eee:				#eee;
+
+
+$dark-layout-default-bg-color:		#151515;
+$gray-silver-text-color:	#9b9ea8;
+
+
+
+//## White colors
+$white:			 		 #fff;
+$white-base:			 #fff;
+$white-f1:			 	 #f1f1f1;
+$white-f2:			 	 #f2f2f2;
+$white-f3:			 	 #f3f3f3;
+$white-f4:			 	 #f4f4f4;
+$white-f5:			 	 #f5f5f5;
+$white-f6:			 	 #f6f6f6;
+$white-f7:			 	 #f7f7f7;
+$white-f8:			 	 #f8f8f8;
+$white-f9:			 	 #f9f9f9;
+$white-fa:			 	 #fafafa;
+$white-fb:			 	 #fbfbfb;
+$white-fc:			 	 #fcfcfc;
+$white-fd:			 	 #fdfdfd;
+$white-fe:			 	 #fefefe;
+
+
+
+// variables-typography
+@import "variables-typography";
+
+
+
+
+//== Folder Path
+//
+$icon-font-path:		"../fonts/";
+$images-path:			"../images/";
+
+
+//== Container Padding Top Bottom
+//
+$container-pt: 		100px;
+$container-pb: 		100px;
+$section-title-mb:	60px;
+
+
+//== Buttons
+$tm-btn-colors: ();
+$btn-default-color:			#666;
+$btn-gray-color:			$black-666;
+
+$tm-btn-colors: map-merge(
+  (
+    "gray":  $btn-gray-color,
+  ),
+  $tm-btn-colors
+);
+
+$btn-padding-y-xs:      .50rem;
+$btn-padding-x-xs:      1rem;
+$btn-line-height-xs:    $line-height-sm;
+$font-size-xs:          ($font-size-base * .800);
+
+
+// Durations
+$fastDuration: .1s;
+$mediumDuration: .3s;
+$slowDuration: .5s;
+
+
+//-- Z-index master list
+$zindex-side-push-panel-body-overlay:	 -1;
+$zindex-side-push-panel-side-panel-open-body-overlay:	 1111;
+$zindex-side-panel:	 1112;
+$zindex-side-panel-trigger:	 11;
+$zindex-vertical-header-header:	 101;
+$zindex-layer-overlay-before:	 0;
+$zindex-maximage-layer-overlay-before:	1;
+$zindex-bg-video:	-1;
+$zindex-bg-video-video-mbYTP_wrapper:	-1;
+$zindex-scrollToTop:	99999;
+
+
+$widget-margin-bottom: 45px;
+$footer-widget-margin-bottom: 45px;
+
+
+$top-nav-font-size: 1rem;
+$dropdown-menu-item-link-fontsize: 0.90rem;
+$dropdown-menu-item-link-megamenu-fontsize: 0.85rem;
+
+
+$ul-li-padding-left: 20px;
+$ul-li-padding-left-with-arrow: 15px;
+
+
+//footer
+$footer-bg-color:				#1a1a1a;
+$footer-primary-text-color:	 	#bbb;
+$footer-link-color:	 			#bbb;
+$footer-widget-title-color:	 	#fff;
+$sidebar_link_color: 			#7d848a;
+
+$footer-bottom-bg-color:		$black-222;
+$footer-bottom-text-color:		$black-888;

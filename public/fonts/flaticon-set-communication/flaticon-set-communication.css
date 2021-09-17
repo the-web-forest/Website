@@ -1,0 +1,79 @@
+	/*
+  	Flaticon icon font: Flaticon
+  	Creation date: 23/07/2018 08:21
+  	*/
+
+@font-face {
+  font-family: "flaticon-set-communication";
+  src: url("./flaticon-set-communication.eot");
+  src: url("./flaticon-set-communication.eot?#iefix") format("embedded-opentype"),
+       url("./flaticon-set-communication.woff") format("woff"),
+       url("./flaticon-set-communication.ttf") format("truetype"),
+       url("./flaticon-set-communication.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "flaticon-set-communication";
+    src: url("./flaticon-set-communication.svg#flaticon-set-communication") format("svg");
+  }
+}
+
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+[class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
+  font-family: flaticon-set-communication;
+  font-style: normal;
+}
+
+.flaticon-contact-001-send-mail:before { content: "\f100"; }
+.flaticon-contact-002-message:before { content: "\f101"; }
+.flaticon-contact-003-mail-4:before { content: "\f102"; }
+.flaticon-contact-004-mail-3:before { content: "\f103"; }
+.flaticon-contact-005-telephone-2:before { content: "\f104"; }
+.flaticon-contact-006-home-message:before { content: "\f105"; }
+.flaticon-contact-007-mail-2:before { content: "\f106"; }
+.flaticon-contact-008-mobile-phone:before { content: "\f107"; }
+.flaticon-contact-009-phone-3:before { content: "\f108"; }
+.flaticon-contact-010-mail-1:before { content: "\f109"; }
+.flaticon-contact-011-web:before { content: "\f10a"; }
+.flaticon-contact-012-mouse:before { content: "\f10b"; }
+.flaticon-contact-013-sending-call:before { content: "\f10c"; }
+.flaticon-contact-014-online-question:before { content: "\f10d"; }
+.flaticon-contact-015-mail:before { content: "\f10e"; }
+.flaticon-contact-016-send-1:before { content: "\f10f"; }
+.flaticon-contact-017-telephone-1:before { content: "\f110"; }
+.flaticon-contact-018-telephone:before { content: "\f111"; }
+.flaticon-contact-019-video-chat:before { content: "\f112"; }
+.flaticon-contact-020-template:before { content: "\f113"; }
+.flaticon-contact-021-mailbox:before { content: "\f114"; }
+.flaticon-contact-022-send:before { content: "\f115"; }
+.flaticon-contact-023-contact:before { content: "\f116"; }
+.flaticon-contact-024-globe:before { content: "\f117"; }
+.flaticon-contact-025-world:before { content: "\f118"; }
+.flaticon-contact-026-email-5:before { content: "\f119"; }
+.flaticon-contact-027-email-4:before { content: "\f11a"; }
+.flaticon-contact-028-phone-2:before { content: "\f11b"; }
+.flaticon-contact-029-write-letter:before { content: "\f11c"; }
+.flaticon-contact-030-email-3:before { content: "\f11d"; }
+.flaticon-contact-031-time-call-1:before { content: "\f11e"; }
+.flaticon-contact-032-time-call:before { content: "\f11f"; }
+.flaticon-contact-033-telephone-book:before { content: "\f120"; }
+.flaticon-contact-034-schedule:before { content: "\f121"; }
+.flaticon-contact-035-website:before { content: "\f122"; }
+.flaticon-contact-036-calendar:before { content: "\f123"; }
+.flaticon-contact-037-address:before { content: "\f124"; }
+.flaticon-contact-038-email-2:before { content: "\f125"; }
+.flaticon-contact-039-home:before { content: "\f126"; }
+.flaticon-contact-040-profile:before { content: "\f127"; }
+.flaticon-contact-041-text:before { content: "\f128"; }
+.flaticon-contact-042-phone-1:before { content: "\f129"; }
+.flaticon-contact-043-email-1:before { content: "\f12a"; }
+.flaticon-contact-044-call-1:before { content: "\f12b"; }
+.flaticon-contact-045-call:before { content: "\f12c"; }
+.flaticon-contact-046-chat-1:before { content: "\f12d"; }
+.flaticon-contact-047-location:before { content: "\f12e"; }
+.flaticon-contact-048-email:before { content: "\f12f"; }
+.flaticon-contact-049-chat:before { content: "\f130"; }
+.flaticon-contact-050-phone:before { content: "\f131"; }

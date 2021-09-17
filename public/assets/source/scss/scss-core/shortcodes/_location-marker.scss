@@ -1,0 +1,77 @@
+/*
+ * Shortcode: location-marker.scss
+ * -----------------------------------------------
+*/
+.tm-sc-location-marker {
+	position: relative;
+	.bg-img {
+		text-align: center;
+	}
+	.each-location {
+		position: absolute;
+		height: 25px;
+		width: 25px;
+		background: #00c3ed;
+		border-radius: 50%;
+		cursor: pointer;
+		transition: .3s all linear;
+		border: 2px solid #fff;
+		@include scale(.8);
+		.each-location-details {
+			width: 280px;
+			background: #fff;
+			position: absolute;
+			left: -88px;
+			top: 20px;
+			box-shadow: 1px 0 30px #dae0ef;
+			border: 1px solid #dae0ef;
+			text-align: left;
+			padding: 25px 30px;
+			visibility: hidden;
+			opacity: 0;
+			transition: .3s all linear;
+			z-index: 10;
+			border-radius: 5px;
+			.title {
+				margin-top: 0;
+				margin-bottom: 5px;
+				font-size: 18px;
+				line-height: 1.4;
+			}
+			.content {
+				font-size: 0.85rem;
+				line-height: 1.5;
+			}
+		}
+
+		&.marker1 {
+			top: 20%;
+			left: 20%;
+		}
+		&.marker2 {
+			top: 43%;
+			left: 47%;
+		}
+		&.marker3 {
+			top: 66%;
+			left: 29%;
+		}
+		&.marker4 {
+			top: 20%;
+			left: 68%;
+		}
+		&.marker5 {
+			top: 77%;
+			left: 81%;
+		}
+
+		&:hover {
+			@include scale(1);
+			z-index: 10;
+			.each-location-details {
+				visibility: visible;
+				opacity: 1;
+			}
+		}
+	}
+}

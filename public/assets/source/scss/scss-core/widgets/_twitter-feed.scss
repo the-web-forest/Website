@@ -1,0 +1,55 @@
+/*
+ * twitter-feed.scss
+ * -----------------------------------------------
+*/
+.twitter-feed {
+	li {
+		&.item {
+			position: relative;
+		}
+
+		&::before {
+			content: "\f081";
+			font-size: 24px;
+			font-family: "Font Awesome 5 Brands";
+			font-weight: 600;
+			display: block;
+		}
+	}
+}
+.widget {
+	.twitter-feed {
+		li {
+			&::before {
+				left: 0;
+				position: absolute;
+				top: 0;
+			}
+		}
+	}
+}
+.twitter-feed,
+.twitter-feed-carousel {
+	li {
+		font-size: 0.85rem;
+		line-height: 1.7;
+		margin-bottom: 12px;
+		padding-bottom: 12px;
+		margin-top: 0px;
+		position: relative;
+		list-style: none;
+	}
+}
+.widget {
+	.twitter-feed-carousel {
+		li {
+			line-height: 1.7;
+		}
+	}
+	.twitter-feed {
+		li {
+			padding-left: 40px;
+			line-height: 1.7;
+		}
+	}
+}

@@ -1,0 +1,24 @@
+/*
+ * Shortcode: unordered-list.scss
+ * -----------------------------------------------
+*/
+
+.tm-ordered-list {
+}
+.tm-sc-unordered-list {
+}
+.list-with-image {
+}
+
+.tm-sc-unordered-list {
+	&.current-theme-list-style1 {
+		ul, ol {
+			li {
+				span {
+					background: $theme-color2;
+				}
+				color: $theme-color2;
+			}
+		}
+	}
+}

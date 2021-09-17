@@ -1,0 +1,537 @@
+/*
+ * isotope-layout.scss
+ * -----------------------------------------------
+*/
+//variables
+$isotope-layout-filter-bg-color: #343434;
+
+/* -------- Isotop Filter ---------- */
+.isotope-layout-filter,
+.carousel-layout-filter {
+	margin-bottom: 30px;
+	a {
+		@include transition(all 100ms ease-in-out 0s);
+
+		color: #777;
+		font-size: 15px;
+		font-weight: 500;
+		margin: 0 5px 10px;
+		padding: 8px 20px 6px;
+		display: inline-block;
+		position: relative;
+		text-transform: uppercase;
+		border: 2px solid;
+		border-color: transparent;
+
+		&.active,
+		&:focus,
+		&:hover {
+			color: #fff;
+			background: $isotope-layout-filter-bg-color;
+		}
+
+		@include media-breakpoint-down(sm) {
+		}
+	}
+
+	&.filter-style-2 {
+		a {
+			border-color: $isotope-layout-filter-bg-color;
+
+			&.active,
+			&:focus,
+			&:hover {
+			}
+		}
+	}
+
+	&.filter-style-3 {
+		a {
+			border-color: #eee;
+
+			&.active,
+			&:focus,
+			&:hover {
+			}
+		}
+	}
+
+	&.filter-style-4 {
+		a {
+			background-color: #f7f7f7;
+
+			&.active,
+			&:focus,
+			&:hover {
+				background: $isotope-layout-filter-bg-color;
+			}
+		}
+	}
+
+	&.filter-style-5 {
+		a {
+			border-radius: 7px;
+
+			&.active,
+			&:focus,
+			&:hover {
+			}
+		}
+	}
+
+	&.filter-style-6 {
+		a {
+			border-radius: 7px;
+			border-color: $isotope-layout-filter-bg-color;
+
+			&.active,
+			&:focus,
+			&:hover {
+			}
+		}
+	}
+
+	&.filter-style-7 {
+		a {
+			border-radius: 7px;
+			border-color: #eee;
+
+			&.active,
+			&:focus,
+			&:hover {
+			}
+		}
+	}
+
+	&.filter-style-8 {
+		a {
+			border-radius: 7px;
+			background-color: #f7f7f7;
+
+			&.active,
+			&:focus,
+			&:hover {
+				background: $isotope-layout-filter-bg-color;
+			}
+		}
+	}
+
+	&.filter-style-9 {
+		a {
+			border-width: 2px;
+			border-radius: 30px;
+
+			&.active,
+			&:focus,
+			&:hover {
+			}
+		}
+	}
+
+	&.filter-style-10 {
+		a {
+			border-width: 2px;
+			border-radius: 30px;
+			border-color: $isotope-layout-filter-bg-color;
+
+			&.active,
+			&:focus,
+			&:hover {
+			}
+		}
+	}
+
+	&.filter-style-11 {
+		a {
+			border-width: 2px;
+			border-radius: 30px;
+			border-color: #eee;
+
+			&.active,
+			&:focus,
+			&:hover {
+			}
+		}
+	}
+
+	&.filter-style-12 {
+		a {
+			border-width: 2px;
+			border-radius: 30px;
+			background-color: #f7f7f7;
+
+			&.active,
+			&:focus,
+			&:hover {
+				background: $isotope-layout-filter-bg-color;
+			}
+		}
+	}
+
+	&.filter-style-13 {
+		a {
+			border-width: 2px;
+			border-radius: 15px 0;
+
+			&.active,
+			&:focus,
+			&:hover {
+			}
+		}
+	}
+
+	&.filter-style-14 {
+		a {
+			border-width: 2px;
+			border-radius: 15px 0;
+			border-color: $isotope-layout-filter-bg-color;
+
+			&.active,
+			&:focus,
+			&:hover {
+			}
+		}
+	}
+
+	&.filter-style-15 {
+		a {
+			border-width: 2px;
+			border-radius: 15px 0;
+			border-color: #eee;
+
+			&.active,
+			&:focus,
+			&:hover {
+			}
+		}
+	}
+
+	&.filter-style-16 {
+		a {
+			border-width: 2px;
+			border-radius: 15px 0;
+			background-color: #f7f7f7;
+
+			&.active,
+			&:focus,
+			&:hover {
+				background: $isotope-layout-filter-bg-color;
+			}
+		}
+	}
+
+	&.filter-style-flat {
+		a {
+			margin-left: 20px;
+			padding: 0;
+			background: none;
+			border-bottom: 1px solid transparent;
+
+			&.active,
+			&:focus,
+			&:hover {
+				color: $black-333;
+				border-bottom-color: $black-333;
+			}
+
+			&:first-child {
+				margin-left: 0;
+			}
+		}
+	}
+
+
+	&.btn-group {
+		a {
+			background-color: $white-fc;
+			
+			&.active,
+			&:focus,
+			&:hover {
+				box-shadow: none;
+				background-color: $black-444;
+				color: $white-base;
+			}
+		}
+	}
+}
+
+/* -------- Isotop Sorter ---------- */
+.isotope-layout-sorter {
+	margin-bottom: 30px;
+	a {
+		background-color: $white-fc;
+		@include transition(all 100ms ease-in-out 0s);
+		&.active ,
+		&:hover {
+			box-shadow: none;
+			background-color: $black-444;
+			color: $white-base;
+		}
+		@include media-breakpoint-down(sm) {
+			margin-bottom: 10px;
+		}
+	}
+}
+
+/* -------- Isotop Gallery ---------- */
+.isotope-layout {
+	/* by default 4 grids */
+	.isotope-layout-inner {
+		position: relative;
+	}
+	.isotope-item {
+		padding: 0 15px;
+		margin: 0 0 30px;
+		float: left;
+		width: 25%;
+		.isotope-item-inner {
+			position: relative;
+			height: 100%;
+		}
+		&.tm-masonry-large-wide, &.tm-masonry-large-width-height {
+			width: 50%;
+		}
+	
+		/* item sizer */
+		&.isotope-item-sizer {
+			padding: 0 !important;
+			margin-bottom: 0 !important;
+			width: 25%;
+			&.tm-masonry-large-wide, &.tm-masonry-large-width-height {
+				width: 50%;
+			}
+		}
+		.thumb {
+			img {
+				width: 100%;
+			}
+		}
+	}
+	&.isotope-layout-single-item:not(.shop-archive) {
+		margin-left: 0;
+		.isotope-item {
+			padding-right: 0;
+			padding-left: 0;
+			.hentry {
+				margin-bottom: 0;
+				padding-bottom: 0;
+			}
+		}
+	}
+
+	/*portfolio 2 grids*/
+	&.grid-1 .isotope-item {
+		width: 100%;
+		&.tm-masonry-large-wide, &.tm-masonry-large-width-height {
+			width: 100%;
+		}
+	}
+
+	/*portfolio 2 grids*/
+	&.grid-2 .isotope-item {
+		width: 49.99%;
+		&.tm-masonry-large-wide, &.tm-masonry-large-width-height {
+			width: 100%;
+		}
+	}
+
+	/*portfolio 3 grids*/
+	&.grid-3 .isotope-item {
+		width: 33.2%;
+		&.tm-masonry-large-wide, &.tm-masonry-large-width-height {
+			width: 66.4%;
+		}
+	}
+
+	/*portfolio 4 grids*/
+	&.grid-4 {
+		width: 100.1%;
+		width: calc(100% + 1px);
+	}
+	&.grid-4 .isotope-item {
+		width: 25%;
+		&.tm-masonry-large-wide, &.tm-masonry-large-width-height {
+			width: 50%;
+		}
+	}
+
+	/*portfolio 5 grids*/
+	&.grid-5 .isotope-item {
+		width: 20%;
+		&.tm-masonry-large-wide, &.tm-masonry-large-width-height {
+			width: 40%;
+		}
+	}
+
+	/*portfolio 6 grids*/
+	&.grid-6 .isotope-item {
+		width: 16.5%;
+		&.tm-masonry-large-wide, &.tm-masonry-large-width-height {
+			width: 33%;
+		}
+	}
+
+	/*portfolio 7 grids*/
+	&.grid-7 .isotope-item {
+		width: 14.2%;
+		&.tm-masonry-large-wide, &.tm-masonry-large-width-height {
+			width: 28.4%;
+		}
+	}
+
+	/*portfolio 8 grids*/
+	&.grid-8 .isotope-item {
+		width: 12.5%;
+		&.tm-masonry-large-wide, &.tm-masonry-large-width-height {
+			width: 25%;
+		}
+	}
+
+	/*portfolio 9 grids*/
+	&.grid-9 .isotope-item {
+		width: 11%;
+		&.tm-masonry-large-wide, &.tm-masonry-large-width-height {
+			width: 22%;
+		}
+	}
+
+	/*portfolio 10 grids*/
+	&.grid-10 .isotope-item {
+		width: 10%;
+		&.tm-masonry-large-wide, &.tm-masonry-large-width-height {
+			width: 20%;
+		}
+	}
+
+
+	/*gutter*/
+	.isotope-layout-inner {
+		margin: 0 -15px;
+	}
+	.isotope-item {
+		padding: 0 15px;
+		margin: 0 0 30px;
+	}
+	
+	&.gutter {
+		.isotope-layout-inner {
+			margin: 0 -15px;
+		}
+		.isotope-item {
+			padding: 0 15px;
+			margin: 0 0 30px;
+		}
+	}
+	&.gutter-0 {
+		.isotope-layout-inner {
+			margin: 0;
+		}
+		.isotope-item {
+			padding: 0;
+			margin: 0;
+		}
+	}
+	&.gutter-5 {
+		.isotope-layout-inner {
+			margin: 0 -5px;
+		}
+		.isotope-item {
+			padding: 0 5px;
+			margin: 0 0 10px;
+		}
+	}
+	&.gutter-10 {
+		.isotope-layout-inner {
+			margin: 0 -10px;
+		}
+		.isotope-item {
+			padding: 0 10px;
+			margin: 0 0 20px;
+		}
+	}
+	&.gutter-15 {
+		.isotope-layout-inner {
+			margin: 0 -15px;
+		}
+		.isotope-item {
+			padding: 0 15px;
+			margin: 0 0 30px;
+		}
+	}
+	&.gutter-20 {
+		.isotope-layout-inner {
+			margin: 0 -20px;
+		}
+		.isotope-item {
+			padding: 0 20px;
+			margin: 0 0 40px;
+		}
+	}
+	&.gutter-30 {
+		.isotope-layout-inner {
+			margin: 0 -30px;
+		}
+		.isotope-item {
+			padding: 0 30px;
+			margin: 0 0 60px;
+		}
+	}
+	&.gutter-40 {
+		.isotope-layout-inner {
+			margin: 0 -40px;
+		}
+		.isotope-item {
+			padding: 0 40px;
+			margin: 0 0 80px;
+		}
+	}
+	&.gutter-50 {
+		.isotope-layout-inner {
+			margin: 0 -50px;
+		}
+		.isotope-item {
+			padding: 0 50px;
+			margin: 0 0 100px;
+		}
+	}
+	&.gutter-60 {
+		.isotope-layout-inner {
+			margin: 0 -60px;
+		}
+		.isotope-item {
+			padding: 0 60px;
+			margin: 0 0 120px;
+		}
+	}
+}
+
+/* -------- Isotop Item Media Query ---------- */
+.isotope-layout {
+	.isotope-item {
+		@include media-breakpoint-down(xl) {
+			width: 50% !important;
+			&.tm-masonry-large-wide, &.tm-masonry-large-width-height {
+				width: 100% !important;
+			}
+		}
+		@include media-breakpoint-down(lg) {
+			width: 50% !important;
+			&.tm-masonry-large-wide, &.tm-masonry-large-width-height {
+				width: 100% !important;
+			}
+		}
+		@include media-breakpoint-down(md) {
+			width: 100% !important;
+			&.tm-masonry-large-wide, &.tm-masonry-large-width-height {
+				width: 100% !important;
+			}
+		}
+		@include media-breakpoint-down(sm) {
+			width: 100% !important;
+			&.tm-masonry-large-wide, &.tm-masonry-large-width-height {
+				width: 100% !important;
+			}
+		}
+	}
+}

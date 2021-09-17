@@ -1,0 +1,43 @@
+/*
+ * widget-contact-info.scss
+ * -----------------------------------------------
+*/
+
+.tm-widget-contact-info {
+	&.contact-icon-theme-colored1 {
+		li {
+			.icon {
+				i {
+					color: $theme-color1;
+				}
+			}
+		}
+	}
+	&.contact-icon-theme-colored2 {
+		li {
+			.icon {
+				i {
+					color: $theme-color2;
+				}
+			}
+		}
+	}
+	&.contact-icon-theme-colored3 {
+		li {
+			.icon {
+				i {
+					color: $theme-color3;
+				}
+			}
+		}
+	}
+	&.contact-icon-theme-colored4 {
+		li {
+			.icon {
+				i {
+					color: $theme-color4;
+				}
+			}
+		}
+	}
+}

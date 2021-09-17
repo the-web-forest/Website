@@ -1,0 +1,54 @@
+/*
+ * Shortcode: icon-box.scss
+ * -----------------------------------------------
+*/
+.bubble-hover {
+	position: relative;
+	overflow: hidden;
+	&:after {
+		content: '';
+		width: 191px;
+		height: 191px;
+		border-radius: 50%;
+		background-color: #bac4c9;
+		opacity: .1;
+		position: absolute;
+		-webkit-transition: all .4s ease-in-out;
+		transition: all .4s ease-in-out;
+		transition-delay: .3s;
+		bottom: 0;
+		left: 0;
+		-webkit-transform: translate(-90%, 90%);
+		transform: translate(-60%, 60%);
+	}
+	&:before {
+		content: '';
+		width: 191px;
+		height: 191px;
+		border-radius: 50%;
+		background-color: #bac4c9;
+		opacity: .1;
+		position: absolute;
+		-webkit-transition: all .3s ease-in-out;
+		transition: all .3s ease-in-out;
+		transition-delay: .2s;
+		bottom: 0;
+		left: 0;
+		-webkit-transform: translate(-90%, 90%);
+		transform: translate(-55%, 55%);
+	}
+	&:hover {
+		&:before {
+			bottom: 0;
+			left: 0;
+			-webkit-transform: translate(0%, 0%);
+			transform: translate(-20%, 20%);
+		}
+		&:after {
+			bottom: 0;
+			left: 0;
+			-webkit-transform: translate(-30%, 30%);
+			transform: translate(-30%, 30%);
+		}
+	}
+}

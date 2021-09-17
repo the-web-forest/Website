@@ -1,0 +1,281 @@
+/* --------------------------------------
+$Author: ThemeMascot
+$URL: https://themeforest.net/user/ThemeMascot
+----------------------------------------- */
+
+
+/*
+ * Dark.scss
+ * -----------------------------------------------
+*/
+
+
+// Import bootstrap variables and mixins for reference
+@import "scss-bootstrap/functions";
+@import "scss-bootstrap/variables";
+@import "scss-bootstrap/mixins";
+
+@import "scss-core/variables";
+$dark-headings-color: #bbb;
+body.dark-layout {
+	background-color: #1e1e1e !important;
+	color: darken($white-base, 40%);
+}
+.dark-layout {
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	.h1,
+	.h2,
+	.h3,
+	.h4,
+	.h5,
+	.h6 {
+		color: lighten($dark-headings-color, 50%);
+		a {
+			color: lighten($dark-headings-color, 50%);
+		}
+	}
+	.header#header .header-top .element,
+	.header#header .header-top .element a {
+		color: darken($white-base, 20%) !important;
+	}
+	.header-layout-type-header-2rows {
+		.header-nav-container {
+			background-color: darken($white-base, 85.5%) !important;
+		}
+	}
+	.menuzord-menu > li > a {
+		color: darken($white-base, 40%);
+	}
+	.divider-dark {
+		background-color: darken($white-base, 85.5%) !important;
+	}
+	/*Bacground Color*/
+	.bg-deep {
+		background-color: darken($white-base, 90%) !important;
+	}
+	.bg-light {
+		background-color: darken($white-base, 87.5%) !important;
+	}
+	.bg-lighter {
+		background-color: darken($white-base, 85%) !important;
+	}
+	.bg-lightest {
+		background-color: darken($white-base, 80%) !important;
+	}
+	.bg-white-light {
+		background-color: $black-333 !important;
+	}
+	/*Bacground Transparent Color*/
+	.bg-deep-transparent {
+		background-color: rgba($black, .90);
+	}
+	.bg-light-transparent {
+		background-color: rgba($black, .80);
+	}
+	.bg-lighter-transparent {
+		background-color: rgba($black, .70);
+	}
+	.bg-lightest-transparent {
+		background-color: rgba($black, .50);
+	}
+	.bg-very-lightest-transparent {
+		background-color: rgba($black, .20);
+	}
+	/*Text Color*/
+	.text-black-333 {
+		color: lighten($dark-headings-color, 50%) !important;
+	}
+	.text-white-light {
+		color: darken($white-base, 70%) !important;
+	}
+	/*Layer Overlay*/
+	.layer-overlay.overlay-light::before {
+		background-color: rgba(darken($white-base, 87%), .80);
+	}
+	.layer-overlay.overlay-lighter::before {
+		background-color: rgba(darken($white-base, 87%), .70);
+	}
+	.layer-overlay.overlay-deep::before {
+		background-color: rgba(darken($white-base, 87%), .90);
+	}
+	.tm-sc-blog article .entry-content {
+		background-color: darken($white-base, 85%);
+	}
+	/*Custom Theme Styles*/
+	hr {
+		border-color: $black-333;
+	}
+	.border-1px {
+		border: 1px solid $black-333;
+	}
+	.border-10px,
+	.blog-posts .post.style1 {
+		border-color: darken($white-base, 90%) !important;
+	}
+	.border-1px {
+		border-color: $black-333 !important;
+	}
+	.border-2px {
+		border-color: $black-333 !important;
+	}
+	.border-3px,
+	.title-border {
+		border-color: $black-333 !important;
+	}
+	.border-4px {
+		border-color: $black-333 !important;
+	}
+	.border-5px {
+		border-color: $black-333 !important;
+	}
+	.event {
+		border-color: $black-333 !important;
+	}
+	.team-carousel-1col .team-thum {
+		border-color: darken($white-base, 90%) !important;
+	}
+	.pricing-table.style1 .pricing-icon i {
+		border-color: darken($white-base, 90%) !important;
+	}
+	.service-icon-box a {
+		background-color: rgba(darken($white-base, 87%), .60) !important;
+	}
+	.owl-carousel.owl-nav-top .owl-controls .owl-nav .owl-prev,
+	.owl-carousel.owl-nav-top .owl-controls .owl-nav .owl-next {
+		background: darken($white-base, 75%) !important;
+	}
+	.bx-controls .bx-controls-direction>a {
+		background: darken($white-base, 75%) !important;
+	}
+	.funfact.bg-white {
+		background: darken($white-base, 85%) !important;
+	}
+	.funfact.style-1:hover .funfact-title {
+		color: $black-555 !important;
+	}
+	.separator::before,
+	.separator::after {
+		border-bottom: 1px solid $black-333;
+	}
+	.register-form .form-control {
+		background: rgba($black, .20);
+		border-color: $black-333;
+	}
+	.login-form {
+		border: 1px solid $black-333;
+	}
+	.form-control {
+		background: rgba($black, .20);
+		border-color: $black-333;
+		color: #ccc;
+	}
+	.login-form .form-control,
+	.register-form .form-control {
+		background: rgba($black, .20);
+		border-color: $black-555;
+	}
+	.login-form.login-form-transparent {
+		background-color: $black-222;
+	}
+	.tab-content {
+		border: 1px solid $black-333;
+	}
+	.services-tab .nav-tabs,
+	.services-tab .nav-tabs>li {
+		border-color: darken($white-base, 90%) !important;
+	}
+	.services-tab .nav-tabs>li>a {
+		background-color: darken($white-base, 70%) !important;
+	}
+	.header-nav .header-nav-wrapper.scroll-to-fixed-fixed.scroll-to-fixed-fixed {
+		border-bottom-color: $black-444;
+	}
+	.nav-tabs>li>a:hover,
+	.nav-tabs>li>a:focus {
+		color: $gray-base;
+	}
+	.nav-tabs>li>a:hover,
+	.nav-tabs>li.active a {
+		border-color: $black-333;
+	}
+	.nav-sidebar li {
+		background-color: darken($white-base, 86%) !important;
+	}
+	/* toggle accordion */
+	.panel-group {
+		.panel {
+			background-color: darken($white-base, 85%) !important;
+			.panel-title {
+				a {
+					background-color: rgba(darken($white-base, 87%), .50) !important;
+					&:hover {
+						color: $white-f5 !important;
+					}
+				}
+				a.active {
+					background-color: rgba(darken($white-base, 89%), .80) !important;
+					border-bottom-color: rgba(darken($white-base, 91%), .80) !important;
+					color: $white-f5 !important;
+					&:after {
+						background-color: $black-333 !important;
+					}
+				}
+			}
+			.panel-content {
+				background-color: rgba(darken($white-base, 89%), .80) !important;
+			}
+		}
+		&.transparent .panel {
+			background-color: transparent !important;
+			.panel-title {
+				a {
+					background-color: transparent !important;
+				}
+				a.active {
+					background-color: transparent!important;
+					border-bottom-color: transparent !important;
+					&:after {
+						background-color: transparent !important;
+					}
+				}
+			}
+		}
+	}
+	/*Blog Style*/
+	.blog-posts .post {
+		background-color: darken($white-base, 84.5%) !important;
+	}
+	.fc-day-number {
+		color: lighten($dark-headings-color, 50%);
+	}
+	.header-nav .header-nav-wrapper .menuzord {
+		background: transparent;
+	}
+	/* boxed-layout */
+	&.tm-boxed-layout section {
+		background: darken($white-base, 87.5%);
+	}
+	/* Feature Icon-box */
+	.feature-icon-box {
+		border: 1px solid $black-333;
+	}
+	/* Opening Hourse */
+	.opening-hours li {
+		border-bottom: 1px solid $black-333;
+	}
+	.our_testimonials:before {
+		background-color: #111;
+	}
+	.border-bottom {
+		border-bottom: 1px solid #555!important;
+	}
+	.img-icon-service-box {
+		border-color: #555;
+	}
+}
+

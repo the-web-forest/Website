@@ -1,0 +1,35 @@
+/*
+ * Shortcode: social-links.scss
+ * -----------------------------------------------
+*/
+
+.tm-sc-social-links {
+	&.links-theme-colored1 {
+		li {
+			a {
+				background: $theme-color1;
+			}
+		}
+	}
+	&.links-theme-colored2 {
+		li {
+			a {
+				background: $theme-color2;
+			}
+		}
+	}
+	&.links-theme-colored3 {
+		li {
+			a {
+				background: $theme-color3;
+			}
+		}
+	}
+	&.links-theme-colored4 {
+		li {
+			a {
+				background: $theme-color4;
+			}
+		}
+	}
+}

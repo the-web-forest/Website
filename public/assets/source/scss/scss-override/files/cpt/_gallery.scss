@@ -1,0 +1,52 @@
+/*
+ * Shortcode: gallery.scss
+ * -----------------------------------------------
+*/
+.tm-sc-gallery {
+	&.gallery-current-style1 {
+		.tm-gallery {
+			.tm-gallery-inner {
+				.thumb {
+					a {
+						img {
+							width: 100%;
+						}
+					}
+				}
+				.tm-gallery-content-wrapper {
+					.tm-gallery-content {
+						&:after {
+							bottom: 0;
+							left: 0;
+							right: 0;
+							top: 0;
+						}
+						.tm-gallery-content-inner {
+							.icons-holder-inner {
+								.styled-icons {
+									.styled-icons-item {
+										background-color: transparent;
+										border: 3px solid #2d3630;
+										font-size: 22px;
+										color: #2d3630;
+										height: 73px;
+										line-height: 68px;
+										width: 73px;
+										display: inline-block;
+										margin-right: 0;
+
+										&:hover {
+											border-color: #3d9c4d;
+											color: #3d9c4d;
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+

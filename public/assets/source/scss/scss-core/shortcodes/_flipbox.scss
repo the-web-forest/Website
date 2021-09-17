@@ -1,0 +1,108 @@
+/*
+ * Shortcode: flipbox.scss
+ * -----------------------------------------------
+*/
+.vc-hoverbox-block-inner{
+	position: absolute;
+	padding: 45px 25px;
+	text-align: center;
+	left: 0;
+	bottom: 0;
+	top: 50%;
+	height: 100%;
+	width: 100%;
+	-webkit-perspective: inherit;
+	perspective: inherit;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	-webkit-transform: translateY(-50%) translateZ(60px) scale(.94);
+	transform: translateY(-50%) translateZ(60px) scale(.94);
+	z-index: 2;
+}
+.tm-sc-flipbox {
+	position: relative;
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	-webkit-perspective: 1000px;
+	perspective: 1000px;
+	padding: 0;
+	border: 0;
+	.tm-sc-flipbox-front,
+	.tm-sc-flipbox-back {
+		-webkit-transform: rotateY(0deg);
+		transform: rotateY(0deg);
+		-webkit-transform-style: preserve-3d;
+		transform-style: preserve-3d;
+		min-height: 420px;
+		height: auto;
+		transition: -webkit-transform .6s ease;
+		transition: transform .6s ease;
+		transition: transform .6s ease, -webkit-transform .6s ease;
+		-webkit-backface-visibility: hidden;
+		backface-visibility: hidden;
+
+		&:after {
+			content: '';
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			opacity: .75;
+		}
+		.flipbox-inner {
+			position: absolute;
+			padding: 45px 25px;
+			text-align: center;
+			left: 0;
+			bottom: 0;
+			top: 50%;
+			height: 100%;
+			width: 100%;
+			-webkit-perspective: inherit;
+			perspective: inherit;
+			-webkit-backface-visibility: hidden;
+			backface-visibility: hidden;
+			-webkit-transform: translateY(-50%) translateZ(60px) scale(.94);
+			transform: translateY(-50%) translateZ(60px) scale(.94);
+			z-index: 2;
+		}
+	}
+	.tm-sc-flipbox-front {
+		background-color: #eee;
+		background-repeat: no-repeat;
+		background-size: cover;
+		border-radius: 10px;
+		background-position: 50% 50%;
+		border: 2px solid transparent;
+	}
+	.tm-sc-flipbox-back {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		border: 2px solid transparent;
+		border-radius: 10px;
+		-webkit-transform: rotateY(180deg);
+		transform: rotateY(180deg);
+		-webkit-transform-style: preserve-3d;
+		transform-style: preserve-3d;
+		.flipbox-inner {
+		}
+	}
+	&:hover {
+		.tm-sc-flipbox-front {
+			-webkit-transform: rotateY(-180deg);
+			transform: rotateY(-180deg);
+			-webkit-transform-style: preserve-3d;
+			transform-style: preserve-3d;
+		}
+		.tm-sc-flipbox-back {
+			-webkit-transform: rotateY(0deg);
+			transform: rotateY(0deg);
+			-webkit-transform-style: preserve-3d;
+			transform-style: preserve-3d;
+		}
+	}
+}

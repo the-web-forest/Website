@@ -1,0 +1,92 @@
+/*
+ * Shortcode: buttons.scss
+ * -----------------------------------------------
+*/
+
+$tm-btn-theme-colors: () !default;
+
+$tm-btn-theme-colors: map-merge(
+	(
+		"theme-colored1":  $theme-color1,
+		"theme-colored2":  $theme-color2,
+		"theme-colored3":  $theme-color3,
+		"theme-colored4":  $theme-color4,
+	),
+	$tm-btn-theme-colors
+);
+@each $color, $value in $tm-btn-theme-colors {
+	.btn-#{$color} {
+		@include button-variant($value, $value);
+	}
+}
+
+@each $color, $value in $tm-btn-theme-colors {
+	.btn-outline-#{$color} {
+		@include button-outline-variant($value);
+	}
+}
+
+//gradient btn
+@each $color, $value in $tm-btn-theme-colors {
+	.btn-gradient-#{$color} {
+		@include button-gradient-variant($value, $value);
+	}
+}
+
+.btn-theme-colored2 {
+	&:hover, &:focus {
+	}
+}
+
+.btn-modern-white {
+	&:after {
+		background-color: $theme-color1;
+	}
+	&:hover {
+		border-color: $theme-color1;
+	}
+}
+
+.btn-modern-theme-colored {
+	border-color: $theme-color1;
+	background-color: $theme-color1;
+}
+.hvr-sweep-to-right,
+.hvr-bounce-to-right,
+.hvr-shutter-out-horizontal {
+	&[class^="btn-outline-"], &[class*=" btn-outline-"] {
+		&:hover, &:focus, &:active {
+			background-color: transparent;
+		}
+		@each $color, $value in $tm-btn-theme-colors {
+			&.btn-outline-#{$color} {
+				&:before {
+					background: $value;
+				}
+			}
+		}
+	}
+}
+
+
+
+.btn-theme-colored1 {
+	color: var(--text-color-bg-theme-color1);
+	&:hover, &:focus {
+		color: var(--text-color-bg-theme-color3);
+	}
+}
+.btn-theme-colored2 {
+	color: var(--text-color-bg-theme-color2);
+	&:hover, &:focus {
+		color: var(--text-color-bg-theme-color3);
+	}
+}
+
+.btn-outline-theme-colored1,
+.btn-outline-theme-colored2 {
+	&:hover {
+		border-color: var(--theme-color3) !important;
+		color: #fff !important;
+	}
+}

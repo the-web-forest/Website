@@ -1,0 +1,22 @@
+/*
+ * shop-common
+ * -----------------------------------------------
+*/
+
+
+.product {
+	.product-header {
+		.onsale {
+			box-shadow: 0 7px 20px rgba($theme-color1,.2);
+			background-image: linear-gradient(to right, $theme-color1 0%, lighten($theme-color1, 13.5%) 51%, $theme-color1 100%);
+			&:hover {
+			}
+		}
+		&:hover {
+			.onsale {
+				box-shadow: 0 10px 20px rgba($theme-color1,.5);
+				background-position: right center;
+			}
+		}
+	}
+}

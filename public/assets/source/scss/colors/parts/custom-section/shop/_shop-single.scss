@@ -1,0 +1,30 @@
+/*
+ * shop-single.scss
+ * -----------------------------------------------
+*/
+.woocommerce {
+	div.product {
+		.woocommerce-tabs {
+			.wc-tabs {
+				li {
+					&.active {
+						border-bottom-color: $theme-color1;
+					}
+				}
+			}
+		}
+
+		.summary {
+			.yith-wcwl-add-to-wishlist {
+				.add_to_wishlist, .yith-wcwl-wishlistaddedbrowse, .yith-wcwl-wishlistexistsbrowse {
+					&:before {
+						color: $theme-color1;
+					}
+				}
+			}
+			.compare.button::before {
+				color: $theme-color1;
+			}
+		}
+	}
+}

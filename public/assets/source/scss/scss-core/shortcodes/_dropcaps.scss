@@ -1,0 +1,23 @@
+/*
+ * Shortcode: dropcaps.scss
+ * -----------------------------------------------
+*/
+.tm-sc-dropcaps {
+	.dropcaps {
+		color: #903;
+		float: left;
+		font-size: 60px;
+		line-height: 52px;
+		margin: 2px 10px 0 0;
+	}
+	&.dropcaps-fill {
+		.dropcaps {
+			background-color: #903;
+			color: #fff;
+			text-align: center;
+			padding: 10px 10px 10px 10px;
+			margin: 7px 15px 0 0;
+			min-width: 64px;
+		}
+	}
+}

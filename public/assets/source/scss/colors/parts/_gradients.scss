@@ -1,0 +1,274 @@
+/*
+ *  Gradients BG+BGTransparent Color
+ * -----------------------------------------------
+*/
+
+@mixin gradient-vertical ($startColor: #eee, $endColor: white) {
+  background-color: $startColor;
+  background: -webkit-gradient(linear, left top, left bottom, from($startColor), to($endColor));
+  background: -webkit-linear-gradient(top, $startColor, $endColor);
+  background: -moz-linear-gradient(top, $startColor, $endColor);
+  background: -ms-linear-gradient(top, $startColor, $endColor);
+  background: -o-linear-gradient(top, $startColor, $endColor);
+}
+@mixin gradient-horizontal ($startColor: #eee, $endColor: white) {
+  background: $startColor;
+  background: -webkit-gradient(linear, left top, right top, from($startColor), to($endColor));
+  background: -webkit-linear-gradient(left, $startColor, $endColor);
+  background: -moz-linear-gradient(left, $startColor, $endColor);
+  background: -ms-linear-gradient(left, $startColor, $endColor);
+  background: -o-linear-gradient(left, $startColor, $endColor);
+}
+
+
+/* Gradient BG Colors */
+.bg-theme-colored1-gradient {
+  @include gradient-vertical($theme-color1, lighten($theme-color1, 15%));
+}
+.bg-theme-colored1-gradient-horizontal {
+  @include gradient-horizontal($theme-color1, lighten($theme-color1, 15%));
+}
+
+.bg-theme-colored2-gradient {
+  @include gradient-vertical($theme-color2, lighten($theme-color2, 15%));
+}
+.bg-theme-colored2-gradient-horizontal {
+  @include gradient-horizontal($theme-color2, lighten($theme-color2, 15%));
+}
+
+.bg-theme-colored12-gradient {
+  @include gradient-vertical($theme-color1, $theme-color2);
+}
+.bg-theme-colored12-gradient-horizontal {
+  @include gradient-horizontal($theme-color1, $theme-color2);
+}
+
+.bg-theme-colored21-gradient {
+  @include gradient-vertical($theme-color2, $theme-color1);
+}
+.bg-theme-colored21-gradient-horizontal {
+  @include gradient-horizontal($theme-color2, $theme-color1);
+}
+
+
+/* -------- layer overlay gradient Color1 ---------- */
+.layer-overlay {
+ &.overlay-theme-colored1-gradient {
+   &::before {
+     @include gradient-horizontal(rgba($theme-color1,.90%), rgba(lighten($theme-color1, 20%),90))
+   }
+ }
+ &.overlay-theme-colored1-gradient-1 {
+   &::before {
+     @include gradient-horizontal(rgba($theme-color1,.10%), rgba(lighten($theme-color1, 20%),10))
+   }
+ }
+ &.overlay-theme-colored1-gradient-2 {
+   &::before {
+     @include gradient-horizontal(rgba($theme-color1,.20%), rgba(lighten($theme-color1, 20%),20))
+   }
+ }
+ &.overlay-theme-colored1-gradient-3 {
+   &::before {
+     @include gradient-horizontal(rgba($theme-color1,.30%), rgba(lighten($theme-color1, 20%),30))
+   }
+ }
+ &.overlay-theme-colored1-gradient-4 {
+   &::before {
+     @include gradient-horizontal(rgba($theme-color1,.40%), rgba(lighten($theme-color1, 20%),40))
+   }
+ }
+ &.overlay-theme-colored1-gradient-5 {
+   &::before {
+     @include gradient-horizontal(rgba($theme-color1,.50%), rgba(lighten($theme-color1, 20%),50))
+   }
+ }
+ &.overlay-theme-colored1-gradient-6 {
+   &::before {
+     @include gradient-horizontal(rgba($theme-color1,.60%), rgba(lighten($theme-color1, 20%),60))
+   }
+ }
+ &.overlay-theme-colored1-gradient-7 {
+   &::before {
+     @include gradient-horizontal(rgba($theme-color1,.70%), rgba(lighten($theme-color1, 20%),70))
+   }
+ }
+ &.overlay-theme-colored1-gradient-8 {
+   &::before {
+     @include gradient-horizontal(rgba($theme-color1,.80%), rgba(lighten($theme-color1, 20%),80))
+   }
+ }
+ &.overlay-theme-colored1-gradient-9 {
+   &::before {
+     @include gradient-horizontal(rgba($theme-color1,.90%), rgba(lighten($theme-color1, 20%),90))
+   }
+ }
+}
+
+
+
+/* -------- layer overlay gradient Color2 ---------- */
+.layer-overlay {
+ &.overlay-theme-colored2-gradient {
+   &::before {
+     @include gradient-horizontal(rgba($theme-color2,.90%), rgba(lighten($theme-color2, 20%),90))
+   }
+ }
+ &.overlay-theme-colored2-gradient-1 {
+   &::before {
+     @include gradient-horizontal(rgba($theme-color2,.10%), rgba(lighten($theme-color2, 20%),10))
+   }
+ }
+ &.overlay-theme-colored2-gradient-2 {
+   &::before {
+     @include gradient-horizontal(rgba($theme-color2,.20%), rgba(lighten($theme-color2, 20%),20))
+   }
+ }
+ &.overlay-theme-colored2-gradient-3 {
+   &::before {
+     @include gradient-horizontal(rgba($theme-color2,.30%), rgba(lighten($theme-color2, 20%),30))
+   }
+ }
+ &.overlay-theme-colored2-gradient-4 {
+   &::before {
+     @include gradient-horizontal(rgba($theme-color2,.40%), rgba(lighten($theme-color2, 20%),40))
+   }
+ }
+ &.overlay-theme-colored2-gradient-5 {
+   &::before {
+     @include gradient-horizontal(rgba($theme-color2,.50%), rgba(lighten($theme-color2, 20%),50))
+   }
+ }
+ &.overlay-theme-colored2-gradient-6 {
+   &::before {
+     @include gradient-horizontal(rgba($theme-color2,.60%), rgba(lighten($theme-color2, 20%),60))
+   }
+ }
+ &.overlay-theme-colored2-gradient-7 {
+   &::before {
+     @include gradient-horizontal(rgba($theme-color2,.70%), rgba(lighten($theme-color2, 20%),70))
+   }
+ }
+ &.overlay-theme-colored2-gradient-8 {
+   &::before {
+     @include gradient-horizontal(rgba($theme-color2,.80%), rgba(lighten($theme-color2, 20%),80))
+   }
+ }
+ &.overlay-theme-colored2-gradient-9 {
+   &::before {
+     @include gradient-horizontal(rgba($theme-color2,.90%), rgba(lighten($theme-color2, 20%),90))
+   }
+ }
+}
+
+
+
+/* -------- layer overlay gradient Color Combined 12 ---------- */
+.layer-overlay {
+ &.overlay-theme-colored12-gradient {
+   &::before {
+     @include gradient-horizontal(rgba($theme-color1,.90), rgba($theme-color2,.90))
+   }
+ }
+ &.overlay-theme-colored12-gradient-1 {
+   &::before {
+     @include gradient-horizontal(rgba($theme-color1,.10), rgba($theme-color2,.10))
+   }
+ }
+ &.overlay-theme-colored12-gradient-2 {
+   &::before {
+     @include gradient-horizontal(rgba($theme-color1,.20), rgba($theme-color2,.20))
+   }
+ }
+ &.overlay-theme-colored12-gradient-3 {
+   &::before {
+     @include gradient-horizontal(rgba($theme-color1,.30), rgba($theme-color2,.30))
+   }
+ }
+ &.overlay-theme-colored12-gradient-4 {
+   &::before {
+     @include gradient-horizontal(rgba($theme-color1,.40), rgba($theme-color2,.40))
+   }
+ }
+ &.overlay-theme-colored12-gradient-5 {
+   &::before {
+     @include gradient-horizontal(rgba($theme-color1,.50), rgba($theme-color2,.50))
+   }
+ }
+ &.overlay-theme-colored12-gradient-6 {
+   &::before {
+     @include gradient-horizontal(rgba($theme-color1,.60), rgba($theme-color2,.60))
+   }
+ }
+ &.overlay-theme-colored12-gradient-7 {
+   &::before {
+     @include gradient-horizontal(rgba($theme-color1,.70), rgba($theme-color2,.70))
+   }
+ }
+ &.overlay-theme-colored12-gradient-8 {
+   &::before {
+     @include gradient-horizontal(rgba($theme-color1,.80), rgba($theme-color2,.80))
+   }
+ }
+ &.overlay-theme-colored12-gradient-9 {
+   &::before {
+     @include gradient-horizontal(rgba($theme-color1,.90), rgba($theme-color2,.90))
+   }
+ }
+}
+
+
+
+/* -------- layer overlay gradient Color Combined 21 ---------- */
+.layer-overlay {
+ &.overlay-theme-colored21-gradient {
+   &::before {
+     @include gradient-horizontal(rgba($theme-color2,.90), rgba($theme-color1,.90))
+   }
+ }
+ &.overlay-theme-colored21-gradient-1 {
+   &::before {
+     @include gradient-horizontal(rgba($theme-color2,.10), rgba($theme-color1,.10))
+   }
+ }
+ &.overlay-theme-colored21-gradient-2 {
+   &::before {
+     @include gradient-horizontal(rgba($theme-color2,.20), rgba($theme-color1,.20))
+   }
+ }
+ &.overlay-theme-colored21-gradient-3 {
+   &::before {
+     @include gradient-horizontal(rgba($theme-color2,.30), rgba($theme-color1,.30))
+   }
+ }
+ &.overlay-theme-colored21-gradient-4 {
+   &::before {
+     @include gradient-horizontal(rgba($theme-color2,.40), rgba($theme-color1,.40))
+   }
+ }
+ &.overlay-theme-colored21-gradient-5 {
+   &::before {
+     @include gradient-horizontal(rgba($theme-color2,.50), rgba($theme-color1,.50))
+   }
+ }
+ &.overlay-theme-colored21-gradient-6 {
+   &::before {
+     @include gradient-horizontal(rgba($theme-color2,.60), rgba($theme-color1,.60))
+   }
+ }
+ &.overlay-theme-colored21-gradient-7 {
+   &::before {
+     @include gradient-horizontal(rgba($theme-color2,.70), rgba($theme-color1,.70))
+   }
+ }
+ &.overlay-theme-colored21-gradient-8 {
+   &::before {
+     @include gradient-horizontal(rgba($theme-color2,.80), rgba($theme-color1,.80))
+   }
+ }
+ &.overlay-theme-colored21-gradient-9 {
+   &::before {
+     @include gradient-horizontal(rgba($theme-color2,.90), rgba($theme-color1,.90))
+   }
+ }
+}

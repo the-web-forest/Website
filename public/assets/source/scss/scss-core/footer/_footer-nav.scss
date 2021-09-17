@@ -1,0 +1,14 @@
+/*
+ * footer footer-nav.scss
+ * -----------------------------------------------
+*/
+.widget_nav_menu {
+	&.split-nav-menu {
+		ul li {
+			margin-bottom: 4px;
+			width: 50%;
+			float: left;
+			padding-right: 3px;
+		}
+	}
+}

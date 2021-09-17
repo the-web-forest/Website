@@ -1,0 +1,47 @@
+/*
+ * blog-list.scss
+ * -----------------------------------------------
+*/
+.widget {
+	.post {
+		border-bottom: none;
+		&:not(:last-child) {
+			margin-bottom: 10px;
+			padding-bottom: 10px;
+		}
+		.post-thumb {
+			float: left;
+			margin-right: 15px;
+			margin-top: 1px;
+			width: 85px;
+			img {
+				border-radius: 50%;
+			}
+		}
+		.entry-meta {
+			font-size: 0.9rem;
+			margin: 0 15px 10px 0;
+			color: #999;
+		}
+		.post-right {
+			overflow: hidden;
+			.post-title {
+				margin-top: 0;
+				margin-bottom: 5px;
+				a {
+					color: #555;
+					letter-spacing: 0;
+					font-family: $body-font;
+					font-size: $body-font-size;
+				}
+			}
+			.entry-date {
+				display: block;
+				color: #888f96;
+				font-size: 14px;
+				line-height: 12px;
+				padding: 4px 0;
+			}
+		}
+	}
+}

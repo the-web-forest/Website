@@ -1,0 +1,226 @@
+/*
+ * Shortcode: blockquote.scss
+ * -----------------------------------------------
+*/
+$blockquote-border-color: #cdcdcd;
+blockquote {
+  background-color: #f4f5f8;
+  border-left: 2px solid var(--theme-color1);
+  padding-left: 30px;
+  padding-right: 30px;
+  border-radius: 7px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 20px;
+  margin-left: 0;
+  margin-right: 0;
+  &:before {
+    content: '\f10d';
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    position: absolute;
+    bottom: 0;
+    font-size: 5rem;
+    line-height: 1;
+    color: var(--theme-color1);
+    opacity: 0.15;
+    right: 30px;
+  }
+  p {
+    margin-bottom: 15px;
+  }
+  cite {
+    color: var(--theme-color1);
+    a {
+      color: var(--theme-color1);
+    }
+  }
+  .blockquote-footer {
+    margin-top: 1rem;
+  }
+}
+
+blockquote {
+	footer {
+		color: #888;
+		font-size: 15px;
+	}
+
+	&.tm-sc-blockquote {
+		font-style: normal;
+		padding: 20px;
+		background-color: #fcfcfc;
+		box-shadow: 0 0 1px #ddd;
+		border-left: 5px solid $blockquote-border-color;
+	}
+	&.blockquote-style1 {
+	}
+	&.blockquote-style2 {
+		background-color: #fcfcfc;
+		box-shadow: 0 0 1px #ddd;
+		border-left: 0;	
+		margin-top: 0;
+		padding: 20px;
+		p {
+			font-size: 24px;
+			line-height: 1.7;
+			color: #333;
+		}
+		footer {
+			color: #888;
+		}
+	}
+	&.blockquote-style3 {
+		border-left: 3px solid $blockquote-border-color;
+		padding: 0 30px 0;
+		background-color: transparent;
+		box-shadow: none;
+		&:before {
+			color: rgba(0, 0, 0, 0.3);
+			content: "\f10e";
+			font-family: "Font Awesome 5 Free";
+			font-size: 50px;
+			font-weight: 600;
+			opacity: 0.20;
+			position: absolute;
+			left: 5px;
+			top: -25px;
+			transform: rotate(180deg);
+		}
+		&:before {
+		}
+	}
+	&.blockquote-style4 {
+		border-left: 3px solid $blockquote-border-color;
+		padding: 0 30px 0;
+		background-color: transparent;
+		box-shadow: none;
+		margin-top: 0;
+		&:before {
+			color: rgba(0, 0, 0, 0.3);
+			content: "\f10e";
+			font-family: "Font Awesome 5 Free";
+			font-weight: 600;
+			font-size: 50px;
+			opacity: 0.20;
+			position: absolute;
+			left: 5px;
+			top: -25px;
+			transform: rotate(180deg);
+		}
+		&:before {
+		}
+		p {
+			font-size: 24px;
+			line-height: 1.7;
+			color: #333;
+		}
+		footer {
+			color: #888;
+		}
+	}
+	&.blockquote-style5 {
+		background: #f9f9f9;
+		padding: 30px 30px 30px;
+		border-left: 10px solid $blockquote-border-color;
+		box-shadow: none;
+		&:before {
+			color: rgba(0, 0, 0, 0.3);
+			content: "\f10e";
+			font-family: "Font Awesome 5 Free";
+			font-weight: 600;
+			font-size: 50px;
+			opacity: 0.20;
+			position: absolute;
+			left: 5px;
+			top: -10px;
+			transform: rotate(180deg);
+		}
+		&:before {
+		}
+	}
+	&.blockquote-style6 {
+		background: #f9f9f9;
+		padding: 30px 30px 30px;
+		border-left: 10px solid $blockquote-border-color;
+		box-shadow: none;
+		margin-top: 0;
+		&:before {
+			color: rgba(0, 0, 0, 0.3);
+			content: "\f10e";
+			font-family: "Font Awesome 5 Free";
+			font-weight: 600;
+			font-size: 50px;
+			opacity: 0.20;
+			position: absolute;
+			left: 5px;
+			top: -10px;
+			transform: rotate(180deg);
+		}
+		&:before {
+		}
+		p {
+			font-size: 24px;
+			line-height: 1.7;
+			color: #333;
+		}
+		footer {
+			color: #888;
+		}
+	}
+	&.blockquote-style7 {
+		padding: 30px 30px 30px;
+		border-left: 0;
+		background: none;
+		box-shadow: none;
+		&:before {
+			color: rgba(0, 0, 0, 0.3);
+			content: "\f10e";
+			font-family: "Font Awesome 5 Free";
+			font-weight: 600;
+			font-size: 70px;
+			opacity: 0.20;
+			position: absolute;
+			left: 16px;
+			top: -20px;
+			transform: rotate(180deg);
+		}
+		&:before {
+		}
+	}
+	&.blockquote-style8 {
+		padding: 30px 30px 30px;
+		border-left: 0;
+		background: none;
+		box-shadow: none;
+		&:before {
+			color: rgba(0, 0, 0, 0.3);
+			content: "\f10e";
+			font-family: "Font Awesome 5 Free";
+			font-weight: 600;
+			font-size: 70px;
+			opacity: 0.20;
+			position: absolute;
+			left: 16px;
+			top: -20px;
+			transform: rotate(180deg);
+		}
+		&:before {
+		}
+		p {
+			font-size: 24px;
+			line-height: 1.7;
+			color: #333;
+		}
+		footer {
+			color: #888;
+			cite {
+				font-size: 0.9rem;
+				font-style: normal;
+				text-align: left;
+			}
+		}
+	}
+}

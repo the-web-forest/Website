@@ -1,0 +1,37 @@
+/*
+ * Shortcode: projects.scss
+ * -----------------------------------------------
+*/
+
+.tm-sc-projects {
+	&.projects-style8-current-theme {
+		.tm-project {
+			.thumb {
+				.link {
+					background-color: $theme-color1;
+				}
+			}
+		}
+	}
+}
+.project-item {
+  .project-thumb {
+    .project-title {
+    }
+    img {
+    }
+  }
+  &:after {
+    background: linear-gradient(0deg, $theme-color2, transparent);
+  }
+  &:hover {
+    .project-thumb {
+      img {
+      }
+    }
+    .project-title {
+    }
+    &:after {
+    }
+  }
+}

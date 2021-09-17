@@ -1,0 +1,73 @@
+/*
+ * Shortcode: multi-scroll-slider.scss
+ * -----------------------------------------------
+*/
+/* Menu Style */
+#tm-page-piling-menu {
+	position:fixed;
+	top:0;
+	left:0;
+	height: 40px;
+	z-index: 70;
+	width: 100%;
+	padding: 0;
+	margin:0;
+
+	li {
+		display:inline-block;
+		margin: 10px;
+		color: #000;
+		background:#fff;
+		background: rgba(255,255,255, 0.5);
+		padding: 0;
+		-webkit-border-radius: 10px;
+		border-radius: 25px;
+		@include media-breakpoint-down(md) {
+			margin: 4px;
+		}
+		a {
+			text-decoration:none;
+			color: #000;
+			@include transition(all .3s ease);
+			@include media-breakpoint-down(md) {
+				font-size: 13px;
+			}
+		}
+		&:hover,
+		&.active {
+			background:#666;
+			background: rgba(0,0,0, 0.5);
+			a {
+				color: #fff;
+			}
+		}
+		a,
+		&.active a{
+			padding: 9px 25px;
+			display:block;
+			@include media-breakpoint-down(md) {
+				padding: 9px 15px;
+			}
+		}
+		&.active a{
+			color: #fff;
+		}
+	}
+}
+#pp-nav {
+	li {
+		span {
+			width: 12px;
+			height: 12px;
+			border: 1px solid rgba(216, 216, 216, 0.55) !important;
+			background: rgba(216, 216, 216, 0.55) !important;
+		}
+		.active span {
+			background: rgba(150, 150, 150, 0.55) !important;
+			border-color: rgba(150, 150, 150, 0.35) !important;
+		}
+	}
+}
+.tm-page-piling-slider {
+	position: relative;
+}

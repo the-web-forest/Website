@@ -1,0 +1,131 @@
+/*
+ * background: theme-color
+ * -----------------------------------------------
+*/
+a {
+  color: $theme-color1;
+  &:hover, &:focus {
+    color: lighten($theme-color2, 25%);
+  }
+}
+.post .entry-meta.meta-absolute {
+  background-color: rgba($theme-color1, .90) !important;
+}
+.tab-slider .nav.nav-pills a:hover,
+.tab-slider .nav.nav-pills a.active,
+.custom-nav-tabs > li > a:hover,
+.widget .tags a:hover,
+.progress-item .progress-bar,
+.small-title .title::after,
+.drop-caps.colored-square p:first-child:first-letter,
+.drop-caps.colored-rounded p:first-child:first-letter,
+.working-process.theme-colored a,
+.widget.dark .tags a:hover,
+.blog-posts .post .entry-content .post-date.right,
+.horizontal-tab-centered .nav-pills > li > a:hover,
+.horizontal-tab-centered .nav-pills > li.active > a,
+.horizontal-tab-centered .nav-pills > li.active  > a:hover,
+.horizontal-tab-centered .nav-pills > li.active > a:focus,
+.owl-theme.dot-theme-colored .owl-controls .owl-dot span,
+.portfolio-filter a.active, .portfolio-filter a:hover,
+.section-title .both-side-line::after,
+.section-title .both-side-line::before,
+.section-title .top-side-line::after,
+.section-title .left-side-line::before,
+.section-title .right-side-line::before,
+.product .tag-sale,
+.owl-theme .owl-dots .owl-dot.active span,
+.blog-posts .post.style1 .entry-header .entry-date.entry-date-absolute,
+.title-dots span,
+.title-line-top:before,
+.become-a-volunteer-form-title  {
+  background: $theme-color1;
+}
+.cd-timeline-simple .cd-timeline-block .cd-timeline-img {
+    background: $theme-color1 !important;
+}
+.ui-state-highlight {
+  background: $theme-color1 !important;
+  color: $white-base !important;
+}
+
+/*
+ * text: theme-color
+ * -----------------------------------------------
+*/
+.widget .twitter-feed li::after,
+.widget .address li i,
+.icon-box.box-style1.practice-style3 i,
+.icon-box.services-style1:hover .heading,
+.horizontal-contact-widget .widget::before,
+.small-title i,
+.drop-caps.text-colored p:first-child:first-letter,
+.schedule-box:hover .schedule-details .title a,
+.widget.dark .nav-tabs li.active a,
+.pager.theme-colored a,
+.widget .post-title a:hover,
+.donation-form .mb-3 label {
+  color: $theme-color1;
+}
+/*
+ * border: theme-color
+ * -----------------------------------------------
+*/
+.widget .line-bottom:after,
+.widget .line-bottom:after,
+.pager.theme-colored a {
+  border: 1px solid $theme-color1;
+}
+.owl-theme .owl-dots .owl-dot span {
+  border-color: $theme-color1;
+}
+.icon-box.box-style1.practice-style3:hover .icon-wrapper::after {
+  border-color: $theme-color1 transparent transparent;
+}
+
+.section-title.title-border {
+    border-left: 4px solid $theme-color1;
+}
+
+/* border-top-color */
+.cssload-tri {
+  border-top: 27px solid $theme-color1;
+}
+
+/* border-right-color */
+.border-right-red {
+  border-right: 1px solid $theme-color1;
+}
+.section-title.title-border.title-right {
+    border-right: 4px solid $theme-color1;
+}
+
+/* border-bottom-color */
+.border-bottom {
+  border-bottom: 1px solid $theme-color1;
+}
+
+.cssload-tri.cssload-invert {
+  border-bottom: 27px solid $theme-color1;
+}
+/* box-shadow */
+
+
+/* Dropdown Search Form */
+.dropdown-search-form-content {
+  .dropdown-search-form {
+    .input-group {
+      border-color: $theme-color1;
+    }
+    button[type="submit"] {
+      background: $theme-color1;
+      i {
+        color: #fff;
+      }
+    }
+  }
+}
+
+.hr-divider {
+  border-top-color: rgba($theme-color1, .20) !important;;
+}

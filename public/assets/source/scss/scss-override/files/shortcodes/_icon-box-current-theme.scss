@@ -1,0 +1,45 @@
+/*
+ * Shortcode: Icon Boxe current theme
+ * -----------------------------------------------
+*/
+.icon-box {
+	&.iconbox-current-theme-style1 {
+		.icon-box-wrapper {
+			position: relative;
+			padding: 60px 60px 50px 60px;
+			.icon-wrapper {
+				.icon {
+					position: relative;
+					&:after {
+						position: absolute;
+						content: '';
+						left: -30px;
+						top: -40%;
+						width: 60px;
+						height: 60px;
+						border-radius: 50%;
+						background-color: rgba(255, 163, 3, 0.1);
+						z-index: -1;
+						@include scale(1);
+						-webkit-transition: transform 0.5s cubic-bezier(.57,.04,.06,.84), opacity 0s;
+						transition: transform 0.5s cubic-bezier(.57,.04,.06,.84), opacity 0s;
+					}
+				}
+			}
+			.icon-box-title {
+				margin-bottom: 20px;
+			}
+		}
+		&:hover {
+			.icon-box-wrapper {
+				.icon-wrapper {
+					.icon {
+						&:after {
+							@include scale(0.8);
+						}
+					}
+				}
+			}
+		}
+	}
+}

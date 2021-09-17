@@ -1,0 +1,15 @@
+/*
+ * header-mid.scss
+ * -----------------------------------------------
+*/
+header#header {
+	.header-middle {
+		.header-mid-column3-container {
+			.contact-info {
+				.font-icon {
+					color: $theme-color1;
+				}
+			}
+		}
+	}
+}

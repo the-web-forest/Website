@@ -1,0 +1,42 @@
+/*
+ * video-popup.scss
+ * -----------------------------------------------
+*/
+.tm-sc-video-popup {
+	&.tm-sc-video-popup-button-over-image {
+		.animated-css-play-button {
+			background-color: rgba($theme-color1, 0.5);
+		}
+		&:hover {
+			.animated-css-play-button {
+				background: rgba($theme-color1, 0.9);
+			}
+		}
+	}
+
+	&.animated-css-play-button,
+	&.tm-sc-video-popup-css-button {
+		.animated-css-play-button {
+			background-color: rgba($theme-color1, 0.7);
+
+			&:before {
+				background-color: rgba($theme-color1, 0.7);
+			}
+			&:after {
+				background-color: rgba($theme-color1, 0.7);
+			}
+		}
+		&:hover {
+			.animated-css-play-button {
+				background-color: rgba($theme-color1, 0.95);
+
+				&:before {
+					background-color: rgba($theme-color1, 0.95);
+				}
+				&:after {
+					background-color: rgba($theme-color1, 0.95);
+				}
+			}
+		}
+	}
+}

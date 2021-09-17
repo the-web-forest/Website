@@ -1,0 +1,80 @@
+/*
+ * 404.scss
+ * -----------------------------------------------
+*/
+.page-404-wrapper {
+	&.page-404-wrapper-padding {
+		padding-top: 100px;
+		padding-bottom: 50px;
+	}
+	.page-404-main-content {
+		margin-bottom: 25px;
+		.title {
+			font-size: 11rem;
+			line-height: 1;
+			margin-top: 0;
+			margin-bottom: 2rem;
+		}
+		.sub-title {
+			font-size: 2rem;
+			line-height: 1;
+			margin-top: 0;
+			margin-bottom: 1.7rem;
+		}
+		.content,
+		.content p {
+			margin-bottom: 1.7rem;
+		}
+	}
+	.search-box {
+		margin-bottom: 2rem;
+		.paragraph {
+			margin-bottom: 1rem;
+		}
+	}
+	.helpful-links {
+		margin-bottom: 25px;
+
+		ul {
+			list-style: none;
+			li {
+				padding-left: $ul-li-padding-left-with-arrow;
+				position: relative;
+				&::before {
+					content: "\f0da";
+					left: 0;
+					top: 0;
+					position: absolute;
+					font-family: "Font Awesome 5 Free";
+					font-weight: 600;
+					color: #ccc;
+				}
+				a {
+					color: $text-color;
+					font-size: $font-size-sm;
+					font-weight: $font-weight-normal;
+				}
+			}
+		}
+	}
+	&.page-404-layout-split {
+		.page-404-main-content {
+			.title {
+				font-size: 8rem;
+				line-height: 1;
+				margin-top: 0;
+				margin-bottom: 1rem;
+			}
+			.sub-title {
+				font-size: 1.7rem;
+				line-height: 1;
+				margin-top: 0;
+				margin-bottom: 1.2rem;
+			}
+			.content,
+			.content p {
+				margin-bottom: 1rem;
+			}
+		}
+	}
+}

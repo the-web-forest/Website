@@ -1,0 +1,80 @@
+/*
+ * pagination.scss
+ * -----------------------------------------------
+*/
+.pagination-wrapper {
+	text-align: center;
+}
+.pagination {
+	margin-top: 40px;
+	> .page-item {
+		padding-left: 0 !important;
+		margin-right: 10px;
+		.page-link {
+			color: $text-color;
+			border-color: #ddd;
+			background-color: #fff;
+
+			border: 3px solid rgba(35, 35, 35, 0.15);
+			border-radius: 50%;
+			text-align: center;
+			height: 50px;
+			width: 50px;
+			display: table-cell;
+			vertical-align: middle;
+			@include box-shadow( 0px 0 20px rgba(5, 5, 5, 0.15) );
+			@include media-breakpoint-down(lg) {
+				height: 35px;
+				width: 35px;
+				padding: 5px;
+			}
+			&:hover {
+				background-color: #eee;
+				border-color: #dee2e6;
+			}
+		}
+		&.active {
+			.page-link {
+			}
+		}
+	}
+}
+
+.pagination2 {
+	margin-bottom: 0;
+	@include media-breakpoint-down(lg) {
+		margin-bottom: 30px;
+	}
+	> .page-item {
+		> .page-link,
+		> span {
+			background-color: #eee;
+			border: 0;
+			border-radius: 0;
+			box-shadow: 0 1px 2px rgba(10, 10, 10, 0.1) inset;
+			color: #777;
+			font-size: 15px;
+			line-height: $line-height-base;
+			margin-right: 10px;
+			padding: 4px 14px;
+		}
+		&:last-child > a,
+		&:last-child > span {
+			border-bottom-right-radius: 0;
+			border-top-right-radius: 0;
+		}
+		&:first-child > a,
+		&:first-child > span {
+			border-bottom-left-radius: 0;
+			border-top-left-radius: 0;
+		}
+		> a:focus,
+		> a:hover,
+		> span:focus,
+		> span:hover {
+			background-color: #333;
+			border-color: #333;
+			color: #fff;
+		}
+	}
+}

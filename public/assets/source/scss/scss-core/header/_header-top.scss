@@ -1,0 +1,512 @@
+/*
+ * header-top.scss
+ * -----------------------------------------------
+*/
+header#header {
+	$header-top-font-size: 16px;
+	.header-top {
+		color: $white-base;
+		padding: 0;
+		font-size: $header-top-font-size;
+		line-height: 1.7;
+		@include media-breakpoint-down(xl) {
+			padding-bottom: 30px;
+			padding-top: 15px;
+			line-height: 2.2;
+		}
+		> .container {
+			> .row {
+				> div {
+					max-width: 100%;
+				}
+				> :first-child {
+				}
+				> :last-child {
+				}
+			}
+		}
+		.element {
+			display: inline-block;
+			margin-right: 15px;
+			padding-right: 15px;
+			padding-top: 10px;
+			padding-bottom: 10px;
+			line-height: 1.8;
+			font-weight: $body-font-weight;
+			position: relative;
+			z-index: 1;
+			@include media-breakpoint-down(sm) {
+				margin-right: 0;
+				padding-right: 0;
+			}
+			a {
+				font-weight: $body-font-weight;
+			}
+			&:last-child {
+				margin-right: 0;
+				padding-right: 0;
+			}
+			.search-form {
+				.search-field {
+					height: 30px;
+					padding: 5px 10px 5px 20px;
+				}
+				.search-submit {
+					padding: 3px 20px;
+				}
+			}
+			.btn {
+				vertical-align: middle;
+				font-size: $header-top-font-size;
+			}
+			&:not(.styled-icons) a:not(.btn):not(.styled-icons-item):not(.wp-block-button__link):not(.wp-block-button__link):not(.dropdown-item) {
+				color: $white-base;
+				&:hover {
+					color: darken($white-base, 10%);
+				}
+			}
+			&.styled-icons {
+				li {
+					a {
+						line-height: 1;
+					}
+				}
+			}
+		}
+		.styled-icons-label {
+			margin-right: 7px;
+		}
+		.styled-icons li {
+			margin-bottom: 0;
+		}
+		.styled-icons.icon-xs li {
+			a i {
+				top: -1px;
+			}
+		}
+		.header-top-left {
+			.element {
+			}
+		}
+		.header-top-right {
+			.element {
+			}
+
+		}
+		.contact-info {
+			li {
+				display: inline-block;
+				position: relative;
+				margin-right: 15px;
+				@include media-breakpoint-up(lg) {
+					margin-right: 25px;
+				}
+				@include media-breakpoint-down(md) {
+					display: block;
+					margin-right: 0;
+					margin-top: 5px;
+					margin-bottom: 5px;
+				}
+				.font-icon {
+					margin-right: 5px;
+				}
+				@include media-breakpoint-up(lg) {
+					&:not( :first-child ) {
+						&:before {
+							background: rgba(255, 255, 255, 0.7);
+							content: "";
+							position: absolute;
+							top: 0;
+							bottom: 1px;
+							left: -16px;
+							margin: auto;
+							height: 15px;
+							width: 1px;
+						}
+					}
+				}
+			}
+		}
+		.tm-wpml-language-switcher {
+			cursor: pointer;
+			.dropdown-toggle {
+				background-color: transparent;
+			}
+			.dropdown-list {
+				border-radius: 0;
+				padding: 0;
+				border: 1px solid rgba(134, 134, 134, 0.15);
+				@include box-shadow( 0px 0px 50px rgba(5, 5, 5, 0.18) );
+				li {
+					a {
+						color: #333;
+						background-color: #fff;
+						padding: 7px 15px;
+						&:hover {
+							color: #252525;
+							background-color: #eee;
+						}
+						img {
+							margin-right: 5px;
+						}
+					}
+				}
+			}
+		}
+		.header-top-nav {
+			&.list-inline {
+				li {
+					display: inline-block;
+				}
+			}
+			.menu-item {
+				padding: 0;
+				a {
+					color: #fff;
+					position: relative;
+				}
+				&:not( :first-child ) {
+					a {
+						margin-left: 25px;
+						&:before {
+							background: rgba(255, 255, 255, 0.7);
+							content: "";
+							position: absolute;
+							top: 0;
+							bottom: 1px;
+							left: -16px;
+							margin: auto;
+							height: 15px;
+							width: 1px;
+						}
+						i {
+							margin-right: 5px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+header#header {
+	&:not(.header-layout-type-header-2rows-floating-header):not(.header-layout-type-header-2rows-floating-header-style2):not(.header-layout-type-header-2rows-floating-header-style3) {
+		.header-top {
+			&.header-top-curve-default {
+			}
+			&.header-top-curve-style1 {
+				@include media-breakpoint-up(xl) {
+					position: relative;
+					overflow: hidden;
+					&:before {
+						content: '';
+						position: absolute;
+						top: 0;
+						width: 51%;
+						height: 100%;
+						left: 0;
+						background: #121212;
+					}
+				}
+			}
+			&.header-top-curve-style2 {
+				@include media-breakpoint-up(xl) {
+					position: relative;
+					overflow: hidden;
+					&:after {
+						border-right: 120px solid transparent;
+						border-top: 200px solid #f1f1f1;
+						content: "";
+						position: absolute;
+						top: 0;
+						width: 52%;
+						height: 100%;
+						left: 0;
+					}
+				}
+			}
+			&.header-top-curve-style3 {
+				@include media-breakpoint-up(xl) {
+					position: relative;
+					overflow: hidden;
+					&:after {
+						border-bottom: 120px solid #f1f1f1;
+						border-left: 144px solid transparent;
+						content: "";
+						position: absolute;
+						top: 0;
+						width: 51%;
+						height: 100%;
+						left: 0;
+					}
+				}
+			}
+			&.header-top-curve-style4 {
+				@include media-breakpoint-up(xl) {
+					position: relative;
+					overflow: hidden;
+					&:after {
+						border-bottom: 120px solid #f1f1f1;
+						border-right: 144px solid transparent;
+						content: "";
+						position: absolute;
+						top: 0;
+						width: 60%;
+						height: 100%;
+						left: 0;
+					}
+				}
+			}
+			&.header-top-curve-style5 {
+				overflow: hidden;
+				@include media-breakpoint-up(xl) {
+					.header-top-left {
+						position: relative;
+						&:before {
+							background-color: #f1f1f1;
+							content: "";
+							height: 100%;
+							position: absolute;
+							right: 0;
+							top: 0;
+							width: 2200px;
+							z-index: 0;
+						}
+
+						&:after {
+							border-left: 120px solid #f1f1f1;
+							border-top: 144px solid transparent;
+							content: "";
+							height: 100%;
+							position: absolute;
+							right: -120px;
+							top: 0;
+							width: 0;
+							z-index: 0;
+						}
+					}
+				}
+			}
+			&.header-top-curve-style6 {
+				overflow: hidden;
+				@include media-breakpoint-up(xl) {
+					position: relative;
+					overflow: hidden;
+					&:after {
+						border-bottom: 120px solid #ddd;
+						border-left: 144px solid transparent;
+						content: "";
+						position: absolute;
+						top: 0;
+						width: 51%;
+						height: 100%;
+						left: 1;
+					}
+					.header-top-left {
+						position: relative;
+						&:before {
+							background-color: #f1f1f1;
+							content: "";
+							height: 100%;
+							position: absolute;
+							right: 0;
+							top: 0;
+							width: 2200px;
+							z-index: 0;
+						}
+
+						&:after {
+							border-right: 120px solid transparent;
+							border-top: 144px solid #ddd;
+							content: "";
+							height: 100%;
+							position: absolute;
+							right: -50px;
+							top: 0;
+							width: 0;
+							z-index: 0;
+						}
+					}
+				}
+			}
+			&.header-top-curve-style7 {
+				overflow: hidden;
+				@include media-breakpoint-up(xl) {
+					.header-top-right {
+						position: relative;
+						&:before {
+							background-color: #f1f1f1;
+							content: "";
+							height: 100%;
+							position: absolute;
+							right: 0;
+							top: 0;
+							width: 2200px;
+							z-index: 0;
+						}
+
+						&:after {
+							border-right: 120px solid transparent;
+							border-top: 144px solid #f1f1f1;
+							content: "";
+							height: 100%;
+							position: absolute;
+							right: -50px;
+							top: 0;
+							width: 0;
+							z-index: 0;
+						}
+					}
+				}
+			}
+			&.header-top-curve-style8 {
+				overflow: hidden;
+				@include media-breakpoint-up(xl) {
+					.header-top-right {
+						position: relative;
+						&:before {
+							background-color: #f1f1f1;
+							content: "";
+							height: 100%;
+							position: absolute;
+							right: 0;
+							top: 0;
+							width: 2200px;
+							z-index: 0;
+						}
+
+						&:after {
+							border-left: 120px solid #f1f1f1;
+							border-top: 144px solid transparent;
+							content: "";
+							height: 100%;
+							position: absolute;
+							right: -120px;
+							top: 0;
+							width: 0;
+							z-index: 0;
+						}
+					}
+				}
+			}
+			&.header-top-curve-style9 {
+				overflow: hidden;
+				@include media-breakpoint-up(xl) {
+					.header-top-right {
+						position: relative;
+						&:before {
+							background-color: #f1f1f1;
+							content: "";
+							height: 100%;
+							position: absolute;
+							right: 0;
+							top: 0;
+							width: 2200px;
+							z-index: 0;
+						}
+					}
+				}
+			}
+			&.header-top-curve-style10 {
+				overflow: hidden;
+				@include media-breakpoint-up(xl) {
+					.header-top-left {
+						position: relative;
+						&:before {
+							background-color: #ddd;
+							content: "";
+							height: 100%;
+							position: absolute;
+							right: 0;
+							top: 0;
+							width: 2200px;
+							z-index: 1;
+						}
+
+						&:after {
+							border-right: 60px solid transparent;
+							border-top: 72px solid #ddd;
+							content: "";
+							height: 100%;
+							position: absolute;
+							right: -50px;
+							top: 0;
+							width: 0;
+							z-index: 1;
+						}
+					}
+					.header-top-right {
+						position: relative;
+						&:before {
+							background-color: #f1f1f1;
+							content: "";
+							height: 100%;
+							position: absolute;
+							right: 0;
+							top: 0;
+							width: 2200px;
+							z-index: 0;
+						}
+
+						&:after {
+							border-left: 120px solid #f1f1f1;
+							border-top: 110px solid transparent;
+							content: "";
+							height: 100%;
+							position: absolute;
+							right: -120px;
+							top: 0;
+							width: 0;
+							z-index: 0;
+						}
+					}
+				}
+			}
+			&.header-top-curve-style11 {
+				overflow: hidden;
+				@include media-breakpoint-up(xl) {
+					position: relative;
+					overflow: hidden;
+					&:after {
+						border-bottom: 120px solid #ccc;
+						border-right: 144px solid transparent;
+						content: "";
+						position: absolute;
+						top: 0;
+						width: 60%;
+						height: 100%;
+						left: 0;
+						z-index: 0;
+					}
+					.header-top-right {
+						position: relative;
+						&:before {
+							background-color: #f1f1f1;
+							content: "";
+							height: 100%;
+							position: absolute;
+							right: 0;
+							top: 0;
+							width: 2200px;
+							z-index: 0;
+						}
+
+						&:after {
+							border-left: 120px solid #f1f1f1;
+							border-top: 110px solid transparent;
+							content: "";
+							height: 100%;
+							position: absolute;
+							right: -120px;
+							top: 0;
+							width: 0;
+							z-index: 0;
+						}
+					}
+				}
+			}
+		}
+	}
+}

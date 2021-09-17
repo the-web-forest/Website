@@ -1,0 +1,27 @@
+/*
+ * Shortcode: single-feature.scss
+ * -----------------------------------------------
+*/
+.single-feature-inner {
+	margin-bottom: 30px;
+	padding: 0 30px;
+	position: relative;
+	&:hover {
+		.feature-icon {
+			background: #ddd;
+		}
+	}
+	&:after {
+		content: "";
+		position: absolute;
+		height: 100%;
+		width: 1px;
+		background: #f4f6fb;
+		top: 0;
+		right: -17px;
+	}
+	.icon-box-title  {
+		margin-top: 20px;
+		margin-bottom: 15px;
+	}
+}

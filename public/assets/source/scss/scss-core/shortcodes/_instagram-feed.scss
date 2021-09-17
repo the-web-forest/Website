@@ -1,0 +1,54 @@
+/*
+ * Shortcode: instagram-feed.scss
+ * -----------------------------------------------
+*/
+
+.instagram-feed {
+  figure {
+    position: relative;
+    margin-bottom: 30px;
+    @include transition(all .4s ease-in-out 0s);
+    img {
+      border-radius: 12px;
+    }
+    .link-out {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      text-align: center;
+      font-size: 36px;
+      line-height: 36px;
+      color: #fff;
+      z-index: 1;
+      opacity: 0;
+      @include transition(all .6s ease-in-out 0s);
+    }
+    &:after {
+      position: absolute;
+      content: "";
+      height: 100%;
+      width: 100%;
+      left: 0;
+      right: 0;
+      opacity: 0.8;
+      transform: scale(0);
+      @include transition(all .4s ease-in-out 0s);
+      border-radius: 12px;
+    }
+    &:hover {
+      .link-out {
+        opacity: 1;
+      }
+      &:after {
+        transform: scale(1);
+      }
+    }
+  }
+  &.instagram-carousel {
+    figure {
+      margin-bottom: 0;
+    }
+  }
+}

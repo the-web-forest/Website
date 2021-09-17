@@ -1,0 +1,20 @@
+/*
+ * Shortcode: pricing-tables.scss
+ * -----------------------------------------------
+*/
+
+.tm-sc-pricing-table {
+	.pricing-table-thumb {
+		.thumb {
+			width: 100px;
+			height: 100px;
+			border: 1px solid #eee;
+			margin: 0 auto;
+			background: rgba(85,85,85,0.15);
+			border-radius: 50%;
+			line-height: 100px;
+		}
+	}
+	.pricing-table-inner {
+	}
+}

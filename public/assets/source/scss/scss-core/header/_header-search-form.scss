@@ -1,0 +1,349 @@
+/*
+ * header-search-form.scss
+ * -----------------------------------------------
+*/
+
+/* fullscreen search form */
+#fullscreen-search-btn {
+	.search-icon {
+		color: #555;
+		font-size: 18px;
+		line-height: 1;
+		padding: 5px;
+		&:hover {
+			color: #888;
+		}
+	}
+	@include media-breakpoint-down(xl) {
+		margin-top: 12px;
+	}
+}
+#fullscreen-search-form {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.95);
+	-webkit-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+	-ms-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
+	-webkit-transform: translate(0px, -100%) scale(0, 0);
+	-moz-transform: translate(0px, -100%) scale(0, 0);
+	-o-transform: translate(0px, -100%) scale(0, 0);
+	-ms-transform: translate(0px, -100%) scale(0, 0);
+	transform: translate(0px, -100%) scale(0, 0);
+	opacity: 0;
+	z-index: 1;
+	form {
+		position: absolute;
+		top: 50%;
+		width: 400px;
+		max-width: 96%;
+		margin: 0px auto;
+		margin-top: -51px;
+		outline: none;
+		left: 0;
+		right: 0;
+		padding-left: 15px;
+		padding-right: 15px;
+		input[type="search"] {
+			color: rgb(255, 255, 255);
+			background: rgba(0, 0, 0, 0);
+			font-size: 30px;
+			font-weight: 300;
+			max-width: 100%;
+			border: 0px;
+			border-bottom: 1px solid #777;
+			@include media-breakpoint-down(xl) {
+				font-size: 20px;
+			}
+		}
+
+		button[type="submit"] {
+			position: absolute;
+			right: 8px;
+			top: 0;
+			height: 100%;
+			font-size: 24px;
+			border: none;
+			border-radius: 0;
+			background: transparent;
+			@include media-breakpoint-down(xl) {
+				font-size: 20px;
+			}
+		}
+	}
+
+	.close {
+		position: fixed;
+		top: 15px;
+		right: 15px;
+		background-color: transparent;
+		color: #fff;
+		border-color: green;
+		opacity: 1;
+		padding: 10px 17px;
+		font-size: 36px;
+	}
+
+	&.hanging-top-search-form {
+		height: auto;
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		-webkit-transform: translateY(-200%);
+		-moz-transform: translateY(-200%);
+		-ms-transform: translateY(-200%);
+		transform: translateY(-200%);
+		-webkit-transition: all 300ms ease;
+		-moz-transition: all 300ms ease;
+		transition: all 300ms ease;
+		form {
+			position: relative;
+			margin: 3em 0;
+			padding: 0 15px;
+			width: 100%;
+			input[type="search"] {
+				height: 60px;
+				width: 100%;
+			}
+		}
+
+		.close {
+		}
+	
+	}
+
+
+	&.open {
+		-webkit-transform: translate(0px, 0px) scale(1, 1);
+		-moz-transform: translate(0px, 0px) scale(1, 1);
+		-o-transform: translate(0px, 0px) scale(1, 1);
+		-ms-transform: translate(0px, 0px) scale(1, 1);
+		transform: translate(0px, 0px) scale(1, 1);
+		opacity: 1;
+	}
+}
+
+/* Top Nav Search Button & Form */
+#inline-fullwidth-search-btn {
+	.search-icon {
+		color: #555;
+		font-size: 17px;
+		line-height: 1;
+		padding: 5px;
+		&:hover {
+			color: #888;
+		}
+	}
+	@include media-breakpoint-down(xl) {
+		margin-top: 12px;
+	}
+}
+#inline-fullwidth-search-form {
+	background: #222;
+	border: 3px solid #111;
+	display: none;
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: 99991;
+
+	&.dropdown-search-form {
+		top: 100%;
+	}
+	form {
+		margin-bottom: 0;
+	}
+
+	input[type="text"] {
+		background: transparent;
+		border: none;
+		border-radius: 0;
+		box-shadow: none;
+		color: #fff;
+		font-size: 24px;
+		height: 100%;
+		left: 15px;
+		line-height: normal;
+		outline: medium none;
+		padding: 0 50px 0 0;
+		position: absolute;
+		top: 0;
+		vertical-align: middle;
+		width: 90%;
+		@include media-breakpoint-down(xl) {
+			font-size: 18px;
+			width: 80%;
+		}
+	}
+
+	button[type="submit"] {
+		right: 50px;
+		position: absolute;
+		height: 100%;
+		font-size: 24px;
+		top: 0;
+		border: none;
+		border-radius: 0;
+		background: transparent;
+	}
+	#close-search-btn {
+		color: #fff;
+		float: right;
+		font-size: 28px;
+		line-height: 75px;
+		margin: 0 15px 0 0;
+		padding: 0;
+		&:hover {
+			color: #555;
+		}
+		@include media-breakpoint-down(xl) {
+			line-height: 60px;
+		}
+	}
+}
+.modern-header:not(.modern-header-white) {
+	#inline-fullwidth-search-btn {
+		.search-icon {
+			color: #fff;
+		}
+	}
+	.top-nav-mini-cart-icon-container {
+		.mini-cart-icon {
+			i {
+				color: #fff;
+			}
+		}
+	}
+	.side-panel-trigger {
+		i {
+			color: #fff;
+		}
+	}
+}
+.header-nav-center {
+	@include media-breakpoint-up(lg) {
+		text-align: center;
+		.menuzord {
+			display: inline-block;
+			float: none;
+			margin-left: auto;
+			margin-right: auto;
+			width: auto;
+			text-align: left;
+		}
+	}
+}
+.header-nav-centered-logo {
+	@include media-breakpoint-up(lg) {
+		nav.menuzord {
+			position: relative;
+			.menuzord-brand {
+				position: absolute;
+				left: 0;
+				right: 0;
+				margin: 0 auto;
+				width: 220px;
+				top: 10px;
+				text-align: center;
+				img {
+					max-height: 80px;
+				}
+			}
+			.menuzord-menu > li > a {
+				margin-right: 15px;
+				padding: 35px 16px 35px;
+			}
+			.menuzord-menu > li:nth-child(3) > a {
+				margin-right: 250px;
+			}
+			.menuzord-menu > li:last-child > a {
+				margin-right: 0;
+			}
+		}
+	}
+	@include media-breakpoint-down(lg) {
+		nav.menuzord {
+			.menuzord-brand {
+				display: block;
+				float: none;
+				text-align: center;
+				margin: 10px;
+				img {
+					max-height: 80px;
+				}
+			}
+			.showhide + .menuzord-brand {
+				margin-left: 60px;
+			}
+		}
+	}
+}
+
+
+/* Top Push Down Search Form */
+.top-pushdown-search-btn {
+	.search-icon {
+		color: #555;
+		font-size: 18px;
+		line-height: 1;
+		padding: 5px;
+		&:hover {
+			color: #888;
+		}
+	}
+	@include media-breakpoint-down(xl) {
+		margin-top: 12px;
+	}
+}
+#top-pushdown-searchbar {
+}
+
+/* Dropdown Search Form */
+.dropdown-search-form-content {
+	.search-icon {
+		color: #555;
+		font-size: 18px;
+		line-height: 1;
+		padding: 5px;
+		&:hover {
+			color: #888;
+		}
+	}
+	position: relative;
+	.dropdown-search-form {
+		background: transparent;
+		border: none;
+		box-shadow: none;
+		left: auto;
+		position: absolute;
+		right: 0;
+		text-align: left;
+		top: 100%;
+		padding-top: 27px;
+		@include transition( all .2s ease );
+		width: 300px;
+		z-index: 1000;
+		.input-group {
+			border-radius: 3px;
+			border: 1px solid #ddd;
+		}
+		input[type="search"] {
+			font-size: 16px;
+			@include media-breakpoint-down(xl) {
+			}
+		}
+		button[type="submit"] {
+			border: none;
+			border-radius: 0;
+			background: #f3f3f3;
+		}
+	}
+}

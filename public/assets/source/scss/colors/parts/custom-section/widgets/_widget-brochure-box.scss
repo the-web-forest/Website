@@ -1,0 +1,44 @@
+/*
+ * widget-brochure-box.scss
+ * -----------------------------------------------
+*/
+
+.widget-brochure-box {
+	.brochure-box {
+		.brochure-icon {
+			color: $theme-color1;
+		}
+		&.brochure-box-theme-colored1 {
+			background: $theme-color1;
+			.brochure-icon {
+				border-right-color: darken($theme-color1, 3%);
+				color: #fff;
+			}
+			.text {
+				color: #fff;
+			}
+			&:hover {
+				background: darken($theme-color1, 6%);
+				.brochure-icon {
+					border-right-color: darken($theme-color1, 9%);
+				}
+			}
+		}
+		&.brochure-box-theme-colored2 {
+			background: $theme-color2;
+			.brochure-icon {
+				border-right-color: darken($theme-color2, 3%);
+				color: #fff;
+			}
+			.text {
+				color: #fff;
+			}
+			&:hover {
+				background: darken($theme-color2, 6%);
+				.brochure-icon {
+					border-right-color: darken($theme-color2, 9%);
+				}
+			}
+		}
+	}
+}

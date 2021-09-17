@@ -1,0 +1,109 @@
+/*
+ * brochure-box.scss
+ * -----------------------------------------------
+*/
+
+.widget-brochure-box {
+	.brochure-box {
+		background: $gray-eee;
+		border-radius: 3px;
+		display: inline-block;
+		padding: 10px 15px 10px 0;
+		position: relative; 
+		width: 100%;
+		@include transition(all .2s ease 0s);
+		&:hover {
+			background: $black-333;
+		}
+		
+		// brochure icon
+		.brochure-icon {
+			border-right: 1px solid $gray-ddd;
+			border-radius: 3px 0 0 3px;
+			color: $black-888;
+			display: inline-block;
+			font-size: 18px;
+			padding: 15px;
+			vertical-align: middle;
+			@include transition(all .2s ease 0s);
+		}
+		&:hover .brochure-icon {
+			border-right-color: $black-444;
+			color: #fff;
+		}
+
+		
+		// brochure text
+		.text {
+			color: $black-333;
+			display: inline-block;
+			font-size: 14px;
+			margin: 0;
+			padding-left: 15px;
+		}
+		&:hover .text {
+			color: #fff;
+		}
+
+		&.brochure-box-classic {
+			padding: 15px 0;
+			.brochure-icon {
+				padding: 3px 15px 0;
+				float: right;
+				border: 0;
+			}
+		}
+
+		&.brochure-box-dark-version {
+			background: $black-333;
+			&:hover {
+				background: $gray-eee;
+			}
+
+			.text {
+				color: #fff;
+			}
+			&:hover .text {
+				color: $black-333;
+			}
+
+			.brochure-icon {
+				border-right-color: $black-444;
+				color: #fff;
+			}
+			&:hover .brochure-icon {
+				border-right-color: $gray-ddd;
+				color: $black-888;
+			}
+		}
+	}
+}
+
+.sidebar-area {
+	.widget-brochure-box {
+		margin-bottom: 15px;
+		&:last-child {
+			margin-bottom: $widget-margin-bottom;
+		}
+	}
+}
+
+
+.widget-brochure-box {
+	.brochure-box.brochure-box-black {
+		background: $black-222;
+		.brochure-icon {
+			border-right: 1px solid $black-333;
+			color: #fff;
+		}
+		.text {
+			color: #fff;
+		}
+		&:hover {
+			background: $black-111;
+			.brochure-icon {
+				border-right-color: $black-222;
+			}
+		}
+	}
+}

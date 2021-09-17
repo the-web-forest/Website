@@ -1,0 +1,87 @@
+/*
+ * shop-widgets.scss
+ * -----------------------------------------------
+*/
+
+.widget.woocommerce {
+	&.widget_price_filter {
+		.price_slider_wrapper {
+			.price_slider {
+				&.ui-slider {
+					.ui-slider-handle {
+						&:hover {
+							&:before {
+								background-color: $theme-color1;
+							}
+						}
+					}
+					.ui-slider-range {
+						background: $theme-color1;
+					}
+				}
+			}
+
+			.price_slider_amount {
+				.price_label {
+					color: #555;
+				}
+
+				.button {
+					background-color: $theme-color1;
+					&:hover {
+						background-color: $theme-color2;
+					}
+				}
+			}
+		}
+	}
+
+	
+	&.widget_shopping_cart,
+	&.widget_product_categories,
+	&.widget_layered_nav,
+	&.widget_layered_nav_filters,
+	&.widget_price_filter,
+	&.widget_rating_filter,
+	&.widget_product_tag_cloud {
+		ul {
+			> li {
+				a {
+					&:hover {
+						color: $theme-color1;
+					}
+				}
+			}
+		}
+	}
+
+	.woocommerce-product-search {
+		[type=submit] {
+			background: $theme-color1;
+			&:hover {
+				background: $theme-color2;
+			}
+		}
+
+	}
+	&.widget_product_tag_cloud {
+		.tagcloud {
+			> a {
+				&:hover {
+					background: $theme-color1;
+				}
+			}
+		}
+	}
+	&.widget_product_categories {
+		.product-categories {
+			li {
+				a::after {
+					color: $theme-color1;
+				}
+			}
+		}
+	}
+}
+
+

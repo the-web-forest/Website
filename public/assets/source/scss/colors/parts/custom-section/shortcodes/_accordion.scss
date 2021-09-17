@@ -1,0 +1,111 @@
+
+.tm-accordion {
+  &.accordion-theme-colored1 {
+    .accordion-item {
+      border-color: $theme-color1;
+    }
+  }
+  &.accordion-theme-colored2 {
+    .accordion-item {
+      border-color: $theme-color2;
+    }
+  }
+  &.accordion-theme-colored3 {
+    .accordion-item {
+      border-color: $theme-color3;
+    }
+  }
+  &.accordion-theme-colored4 {
+    .accordion-item {
+      border-color: $theme-color4;
+    }
+  }
+
+  //classic
+  &.accordion-classic {
+    &.accordion-theme-colored1 {
+      .accordion-item {
+        .accordion-header {
+          .accordion-button:not(.collapsed) {
+            background-color: $theme-color1;
+            color: #fff;
+          }
+        }
+      }
+    }
+    &.accordion-theme-colored2 {
+      .accordion-item {
+        .accordion-header {
+          .accordion-button:not(.collapsed) {
+            background-color: $theme-color2;
+            color: #fff;
+          }
+        }
+      }
+    }
+    &.accordion-theme-colored3 {
+      .accordion-item {
+        .accordion-header {
+          .accordion-button:not(.collapsed) {
+            background-color: $theme-color3;
+            color: #fff;
+          }
+        }
+      }
+    }
+    &.accordion-theme-colored4 {
+      .accordion-item {
+        .accordion-header {
+          .accordion-button:not(.collapsed) {
+            background-color: $theme-color4;
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+
+  //gradient
+  &.accordion-gradient {
+    &.accordion-theme-colored1 {
+      .accordion-item {
+        .accordion-header {
+          .accordion-button:not(.collapsed) {
+            background: $theme-color1;
+            background: linear-gradient(0deg, lighten($theme-color1, 0%) 0%, lighten($theme-color1, 15%) 45%, lighten($theme-color1, 25%) 100%);
+          }
+        }
+      }
+    }
+    &.accordion-theme-colored2 {
+      .accordion-item {
+        .accordion-header {
+          .accordion-button:not(.collapsed) {
+            background: $theme-color2;
+            background: linear-gradient(0deg, lighten($theme-color2, 0%) 0%, lighten($theme-color2, 15%) 45%, lighten($theme-color2, 25%) 100%);
+          }
+        }
+      }
+    }
+    &.accordion-theme-colored3 {
+      .accordion-item {
+        .accordion-header {
+          .accordion-button:not(.collapsed) {
+            background: $theme-color3;
+            background: linear-gradient(0deg, lighten($theme-color3, 0%) 0%, lighten($theme-color3, 15%) 45%, lighten($theme-color3, 25%) 100%);
+          }
+        }
+      }
+    }
+    &.accordion-theme-colored4 {
+      .accordion-item {
+        .accordion-header {
+          .accordion-button:not(.collapsed) {
+            background: $theme-color4;
+            background: linear-gradient(0deg, lighten($theme-color4, 0%) 0%, lighten($theme-color4, 15%) 45%, lighten($theme-color4, 25%) 100%);
+          }
+        }
+      }
+    }
+  }
+}

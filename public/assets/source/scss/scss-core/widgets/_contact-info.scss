@@ -1,0 +1,110 @@
+/*
+ * contact-info.scss
+ * -----------------------------------------------
+*/
+
+.tm-widget-contact-info {
+	.thumb {
+		margin-bottom: 15px;
+	}
+	.description {
+		margin-bottom: 15px;
+	}
+	ul {
+		list-style: none;
+		li {
+			margin-bottom: 20px;
+			padding: 0;
+			line-height: 1.5rem;
+			.icon {
+				color: $headings-color;
+				margin-right: 30px;
+				@include transition(color .3s ease);
+			}
+			.text {
+				font-weight: 400;
+				font-size: 16px;
+				a {
+					color: $text-color;
+				}
+				p {
+					margin-bottom: 0;
+				}
+			}
+			&:last-child {
+				margin-bottom: 0;
+			}
+			a {
+				font-weight: $body-font-weight;
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+	&.contact-info-style1 {
+		li {
+			.icon {
+				float: left;
+				width: 16px;
+				font-size: 22px;
+				text-align: center;
+			}
+			.text {
+				overflow: hidden;
+			}
+		}
+	}
+	&.contact-info-style2 {
+		li {
+			.icon {
+				display: none;
+			}
+			.text {
+				overflow: hidden;
+			}
+		}
+	}
+	&.contact-info-style3 {
+		li {
+			.icon {
+				float: left;
+				margin-right: 10px;
+				font-weight: bold;
+				i {
+					width: 16px;
+					font-size: 18px;
+					text-align: center;
+					margin-right: 8px;
+					vertical-align: middle;
+				}
+			}
+			.text {
+				overflow: hidden;
+			}
+		}
+	}
+	&.contact-info-style4 {
+		li {
+			.icon {
+				margin-right: 0;
+				font-weight: bold;
+			}
+		}
+	}
+	&.contact-info-style5 {
+		li {
+			.icon {
+				margin-right: 0;
+				font-weight: bold;
+				i {
+					width: 16px;
+					font-size: 18px;
+					text-align: center;
+					margin-right: 8px;
+					vertical-align: middle;
+				}
+			}
+		}
+	}
+}

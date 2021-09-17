@@ -1,0 +1,156 @@
+/*
+ * social-links.scss
+ * -----------------------------------------------
+*/
+
+.tm-sc-social-links {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	li {
+		display: inline-block;
+		vertical-align: top;
+		font-size: 1rem;
+		a.social-link {
+			position: relative;
+			display: block;
+			background: #333;
+			border-radius: 50%;
+			height: 45px;
+			width: 45px;
+			font-size: 18px;
+			line-height: 45px;
+			text-align: center;
+			color: #fff;
+			z-index: 1;
+			transition: all 0.3s;
+			&:after {
+				content: '';
+				position: absolute;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				margin: auto;
+				width: 100%;
+				height: 100%;
+				border-radius: inherit;
+				box-shadow: inset 0 0 0 1px rgba(241, 244, 246, 0.02);
+				z-index: -1;
+				transition: all 0.3s;
+			}
+			&:hover {
+				background: #eee;
+				color: #31354c;
+				&:after {
+					box-shadow: inset 0 0 0 50px #eee;
+				}
+			}
+		}
+		&:not(:last-child) {
+			margin-right: 10px;
+		}
+	}
+
+
+	// icon-rounded
+	&.icon-light {
+		li {
+			a.social-link {
+				background: #f5f5f5;
+				color: #333;
+				border: 1px solid #fff;
+				&:after {
+					box-shadow: inset 0 0 0 1px rgba(44, 44, 44, 0.02);
+				}
+				&:hover {
+					background: #333;
+					color: #fff;
+					border: 1px solid #333;
+					&:after {
+						box-shadow: inset 0 0 0 50px #333;
+					}
+				}
+			}
+		}
+	}
+
+
+	// icon-rounded
+	&.icon-rounded {
+		li {
+			a {
+				border-radius: 5px;
+			}
+		}
+	}
+
+
+	// Icon xs
+	&.icon-xs {
+		li {
+			a {
+				font-size: 12px;
+				height: 25px;
+				width: 25px;
+				line-height: 25px;
+			}
+		}
+	}
+
+
+
+	// Icon sm
+	&.icon-sm {
+		li {
+			a {
+				font-size: 14px;
+				height: 30px;
+				width: 30px;
+				line-height: 30px;
+			}
+		}
+	}
+
+
+
+	// Icon md
+	&.icon-md {
+		li {
+			a {
+				font-size: 18px;
+				height: 45px;
+				width: 45px;
+				line-height: 45px;
+			}
+		}
+	}
+
+
+
+	// Icon lg
+	&.icon-lg {
+		li {
+			a {
+				font-size: 23px;
+				height: 50px;
+				width: 50px;
+				line-height: 50px;
+			}
+		}
+	}
+
+
+
+	// Icon xl
+	&.icon-xl {
+		li {
+			a {
+				font-size: 28px;
+				height: 60px;
+				width: 60px;
+				line-height: 60px;
+			}
+		}
+	}
+}

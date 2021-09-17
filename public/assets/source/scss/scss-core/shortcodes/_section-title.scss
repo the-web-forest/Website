@@ -1,0 +1,507 @@
+/*
+ * Shortcode: section-title.scss
+ * -----------------------------------------------
+*/
+.tm-sc-section-title {
+	margin-bottom: $section-title-mb;
+	.title-wrapper {
+		margin-bottom: 20px;
+		position: relative;
+		.title {
+			margin-top: -6px;
+			line-height: 1.3;
+			position: relative;
+			z-index: 0;
+			text-transform: capitalize;
+			font-family: $section-title-font-family;
+			font-size: $section-title-font-size;
+			.title-shadow-text {
+				position: absolute;
+				left: 0;
+				right: 0;
+				z-index: -1;
+				color: #ddd;
+				font-size: 6rem;
+				opacity: 0.4;
+				top: -40px;
+				@include media-breakpoint-down(md) {
+					font-size: 4rem;
+					top: -20px;
+				}
+			}
+			span {
+				line-height: 1;
+			}
+		}
+		.subtitle {
+			position: relative;
+			z-index: 1;
+			font-family: $section-title-subtitle-font-family;
+			font-size: $section-title-subtitle-font-size;
+			font-weight: 400;
+			color: #515056;
+		}
+		:first-child {
+			margin-top: 0;
+		}
+		.paragraph {
+			font-size: $section-title-para-font-size;
+			position: relative;
+		}
+	}
+
+
+
+
+	&.line-bottom-style1-image-icon {
+		.title-wrapper {
+			&:after {
+				background: url('../images/line-bottom-style1-image-icon.png') no-repeat;
+				bottom: -20px;
+				border-radius: 10px;
+				content: "";
+				height: 20px;
+				left: 0;
+				margin-top: 0;
+				position: absolute;
+				width: 66px;
+			}
+		}
+		&.text-center {
+			.title-wrapper {
+				&:after {
+					margin-left: auto;
+					margin-right: auto;
+					left: 0;
+					right: 0;
+				}
+			}
+		}
+		&.text-right {
+			.title-wrapper {
+				&:after {
+					left: auto;
+					right: 0;
+				}
+			}
+		}
+	}
+
+
+
+
+	&.line-bottom-style2-solid-line {
+		.title-wrapper {
+			&:after {
+				background-color: #aaa;
+				bottom: -25px;
+				border-radius: 10px;
+				content: "";
+				height: 4px;
+				left: 0;
+				margin-top: 0;
+				position: absolute;
+				width: 50px;
+			}
+		}
+		&.text-center {
+			.title-wrapper {
+				&:after {
+					margin-left: auto;
+					margin-right: auto;
+					left: 0;
+					right: 0;
+				}
+			}
+		}
+		&.text-right {
+			.title-wrapper {
+				&:after {
+					left: auto;
+					right: 0;
+				}
+			}
+		}
+	}
+
+
+
+
+	&.line-bottom-style3-bordered-line {
+		.title-wrapper {
+			&:after {
+				border: 1px solid #aaa;
+				bottom: -13px;
+				border-radius: 10px;
+				content: "";
+				height: 4px;
+				left: 0;
+				margin-top: 0;
+				position: absolute;
+				width: 50px;
+			}
+		}
+		&.text-center {
+			.title-wrapper {
+				&:after {
+					margin-left: auto;
+					margin-right: auto;
+					left: 0;
+					right: 0;
+				}
+			}
+		}
+		&.text-right {
+			.title-wrapper {
+				&:after {
+					left: auto;
+					right: 0;
+				}
+			}
+		}
+	}
+
+
+
+	&.line-bottom-style4-attached-double-lines1 {
+		.title-wrapper {
+			position: relative;
+			&:before {
+				content: "";
+				background: #eee;
+				position: absolute;
+				height: 3px;
+				width: 110px;
+				left: 0;
+				bottom: -13px;
+				border-radius: 6px;
+			}
+			&:after {
+				position: absolute;
+				background: #333;
+				content: "";
+				height: 3px;
+				width: 35px;
+				left: 0;
+				bottom: -13px;
+				border-radius: 6px;
+			}
+		}
+		&.text-center {
+			.title-wrapper {
+				&:before {
+					margin-left: auto;
+					margin-right: auto;
+					left: 0;
+					right: 0;
+				}
+				&:after {
+					margin-left: auto;
+					margin-right: auto;
+					left: 0;
+					right: 0;
+				}
+			}
+		}
+		&.text-right {
+			.title-wrapper {
+				&:before {
+					left: auto;
+					right: 0;
+				}
+				&:after {
+					left: auto;
+					right: 0;
+				}
+			}
+		}
+	}
+
+
+
+	&.line-bottom-style5-attached-double-lines2 {
+		.title-wrapper {
+			position: relative;
+			&:before {
+				content: "";
+				background: #eee;
+				position: absolute;
+				height: 3px;
+				width: 110px;
+				left: 0;
+				bottom: -13px;
+				border-radius: 6px;
+			}
+			&:after {
+				position: absolute;
+				background: #333;
+				content: "";
+				height: 3px;
+				width: 35px;
+				left: 20px;
+				bottom: -13px;
+				border-radius: 6px;
+			}
+		}
+		&.text-center {
+			.title-wrapper {
+				&:before {
+					margin-left: auto;
+					margin-right: auto;
+					left: 0;
+					right: 0;
+				}
+				&:after {
+					margin-left: auto;
+					margin-right: auto;
+					left: 0;
+					right: 0;
+				}
+			}
+		}
+		&.text-right {
+			.title-wrapper {
+				&:before {
+					left: auto;
+					right: 0;
+				}
+				&:after {
+					left: auto;
+					right: 20px;
+				}
+			}
+		}
+	}
+
+
+
+	&.line-bottom-style6-bold-double-lines {
+		.title-wrapper {
+			position: relative;
+			&:before {
+				content: "";
+				background: #ddd;
+				position: absolute;
+				height: 2px;
+				width: 70px;
+				left: 0;
+				bottom: -13px;
+				border-radius: 6px;
+			}
+			&:after {
+				position: absolute;
+				background: #eee;
+				content: "";
+				height: 2px;
+				width: 35px;
+				left: 0;
+				bottom: -18px;
+				border-radius: 6px;
+			}
+		}
+		&.text-center {
+			.title-wrapper {
+				&:before {
+					margin-left: auto;
+					margin-right: auto;
+					left: 0;
+					right: 0;
+				}
+				&:after {
+					margin-left: auto;
+					margin-right: auto;
+					left: 0;
+					right: 0;
+				}
+			}
+		}
+		&.text-right {
+			.title-wrapper {
+				&:before {
+					left: auto;
+					right: 0;
+				}
+				&:after {
+					left: auto;
+					right: 0;
+				}
+			}
+		}
+	}
+
+
+
+	&.line-bottom-style7-double-lines {
+		.title-wrapper {
+			position: relative;
+			&:before {
+				content: "";
+				background: #d3c6c6;
+				position: absolute;
+				height: 3px;
+				width: 110px;
+				left: 0;
+				bottom: -24px;
+				border-radius: 6px;
+			}
+			&:after {
+				position: absolute;
+				background: #333;
+				content: "";
+				height: 7px;
+				width: 35px;
+				left: 20px;
+				bottom: -25px;
+				border-radius: 6px;
+			}
+		}
+		&.text-center {
+			.title-wrapper {
+				&:before {
+					margin-left: auto;
+					margin-right: auto;
+					left: 0;
+					right: 0;
+				}
+				&:after {
+					margin-left: auto;
+					margin-right: auto;
+					left: 0;
+					right: 0;
+				}
+			}
+		}
+		&.text-right {
+			.title-wrapper {
+				&:before {
+					left: auto;
+					right: 0;
+				}
+				&:after {
+					left: auto;
+					right: 20px;
+				}
+			}
+		}
+	}
+
+
+
+	&.line-bottom-style8-line-with-circle {
+		.title-wrapper {
+			position: relative;
+			&:before {
+				content: "";
+				background: #eee;
+				position: absolute;
+				height: 3px;
+				width: 110px;
+				left: 0;
+				bottom: -13px;
+				border-radius: 6px;
+			}
+			&:after {
+				position: absolute;
+				background: #999;
+				content: "";
+				height: 10px;
+				width: 10px;
+				left: 0;
+				bottom: -16px;
+				border-radius: 6px;
+			}
+		}
+		&.text-center {
+			.title-wrapper {
+				&:before {
+					margin-left: auto;
+					margin-right: auto;
+					left: 0;
+					right: 0;
+				}
+				&:after {
+					margin-left: auto;
+					margin-right: auto;
+					left: 0;
+					right: 0;
+				}
+			}
+		}
+		&.text-right {
+			.title-wrapper {
+				&:before {
+					left: auto;
+					right: 0;
+				}
+				&:after {
+					left: auto;
+					right: 0;
+				}
+			}
+		}
+	}
+
+
+
+	&.line-bottom-style9-line-with-square {
+		.title-wrapper {
+			position: relative;
+			&:before {
+				content: "";
+				background: #eee;
+				position: absolute;
+				height: 3px;
+				width: 110px;
+				left: 0;
+				bottom: -13px;
+				border-radius: 6px;
+			}
+			&:after {
+				position: absolute;
+				background: #999;
+				content: "";
+				height: 10px;
+				width: 10px;
+				left: 0;
+				bottom: -16px;
+			}
+		}
+		&.text-center {
+			.title-wrapper {
+				&:before {
+					margin-left: auto;
+					margin-right: auto;
+					left: 0;
+					right: 0;
+				}
+				&:after {
+					margin-left: auto;
+					margin-right: auto;
+					left: 0;
+					right: 0;
+				}
+			}
+		}
+		&.text-right {
+			.title-wrapper {
+				&:before {
+					left: auto;
+					right: 0;
+				}
+				&:after {
+					left: auto;
+					right: 0;
+				}
+			}
+		}
+	}
+}
+
+
+
+
+@include media-breakpoint-down(md) {
+	.tm-sc-section-title .title-wrapper h4.title {
+		font-size: 1.3846em;
+	}
+}

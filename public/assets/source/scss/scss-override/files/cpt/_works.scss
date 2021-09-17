@@ -1,0 +1,50 @@
+/*
+ * Shortcode: works.scss
+ * -----------------------------------------------
+*/
+/* Case Story */
+.case-story .title-wrapper .subtitle {
+	font-size: 18px;
+	font-weight: 500;
+	letter-spacing: 2px;
+}
+.case-story .title-wrapper .title {
+	color: #192a3a;
+	font-size: 50px;
+	font-weight: bold;
+}
+.case-story .title-wrapper p {
+	font-size: 18px;
+	color: #7c8186;
+	line-height: 2;
+}
+.case-story .title-wrapper .chart-title {
+	font-size: 24px;
+	font-weight: 400;
+	padding-left: 10px;
+}
+.case-story .title-wrapper .tm-ae-list li {
+	color: #192a3a;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 2.222;
+}
+.case-story .tm-content {
+	position: relative;
+}
+.case-story .tm-content .caq-details {
+	background-color: #fff;
+	bottom: 15px;
+	height: 124px;
+	padding: 35px 60px;
+	position: absolute;
+	right: 15px;
+}
+.case-story .tm-content .caq-details p {
+	color: #7c8186;
+	font-size: 16px;
+	margin-bottom: 0;
+}
+.case-story .tm-content .caq-details .title {
+	margin: 0;
+}

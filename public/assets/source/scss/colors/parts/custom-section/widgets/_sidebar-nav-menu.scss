@@ -1,0 +1,44 @@
+/*
+ * sidebar-nav-menu.scss
+ * -----------------------------------------------
+*/
+
+//style 1
+.tm-sidebar-nav-menu-style1 {
+	.widget.widget_nav_menu {
+		ul {
+			> li {
+				a {
+					&:hover {
+						border-left-color: $theme-color1;
+					}
+				}
+				&.active {
+					> a {
+						border-left-color: $theme-color1;
+					}
+				}
+			}
+		}
+	}
+}
+
+//style 2
+.tm-sidebar-nav-menu-style2 {
+	.widget.widget_nav_menu {
+		ul {
+			> li {
+				a {
+					&:hover {
+						border-left-color: $theme-color1;
+					}
+				}
+				&.active {
+					> a {
+						border-left-color: $theme-color1;
+					}
+				}
+			}
+		}
+	}
+}

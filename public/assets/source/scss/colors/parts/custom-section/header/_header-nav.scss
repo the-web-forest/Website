@@ -1,0 +1,36 @@
+/*
+ * header-nav.scss
+ * -----------------------------------------------
+*/
+#top-primary-nav {
+	.menuzord-menu {
+		> li {
+			> .megamenu {
+				.megamenu-row {
+					li {
+						&.active, &:hover {
+							> a:not(.tm-submenu-title) {
+								color: $theme-color1;
+								i {
+									color: $theme-color1;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		ul.dropdown {
+			li {
+				&.active, &:hover {
+					> a:not(.tm-submenu-title) {
+						color: $theme-color1;
+						i {
+							color: $theme-color1;
+						}
+					}
+				}
+			}
+		}
+	}
+}

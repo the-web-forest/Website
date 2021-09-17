@@ -1,0 +1,37 @@
+/*
+ * Shortcode: working-steps.scss
+ * -----------------------------------------------
+*/
+.tm-sc-working-steps {
+	&.working-steps-horizontal {
+		.working-steps-inner {
+			.tm-sc-working-steps-item:hover {
+				.image-holder {
+					border-color: rgba($theme-color2, 0.8);
+				}
+			}
+		}
+		.working-steps-inner {
+			.tm-sc-working-steps-item {
+				.working-steps-item-inner {
+				}
+				.image-holder-wrapper {
+					.image-holder {
+						.tag {
+							background-color: $theme-color2;
+						}
+					}
+				}
+				&:hover {
+					.image-holder-wrapper {
+						.image-holder {
+							.tag {
+								background-color: $theme-color1;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

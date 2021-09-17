@@ -1,0 +1,13 @@
+/*
+ * Shortcode: unordered-list.scss
+ * -----------------------------------------------
+*/
+.tm-sc-unordered-list {
+	ul {
+		li {
+			&:before {
+				color: $theme-color1;
+			}
+		}
+	}
+}

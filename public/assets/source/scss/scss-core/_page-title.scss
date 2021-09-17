@@ -1,0 +1,110 @@
+/*
+ * page-title.scss
+ * -----------------------------------------------
+*/
+.tm-page-title {
+	
+	.container, .container-fluid {
+		padding-top: 50px;
+		padding-bottom: 50px;
+	}
+	.padding-default {
+		padding-top: 50px;
+		padding-bottom: 50px;
+	}
+	.padding-extra-small {
+		padding-top: 30px;
+		padding-bottom: 30px;
+	}
+	.padding-small {
+		padding-top: 50px;
+		padding-bottom: 50px;
+	}
+	.padding-medium {
+		padding-top: 80px;
+		padding-bottom: 80px;
+	}
+	.padding-large {
+		padding-top: 120px;
+		padding-bottom: 120px;
+	}
+	.padding-extra-large {
+		padding-top: 150px;
+		padding-bottom: 150px;
+	}
+	.title {
+		color: $white-f5;
+		font-weight: $font-weight-600;
+		line-height: 1.1;
+		margin-bottom: 0;
+		margin-top: 0;
+		font-size: 3.5rem;
+		@include media-breakpoint-down(md) {
+			font-size: 2rem;
+			line-height: 1.3;
+		}
+	}
+	.subtitle {
+		color: $gray-aaa;
+		font-weight: $font-weight-600;
+		margin: 0;
+		margin-top: 10px;
+	}
+
+	//breadcrumbs
+	.breadcrumbs {
+		background-color: transparent;
+		padding: 0;
+		margin: 0;
+		font-weight: $font-weight-600;
+		font-size: 16px;
+		> span {
+			margin: 0 12px 10px 0;
+		}
+		span {
+			color: #fff;
+			a {
+				color: #ddd;
+				&:hover {
+					color: darken($gray-aaa, 25%);
+				}
+			}
+		}
+		.active {
+			color: #fff;
+		}
+		@include media-breakpoint-down(md) {
+			display: none;
+		}
+	}
+	
+	//make text black
+	&.text-inverted {
+		.title {
+			color: $black-222;
+		}
+		.subtitle {
+			color: $black-555;
+		}
+		.breadcrumbs {
+			span, a {
+				color: $black-555;
+				&:hover {
+					color: darken($black-555, 25%);
+				}
+			}
+			.active {
+				color: $gray-base;
+			}
+		}
+	}
+
+	&.page-title-standard {
+		.breadcrumbs {
+			margin-top: 10px;
+		}
+		.subtitle + .breadcrumbs {
+			margin-top: 15px;
+		}
+	}
+}

@@ -1,0 +1,28 @@
+/*
+ * Shortcode: line-with-text.scss
+ * -----------------------------------------------
+*/
+.tm-sc-line-with-text {
+	&.line-after-title {
+		.horizontal-text {
+			padding-right: 5px;
+		}
+	}
+	.horizontal-line {
+		display: inline-block;
+		vertical-align: middle;
+		height: 0;
+		width: 50px;
+		background-color: transparent;
+		position: relative;
+		&:after {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			background-image: url('../images/current-theme/title-line-bottom.png');
+			width: 36px;
+			height: 7px;
+		}
+	}
+}

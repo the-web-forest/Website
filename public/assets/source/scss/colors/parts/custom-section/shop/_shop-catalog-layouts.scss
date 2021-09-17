@@ -1,0 +1,136 @@
+/*
+ * shop-catalog-layouts.scss
+ * -----------------------------------------------
+*/
+.woocommerce {
+	.product {
+		.price {
+			//color: $theme-color2;
+		}
+	}
+}
+.woocommerce {
+	.carousel-layout,
+	.isotope-layout {
+		&.products {
+			.tm-woo-product-item {
+				&.shop-catalog-layout-default {
+					.tm-woo-product-item-inner {
+						.product-header-wrapper {
+						}
+						.product-details {
+						}
+					}
+				
+					&:hover {
+						.tm-woo-product-item-inner {
+							.product-header-wrapper {
+								.product-button-holder {
+									//1. quick view
+									.button.yith-wcqv-button {
+										&:hover {
+											background-color: $theme-color1;
+										}
+									}
+
+									//2. compare button
+									.compare-button {
+										.compare.button {
+										}
+										.compare.button:hover {
+											background-color: $theme-color1;
+										}
+									}
+
+									//3. wishlist
+									.yith-wcwl-add-to-wishlist {
+										a {
+											&:hover {
+												background-color: $theme-color1;
+											}
+										}
+									}
+									.yith-wcwl-wishlistaddedbrowse.show,
+									.yith-wcwl-wishlistexistsbrowse.show {
+										a {
+											&:before {
+												background-color: $theme-color1;
+											}
+										}
+									}
+
+									//4. add to cart
+									.tm-btn-add-to-cart {
+										&:hover {
+											background-color: $theme-color1;
+										}
+										&.added {
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+				&.shop-catalog-layout-classic {
+					.tm-woo-product-item-inner {
+						.product-header-wrapper {
+						}
+						.product-details {
+						}
+					}
+				
+					&:hover {
+						.tm-woo-product-item-inner {
+							.product-header-wrapper {
+								.product-button-holder {
+									//1. quick view
+									.button.yith-wcqv-button {
+										&:hover {
+											background-color: $theme-color1;
+										}
+									}
+
+									//2. compare button
+									.compare-button {
+										.compare.button {
+										}
+										.compare.button:hover {
+											background-color: $theme-color1;
+										}
+									}
+
+									//3. wishlist
+									.yith-wcwl-add-to-wishlist {
+										a {
+											&:hover {
+												background-color: $theme-color1;
+											}
+										}
+									}
+									.yith-wcwl-wishlistaddedbrowse.show,
+									.yith-wcwl-wishlistexistsbrowse.show {
+										a:hover {
+											&:before {
+												background-color: $theme-color1;
+											}
+										}
+									}
+
+									//4. add to cart
+									.tm-btn-add-to-cart {
+										&:hover {
+											background-color: $theme-color1;
+										}
+										&.added {
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

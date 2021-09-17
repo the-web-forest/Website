@@ -1,0 +1,100 @@
+/*
+ * Shortcode: common.scss
+ * -----------------------------------------------
+*/
+
+.pt-160 {
+	padding-top: 160px !important;
+}
+.pt-270 {
+	padding-top: 270px !important;
+}
+.pb-200 {
+	padding-bottom: 200px !important;
+}
+.large-font-size {
+	font-size: 72px;
+	margin-bottom: 40px;
+	font-weight: 900;
+}
+.bg-size-cover {
+	background-size: cover;
+}
+.bg-size-contain {
+	background-size: contain;
+}
+.bg-pos-center-center {
+	background-position: center center;
+}
+.mb-responsive--440 {
+	margin-bottom: -440px;
+	@include media-breakpoint-down(md) {
+		margin-bottom: 0;
+	}
+}
+
+.border-radius-5px {
+	border-radius: 5px;
+}
+
+.border-rounded {
+	border-radius: 50%;
+}
+
+.mt-05 {
+	margin-top: 5px !important;
+}
+
+.font-opensans {
+	font-family: $font-current-theme1 !important;
+}
+
+.list-style-square ul li {
+	list-style-type: none;
+}
+
+.list-style-square ul li i {
+	background: #c0c0c0;
+	color: #555555;
+	font-size: 12px;
+	height: 28px;
+	line-height: 28px;
+	margin: 5px 10px 5px 0;
+	text-align: center;
+	width: 28px;
+}
+.fullscreen {
+	height: 100vh;
+}
+.personal-home-style3 {
+	background-attachment: fixed;
+}
+.tm-sc-line-with-text .horizontal-line {
+	display: inline-block;
+	vertical-align: middle;
+	height: 2px;
+	width: 50px;
+	background-color: #fac400;
+}
+.bg-pos-center-bottom {
+	background-position: center bottom;
+}
+.get-a-quote-text {
+	font-size: 72px;
+	margin-bottom: 40px;
+	font-weight: 900;
+}
+.title-area {
+	position: relative;
+}
+.title-area:after {
+	position: absolute;
+	background: #ee864d;
+	height: 56px;
+	width: 56px;
+	content: "";
+	top: 10px;
+	left: 0;
+	border-radius: 50%;
+	opacity: 0.1;
+}

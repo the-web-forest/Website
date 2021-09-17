@@ -1,0 +1,223 @@
+/*
+ * Shortcode: custom-columns-holder.scss
+ * -----------------------------------------------
+*/
+.tm-sc-custom-columns-holder {
+	width: 100%;
+	display: table;
+	table-layout: fixed;
+
+	&.tm-cc-two-columns .tm-sc-custom-columns-holder-item {
+		width: 50%;
+	}
+
+	&.tm-cc-two-columns .tm-sc-custom-columns-holder-item {
+		width: 50%;
+	}
+
+	&.tm-cc-three-columns .tm-sc-custom-columns-holder-item {
+		width: 33%;
+	}
+
+	&.tm-cc-four-columns .tm-sc-custom-columns-holder-item {
+		width: 25%;
+	}
+
+	&.tm-cc-five-columns .tm-sc-custom-columns-holder-item {
+		width: 20%;
+	}
+
+	&.tm-cc-six-columns .tm-sc-custom-columns-holder-item {
+		width: 16%;
+	}
+
+	.tm-sc-custom-columns-holder-item {
+		display: table-cell;
+		vertical-align: middle;
+		height: 100%;
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		position: relative;
+
+		&.tm-cc-vertical-alignment-top {
+			vertical-align: top;
+		}
+
+		&.tm-cc-vertical-alignment-bottom {
+			vertical-align: bottom;
+		}
+
+		&.tm-cc-horizontal-alignment-center {
+			text-align: center;
+		}
+
+		&.tm-cc-horizontal-alignment-right {
+			text-align: right;
+		}
+
+		.item-link {
+			display: inline-block;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			line-height: 0;
+		}
+
+		.item-inner {
+			width: 100%;
+		}
+
+		&.tm-cc-eh-with-zoom {
+			position: relative;
+			overflow: hidden;
+
+			.tm-sc-custom-columns-holder-item-image-zoom {
+				position: absolute;
+				top: 0;
+				left: 0;
+				height: 100%;
+				width: 100%;
+				z-index: -1;
+				background-size: cover;
+				background-position: center center;
+				background-repeat: no-repeat;
+				-webkit-transition: transform 0.5s cubic-bezier(0.15, 0.7, 0.54, 0.99);
+				-moz-transition: transform 0.5s cubic-bezier(0.15, 0.7, 0.54, 0.99);
+				transition: transform 0.5s cubic-bezier(0.15, 0.7, 0.54, 0.99);
+				will-change: transform;
+				-webkit-backface-visibility: hidden;
+			}
+
+			&:hover .tm-sc-custom-columns-holder-item-image-zoom {
+				-webkit-transform: scale(1.03);
+				-moz-transform: scale(1.03);
+				transform: scale(1.03);
+			}
+		}
+	}
+
+	&.tm-cc-elements-items-float.tm-cc-three-columns .tm-sc-custom-columns-holder-item {
+		width: 33.33333333333333%;
+	}
+
+	&.tm-cc-elements-items-float.tm-cc-six-columns .tm-sc-custom-columns-holder-item {
+		width: 16.66666666666667%;
+	}
+
+	&.tm-cc-elements-items-float .tm-sc-custom-columns-holder-item {
+		float: left;
+	}
+
+	.item-content {
+	}
+}
+
+
+@include media-breakpoint-down(xl) {
+	.tm-sc-custom-columns-holder.tm-cc-responsive-mode-1280.tm-cc-two-columns .tm-sc-custom-columns-holder-item, .tm-sc-custom-columns-holder.tm-cc-responsive-mode-1280.tm-cc-three-columns .tm-sc-custom-columns-holder-item, .tm-sc-custom-columns-holder.tm-cc-responsive-mode-1280.tm-cc-four-columns .tm-sc-custom-columns-holder-item, .tm-sc-custom-columns-holder.tm-cc-responsive-mode-1280.tm-cc-five-columns .tm-sc-custom-columns-holder-item, .tm-sc-custom-columns-holder.tm-cc-responsive-mode-1280.tm-cc-six-columns .tm-sc-custom-columns-holder-item {
+		width: 100%;
+		display: inline-block;
+		height: auto;
+	}
+}
+
+@include media-breakpoint-down(lg) {
+	.tm-sc-custom-columns-holder.tm-cc-responsive-mode-1024.tm-cc-two-columns .tm-sc-custom-columns-holder-item, .tm-sc-custom-columns-holder.tm-cc-responsive-mode-1024.tm-cc-three-columns .tm-sc-custom-columns-holder-item, .tm-sc-custom-columns-holder.tm-cc-responsive-mode-1024.tm-cc-four-columns .tm-sc-custom-columns-holder-item, .tm-sc-custom-columns-holder.tm-cc-responsive-mode-1024.tm-cc-five-columns .tm-sc-custom-columns-holder-item, .tm-sc-custom-columns-holder.tm-cc-responsive-mode-1024.tm-cc-six-columns .tm-sc-custom-columns-holder-item {
+		width: 100%;
+		display: inline-block;
+		height: auto;
+	}
+}
+
+@include media-breakpoint-down(md) {
+	.tm-sc-custom-columns-holder.tm-cc-responsive-mode-768.tm-cc-two-columns .tm-sc-custom-columns-holder-item, .tm-sc-custom-columns-holder.tm-cc-responsive-mode-768.tm-cc-three-columns .tm-sc-custom-columns-holder-item, .tm-sc-custom-columns-holder.tm-cc-responsive-mode-768.tm-cc-four-columns .tm-sc-custom-columns-holder-item, .tm-sc-custom-columns-holder.tm-cc-responsive-mode-768.tm-cc-five-columns .tm-sc-custom-columns-holder-item, .tm-sc-custom-columns-holder.tm-cc-responsive-mode-768.tm-cc-six-columns .tm-sc-custom-columns-holder-item {
+		width: 100%;
+		display: inline-block;
+		height: auto;
+	}
+}
+
+@include media-breakpoint-down(sm) {
+	.tm-sc-custom-columns-holder.tm-cc-responsive-mode-600.tm-cc-two-columns .tm-sc-custom-columns-holder-item, .tm-sc-custom-columns-holder.tm-cc-responsive-mode-600.tm-cc-three-columns .tm-sc-custom-columns-holder-item, .tm-sc-custom-columns-holder.tm-cc-responsive-mode-600.tm-cc-four-columns .tm-sc-custom-columns-holder-item, .tm-sc-custom-columns-holder.tm-cc-responsive-mode-600.tm-cc-five-columns .tm-sc-custom-columns-holder-item, .tm-sc-custom-columns-holder.tm-cc-responsive-mode-600.tm-cc-six-columns .tm-sc-custom-columns-holder-item {
+		width: 100%;
+		display: inline-block;
+		height: auto;
+	}
+}
+
+@include media-breakpoint-down(sm) {
+	.tm-sc-custom-columns-holder.tm-cc-responsive-mode-480.tm-cc-two-columns .tm-sc-custom-columns-holder-item, .tm-sc-custom-columns-holder.tm-cc-responsive-mode-480.tm-cc-three-columns .tm-sc-custom-columns-holder-item, .tm-sc-custom-columns-holder.tm-cc-responsive-mode-480.tm-cc-four-columns .tm-sc-custom-columns-holder-item, .tm-sc-custom-columns-holder.tm-cc-responsive-mode-480.tm-cc-five-columns .tm-sc-custom-columns-holder-item, .tm-sc-custom-columns-holder.tm-cc-responsive-mode-480.tm-cc-six-columns .tm-sc-custom-columns-holder-item {
+		width: 100%;
+		display: inline-block;
+		height: auto;
+	}
+}
+
+@include media-breakpoint-down(sm) {
+	.tm-sc-custom-columns-holder .item-content {
+		padding: 0 10px;
+	}
+}
+
+@include media-breakpoint-down(xl) {
+	.tm-sc-custom-columns-holder.tm-cc-responsive-mode-1280.tm-cc-one-column-alignment-left .tm-sc-custom-columns-holder-item .item-content {
+		text-align: left;
+	}
+	.tm-sc-custom-columns-holder.tm-cc-responsive-mode-1280.tm-cc-one-column-alignment-right .tm-sc-custom-columns-holder-item .item-content {
+		text-align: right;
+	}
+	.tm-sc-custom-columns-holder.tm-cc-responsive-mode-1280.tm-cc-one-column-alignment-center .tm-sc-custom-columns-holder-item .item-content {
+		text-align: center;
+	}
+}
+
+@include media-breakpoint-down(lg) {
+	.tm-sc-custom-columns-holder.tm-cc-responsive-mode-1024.tm-cc-one-column-alignment-left .tm-sc-custom-columns-holder-item .item-content {
+		text-align: left;
+	}
+	.tm-sc-custom-columns-holder.tm-cc-responsive-mode-1024.tm-cc-one-column-alignment-right .tm-sc-custom-columns-holder-item .item-content {
+		text-align: right;
+	}
+	.tm-sc-custom-columns-holder.tm-cc-responsive-mode-1024.tm-cc-one-column-alignment-center .tm-sc-custom-columns-holder-item .item-content {
+		text-align: center;
+	}
+}
+
+@include media-breakpoint-down(md) {
+	.tm-sc-custom-columns-holder.tm-cc-responsive-mode-768.tm-cc-one-column-alignment-left .tm-sc-custom-columns-holder-item .item-content {
+		text-align: left;
+	}
+	.tm-sc-custom-columns-holder.tm-cc-responsive-mode-768.tm-cc-one-column-alignment-right .tm-sc-custom-columns-holder-item .item-content {
+		text-align: right;
+	}
+	.tm-sc-custom-columns-holder.tm-cc-responsive-mode-768.tm-cc-one-column-alignment-center .tm-sc-custom-columns-holder-item .item-content {
+		text-align: center;
+	}
+}
+
+@include media-breakpoint-down(sm) {
+	.tm-sc-custom-columns-holder.tm-cc-responsive-mode-600.tm-cc-one-column-alignment-left .tm-sc-custom-columns-holder-item .item-content {
+		text-align: left;
+	}
+	.tm-sc-custom-columns-holder.tm-cc-responsive-mode-600.tm-cc-one-column-alignment-right .tm-sc-custom-columns-holder-item .item-content {
+		text-align: right;
+	}
+	.tm-sc-custom-columns-holder.tm-cc-responsive-mode-600.tm-cc-one-column-alignment-center .tm-sc-custom-columns-holder-item .item-content {
+		text-align: center;
+	}
+}
+
+@include media-breakpoint-down(sm) {
+	.tm-sc-custom-columns-holder.tm-cc-responsive-mode-480.tm-cc-one-column-alignment-left .tm-sc-custom-columns-holder-item .item-content {
+		text-align: left;
+	}
+	.tm-sc-custom-columns-holder.tm-cc-responsive-mode-480.tm-cc-one-column-alignment-right .tm-sc-custom-columns-holder-item .item-content {
+		text-align: right;
+	}
+	.tm-sc-custom-columns-holder.tm-cc-responsive-mode-480.tm-cc-one-column-alignment-center .tm-sc-custom-columns-holder-item .item-content {
+		text-align: center;
+	}
+}
