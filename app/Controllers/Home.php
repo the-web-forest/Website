@@ -3,6 +3,8 @@
 namespace App\Controllers;
 
 use App\Helpers\PageHelper;
+use App\Entities\NewsletterSubscription;
+use App\Models\NewsletterSubscriptionModel;
 
 class Home extends BaseController
 {
