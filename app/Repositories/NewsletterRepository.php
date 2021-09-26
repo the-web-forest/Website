@@ -25,7 +25,12 @@ class NewsletterRepository {
         }
 
         throw new Error("User Not Found");
+    }
 
+    public function create(string $email): bool {
+        $newsletterSubscription = new NewsletterSubscription();
+        $newsletterSubscription->setEmail($email);
+        return $this->newsletterSubscriptionModel->insert($newsletterSubscription);
     }
 
     static function getInstance(): NewsletterRepository {

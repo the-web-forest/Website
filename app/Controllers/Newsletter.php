@@ -8,8 +8,8 @@ class Newsletter extends BaseController
 {
     public function register()
     {
-        $data = NewsletterRegisterUseCase::getInstance()->run("mdbf42@gmail.com");
-        return $data->getStatus();
+        $data = NewsletterRegisterUseCase::getInstance()->run("dev.victor.bacega@gmail.com");
+        return $data->toJson();
     }
     
 }
