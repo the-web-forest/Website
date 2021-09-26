@@ -12,4 +12,10 @@ class NewsletterSubscription extends Entity
         'created_at' => null,
         'updated_at' => null,
     ];
+
+    public function setEmail(string $email) {
+        $this->attributes['email'] = $email;
+        return $this;
+    }
+
 }
