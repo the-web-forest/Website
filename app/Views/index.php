@@ -170,7 +170,7 @@
                     <p class="paragraph mb-0">O plantio de árvores é uma das alternativas mais simples e benéficas para reverter os impactos ambientais já causados pelo homem na natureza. O retorno desta atividade é sentido rapidamente e o investimento é muito pequeno, se comparado às inovações tecnologias que prometem o mesmo efeito.</p>
                   </div>
                 </div>
-                <a href="page-about.html" class="btn btn-lg btn-theme-colored1 btn-flat">Vamos Plantar</a>
+                <a onclick="alert('Em breve!')" class="btn btn-lg btn-theme-colored1 btn-flat">Vamos Plantar</a>
               </div>
             </div>
           </div>
@@ -711,7 +711,7 @@
               </div>
             </div>
             <div class="col-lg-3 text-left text-lg-right mt-md-20">
-              <a href="page-campaign-details.html" class="btn btn-lg btn-theme-colored2 btn-flat">Quero mudar o mundo</a>
+              <a onclick="alert('Em breve')" class="btn btn-lg btn-theme-colored2 btn-flat">Quero mudar o mundo</a>
             </div>
           </div>
         </div>
