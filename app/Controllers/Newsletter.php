@@ -3,12 +3,14 @@
 namespace App\Controllers;
 
 use App\UseCases\Newsletter\NewsletterRegisterUseCase;
+use Error;
 
 class Newsletter extends BaseController
 {
     public function register()
-    {
-        $data = NewsletterRegisterUseCase::getInstance()->run("dev.victor.bacega@gmail.com");
+    {   
+        $email = $_POST["email"];
+        $data = NewsletterRegisterUseCase::getInstance()->run($email);
         return $data->toJson();
     }
     

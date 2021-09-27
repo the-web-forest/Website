@@ -23,6 +23,7 @@ class NewsletterRegisterUseCase {
 
         if($alreadyRegistered) {
             $response->setStatus("ALREADY REGISTERED");
+            $response->setError(true);
             return $response;
         }
 

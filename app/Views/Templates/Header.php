@@ -42,6 +42,7 @@
 <script src="js/bootstrap.min.js"></script>
 <script src="js/javascript-plugins-bundle.js"></script>
 <script src="js/menuzord/js/menuzord.js"></script>
+<script src="js/custom.js"></script>
 
 <!-- REVOLUTION STYLE SHEETS -->
 <link rel="stylesheet" type="text/css" href="js/revolution-slider/css/rs6.css">

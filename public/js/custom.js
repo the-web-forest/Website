@@ -3487,3 +3487,45 @@ var THEMEMASCOT = {};
   THEMEMASCOT.initialize.TM_preLoaderClickDisable();
 
 })(jQuery);
+
+
+// EMAIL FUNCTIONS
+
+function validateEmail(email) {
+  const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return re.test(String(email).toLowerCase());
+}
+
+function registerEmail(url) {
+  var email = document.getElementById('email-from-bottom').value
+  var msgSucesso = document.getElementById('msg-email-sucesso')
+  var msgErro = document.getElementById('msg-email-erro')
+
+  msgErro.style.display = 'None'
+  msgSucesso.style.display = 'None'
+  msgErro.innerHTML = "Erro ao cadastrar o e-mail"
+  msgSucesso.innerHTML = "E-mail cadastrado com sucesso"
+
+  if(!validateEmail(email)){
+    msgErro.style.display = 'Block'
+    return
+  }
+
+  $.post(url + "/newsletter/register", { email }, null, "json").then((data) => {
+    var hasError = data.error
+
+    if(hasError){
+
+      if(data.status == "ALREADY REGISTERED") {
+        msgErro.innerHTML = "Seu e-mail já está cadastrado"
+      }
+
+      msgErro.style.display = 'Block'
+    } else {
+      msgSucesso.style.display = 'Block'
+    }
+
+  }).catch((err) => {
+    msgErro.style.display = 'Block'
+  })
+}
