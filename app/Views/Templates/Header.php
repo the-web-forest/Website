@@ -13,8 +13,8 @@
 <meta property="og:url"                content="<?=base_url()?>" />
 <meta property="og:type"               content="website" />
 <meta property="og:title"              content="<?=$Title?>"/>
-<meta property="og:description"        content="Ações Digitais, impactos reais" />
-<meta property="og:image"              content="<?=base_url("images/background/bg1.jpg")?>" />
+<meta property="og:description"        content="Ações digitais, impactos reais." />
+<meta property="og:image"              content="<?=base_url("images/preload/preload.jpg")?>" />
 
 <!-- Favicon and Touch Icons -->
 <link href="images/favicon.png" rel="shortcut icon" type="image/png">
