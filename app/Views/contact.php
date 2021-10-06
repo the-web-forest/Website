@@ -12,8 +12,6 @@
   <div id="disable-preloader" class="btn btn-default btn-sm">Disable Preloader</div>
 </div>
 
-<?php echo view('Templates/Sidebar'); ?>
-
 <div id="wrapper" class="clearfix">
   
   <!-- Header -->

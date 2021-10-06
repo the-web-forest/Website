@@ -5,8 +5,6 @@
 
 <body class="tm-container-1340px has-side-panel side-panel-right">
 
-<?php echo view('Templates/Sidebar'); ?>
-
 <div id="wrapper" class="clearfix">
   <!-- Header -->
   
@@ -48,8 +46,31 @@
                   <div class="team-social">
                     <ul class="styled-icons icon-dark icon-rounded clearfix">
                       <li><a class="social-link" href="https://www.linkedin.com/in/barros42" target="_blank" ><i class="fab fa-linkedin"></i></a></li>
-                      <li><a class="social-link" href="https://twitter.com/4str0n4uta" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                      <li><a class="social-link" href="https://instagram.com/barros.42" target="_blank"><i class="fab fa-instagram"></i></a></li>
                       <li><a class="social-link" href="https://www.youtube.com/channel/UC-fqQFJ19_VMzEUa8OwDjbw" target="_blank"><i class="fab fa-youtube"></i></a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- End Member -->
+
+            <!-- Member  -->
+            <div class="col-lg-6 col-xl-3 col-md-6">
+              <div class="team-item mb-30">
+                <div class="team-thumb">
+                  <img class="w-100" src="images/team/3.jpg" alt="">
+                </div>
+                <div class="team-content">
+                  <div class="team-information">
+                    <h4 class="team-name mt-0 mb-0">Victor Bacega</h4>
+                    <p class="designation ">Desenvolvedor & Cofundador</p>
+                  </div>
+                  <div class="team-social">
+                    <ul class="styled-icons icon-dark icon-rounded clearfix">
+                      <li><a class="social-link" href="https://www.linkedin.com/in/victor-bacega/" target="_blank" ><i class="fab fa-linkedin"></i></a></li>
+                      <li><a class="social-link" href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                      <li><a class="social-link" href="#" target="_blank"><i class="fab fa-youtube"></i></a></li>
                     </ul>
                   </div>
                 </div>
@@ -84,18 +105,18 @@
             <div class="col-lg-6 col-xl-3 col-md-6">
               <div class="team-item mb-30">
                 <div class="team-thumb">
-                  <img class="w-100" src="images/team/3.jpg" alt="">
+                  <img class="w-100" src="images/team/4.jpg" alt="">
                 </div>
                 <div class="team-content">
                   <div class="team-information">
-                    <h4 class="team-name mt-0 mb-0">Victor Bacega</h4>
-                    <p class="designation ">Desenvolvedor & Cofundador</p>
+                    <h4 class="team-name mt-0 mb-0">Murillo Torres</h4>
+                    <p class="designation ">Diretor de Comunicação</p>
                   </div>
                   <div class="team-social">
                     <ul class="styled-icons icon-dark icon-rounded clearfix">
-                      <li><a class="social-link" href="https://www.linkedin.com/in/victor-bacega/" target="_blank" ><i class="fab fa-linkedin"></i></a></li>
-                      <li><a class="social-link" href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
-                      <li><a class="social-link" href="#" target="_blank"><i class="fab fa-youtube"></i></a></li>
+                      <li><a class="social-link" href="https://linkedin.com/in/murillottorres" target="_blank" ><i class="fab fa-linkedin"></i></a></li>
+                      <li><a class="social-link" href="https://instagram.com/murillottorres" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                      <li><a class="social-link" href="https://facebook.com/murillottorres" target="_blank"><i class="fab fa-facebook"></i></a></li>
                     </ul>
                   </div>
                 </div>

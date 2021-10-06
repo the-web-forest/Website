@@ -16,7 +16,7 @@ class NewsletterRegisterUseCase {
 
     function run(string $email): NewsletterRegisterUseCaseResponse {
 
-        $response = new NewsletterRegisterUseCaseResponse();
+        $response = new NewsletterRegisterUseCaseResponse;
         $response->setError(false);
 
         $alreadyRegistered = $this->userExists($email);

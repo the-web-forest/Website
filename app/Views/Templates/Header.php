@@ -4,11 +4,17 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
 <meta name="description" content="The Web Forest"/>
-<meta name="keywords" content="agency, business, charity, corporate, fundraising"/>
-<meta name="author" content="Matheus de Barros"/>
+<meta name="keywords" content="the, web, forest, associação, ong, floresta"/>
+<meta name="author" content="The Web Forest"/>
 
 <!-- Page Title -->
 <title><?=$Title?></title>
+
+<meta property="og:url"                content="<?=base_url()?>" />
+<meta property="og:type"               content="website" />
+<meta property="og:title"              content="<?=$Title?>"/>
+<meta property="og:description"        content="Ações Digitais, impactos reais" />
+<meta property="og:image"              content="<?=base_url("images/background/bg1.jpg")?>" />
 
 <!-- Favicon and Touch Icons -->
 <link href="images/favicon.png" rel="shortcut icon" type="image/png">

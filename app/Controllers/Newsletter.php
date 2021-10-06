@@ -3,7 +3,6 @@
 namespace App\Controllers;
 
 use App\UseCases\Newsletter\NewsletterRegisterUseCase;
-use Error;
 
 class Newsletter extends BaseController
 {

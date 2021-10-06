@@ -5,8 +5,6 @@
 
 <body class="tm-container-1340px has-side-panel side-panel-right">
 
-<?php echo view('Templates/Sidebar'); ?>
-
 <div id="wrapper" class="clearfix">
   <!-- Header -->
   

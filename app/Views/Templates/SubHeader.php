@@ -22,26 +22,10 @@
                       </ul>
                     </li>
                     <li><a href="/contact">Contato</a></li>
+                    <li><a href="https://forum.thewebforest.com/" target="_blank">Fórum</a></li>
                     <li><a href="#em-breve" onClick="alert('Em Breve!')">Web Forest</a></li>
                   </ul>
                 </nav>
-              </div>
-              <div class="col-sm-auto align-self-center nav-side-icon-parent">
-                <ul class="list-inline nav-side-icon-list">
-                  <li class="hidden-mobile-mode">
-                    <div id="side-panel-trigger" class="side-panel-trigger"> <a href="#">
-                      <div class="hamburger-box">
-                        <div class="hamburger-inner"></div>
-                      </div>
-                      </a> </div>
-                  </li>
-                </ul>
-                <div id="top-nav-search-form" class="clearfix">
-                  <form action="#" method="GET">
-                    <input type="text" name="s" value="" placeholder="Type and Press Enter..." autocomplete="off" />
-                  </form>
-                  <a href="#" id="close-search-btn"><i class="fa fa-times"></i></a>
-                </div>
               </div>
             </div>
             <div class="row header-nav-clone-col-row d-block d-xl-none">
