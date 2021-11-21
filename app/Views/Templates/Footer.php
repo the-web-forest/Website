@@ -53,10 +53,9 @@
                 <div class="footer-paragraph font-size-15">© Copyright <?=date("Y");?> The Web Forest</div>
                 <div class="widget widget-social-list-custom clearfix mb-0">
                   <ul class="styled-icons icon-theme-colored1">
-                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                    <li><a href="#"><i class="fab fa-facebook"></i></a></li>
-                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                    <li><a href="#"><i class="fab fa-vk"></i></a></li>
+                    <li><a href="https://twitter.com/the_web_forest" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="https://www.linkedin.com/company/the-web-forest" target="_blank" ><i class="fab fa-linkedin"></i></a></li>
+                    <li><a href="https://www.instagram.com/the.web.forest" target="_blank"><i class="fab fa-instagram"></i></a></li>
                   </ul>
                 </div>
               </div>

@@ -585,7 +585,7 @@
                 <div class="title-icon-img line-height-1">
                   <img src="images/icons/title-icon.png" alt="Image">
                 </div>
-                <h2 class="title">Veja algumas árvores que você poderá plantar</h2>
+                <h2 class="title">Veja algumas árvores simbólicas que você poderá plantar</h2>
                 <p class="paragraph mb-0">Você poderá em poucos cliques plantar qualquer uma dessas árvores em nossa floresta digital.</p>
               </div>
             </div>
