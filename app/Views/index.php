@@ -168,7 +168,7 @@
                     <p class="paragraph mb-0">O plantio de árvores é uma das alternativas mais simples e benéficas para reverter os impactos ambientais já causados pelo homem na natureza. O retorno desta atividade é sentido rapidamente e o investimento é muito pequeno, se comparado às inovações tecnologias que prometem o mesmo efeito.</p>
                   </div>
                 </div>
-                <a onclick="alert('Em breve!')" class="btn btn-lg btn-theme-colored1 btn-flat">Vamos Plantar</a>
+                <a class="btn btn-lg btn-theme-colored1 btn-flat" href="https://www.catarse.me/the_web_forest" target="_blank" >Vamos Plantar</a>
               </div>
             </div>
           </div>
@@ -179,6 +179,19 @@
         <span class="floating-object-2 tm-animation-floating" data-tm-bg-img="images/shape/about-02.png" data-tm-width="90" data-tm-height="80" data-tm-top="150" data-tm-bottom="auto" data-tm-left="180" data-tm-opacity="1"></span>
         <span class="floating-object-3" data-tm-bg-img="images/shape/about-03.png" data-tm-width="174" data-tm-height="258" data-tm-top="auto" data-tm-bottom="0" data-tm-right="100" data-tm-left="auto" data-tm-opacity="1"></span>
         <span class="floating-object-4 tm-animation-slide-horizontal" data-tm-bg-img="images/shape/about-04.png" data-tm-width="90" data-tm-height="80" data-tm-top="40%" data-tm-bottom="auto" data-tm-right="120" data-tm-left="auto" data-tm-opacity="1"></span>
+      </div>
+    </section>
+
+    <!-- Start Divider -->
+    <section class="text-center bg-img-cover bg-img-center-top" data-tm-bg-img="images/background/bg4.jpg">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-8 m-auto text-center">
+            <div class="m-auto mb-25" data-tm-width="75" data-tm-height="63" data-tm-bg-img="images/icons/heart01.png"></div>
+            <h2 class="text-white rs-divider-title font-weight-900 mb-40 mt-0">Nossa campanha de financiamento coletivo <br> está ativa. <br> Nos ajude a ganhar vida!</h2>
+            <a href="https://www.catarse.me/the_web_forest" target="_blank" class="btn btn-lg btn-theme-colored2 btn-flat">Doar</a>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -351,11 +364,11 @@
                             <div class="progress-title">
                               <h6 class="title m-0">Alcançado</h6>
                             </div>
-                            <div class="tm-sc-progress-bar progress-bar-fixed-right-percent mb-10" data-percent="0" data-bar-height="10">
+                            <div class="tm-sc-progress-bar progress-bar-fixed-right-percent mb-10" data-percent="40" data-bar-height="10">
                               <div class="progress-title-holder">
                                 <span class="percent">
                                   <span class="symbol-left"></span>
-                                  <span class="value">0</span>
+                                  <span class="value">40</span>
                                   <span class="symbol-right">%</span>
                                 </span>
                               </div>
@@ -383,11 +396,11 @@
                             <div class="progress-title">
                               <h6 class="title m-0">Alcançado</h6>
                             </div>
-                            <div class="tm-sc-progress-bar progress-bar-fixed-right-percent mb-10" data-percent="0" data-bar-height="10">
+                            <div class="tm-sc-progress-bar progress-bar-fixed-right-percent mb-10" data-percent="70" data-bar-height="10">
                               <div class="progress-title-holder">
                                 <span class="percent">
                                   <span class="symbol-left"></span>
-                                  <span class="value">0</span>
+                                  <span class="value">70</span>
                                   <span class="symbol-right">%</span>
                                 </span>
                               </div>
@@ -572,7 +585,7 @@
                 <div class="title-icon-img line-height-1">
                   <img src="images/icons/title-icon.png" alt="Image">
                 </div>
-                <h2 class="title">Veja as árvores que você poderá plantar</h2>
+                <h2 class="title">Veja algumas árvores que você poderá plantar</h2>
                 <p class="paragraph mb-0">Você poderá em poucos cliques plantar qualquer uma dessas árvores em nossa floresta digital.</p>
               </div>
             </div>
@@ -709,7 +722,7 @@
               </div>
             </div>
             <div class="col-lg-3 text-left text-lg-right mt-md-20">
-              <a onclick="alert('Em breve')" class="btn btn-lg btn-theme-colored2 btn-flat">Quero mudar o mundo</a>
+              <a href="https://www.catarse.me/the_web_forest" target="_blank" class="btn btn-lg btn-theme-colored2 btn-flat">Quero mudar o mundo</a>
             </div>
           </div>
         </div>

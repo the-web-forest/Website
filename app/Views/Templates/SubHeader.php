@@ -6,8 +6,8 @@
             <div class="row header-nav-col-row">
               <div class="col-sm-auto align-self-center">
                 <a class="menuzord-brand site-brand" href="<?=base_url()?>">
-                  <img class="logo-default logo-1x" src="images/logo-wide@2x.png" alt="Logo">
-                  <img class="logo-default logo-2x retina" src="images/logo-wide@2x.png" alt="Logo">
+                  <img class="logo-default logo-1x" src="images/logo.svg" style="width: 150px;" alt="Logo">
+                  <img class="logo-default logo-2x retina" src="images/logo.svg" style="width: 150px;" alt="Logo">
                 </a>
               </div>
               <div class="col-sm-auto ms-auto pr-0 align-self-center">
@@ -22,8 +22,8 @@
                       </ul>
                     </li>
                     <li><a href="/contact">Contato</a></li>
-                    <li><a href="https://forum.thewebforest.com/" target="_blank">Fórum</a></li>
-                    <li><a href="#em-breve" onClick="alert('Em Breve!')">Web Forest</a></li>
+                    <li><a href="https://forum.thewebforest.com" target="_blank">Fórum</a></li>
+                    <li><a href="https://app.thewebforest.com" target="_blank">Web Forest</a></li>
                   </ul>
                 </nav>
               </div>

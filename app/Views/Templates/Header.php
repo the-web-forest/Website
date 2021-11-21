@@ -50,6 +50,16 @@
 <script src="js/menuzord/js/menuzord.js"></script>
 <script src="js/custom.js"></script>
 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BFDYPYF2FJ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-BFDYPYF2FJ');
+</script>
+
 <!-- REVOLUTION STYLE SHEETS -->
 <link rel="stylesheet" type="text/css" href="js/revolution-slider/css/rs6.css">
 <link rel="stylesheet" type="text/css" href="js/revolution-slider/extra-rev-slider1.css">
