@@ -147,6 +147,29 @@
             </div>
             <!-- End Member -->
 
+            <!-- Member  -->
+            <div class="col-lg-6 col-xl-3 col-md-6">
+              <div class="team-item mb-30">
+                <div class="team-thumb">
+                  <img class="w-100" src="images/team/6.jpg" alt="">
+                </div>
+                <div class="team-content">
+                  <div class="team-information">
+                    <h4 class="team-name mt-0 mb-0">Gabriel Cordeiro</h4>
+                    <p class="designation ">Product Designer</p>
+                  </div>
+                  <div class="team-social">
+                    <ul class="styled-icons icon-dark icon-rounded clearfix">
+                      <li><a class="social-link" href="https://www.linkedin.com/in/gabrielcordeirosantos/" target="_blank" ><i class="fab fa-linkedin"></i></a></li>
+                      <li><a class="social-link" href="https://www.instagram.com/gcsantos_/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                      <li><a class="social-link" href="#" target="_blank"><i class="fab fa-facebook"></i></a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- End Member -->
+
           </div>
         </div>
       </div>
