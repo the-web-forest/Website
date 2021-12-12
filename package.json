@@ -1,5 +1,5 @@
 {
-  "name": "gaia",
+  "name": "wf-gaia",
   "private": true,
   "scripts": {
     "dev": "next dev",
