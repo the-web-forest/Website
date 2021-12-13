@@ -1,0 +1,71 @@
+@media screen and (max-width: 1024px) {
+}
+@media screen and (max-width: 768px) {
+ .banner-text {
+ padding-top: 12%;
+}
+ .banner-text h1 {
+ font-size: 42px;
+}
+ .banner-text p {
+ font-size: 24px;
+}
+ .footer .footer-col {
+ margin-bottom: 50px;
+}
+h1, .type-wrap {
+    font-size: 24px;
+    color: #fff;
+}
+#countdown {
+	margin-bottom:0px;
+}
+#countdown .item:nth-child(1){
+    margin: 15px; 
+	margin-left:0px;
+}
+.item {
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    margin: 0 10px;
+    padding: 15px 0 20px;
+    text-transform: uppercase;
+    font-size: 10px;
+    color: #fff;
+    width: 140px;
+    margin: 15px;
+    margin-left:0px;
+}
+.subscribe {
+    padding-bottom: 4px;
+}
+}
+@media screen and (max-width: 640px) {
+ .banner-text {
+ padding-top: 12%;
+}
+h1, .type-wrap {
+    font-size: 18px;
+    color: #fff;
+}
+}
+@media screen and (max-width: 480px) {
+ .banner-text {
+ padding-top: 12%;
+}
+ .banner-text h1 {
+ font-size: 32px;
+}
+ .item {
+ width: 45%;
+}
+}
+@media screen and (max-width: 320px) {
+ .banner-text {
+ padding-top: 55%;
+}
+ .item {
+ width:70%;
+}
+}
