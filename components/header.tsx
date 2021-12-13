@@ -8,16 +8,13 @@ interface HeaderData {
 const Header = (props: HeaderData) => {
 
     const getTitle = (): string => {
-
         let title = Settings.APP_NAME
         
-        if(props.title) {
+        if(props.title)
             title = `${props.title} - ${title}`
-        }
 
-        if(Settings.isDevelopment()) {
+        if(Settings.isDevelopment())
             title = `DEV - ${title}`
-        }
 
         return title
     }
