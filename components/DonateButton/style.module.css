@@ -1,9 +1,17 @@
 .container {
     background-color: #28ab38;
-    color: #FFF;
+    color: #ffffff;
     height: 40px;
-    width: 150px;
     border-radius: 20px;
     text-align: center;
+    display: inline-block;
     line-height: 40px;
+    cursor: pointer;
+    font-family: 'Aprova';
+    letter-spacing: 1px;
+    padding: 0px 18px 0px 18px
+}
+
+.container:hover {
+    background-color: #1e8c2b;
 }

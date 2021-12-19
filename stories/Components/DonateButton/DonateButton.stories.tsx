@@ -13,6 +13,15 @@ const Template: ComponentStory<typeof DonateButton> = (args) => <DonateButton {.
 export const Primary = Template.bind({});
 
 Primary.args = {
-  text: 'Botão de Teste'
+  text: 'Faça uma doação',
+  target: '_blank',
+  url: 'https://www.webforest.eco'
 };
+
+Primary.argTypes = {
+  target: {
+    options: ['_blank', '_self'],
+    control: { type: 'select' },
+  }
+}
 
