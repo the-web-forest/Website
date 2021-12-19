@@ -12,11 +12,11 @@ const DonateButton = ({
     url 
 }: DonateButtonProps) => {
     return (
-        <div className={styles.container}>
-            <a href={url} target={target} >
+        <a href={url} target={target} >
+            <div className={styles.container}>
                 {text}
-            </a>
-        </div>
+            </div>
+        </a>
     )
 }
 
