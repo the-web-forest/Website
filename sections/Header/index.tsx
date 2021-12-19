@@ -1,5 +1,6 @@
-import DonateButton from '../../components/DonateButton'
+import DonateButton from '../../components/FilledButton'
 import HeaderButton from '../../components/HeaderButton'
+import OutlinedButton from '../../components/OutlinedButton'
 import Settings from '../../core/settings'
 import styles from './styles.module.css'
 
@@ -18,22 +19,36 @@ const HeaderSection = () => {
                     <HeaderButton
                         text='Quem somos'
                         selected
-                        url='http://google.com.br'
+                        url={`${Settings.APP_URL}#about`}
                     />
 
                     <HeaderButton
                         text='Como funciona'
-                        url='http://google.com.br'
+                        url={`${Settings.APP_URL}#works`}
                     />
 
                     <HeaderButton
                         text='Nossas Ações'
-                        url='http://google.com.br'
+                        url={`${Settings.APP_URL}#actions`}
+                    />
+                    
+                    <HeaderButton
+                        text='Floresta Digital'
+                        url={`${Settings.APP_URL}#forest`} 
                     />
                     
                 </div>
 
                 <div id={styles.divRight}>
+
+                    <OutlinedButton
+                        text='Login'
+                        type='function'
+                        clickHandler={() => alert('Login')}
+                        url={Settings.APP_URL}
+                    />
+
+                    
                     <DonateButton
                         text='Faça uma Doação'
                         url='https://www.webforest.eco' 

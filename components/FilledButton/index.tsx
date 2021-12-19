@@ -1,16 +1,16 @@
 import styles from './style.module.css'
 
-interface DonateButtonProps {
+interface FilledButtonProps {
     text: string
     target: string
     url: string
 }
 
-const DonateButton = ({ 
+const FilledButton = ({ 
     text, 
     target = '_blank', 
     url 
-}: DonateButtonProps) => {
+}: FilledButtonProps) => {
     return (
         <a href={url} target={target} >
             <div className={styles.container}>
@@ -20,4 +20,4 @@ const DonateButton = ({
     )
 }
 
-export default DonateButton
+export default FilledButton

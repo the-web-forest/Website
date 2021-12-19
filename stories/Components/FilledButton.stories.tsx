@@ -1,14 +1,14 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import DonateButton from '../../../components/DonateButton'
+import FilledButton from '../../components/FilledButton'
 
 export default {
-    title: 'Components/Donate Button',
-    component: DonateButton,
-  } as ComponentMeta<typeof DonateButton>;
+    title: 'Components/Filled Button',
+    component: FilledButton,
+  } as ComponentMeta<typeof FilledButton>;
 
-const Template: ComponentStory<typeof DonateButton> = (args) => <DonateButton {...args} />;
+const Template: ComponentStory<typeof FilledButton> = (args) => <FilledButton {...args} />;
 
 export const Default = Template.bind({});
 
