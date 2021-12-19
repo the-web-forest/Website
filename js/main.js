@@ -7,7 +7,9 @@ jQuery(document).ready(function() {
 	$('.banner-area').backstretch([
 	                     "images/backgrounds/1.jpg"
 	                   , "images/backgrounds/2.jpg"
-	                   , "images/backgrounds/3.jpg"
+	                   , "images/backgrounds/3.jpg",
+	                   , "images/backgrounds/4.jpg",
+	                   , "images/backgrounds/5.jpg"
 	                  ], {duration: 3000, fade: 750});
 	
 
