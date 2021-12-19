@@ -1,0 +1,25 @@
+.container {
+    width: 100%;
+    background-color: #fff;
+    height: 100px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    display: flex;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+#divLeft {
+}
+
+#divRight {
+    margin-left: auto;
+}
+
+#logo {
+    width: 150px;
+    height: 90px;
+    background-image: url('/images/logo.svg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    cursor: pointer;
+}
