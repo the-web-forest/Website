@@ -17,9 +17,6 @@ const HeaderButton = ({ text, url, target = '_self', selected = false }: HeaderB
         <a href={url} target={target} >
             <div id={styles.container} className={getClassName()}>
             <div id={styles.text}>{text}</div>
-                <div id={styles.selected}>
-                    <div id={styles.dot} />
-                </div>
             </div>
         </a>
     )

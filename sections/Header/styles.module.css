@@ -4,15 +4,16 @@
     height: 90px;
     box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 10px 1px;
     display: flex;
-    padding: 0 2rem;
+    padding: 0 8.68rem;
     align-items: center;
+    justify-content: space-around;
 }
 
 #divLeft {
     display: flex;
     flex-direction: row;
     align-items: center;
-    flex-grow: 1;
+    flex: 1;
 }
 
 #divRight {
@@ -32,3 +33,11 @@
     background-position: center center;
     cursor: pointer;
 }
+
+#menuOptions {
+    display: flex;
+    flex-direction: row;
+    width: 500px;
+    justify-content: space-between;
+}
+

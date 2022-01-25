@@ -16,38 +16,32 @@ const HeaderSection = () => {
                         </a>
                     </div>
 
-                    <HeaderButton
-                        text='Quem somos'
-                        selected
-                        url={`${Settings.APP_URL}#about`}
-                    />
+                    <div id={styles.menuOptions}>
+                        <HeaderButton
+                            text='Inicio'
+                            selected
+                            url={`${Settings.APP_URL}#start`}
+                        />
 
-                    <HeaderButton
-                        text='Como funciona'
-                        url={`${Settings.APP_URL}#works`}
-                    />
+                        <HeaderButton
+                            text='Apoie'
+                            url={`${Settings.APP_URL}#support`}
+                        />
 
-                    <HeaderButton
-                        text='Nossas Ações'
-                        url={`${Settings.APP_URL}#actions`}
-                    />
-                    
-                    <HeaderButton
-                        text='Floresta Digital'
-                        url={`${Settings.APP_URL}#forest`} 
-                    />
+                        <HeaderButton
+                            text='Quem Somos'
+                            url={`${Settings.APP_URL}#us`}
+                        />
+                        
+                        <HeaderButton
+                            text='Contato'
+                            url={`${Settings.APP_URL}#contact`} 
+                        />
+                    </div>
                     
                 </div>
 
                 <div id={styles.divRight}>
-
-                    <OutlinedButton
-                        text='Login'
-                        type='function'
-                        clickHandler={() => alert('Login')}
-                        url={Settings.APP_URL}
-                    />
-
                     
                     <DonateButton
                         text='Faça uma Doação'
