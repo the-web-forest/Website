@@ -1,18 +1,18 @@
 .container {
-    background-color: #28ab38;
+    background-color: #EA9B02;
     color: #ffffff;
     height: 40px;
-    border-radius: 20px;
+    border-radius: 5px;
     text-align: center;
     display: inline-block;
     line-height: 40px;
     cursor: pointer;
     font-family: 'Aprova';
-    letter-spacing: 1px;
     padding: 0px 18px 0px 18px;
-    font-size: .9em;
+    font-size: 1em;
 }
 
 .container:hover {
-    background-color: #1e8c2b;
+    background-color: #B67901;
+    transition: background-color 500ms linear;
 }
