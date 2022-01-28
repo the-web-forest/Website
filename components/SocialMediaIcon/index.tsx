@@ -1,10 +1,23 @@
 import styles from './style.module.css'
 
-const SocialMediaIcon = () => {
+interface SocialMediaIconProps {
+    type: 'facebook' | 'linkedin' | 'instagram',
+    url: string
+    title: string
+}
+
+const SocialMediaIcon = ({ type, title, url }: SocialMediaIconProps) => {
+
+    const getClassName = (): string => {
+        return styles[type]
+    }
+
+    const goToLink = (): void => {
+        window.open(url, '_blank')
+    }
+
     return (
-        <div id={styles.container}>
-            Hello        
-        </div>
+        <div onClick={() => goToLink()} title={title} id={styles.container} className={getClassName()}/>
     )
 }
 
