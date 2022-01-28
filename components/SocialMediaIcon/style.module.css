@@ -1,0 +1,7 @@
+#container {
+    width: 40px;
+    height: 40px;
+    background-color: red;
+    cursor: pointer;
+    margin: 5px;
+}

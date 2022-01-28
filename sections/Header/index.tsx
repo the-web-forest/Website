@@ -1,6 +1,5 @@
 import DonateButton from '../../components/FilledButton'
 import HeaderButton from '../../components/HeaderButton'
-import OutlinedButton from '../../components/OutlinedButton'
 import Settings from '../../core/settings'
 import styles from './styles.module.css'
 
