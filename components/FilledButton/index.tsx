@@ -4,7 +4,7 @@ interface FilledButtonProps {
     text: string
     target?: string
     url?: string
-    type: 'function' | 'link'
+    type?: 'function' | 'link'
     onClickFunction?: () => void,
     width?: string
 }
