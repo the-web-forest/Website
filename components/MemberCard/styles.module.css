@@ -1,0 +1,36 @@
+#memberCard {
+    width: 200px;
+    height: 250px;
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+#memberCard #profilePicture {
+    width: 180px;
+    height: 180px;
+    background-image: url('/images/team/barros.jpeg');
+    background-position: center center;
+    background-size: contain;
+    border-radius: 100%;
+    margin: 10px;
+}
+
+#memberCard #name {
+    color: var(--dark-gray);
+    font-family: 'Aprova';
+    text-align: center;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.5em;
+}
+
+#memberCard #description {
+
+    color: var(--dark-gray);
+    font-family: 'Aprova';
+    text-align: center;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1em;
+}
