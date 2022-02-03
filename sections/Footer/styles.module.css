@@ -31,7 +31,11 @@
 }
 
 #blockSocialMediaText {
+<<<<<<< HEAD
+    font-family: 'Aprova';
+=======
     font-family: Aprova Sans;
+>>>>>>> develop
     font-style: normal;
     font-weight: normal;
     font-size: 1.2em;
@@ -55,7 +59,7 @@
 
 #linksBlock a {
     font-size: 1.1em;
-    font-family: Aprova Sans;
+    font-family: 'Aprova';
     font-style: normal;
     font-weight: normal;
     text-decoration: underline;
