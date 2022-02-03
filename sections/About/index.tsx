@@ -16,7 +16,6 @@ const AboutSection = () => {
                     text={fakeText}
 
                 />
-                
                 <AboutCard
                     icon={1}
                     title={fakeTitle}
