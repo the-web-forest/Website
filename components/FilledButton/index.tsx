@@ -1,8 +1,8 @@
 import styles from './style.module.css'
 
 export enum FilledColor {
-    orange = styles.orange,  
-    darkGreen = styles.darkGreen,
+    orange = 'orange',  
+    darkGreen = 'darkGreen',
 }
 interface FilledButtonProps {
     text: string
@@ -43,7 +43,7 @@ const FilledButton = ({
 
     const getMiddle = (): JSX.Element => {
         return (
-            <div className={`${styles.container} ${color}`} style={{ width }}>
+            <div className={`${styles.container} ${styles[color]}`} style={{ width }}>
                 {text}
             </div>
         )
