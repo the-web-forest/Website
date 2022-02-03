@@ -1,5 +1,5 @@
 import Member from "../core/domain/Member";
-import MemberService from "../services/MemberService/MemberService";
+import MemberService from "../services/MemberService";
 
 export default class GetAllMembersUseCase {
 
