@@ -9,8 +9,8 @@ module.exports = {
   ],
   presets: [path.resolve(__dirname, './next-preset.js')],
   staticDirs: [
-   '../public',
-   '../public/'
+    { from: '../public/icons', to: '/icons' },
+    { from: '../public', to: './' }
   ]
 };
 
