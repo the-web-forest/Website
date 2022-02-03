@@ -1,12 +1,22 @@
 :root {
     --primary-color: #00635D;
     --gray-background: #ECECEC;
+    --english-violet: #58355E;
+    --brow-sugar: #A06348;
 
     --dark-gray: #4C4C4C;
     --soft-gray: #E5E5E5;
     --soft-red: #ffb6b6;
-
+    --green-lime: #28ab38;
+    --bud-green:#63AF53;
+    
+    --orange: #EA9B02;
+    --orange-hover: #B67901;
     --white: #FFF;
     --red: red;
     --blue: #508FE7;
+
+    --black: black;
+    --green: green;
+
 }

@@ -8,6 +8,10 @@
   align-items: center;
 }
 
+.container {
+  height: 100vh;
+}
+
 .footer {
   display: flex;
   flex: 1;
