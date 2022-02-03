@@ -13,6 +13,14 @@
 }
 
 .container:hover {
-    background-color: var(--orange-hover);
-    transition: background-color 500ms linear;
+    filter: brightness(90%);
+    transition: filter 500ms linear;
+}
+
+.darkGreen {
+    background-color: var(--dark-green);
+}
+
+.orange {
+    background-color: var(--orange);
 }
