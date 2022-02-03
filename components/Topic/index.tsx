@@ -11,15 +11,15 @@ interface TopicProps {
 const Topic = ({Icon, Title, description}: TopicProps) => {
     return (
         <div className={styles.topic}>
-                    <div className={styles.topicHeader}>
-                        {Icon}
-                        <div className={styles.topicTitle}>
-                        {Title}
-                        </div>
-                    </div>
-                    <div className={styles.topicDescription}>
-                        {description}
-                    </div>
+            <div className={styles.topicHeader}>
+                {Icon}
+                <div className={styles.topicTitle}>
+                {Title}
+                </div>
+            </div>
+            <div className={styles.topicDescription}>
+                {description}
+            </div>
         </div>
     )
 }

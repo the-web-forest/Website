@@ -26,7 +26,6 @@ const HowItWork = () => {
     return (
         <div className={styles.container}>
             <Title text='Como a Web Forest funciona?' color="#4C4C4C" />
-
             <div className={styles.topicSection}>
                 <Topic Icon={<TopicIcon Icon={FaDonate} />} 
                 Title={makeDonationTitle}

@@ -2,7 +2,7 @@ import type { NextPage } from 'next'
 import Header from '../components/header'
 import BannerSection from '../sections/Banner'
 import HeaderSection from '../sections/Header'
-import HowItWork from '../sections/HowItWork'
+import HowItWorkSection from '../sections/HowItWork'
 import ContactSection from '../sections/Contact'
 import FooterSection from '../sections/Footer'
 import TeamSection from '../sections/Team'
@@ -14,7 +14,7 @@ const Home: NextPage = () => {
       <Header/>
       <HeaderSection/>
       <BannerSection/>
-      <HowItWork/>
+      <HowItWorkSection/>
       <TeamSection/>
       <ContactSection/>
       <FooterSection/>
