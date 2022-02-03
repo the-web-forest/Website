@@ -1,0 +1,26 @@
+#container {
+    background: linear-gradient(to bottom, var(--english-violet), var(--english-violet) 60%, transparent 60%, transparent 100%);
+    height: 500px;
+    padding: 0 8.68rem;
+    padding-top: 1.4em;
+    margin-bottom: 120px;
+    margin-top: 50px;
+}
+
+#container #title {
+    color: var(--white);
+    font-family: 'Aprova';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 50px;
+}
+
+#container #cards {
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+}
