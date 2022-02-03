@@ -1,4 +1,4 @@
-import Member from "../../core/domain/Member";
+import Member from "../core/domain/Member";
 
 export default class MemberService {
 
