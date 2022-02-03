@@ -8,6 +8,7 @@ import FooterSection from '../sections/Footer'
 import NewsSection from '../sections/News'
 import TeamSection from '../sections/Team'
 import styles from '../styles/Home.module.css'
+import DonateSection from '../sections/Donate'
 
 const Home: NextPage = () => {
   return (
@@ -15,8 +16,9 @@ const Home: NextPage = () => {
       <Header/>
       <HeaderSection/>
       <BannerSection/>
-      <NewsSection/>
       <HowItWorkSection/>
+      <DonateSection/>
+      <NewsSection/>
       <TeamSection/>
       <ContactSection/>
       <FooterSection/>
