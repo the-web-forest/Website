@@ -1,0 +1,60 @@
+#container {
+    width: 20em;
+    height: 17em;
+    background: var(--white);
+    border: 1px solid var(--soft-gray);
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.06);
+    border-radius: 4px;
+}
+
+#container #photo {
+    background-image: url('/images/news-placeholder.png');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 50%;
+}
+
+#container #title {
+    width: 100%;
+    height: 25%;
+    padding: 10px;
+    font-family: 'Aprova';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.2em;
+    font-weight: 300;
+    overflow: hidden;
+    white-space: inherit;
+    text-overflow: ellipsis;
+    color: var(--dark-gray);
+}
+
+#container #date {
+    font-family: 'Aprova';
+    width: 100%;
+    height: 8%;
+    display: flex;
+    padding: 10px;
+    padding-top: 0;
+    color: var(--dark-gray);
+}
+
+#container #link {
+    width: 100%;
+    height: 17%;
+    color: var(--blue);
+    padding: 10px;
+    padding-top: 0;
+    font-family: 'Aprova';
+    font-size: 1.7em;
+    text-decoration: underline;
+    padding-top: 7px;
+    cursor: pointer;
+}
+
+#container #link:hover{
+    opacity: .9;
+}
