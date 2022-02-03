@@ -1,9 +1,14 @@
 import styles from './style.module.css'
 
+export enum FilledColor {
+    orange = styles.orange,  
+    darkGreen = styles.darkGreen,
+}
 interface FilledButtonProps {
     text: string
     target?: string
     url?: string
+    color?: FilledColor
     type?: 'function' | 'link'
     onClickFunction?: () => void,
     width?: string
@@ -15,6 +20,7 @@ const FilledButton = ({
     url,
     type = 'link',
     onClickFunction,
+    color = FilledColor.orange,
     width = 'auto'
 }: FilledButtonProps) => {
 
@@ -37,7 +43,7 @@ const FilledButton = ({
 
     const getMiddle = (): JSX.Element => {
         return (
-            <div className={styles.container} style={{ width }}>
+            <div className={`${styles.container} ${color}`} style={{ width }}>
                 {text}
             </div>
         )
