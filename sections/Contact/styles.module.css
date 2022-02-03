@@ -1,0 +1,23 @@
+#container {
+    background-color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 1.5em;
+}
+
+#container #title{ 
+    color: var(--white);
+    font-family: 'Aprova';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 2.8em;
+    width: 100%;
+    text-align: center;
+}
+
+#container #form {
+    width: 30%;
+    margin-top: 20px;
+    animation: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}

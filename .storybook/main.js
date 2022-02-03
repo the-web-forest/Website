@@ -8,6 +8,8 @@ module.exports = {
     '@storybook/preset-scss',
   ],
   presets: [path.resolve(__dirname, './next-preset.js')],
-  staticDirs: ['../public']
+  staticDirs: [
+    { from: '../public/icons', to: '/icons' },
+    { from: '../public', to: './' }
+  ]
 };
-
