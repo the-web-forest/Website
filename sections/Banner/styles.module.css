@@ -4,9 +4,9 @@
     font-family: 'Aprova';
     display: flex;
     flex-direction: column;
-    color: #fff;
+    color: var(--white);
     padding: 4.43rem 8.68rem;
-    background-color: green;
+    background-color: var(--bud-green);
     justify-content: space-between;
 }
 

@@ -5,10 +5,10 @@
     max-width: 260px;
     height: 159px;
     font-family: 'Aprova';
+    color: var(--dark-gray);
 }
 
 .topicHeader{
-    
     display: flex;
 }
 
@@ -20,12 +20,10 @@
     line-height: 22px;
     font-size: 1em;
     width: 160px;
-    color: #4D4D4D;
     margin: 0px 0px 4px 8px;
 }
 
 .topicDescription {
-   color: #4C4C4C; 
    font-weight: 400;
    line-height: 19px;
    font-size: 0.8em;

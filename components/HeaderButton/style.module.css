@@ -1,6 +1,6 @@
 #container {
-    background-color: #fff;
-    color: #9b9b9b;
+    background-color: var(--white);
+    color: var(--dark-gray);
     height: 40px;
     text-align: center;
     flex-direction: column;
@@ -16,7 +16,7 @@
 
 #container:hover #text {
     opacity: 0.9;
-    color: black;
+    color: var(--black);
 }
 
 #container:hover #dot{
@@ -24,7 +24,7 @@
 }
 
 #container.selected #text {
-    color: black;
+    color: var(--black);
 }
 
 #container.selected #dot {
@@ -50,7 +50,7 @@
     display: none;
     width: 10px;
     height: 10px;
-    background-color: #28ab38;
+    background-color: var(--green-lime);
     border-radius: 100%;
 }
 
