@@ -1,16 +1,21 @@
 .topic {
+    
     display: flex;
     flex-direction: column;
-    width: 260px;
+    max-width: 260px;
     height: 159px;
     font-family: 'Aprova';
 }
 
 .topicHeader{
+    
     display: flex;
 }
 
 .topicTitle {
+    white-space: pre-wrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
     font-weight: 600;
     line-height: 22px;
     font-size: 1em;
