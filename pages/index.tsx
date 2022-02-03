@@ -18,9 +18,9 @@ const Home: NextPage = () => {
       <HeaderSection/>
       <BannerSection/>
       <HowItWorkSection/>
-      <AboutSection/>
       <DonateSection/>
       <NewsSection/>
+      <AboutSection/>
       <TeamSection/>
       <ContactSection/>
       <FooterSection/>
