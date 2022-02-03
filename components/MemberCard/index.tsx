@@ -1,13 +1,23 @@
+import Member from '../../core/domain/Member'
 import styles from './styles.module.css'
-import SocialMediaIcon from '../SocialMediaIcon'
 
+const MemberCard = ({ profilePictureUrl, name, description, linkedInUrl }: Member) => {
 
-const MemberCard = () => {
+    const openLinkedIn = () => {
+        window.open(linkedInUrl,'_blank')
+    }
+
+    const getStyle = () => {
+        const withPhoto = { backgroundImage: `url(${profilePictureUrl})` }
+        return (profilePictureUrl) ? withPhoto : {}
+    }
+
     return (
         <div id={styles.memberCard}>
-            <div id={styles.profilePicture}/>
-            <div id={styles.name}>Matheus Barros</div>
-            <div id={styles.description}>Founder</div>
+            <div style={getStyle()} id={styles.profilePicture}/>
+            <div id={styles.name}>{name}</div>
+            <div id={styles.description}>{description}</div>
+            <div onClick={(e) => openLinkedIn()} id={styles.linkedinTeam}/>
         </div>
     )
 }
