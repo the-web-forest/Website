@@ -1,6 +1,6 @@
 .container {
-    background-color: #EA9B02;
-    color: #ffffff;
+    background-color: var(--orange);
+    color: var(--white);
     height: 40px;
     border-radius: 5px;
     text-align: center;
@@ -13,6 +13,6 @@
 }
 
 .container:hover {
-    background-color: #B67901;
+    background-color: var(--orange-hover);
     transition: background-color 500ms linear;
 }

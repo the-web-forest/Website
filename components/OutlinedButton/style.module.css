@@ -1,5 +1,5 @@
 #container {
-    color: #9b9b9b;
+    color: var(--dark-gray);
     height: 40px;
     text-align: center;
     display: inline-block;
@@ -13,5 +13,5 @@
 
 #container:hover {
     opacity: 0.9;
-    color: black;
+    color: var(--black);
 }
