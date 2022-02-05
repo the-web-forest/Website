@@ -29,15 +29,21 @@ const TeamSection = () => {
 
     const getVisibleSlides = (): number => {
 
-        if(width <= 400) {
+        const BREAKPOINTS = {
+            MINI: 400,
+            MEDIUM: 700,
+            LARGE: 1200
+        }
+
+        if(width <= BREAKPOINTS.MINI) {
             return 2
         }
 
-        if(width <= 700) {
+        if(width <= BREAKPOINTS.MEDIUM) {
             return 3
         }
 
-        if(width <= 1200) {
+        if(width <= BREAKPOINTS.LARGE) {
             return 4
         }
 
