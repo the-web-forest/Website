@@ -2,18 +2,53 @@ import MemberCard from '../../components/MemberCard'
 import styles from './style.module.css'
 import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext } from 'pure-react-carousel';
 import 'pure-react-carousel/dist/react-carousel.es.css';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import GetAllMembersUseCase from '../../use-cases/GetAllMembersUseCase';
 
 const TeamSection = () => { 
 
     const getAllMembersUseCase = new GetAllMembersUseCase()
-
     const [members] = useState(getAllMembersUseCase.run() || [])
+    const [width, setWidth] = useState(0)
+
+    const getWindowDimensions = () => {
+        const { innerWidth: width, innerHeight: height } = window;
+        return { width, height };
+    }
+
+    const handleWindowResize = () => {
+        const dimensions = getWindowDimensions()
+        setWidth(dimensions.width)
+    }
+
+    useEffect(() => {
+        handleWindowResize()
+        window.addEventListener("resize", handleWindowResize);
+        return () => window.removeEventListener("resize", handleWindowResize);
+    })
+
+    const getVisibleSlides = (): number => {
+
+        if(width <= 400) {
+            return 2
+        }
+
+        if(width <= 700) {
+            return 3
+        }
+
+        if(width <= 1200) {
+            return 4
+        }
+
+        return 6
+
+    }
+
 
     return (
         <>
-        <div id={styles.container}>
+        <div id={styles.container}  >
             <div id={styles.title}>Quem faz</div>
         </div>
         
@@ -22,9 +57,9 @@ const TeamSection = () => {
             naturalSlideHeight={200}
             totalSlides={members.length}
             infinite={true}
-            visibleSlides={6}
+            visibleSlides={getVisibleSlides()}
             className={styles.carousel}
-            interval={5000}
+            interval={3000}
             isPlaying={true}
             isIntrinsicHeight={true}
         >
