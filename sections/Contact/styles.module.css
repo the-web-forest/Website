@@ -25,17 +25,13 @@
 /* Responsive Section */
 
 @media screen and (max-width: 1600px) {
-    
     #container #form {
         width: 60%;
     }
-
 }
 
 @media screen and (max-width: 1024px) {
-    
     #container #form {
         width: 90%;
     }
-
 }
