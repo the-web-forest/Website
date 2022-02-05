@@ -4,7 +4,7 @@ import styles from './styles.module.css'
 
 const FooterSection = () => {
     return (
-        <div className={styles.container}>
+        <div id={styles.container}>
             <div id={styles.block}>
                 <div id={styles.blockTop}>
                     <div id={styles.blockLogo} />
