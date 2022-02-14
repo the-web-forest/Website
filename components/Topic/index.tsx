@@ -1,5 +1,3 @@
-import { IconType } from "react-icons";
-import TopicIcon, { CircleIconProps } from "../../components/CircleIcon";
 import styles from './style.module.css';
 
 interface TopicProps {
