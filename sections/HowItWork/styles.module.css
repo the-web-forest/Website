@@ -16,30 +16,14 @@
     justify-content: space-between;
 }
 
-.topic {
-    display: flex;
-    flex-direction: column;
-    width: 260px;
-    height: 159px;
-    font-family: 'Aprova';
-}
+@media screen and (max-width: 1024px) {
+    .container {
+        padding: 0 1.68rem;
+        height: auto;
+    }
 
-.topicHeader{
-    display: flex;
-}
-
-.topicTitle {
-    font-weight: 600;
-    line-height: 22px;
-    font-size: 1em;
-    width: 140px;
-    color: var(--dark-gray);
-    margin: 0px 0px 4px 8px;
-}
-
-.topicDescription {
-   color: var(--dark-gray); 
-   font-weight: 400;
-   line-height: 19px;
-   font-size: 0.8em;
+    .topicSection {
+        flex-direction: column;
+        margin-top: 10px;
+    }
 }

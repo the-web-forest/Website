@@ -6,7 +6,10 @@
     flex-direction: column;
     color: var(--white);
     padding: 4.43rem 8.68rem;
-    background-color: var(--bud-green);
+    background-image: url('../../public/images/Banner.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
     justify-content: space-between;
 }
 
@@ -17,4 +20,18 @@
 .subtitle {
     font-size: 2em;
     font-weight: 400;
+}
+
+@media screen and (max-width: 1024px) {
+    .container {
+        height: 219px;
+        padding: 1.43rem 2.68rem;
+        
+    }
+    .title {
+       width: 230px;
+    }
+    .subtitle {
+        font-size: 1.2em;
+    }
 }

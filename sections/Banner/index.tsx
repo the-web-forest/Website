@@ -1,6 +1,7 @@
 import styles from './styles.module.css';
 import DonateButton from '../../components/FilledButton';
 import Title from '../../components/Title';
+import Settings from '../../core/settings';
 
 const BannerSection = () => {
     return (
@@ -13,7 +14,7 @@ const BannerSection = () => {
            </div>
            <DonateButton
                 text='Faça uma Doação'
-                url='https://www.webforest.eco' 
+                url={Settings.APP_URL}
                 target='_blank'        
             />
         </div>
