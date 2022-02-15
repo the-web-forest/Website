@@ -9,9 +9,9 @@ interface TopicIconProp {
     Icon: IconType
 }
 
-const makeDonationTitle = <span>Faça uma<br/>doação online<br/>de qualquer valor</span>
-const growTreeTitle = <span>Utilizaremos o<br/>valor para plantar<br/>árvores reais</span>
-const shareTitle = <span>Acompanhe e<br/>compartilhe suas<br/>ações na Web Forest</span>
+const makeDonationTitle = <span>Faça uma doação online de qualquer valor</span>
+const growTreeTitle = <span>Utilizaremos o valor para plantar árvores reais</span>
+const shareTitle = <span>Acompanhe e compartilhe suas ações na Web Forest</span>
 const description1 = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."
 
 const TopicIcon = ({ Icon }: TopicIconProp) => <CircleIcon
