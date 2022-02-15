@@ -9,6 +9,7 @@
 
 .topicHeader{
     display: flex;
+    align-items: center;
 }
 
 .topicTitle {
@@ -26,4 +27,19 @@
    font-weight: 400;
    line-height: 19px;
    font-size: 0.8em;
+}
+
+@media screen and (max-width: 1020px) {
+    .topic {
+    max-width: 100%;
+    }
+
+    .topicTitle {
+        width: 220px;
+        font-size: 1.2em;
+    }
+
+    .topicDescription {
+        font-size: 1em;
+    }
 }
