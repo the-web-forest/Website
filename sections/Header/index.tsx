@@ -4,14 +4,29 @@ import Settings from "../../core/settings";
 import styles from "./styles.module.css";
 import { HiMenu } from "react-icons/hi";
 
-
-
 const HeaderSection = () => {
+  const toggleMenu = () => {
+    const menu = document.getElementById(styles.menuMobileContainer);
+    menu?.classList.toggle(styles.active);
+  };
 
-    const toggleMenu = () => {
-        const menu = document.getElementById(styles.menuMobileContainer);
-        menu?.classList.toggle(styles.active);
-    }
+  const MenuOptions = () => {
+    return (
+      <>
+        <HeaderButton
+          text="Inicio"
+          selected
+          url={`${Settings.APP_URL}#start`}
+        />
+
+        <HeaderButton text="Apoie" url={`${Settings.APP_URL}#support`} />
+
+        <HeaderButton text="Quem Somos" url={`${Settings.APP_URL}#us`} />
+
+        <HeaderButton text="Contato" url={`${Settings.APP_URL}#contact`} />
+      </>
+    );
+  };
 
   return (
     <div className={styles.container}>
@@ -24,17 +39,7 @@ const HeaderSection = () => {
           </div>
 
           <div id={styles.menuOptions}>
-            <HeaderButton
-              text="Inicio"
-              selected
-              url={`${Settings.APP_URL}#start`}
-            />
-
-            <HeaderButton text="Apoie" url={`${Settings.APP_URL}#support`} />
-
-            <HeaderButton text="Quem Somos" url={`${Settings.APP_URL}#us`} />
-
-            <HeaderButton text="Contato" url={`${Settings.APP_URL}#contact`} />
+            <MenuOptions />
           </div>
         </div>
 
@@ -61,17 +66,7 @@ const HeaderSection = () => {
         </div>
         <div id={styles.menuMobileContainer}>
           <div id={styles.menuMobileOptions}>
-            <HeaderButton
-              text="Inicio"
-              selected
-              url={`${Settings.APP_URL}#start`}
-            />
-
-            <HeaderButton text="Apoie" url={`${Settings.APP_URL}#support`} />
-
-            <HeaderButton text="Quem Somos" url={`${Settings.APP_URL}#us`} />
-
-            <HeaderButton text="Contato" url={`${Settings.APP_URL}#contact`} />
+            <MenuOptions />
           </div>
         </div>
       </div>
