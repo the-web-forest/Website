@@ -18,12 +18,12 @@ const Home: NextPage = () => {
       <HeaderSection/>
       <BannerSection/>
       <HowItWorkSection/>
-      <DonateSection/>
+      {/* <DonateSection/>
       <NewsSection/>
       <AboutSection/>
       <TeamSection/>
       <ContactSection/>
-      <FooterSection/>
+      <FooterSection/> */}
     </div>
   )
 }
