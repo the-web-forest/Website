@@ -10,6 +10,7 @@ const TeamSection = () => {
     const getAllMembersUseCase = new GetAllMembersUseCase()
     const [members] = useState(getAllMembersUseCase.run() || [])
     const [width, setWidth] = useState(0)
+    const DEFAULT_SLIDES_INTERVAL = 3000
 
     const getWindowDimensions = () => {
         const { innerWidth: width, innerHeight: height } = window;
@@ -35,19 +36,28 @@ const TeamSection = () => {
             LARGE: 1200
         }
 
+        const ITEMS_PER_BLOCK = {
+            ONE: 1,
+            TWO: 2,
+            THREE: 3,
+            FOUR: 4,
+            FIVE: 5,
+            SIX: 6
+        }
+
         if(width <= BREAKPOINTS.MINI) {
-            return 2
+            return ITEMS_PER_BLOCK.ONE
         }
 
         if(width <= BREAKPOINTS.MEDIUM) {
-            return 3
+            return ITEMS_PER_BLOCK.THREE
         }
 
         if(width <= BREAKPOINTS.LARGE) {
-            return 4
+            return ITEMS_PER_BLOCK.FOUR
         }
 
-        return 6
+        return ITEMS_PER_BLOCK.SIX
 
     }
 
@@ -65,7 +75,7 @@ const TeamSection = () => {
             infinite={true}
             visibleSlides={getVisibleSlides()}
             className={styles.carousel}
-            interval={3000}
+            interval={DEFAULT_SLIDES_INTERVAL}
             isPlaying={true}
             isIntrinsicHeight={true}
         >
