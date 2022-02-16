@@ -57,3 +57,21 @@
 .thirdIcon {
     background-image: url('/icons/people-trees.svg');
 }
+
+
+/* Responsive Section */
+
+@media screen and (max-width: 1400px) {
+    #container{
+        width: 230px;
+        height: auto;
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    #container{
+        width: 100%;
+        height: auto;
+    }
+}

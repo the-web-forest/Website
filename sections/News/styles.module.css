@@ -24,5 +24,39 @@
     padding-left: 9em;
     padding-right: 9em;
     box-sizing: border-box;
-    padding-bottom: 2em;
+    padding-bottom: 0em;
+}
+
+#newsSection {
+    overflow: hidden;
+}
+
+.newsSlide {
+    margin-right: 10px;
+}
+
+@media screen and (max-width: 1024px) {
+
+    #container {
+        padding: 20px;
+        height: auto;
+        margin-right: 10px;
+    }
+
+    .carousel {
+        padding: 20px;
+    }
+
+    #container #title {
+        margin-top: 40px;
+        font-weight: 600;
+        font-size: 1.5em;
+        line-height: 35px;
+        margin-bottom: 0;
+    }
+
+    .carousel {
+        padding-bottom: 0;
+    }
+
 }
