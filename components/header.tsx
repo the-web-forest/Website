@@ -22,8 +22,14 @@ const Header = (props: HeaderData) => {
     return(
         <Head>
             <title>{getTitle()}</title>
-            <meta name="description" content="Web Forest" />
+            <meta name="description" content={Settings.APP_NAME} />
             <link rel="icon" href="/favicon.ico" />
+            <meta property="og:title" content="Web Forest - Floresta Virtual"/>
+            <meta property="og:site_name" content={Settings.APP_NAME}/>
+            <meta property="og:url" content={Settings.APP_URL}/>
+            <meta property="og:description" content="Web Forest - Uma floresta virtual que transforma ações digitais em impactos reais"/>
+            <meta property="og:type" content="website"/>
+            <meta property="og:image" content="/images/open-graph.png"/>
         </Head>
     )
 
