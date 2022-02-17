@@ -44,10 +44,20 @@ const Header = (props: HeaderData) => {
         
     }
 
+    const renderTags = () => {
+        const noIndex = (<>
+            <meta key="robots" name="robots" content="noindex,follow" />
+            <meta key="googlebot" name="googlebot" content="noindex,follow" />
+        </>)
+
+        return (Settings.isDevelopment()) ? noIndex : null
+    }
+
     return(
         <Head>
             <title>{getTitle()}</title>
             {renderAnalytics()}
+            {renderTags()}
             <meta name="description" content={Settings.APP_NAME} />
             <link rel="icon" href="/favicon.ico" />
             <meta property="og:title" content="Web Forest - Floresta Virtual"/>
