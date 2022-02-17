@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Script from 'next/script'
 import Settings from "../core/settings";
 
 interface HeaderData {
@@ -19,9 +20,34 @@ const Header = (props: HeaderData) => {
         return title
     }
 
+    const renderAnalytics = () => {
+
+        const analytics = (
+            <>
+                <Script strategy={'afterInteractive'} async src={'https://www.googletagmanager.com/gtag/js?id=G-K7MKT332XK'}></Script>
+                <Script
+                    id={'analyticsTag'}
+                    strategy={'afterInteractive'}
+                    dangerouslySetInnerHTML={{
+                         __html: `
+                        window.dataLayer = window.dataLayer || [];
+                        function gtag(){dataLayer.push(arguments);}
+                        gtag('js', new Date());
+                        gtag('config', 'G-K7MKT332XK');
+                        `
+                     }}
+                />
+            </>
+        );
+
+        return (Settings.isDevelopment()) ? analytics : null
+        
+    }
+
     return(
         <Head>
             <title>{getTitle()}</title>
+            {renderAnalytics()}
             <meta name="description" content={Settings.APP_NAME} />
             <link rel="icon" href="/favicon.ico" />
             <meta property="og:title" content="Web Forest - Floresta Virtual"/>
