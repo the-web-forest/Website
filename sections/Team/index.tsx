@@ -46,7 +46,7 @@ const TeamSection = () => {
         }
 
         if(width <= BREAKPOINTS.MINI) {
-            return ITEMS_PER_BLOCK.ONE
+            return ITEMS_PER_BLOCK.TWO
         }
 
         if(width <= BREAKPOINTS.MEDIUM) {

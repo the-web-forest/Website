@@ -14,13 +14,11 @@ const AboutSection = () => {
                     icon={0}
                     title={fakeTitle}
                     text={fakeText}
-
                 />
                 <AboutCard
                     icon={1}
                     title={fakeTitle}
                     text={fakeText}
-
                 />
                 <AboutCard
                     icon={2}

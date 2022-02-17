@@ -1,5 +1,5 @@
 #container {
-    width: 20em;
+    width: 90%;
     height: 17em;
     background: var(--white);
     border: 1px solid var(--soft-gray);
@@ -57,4 +57,33 @@
 
 #container #link:hover{
     opacity: .9;
+}
+
+
+@media screen and (max-width: 1024px) {
+
+    #container #link {
+        font-size: 1.4em;
+    }
+
+}
+
+@media screen and (max-width: 1400px) {
+
+    #container {
+        width: 90%;
+        margin-left: 5%;
+    }
+
+    #container #link {
+        font-size: 1.4em;
+    }
+
+}
+
+@media screen and (max-width: 1600px) {
+    #container #title {
+        font-size: .9em;
+        font-weight: bold;
+    }
 }

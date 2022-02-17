@@ -19,8 +19,32 @@
 #container #cards {
     margin-top: 30px;
     width: 100%;
+    height: auto;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-content: center;
+   
+}
+
+
+@media screen and (max-width: 1024px) {
+    
+    #container {
+        background: linear-gradient(to bottom, var(--english-violet), var(--english-violet) 15%, transparent 15%, transparent 100%);
+        height: auto;
+        padding: 0;
+        padding: 20px;
+        margin-bottom: 10px;
+    }
+
+    #container #title {
+        font-size: 30px;
+    }
+
+    #container #cards {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
 }
