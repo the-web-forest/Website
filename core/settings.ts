@@ -14,4 +14,8 @@ export default class Settings {
         return process.env.NEXT_PUBLIC_APP_ENV == `development`
     }
 
+    public static getGoogleTagKey(): string { 
+        return process.env.NEXT_GOOGLE_TAG_KEY!
+    }
+
 }
