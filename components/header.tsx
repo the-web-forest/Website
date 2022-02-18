@@ -22,9 +22,11 @@ const Header = (props: HeaderData) => {
 
     const renderAnalytics = () => {
 
+        const googleKey = Settings.getGoogleTagKey()
+
         const analytics = (
             <>
-                <Script strategy={'afterInteractive'} async src={'https://www.googletagmanager.com/gtag/js?id=G-K7MKT332XK'}></Script>
+                <Script strategy={'afterInteractive'} async src={`https://www.googletagmanager.com/gtag/js?id=${googleKey}`}></Script>
                 <Script
                     id={'analyticsTag'}
                     strategy={'afterInteractive'}
@@ -33,7 +35,7 @@ const Header = (props: HeaderData) => {
                         window.dataLayer = window.dataLayer || [];
                         function gtag(){dataLayer.push(arguments);}
                         gtag('js', new Date());
-                        gtag('config', 'G-K7MKT332XK');
+                        gtag('config', '${googleKey}');
                         `
                      }}
                 />
