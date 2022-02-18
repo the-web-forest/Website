@@ -26,7 +26,6 @@ const Header = (props: HeaderData) => {
         const analytics = (
             <>
                 <Script strategy={'afterInteractive'} async src={`https://www.googletagmanager.com/gtag/js?id=${googleKey}`}></Script>
-
                 <Script
                     id={'analyticsTag'}
                     strategy={'afterInteractive'}
@@ -35,11 +34,7 @@ const Header = (props: HeaderData) => {
                         window.dataLayer = window.dataLayer || [];
                         function gtag(){dataLayer.push(arguments);}
                         gtag('js', new Date());
-<<<<<<< HEAD
                         gtag('config', '${googleKey}');
-=======
-                        gtag('config', 'G-K7MKT332XK');
->>>>>>> origin/develop
                         `
                      }}
                 />
@@ -50,7 +45,6 @@ const Header = (props: HeaderData) => {
         
     }
 
-<<<<<<< HEAD
     const renderTags = () => {
         const noIndex = (<>
             <meta key="robots" name="robots" content="noindex,follow" />
@@ -60,16 +54,11 @@ const Header = (props: HeaderData) => {
         return (Settings.isDevelopment()) ? noIndex : null
     }
 
-=======
->>>>>>> origin/develop
     return(
         <Head>
             <title>{getTitle()}</title>
             {renderAnalytics()}
-<<<<<<< HEAD
             {renderTags()}
-=======
->>>>>>> origin/develop
             <meta name="description" content={Settings.APP_NAME} />
             <link rel="icon" href="/favicon.ico" />
             <meta property="og:title" content="Web Forest - Floresta Virtual"/>
