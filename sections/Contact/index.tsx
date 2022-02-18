@@ -113,6 +113,13 @@ const ContactSection = () => {
                     </div>
                 )
             }
+            {
+                (messageSent) && (
+                    <div id={styles.messageSent}>
+                        <div id={styles.text}>Agradecemos o seu contato e retornaremos o mais breve possível.</div>
+                    </div>
+                )
+            }
         </div>
     )
 }

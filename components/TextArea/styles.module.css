@@ -9,6 +9,7 @@
     font-family: 'Aprova';
     font-style: normal;
     font-weight: normal;
+    box-sizing: border-box;
 }
 
 #container:focus {
@@ -16,6 +17,11 @@
 }
 
 .error {
-    background-color: var(--soft-red);
+    border: solid !important;
+    border-color: red !important;
+    border-width: 2px !important;
+}
+
+.error::placeholder {
     color: var(--red) !important;
 }
