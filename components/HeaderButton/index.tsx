@@ -1,20 +1,20 @@
+import { AnchorHTMLAttributes } from 'react'
 import styles from './style.module.css'
 
-interface HeaderButtonProps {
+interface HeaderButtonProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
     text: string
     selected?: boolean
     url: string
-    target?: string
 } 
 
-const HeaderButton = ({ text, url, target = '_self', selected = false }: HeaderButtonProps) => {
+const HeaderButton = ({ text, url, target = '_self', selected = false, ...rest }: HeaderButtonProps) => {
 
     const getClassName = (): string => {
         return (selected) ? styles.selected : String.call(null)
     }
 
     return(
-        <a href={url} target={target} >
+        <a {...rest} href={url} target={target}    >
             <div id={styles.container} className={getClassName()}>
             <div id={styles.text}>{text}</div>
             </div>

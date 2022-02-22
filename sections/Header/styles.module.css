@@ -1,5 +1,6 @@
 #headerDesktop {
   display: flex;
+  top: 0;
 }
 
 #headerMobile {
@@ -14,6 +15,9 @@
   padding: 0 8.68rem;
   align-items: center;
   justify-content: space-around;
+  position: fixed;
+  top: 0px;
+  z-index: 1000;
 }
 
 #divLeft {
@@ -71,30 +75,30 @@
   }
 
   #logo {
-      height: 30px;
+    height: 30px;
   }
   #logoContainer {
-      padding: 0;
+    padding: 0;
   }
 
   .container {
-      height: 48px;
-      justify-content: center;
-      padding: 0 2rem;
-      display: flex;
+    height: 48px;
+    justify-content: center;
+    padding: 0 2rem;
+    display: flex;
   }
 
   #menuMobile {
-     display: flex;
-     align-items: center;
+    display: flex;
+    align-items: center;
   }
 
   #menuMobileOptions {
-    position: relative;  
+    position: relative;
     width: 100%;
   }
 
-  #menuMobileContainer{
+  #menuMobileContainer {
     width: 100%;
     opacity: 0;
     visibility: hidden;
@@ -104,13 +108,12 @@
     top: 48px;
     left: 0px;
     z-index: 100;
-}
-
-  #menuMobileContainer.active {
-      display: flex;
-      opacity: 1;
-      transition: 1s;
-      visibility: visible;
   }
 
+  #menuMobileContainer.active {
+    display: flex;
+    opacity: 1;
+    transition: 1s;
+    visibility: visible;
+  }
 }

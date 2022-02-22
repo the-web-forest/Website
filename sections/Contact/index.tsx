@@ -67,7 +67,8 @@ const ContactSection = () => {
     }
 
     return (
-        <div id={styles.container}>
+        <section id="contact">
+          <div id={styles.container}>
             <div id={styles.title}>
                 {
                     (!messageSent) ? 'Entre em contato' : 'Mensagem enviada com sucesso!'
@@ -113,7 +114,8 @@ const ContactSection = () => {
                     </div>
                 )
             }
-        </div>
+          </div>
+        </section>
     )
 }
 

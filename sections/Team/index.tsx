@@ -63,7 +63,7 @@ const TeamSection = () => {
 
 
     return (
-        <>
+    <section id="team">
         <div id={styles.container}  >
             <div id={styles.title}>Quem faz</div>
         </div>
@@ -93,7 +93,7 @@ const TeamSection = () => {
                
             </Slider>
         </CarouselProvider>
-    </>
+    </section>
     )
 }
 

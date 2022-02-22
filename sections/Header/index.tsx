@@ -10,6 +10,15 @@ const HeaderSection = () => {
     menu?.classList.toggle(styles.active);
   };
 
+  const scrollDown = (id: string) => {
+    const element = document.getElementById(id);
+    element && element.scrollIntoView();
+  };
+
+  const scrollUp = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   const MenuOptions = () => {
     return (
       <>
@@ -17,13 +26,26 @@ const HeaderSection = () => {
           text="Inicio"
           selected
           url={`${Settings.APP_URL}#start`}
+          onClick={scrollUp}
         />
 
-        <HeaderButton text="Apoie" url={`${Settings.APP_URL}#support`} />
+        <HeaderButton
+          text="Apoie"
+          url={`${Settings.APP_URL}#support`}
+          onClick={() => scrollDown("#support")}
+        />
 
-        <HeaderButton text="Quem Somos" url={`${Settings.APP_URL}#us`} />
+        <HeaderButton
+          text="Quem Somos"
+          url={`${Settings.APP_URL}#team`}
+          onClick={() => scrollDown("#team")}
+        />
 
-        <HeaderButton text="Contato" url={`${Settings.APP_URL}#contact`} />
+        <HeaderButton
+          text="Contato"
+          url={`${Settings.APP_URL}#contact`}
+          onClick={() => scrollDown("#contact")}
+        />
       </>
     );
   };
