@@ -1,0 +1,39 @@
+{
+  "name": "wf-gaia",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "dependencies": {
+    "@types/gtag.js": "^0.0.8",
+    "next": "12.0.7",
+    "pure-react-carousel": "^1.28.0",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-icons": "^4.3.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.16.5",
+    "@storybook/addon-actions": "^6.4.9",
+    "@storybook/addon-essentials": "^6.4.9",
+    "@storybook/addon-links": "^6.4.9",
+    "@storybook/addon-postcss": "^2.0.0",
+    "@storybook/preset-scss": "^1.0.3",
+    "@storybook/react": "^6.4.9",
+    "@types/node": "16.11.12",
+    "@types/react": "17.0.37",
+    "babel-loader": "^8.2.3",
+    "css-loader": "^5.2.7",
+    "eslint": "8.4.1",
+    "eslint-config-next": "12.0.7",
+    "eslint-plugin-storybook": "^0.5.3",
+    "sass-loader": "^12.4.0",
+    "style-loader": "^2.0.0",
+    "typescript": "4.5.3"
+  }
+}

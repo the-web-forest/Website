@@ -1,0 +1,62 @@
+#container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 8.68rem;
+    padding-top: 1.5rem;
+}
+
+#container #title {
+    color: var(--dark-gray);
+    font-family: 'Aprova';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 2.8em;
+    width: 100%;
+    text-align: left;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+.carousel{
+    width: 100%;
+    padding-left: 9em;
+    padding-right: 9em;
+    box-sizing: border-box;
+    padding-bottom: 0em;
+}
+
+#newsSection {
+    overflow: hidden;
+}
+
+.newsSlide {
+    margin-right: 10px;
+}
+
+@media screen and (max-width: 1024px) {
+
+    #container {
+        padding: 20px;
+        height: auto;
+        margin-right: 10px;
+    }
+
+    .carousel {
+        padding: 20px;
+    }
+
+    #container #title {
+        margin-top: 40px;
+        font-weight: 600;
+        font-size: 1.5em;
+        line-height: 35px;
+        margin-bottom: 0;
+    }
+
+    .carousel {
+        padding-bottom: 0;
+    }
+
+}
