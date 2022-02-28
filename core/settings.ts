@@ -2,7 +2,7 @@ export default class Settings {
     
     public static APP_NAME = 'Web Forest'
     public static DONATE_URL = 'https://www.catarse.me/construindo_a_web_forest'
-    public static APP_URL = process.env.SERVER_URL
+    public static APP_URL = process.env.NEXT_SERVER_URL
     public static FACEBOOK_URL = 'https://facebook.com'
     public static INSTAGRAM_URL = 'https://www.instagram.com/web_forest'
     public static LINKEDIN_URL = 'https://www.linkedin.com/company/77021618'
