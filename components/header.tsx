@@ -54,6 +54,7 @@ const Header = (props: HeaderData) => {
             <meta property="og:description" content="Web Forest - Uma floresta virtual que transforma ações digitais em impactos reais"/>
             <meta property="og:type" content="website"/>
             <meta property="og:image" content="/images/open-graph.png"/>
+            {renderTags()}
         </Head>
     )
 
