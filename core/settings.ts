@@ -18,7 +18,7 @@ export default class Settings {
     }
 
     public static getGoogleTagKey(): string { 
-        return process.env.NEXT_GOOGLE_TAG_KEY!
+        return process.env.NEXT_PUBLIC_GOOGLE_TAG_KEY!
     }
 
 }
