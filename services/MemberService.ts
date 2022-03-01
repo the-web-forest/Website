@@ -7,13 +7,13 @@ export default class MemberService {
           new Member({
             profilePictureUrl: '/images/team/barros.jpeg',
             name: 'Matheus Barros',
-            description: 'Founder / Engineer',
+            description: 'Fundador / Engenheiro',
             linkedInUrl: 'https://www.linkedin.com/in/barros42/'
         }),
         new Member({
             profilePictureUrl: '/images/team/victor.jpeg',
             name: 'Victor Bacega',
-            description: 'Founder / Analyst',
+            description: 'Fundador / Analista',
             linkedInUrl: 'https://www.linkedin.com/in/victor-bacega/'
         }),
         new Member({
@@ -25,7 +25,7 @@ export default class MemberService {
         new Member({
             profilePictureUrl: '/images/team/carol.jpeg',
             name: 'Caroline Alves',
-            description: 'Product Manager',
+            description: 'Gestão de Produto & Parcerias',
             linkedInUrl: 'https://www.linkedin.com/in/carolineaalves/'
         }),
         new Member({
@@ -37,7 +37,7 @@ export default class MemberService {
         new Member({
             profilePictureUrl: '/images/team/daniel.jpeg',
             name: 'Daniel Trindade',
-            description: 'Game Dev',
+            description: 'Desenvolvedor',
             linkedInUrl: 'https://www.linkedin.com/in/daniel-trindade-a44955163/'
         }),
         new Member({
