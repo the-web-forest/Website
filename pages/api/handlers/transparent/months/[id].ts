@@ -5,6 +5,7 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {  
+
   try {
     const { id } = req.query
     const monthId = id.toString()
@@ -14,4 +15,5 @@ export default async function handler(
   } catch (e) {
     res.status(400).json({ error: 'Invalid Month Id' })
   }
+
 }
