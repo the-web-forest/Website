@@ -51,7 +51,6 @@ export default class GoogleSpreadSheetService {
     }
 
     private googleRowToRowData(row: GoogleSpreadsheetRow): RowData {
-        console.log(row.DATE)
         return new RowData({
             date: row.DATE,
             description: row.DESCRIPTION,
