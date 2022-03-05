@@ -2,7 +2,9 @@ export default class RowData {
 
     date!: Date
     description!: string
+    category!: string
     type!: string
+    obs!: string
     value!: string
     receipt!: string | null
 
