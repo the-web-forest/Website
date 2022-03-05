@@ -32,19 +32,34 @@ export default class GoogleSpreadSheetService {
     async getAllMonths(): Promise<MonthDto[]> {
         await this.initDocs()
         const sheetsIds = Object.values(this.doc.sheetsById)
-        return sheetsIds.map(sheet => new MonthDto({ 
-            id: sheet.sheetId.toString(),
-            title: sheet.title 
-        }))
+        const sheets: MonthDto[] = []
+        sheetsIds.forEach(sheet => {
+            if(this.isPrivateSheetByName(sheet.title)) 
+                return
+            sheets.push(
+                new MonthDto({ 
+                    id: sheet.sheetId.toString(),
+                    title: sheet.title 
+                })
+            )
+        });
+        return sheets
+    }
+
+    private isPrivateSheetByName(sheetName: string): boolean {
+        return sheetName.includes('Private_')
     }
 
     private googleRowToRowData(row: GoogleSpreadsheetRow): RowData {
+        console.log(row.DATE)
         return new RowData({
-            date: new Date(row.DATE),
+            date: row.DATE,
             description: row.DESCRIPTION,
+            category: row.CATEGORY,
             type: row.TYPE,
             value: row.VALUE,
-            receipt: (row.RECEIPT) ? `${this.baseGoogleImageUrl}${row.RECEIPT}` : null
+            obs: row.OBS,
+            receipt: (row.RECEIPT) ? `${this.baseGoogleImageUrl}${row.RECEIPT}` : null,
         })
     }
 
