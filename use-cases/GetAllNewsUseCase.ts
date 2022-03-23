@@ -1,16 +1,14 @@
-import News from "../core/domain/News";
-import NewsService from "../services/NewsService";
+import News from '../core/domain/News';
+import NewsService from '../services/NewsService';
 
 export default class GetAllNewsUseCase {
+  private newsService: NewsService;
 
-    private newsService: NewsService
+  constructor() {
+    this.newsService = new NewsService();
+  }
 
-    constructor() {
-        this.newsService = new NewsService()
-    }
-
-    run(): News[] {
-        return this.newsService.getAllNews()
-    }
-
+  run(): News[] {
+    return this.newsService.getAllNews();
+  }
 }

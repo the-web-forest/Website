@@ -1,60 +1,59 @@
-import styles from './style.module.css'
+import styles from './style.module.css';
 
 export enum FilledColor {
-    orange = 'orange',  
-    darkGreen = 'darkGreen',
+  orange = 'orange',
+  darkGreen = 'darkGreen',
 }
 interface FilledButtonProps {
-    text: string
-    target?: string
-    url?: string
-    color?: FilledColor
-    type?: 'function' | 'link'
-    onClickFunction?: () => void,
-    width?: string
+  text: string;
+  target?: string;
+  url?: string;
+  color?: FilledColor;
+  type?: 'function' | 'link';
+  onClickFunction?: () => void;
+  width?: string;
 }
 
-const FilledButton = ({ 
-    text, 
-    target = '_blank', 
-    url,
-    type = 'link',
-    onClickFunction,
-    color = FilledColor.orange,
-    width = 'auto'
+const FilledButton = ({
+  text,
+  target = '_blank',
+  url,
+  type = 'link',
+  onClickFunction,
+  color = FilledColor.orange,
+  width = 'auto',
 }: FilledButtonProps) => {
-
-    const getWrapper = (elem: JSX.Element) => {
-        switch(type) {
-            case 'link': 
-                return (
-                    <a href={url} target={target} >
-                        {elem}
-                    </a>
-                )
-            case 'function': 
-                return (
-                    <a onClick={() => (onClickFunction) ? onClickFunction() : null}>
-                        {elem}
-                    </a>
-                )
-        }
-    }
-
-    const getMiddle = (): JSX.Element => {
+  const getWrapper = (elem: JSX.Element) => {
+    switch (type) {
+      case 'link':
         return (
-            <div className={`${styles.container} ${styles[color]}`} style={{ width }}>
-                {text}
-            </div>
-        )
+          <a href={url} target={target}>
+            {elem}
+          </a>
+        );
+      case 'function':
+        return (
+          <a onClick={() => (onClickFunction ? onClickFunction() : null)}>
+            {elem}
+          </a>
+        );
     }
+  };
 
-    const renderButton = () => {
-        const middle = getMiddle()
-        return getWrapper(middle) 
-    }
+  const getMiddle = (): JSX.Element => {
+    return (
+      <div className={`${styles.container} ${styles[color]}`} style={{ width }}>
+        {text}
+      </div>
+    );
+  };
 
-    return renderButton()
-}
+  const renderButton = () => {
+    const middle = getMiddle();
+    return getWrapper(middle);
+  };
 
-export default FilledButton
+  return renderButton();
+};
+
+export default FilledButton;

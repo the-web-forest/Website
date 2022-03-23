@@ -1,15 +1,15 @@
-import FilledButton, { FilledColor } from "../../components/FilledButton";
-import Title from "../../components/Title";
-import Settings from "../../core/settings";
-import { gaButtonClick } from "../../libs/GoogleAnalytics";
-import styles from "./styles.module.css";
+import FilledButton, { FilledColor } from '../../components/FilledButton';
+import Title from '../../components/Title';
+import Settings from '../../core/settings';
+import { gaButtonClick } from '../../libs/GoogleAnalytics';
+import styles from './styles.module.css';
 
-const text = "Apoie nosso projeto e invista no meio ambiente";
+const text = 'Apoie nosso projeto e invista no meio ambiente';
 
 const donateButtonFunction = () => {
   gaButtonClick('saiba-mais');
-  window.open(Settings.DONATE_URL, '_blank')
-}
+  window.open(Settings.DONATE_URL, '_blank');
+};
 
 const DonateSection = () => {
   return (

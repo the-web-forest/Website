@@ -1,1 +1,1 @@
-export * from './EmailHelper'
+export * from './EmailHelper';
