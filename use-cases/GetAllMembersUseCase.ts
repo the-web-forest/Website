@@ -1,16 +1,14 @@
-import Member from "../core/domain/Member";
-import MemberService from "../services/MemberService";
+import Member from '../core/domain/Member';
+import MemberService from '../services/MemberService';
 
 export default class GetAllMembersUseCase {
+  private memberService: MemberService;
 
-    private memberService: MemberService
+  constructor() {
+    this.memberService = new MemberService();
+  }
 
-    constructor() {
-        this.memberService = new MemberService()
-    }
-
-    run(): Member[] {
-        return this.memberService.getAllMembers()
-    }
-
+  run(): Member[] {
+    return this.memberService.getAllMembers();
+  }
 }

@@ -1,9 +1,9 @@
-import DonateButton from "../../components/FilledButton";
-import HeaderButton from "../../components/HeaderButton";
-import Settings from "../../core/settings";
-import styles from "./styles.module.css";
-import { HiMenu } from "react-icons/hi";
-import { gaButtonClick } from "../../libs/GoogleAnalytics";
+import DonateButton from '../../components/FilledButton';
+import HeaderButton from '../../components/HeaderButton';
+import Settings from '../../core/settings';
+import styles from './styles.module.css';
+import { HiMenu } from 'react-icons/hi';
+import { gaButtonClick } from '../../libs/GoogleAnalytics';
 
 const HeaderSection = () => {
   const toggleMenu = () => {
@@ -17,7 +17,7 @@ const HeaderSection = () => {
   };
 
   const scrollUp = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   const MenuOptions = () => {
@@ -27,25 +27,37 @@ const HeaderSection = () => {
           text="Inicio"
           selected
           url={`${Settings.APP_URL}#start`}
-          onClick={() => { gaButtonClick('inicio'); scrollUp()}}
+          onClick={() => {
+            gaButtonClick('inicio');
+            scrollUp();
+          }}
         />
 
         <HeaderButton
           text="Apoie"
           url={`${Settings.APP_URL}#support`}
-          onClick={() => { gaButtonClick('apoie'); scrollDown("#support") }}
+          onClick={() => {
+            gaButtonClick('apoie');
+            scrollDown('#support');
+          }}
         />
 
         <HeaderButton
           text="Quem Somos"
           url={`${Settings.APP_URL}#team`}
-          onClick={() => { gaButtonClick('quem-somos'); scrollDown("#team")}}
+          onClick={() => {
+            gaButtonClick('quem-somos');
+            scrollDown('#team');
+          }}
         />
 
         <HeaderButton
           text="Contato"
           url={`${Settings.APP_URL}#contact`}
-          onClick={() => { gaButtonClick('contato'); scrollDown("#contact")}}
+          onClick={() => {
+            gaButtonClick('contato');
+            scrollDown('#contact');
+          }}
         />
       </>
     );

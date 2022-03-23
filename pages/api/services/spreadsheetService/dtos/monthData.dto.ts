@@ -1,12 +1,10 @@
-import RowData from "../../../domain/rowData"
+import RowData from '../../../domain/rowData';
 
 export default class MonthDataDto {
+  title!: string;
+  data!: RowData[];
 
-    title!: string
-    data!: RowData[]
-
-    constructor(data: Partial<MonthDataDto>) {
-        Object.assign(this, data)
-    }
-
+  constructor(data: Partial<MonthDataDto>) {
+    Object.assign(this, data);
+  }
 }

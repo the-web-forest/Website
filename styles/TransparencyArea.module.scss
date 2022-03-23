@@ -1,0 +1,21 @@
+.container {
+  min-height: 80vh;
+  padding: 8rem 8.68rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.head {
+  font-family: "Aprova";
+  line-height: 3rem;
+  color: var(--dark-gray);
+  border: 1px solid;
+
+  span {
+    font-size: 1.3rem;
+  }
+}
+
+.filter {
+}
