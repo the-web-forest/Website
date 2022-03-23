@@ -8,9 +8,9 @@ export const ga_event = ({ action, category, label, value }: any) => {
 
 export const gaButtonClick = (buttonName: string) => {
   return ga_event({
-    action: 'btn_click',
-    category: null,
-    label: null,
-    value: buttonName,
+    action: 'click',
+    category: 'Button',
+    label: buttonName,
+    value: null,
   });
 };
