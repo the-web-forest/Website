@@ -1,12 +1,13 @@
 import { CarouselProvider, Slide, Slider } from 'pure-react-carousel';
 import { useEffect, useState } from 'react';
 import NewsCard from '../../components/NewsCard';
+import News from '../../core/domain/News';
 import GetAllNewsUseCase from '../../use-cases/GetAllNewsUseCase';
 import styles from './styles.module.css';
 
 const NewsSection = () => {
   const getAllNewsUseCase = new GetAllNewsUseCase();
-  const [news] = useState(getAllNewsUseCase.run() || []);
+  const [news, setNews] = useState<News[]>([]);
 
   const [width, setWidth] = useState(0);
   const DEFAULT_SLIDES_INTERVAL = 3000;
@@ -21,8 +22,15 @@ const NewsSection = () => {
     setWidth(dimensions.width);
   };
 
+  const loadNews = async () => {
+    if (news && news.length) return;
+    const loadedNews = await getAllNewsUseCase.run();
+    setNews(loadedNews);
+  };
+
   useEffect(() => {
     handleWindowResize();
+    loadNews();
     window.addEventListener('resize', handleWindowResize);
     return () => window.removeEventListener('resize', handleWindowResize);
   });
@@ -77,6 +85,7 @@ const NewsSection = () => {
           isIntrinsicHeight={true}
         >
           <Slider>
+            {!news.length && <div>Carregando...</div> }
             {news.map((x, i) => (
               <Slide className={styles.newsSlide} key={i} index={i}>
                 <NewsCard

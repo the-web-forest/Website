@@ -2,7 +2,7 @@ import { GoogleSpreadsheet, GoogleSpreadsheetRow } from 'google-spreadsheet';
 import RowData from '../../domain/rowData';
 import MonthDataDto from './dtos/monthData.dto';
 import MonthDto from './dtos/months.dto';
-export default class GoogleSpreadSheetService {
+export default class TransparencyService {
   private doc: GoogleSpreadsheet;
   private baseGoogleImageUrl: string =
     'https://drive.google.com/uc?export=view&id=';
@@ -19,7 +19,7 @@ export default class GoogleSpreadSheetService {
     await this.doc.loadInfo();
   }
 
-  async getSheetDataById(id: string): Promise<MonthDataDto> {
+  async getDataByMonthId(id: string): Promise<MonthDataDto> {
     await this.initDocs();
     const sheet = this.doc.sheetsById[id];
     const sheetRows = await sheet.getRows();

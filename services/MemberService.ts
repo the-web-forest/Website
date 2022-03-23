@@ -34,12 +34,6 @@ export default class MemberService {
         linkedInUrl: 'https://www.linkedin.com/in/herbertreis/',
       }),
       new Member({
-        profilePictureUrl: '/images/team/daniel.jpeg',
-        name: 'Daniel Trindade',
-        description: 'Desenvolvedor',
-        linkedInUrl: 'https://www.linkedin.com/in/daniel-trindade-a44955163/',
-      }),
-      new Member({
         profilePictureUrl: '/images/team/murillo.jpeg',
         name: 'Murillo Torres',
         description: 'Marketing',
