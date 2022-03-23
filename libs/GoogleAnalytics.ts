@@ -1,4 +1,3 @@
-// https://developers.google.com/analytics/devguides/collection/gtagjs/events
 export const ga_event = ({ action, category, label, value }: any) => {
     window.gtag('event', action, {
       event_category: category,
@@ -9,5 +8,5 @@ export const ga_event = ({ action, category, label, value }: any) => {
 
 
 export const gaButtonClick = (buttonName: string) => {
-  return ga_event({ action: 'btn_click', category: null, label: null, value: buttonName })
+  return ga_event({ action: 'click', category: 'Button', label: buttonName, value: null })
 }
