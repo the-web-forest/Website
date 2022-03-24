@@ -1,4 +1,4 @@
-import MonthDataDto from '../services/spreadsheetService/dtos/monthData.dto';
+import MonthDataDto from '../services/transparency/dtos/monthData.dto';
 import GetMonthDataByIdUseCase from '../use-cases/getMonthDataByIdUseCase/getMonthDataByIdUseCase';
 
 export default class GetMonthByIdController {

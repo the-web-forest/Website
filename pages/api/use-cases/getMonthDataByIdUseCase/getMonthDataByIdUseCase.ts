@@ -1,10 +1,10 @@
-import MonthDataDto from '../../services/spreadsheetService/dtos/monthData.dto';
-import GoogleSpreadSheetService from '../../services/spreadsheetService/googleSpreadsheetService';
+import MonthDataDto from '../../services/transparency/dtos/monthData.dto';
+import TransparencyService from '../../services/transparency/transparencyService';
 
 export default class GetMonthDataByIdUseCase {
-  private readonly googleSheetService = new GoogleSpreadSheetService();
+  private readonly transparencyService = new TransparencyService();
 
   async run(monthId: string): Promise<MonthDataDto> {
-    return await this.googleSheetService.getSheetDataById(monthId);
+    return await this.transparencyService.getDataByMonthId(monthId);
   }
 }

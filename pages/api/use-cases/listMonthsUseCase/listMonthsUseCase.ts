@@ -1,10 +1,10 @@
-import MonthDto from '../../services/spreadsheetService/dtos/months.dto';
-import GoogleSpreadSheetService from '../../services/spreadsheetService/googleSpreadsheetService';
+import MonthDto from '../../services/transparency/dtos/months.dto';
+import TransparencyService from '../../services/transparency/transparencyService';
 
 export default class ListMonthsUseCase {
-  private readonly googleSheetService = new GoogleSpreadSheetService();
+  private readonly transparencyService = new TransparencyService();
 
   async run(): Promise<MonthDto[]> {
-    return this.googleSheetService.getAllMonths();
+    return this.transparencyService.getAllMonths();
   }
 }

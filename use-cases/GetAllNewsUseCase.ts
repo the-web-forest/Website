@@ -8,7 +8,7 @@ export default class GetAllNewsUseCase {
     this.newsService = new NewsService();
   }
 
-  run(): News[] {
-    return this.newsService.getAllNews();
+  async run(): Promise<News[]> {
+    return await this.newsService.getAllNews();
   }
 }
