@@ -16,6 +16,12 @@ export default class MemberService {
         linkedInUrl: 'https://www.linkedin.com/in/victor-bacega/',
       }),
       new Member({
+        profilePictureUrl: '/images/team/bianca.jpeg',
+        name: 'Bianca Valverde',
+        description: 'Marketing / Produto',
+        linkedInUrl: 'https://www.linkedin.com/in/bianca-valverde-856b21111/',
+      }),
+      new Member({
         profilePictureUrl: '/images/team/gabriel.jpeg',
         name: 'Gabriel Cordeiro',
         description: 'UI/UX',
