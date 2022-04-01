@@ -24,7 +24,7 @@
     padding-bottom: 2em;
 }
 
-.slider { 
+.innerSlide {
   display: flex;
   justify-content: center;
 }
