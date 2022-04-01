@@ -1,68 +1,81 @@
 export interface IMonth {
   name: string;
-  seqNumber: number;
+  value: string;
+  order: number;
   days: number;
 }
 
 const Months: IMonth[] = [
   {
     name: 'Janeiro',
-    seqNumber: 1,
+    value: 'Janeiro',
+    order: 1,
     days: 31,
   },
   {
     name: 'Fevereiro',
-    seqNumber: 2,
+    value: 'Fevereiro',
+    order: 2,
     days: 28,
   },
   {
     name: 'Março',
-    seqNumber: 3,
+    value: 'Março',
+    order: 3,
     days: 31,
   },
   {
     name: 'Abril',
-    seqNumber: 4,
+    value: 'Abril',
+    order: 4,
     days: 30,
   },
   {
     name: 'Maio',
-    seqNumber: 5,
+    value: 'Maio',
+    order: 5,
     days: 31,
   },
   {
     name: 'Junho',
-    seqNumber: 6,
+    value: 'Junho',
+    order: 6,
     days: 30,
   },
   {
     name: 'Julho',
-    seqNumber: 7,
+    value: 'Julho',
+    order: 7,
     days: 31,
   },
   {
     name: 'Agosto',
-    seqNumber: 8,
+    value: 'Agosto',
+    order: 8,
     days: 30,
   },
   {
     name: 'Setembro',
-    seqNumber: 9,
+    value: 'Setembro',
+    order: 9,
     days: 31,
   },
   {
     name: 'Outubro',
-    seqNumber: 10,
+    value: 'Outubro',
+    order: 10,
     days: 30,
   },
   {
     name: 'Novembro',
-    seqNumber: 11,
+    value: 'Novembro',
+    order: 11,
     days: 31,
   },
   {
     name: 'Dezembro',
-    seqNumber: 12,
+    value: 'Dezembro',
+    order: 12,
     days: 30,
   },
 ];

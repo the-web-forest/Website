@@ -4,15 +4,13 @@ import {
   SetStateAction,
   useCallback,
 } from 'react';
+import ISelectOptionsEntity from '../../core/entities/SelectOptionsEntity';
 import style from './style.module.scss';
 
 interface ComboBoxProps extends React.HTMLAttributes<HTMLSelectElement> {
   placeHolder: string;
   selectedState: Dispatch<SetStateAction<any>>;
-  options: {
-    label: string;
-    value: any;
-  }[];
+  options: ISelectOptionsEntity[];
 }
 
 const ComboBox = ({
@@ -30,21 +28,18 @@ const ComboBox = ({
   );
 
   return (
-    <select
-      onChange={selectChange}
-      defaultValue=""
-      id={style.comboBox}
-      {...rest}
-    >
-      <option value="" disabled>
-        {placeHolder}
-      </option>
-      {options.map(option => (
-        <option key={option.value} value={option.value}>
-          {option.label}
+    <label className={style.label}>
+      <select onChange={selectChange} defaultValue="" {...rest}>
+        <option value="" disabled>
+          {placeHolder}
         </option>
-      ))}
-    </select>
+        {options.map(option => (
+          <option key={option.value} value={option.value}>
+            {option.label}
+          </option>
+        ))}
+      </select>
+    </label>
   );
 };
 

@@ -1,4 +1,5 @@
 .container {
+  font-family: 'Aprova';
   min-height: 80vh;
   padding: 8rem 8.68rem;
   flex: 1;
@@ -10,7 +11,6 @@
   font-family: "Aprova";
   line-height: 3rem;
   color: var(--dark-gray);
-  border: 1px solid;
 
   span {
     font-size: 1.3rem;
@@ -18,4 +18,10 @@
 }
 
 .filter {
+  margin: 24px 0px;
+  display: flex;
+  & > label:first-child {
+    margin-right: 40px;
+  }
+ 
 }

@@ -1,0 +1,29 @@
+#container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.2em 1em;
+    border-bottom: 1px solid var(--dark-gray);
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  min-width: 100px;
+
+  & > span:first-child {
+    margin-bottom: 10px;
+  }
+
+  .head {
+    color: var(--dark-gray);
+  }
+
+  .value {
+    color: var(--english-violet);
+    font-weight: 600;
+  }
+}
+
+

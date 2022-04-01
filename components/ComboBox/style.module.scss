@@ -1,3 +1,29 @@
-#comboBox {
-  
+.label {
+  display: flex;
+  position: relative;
+  height: 40px;
+  min-width: 196px;
+  width: 196px;
+  &::after {
+    content: '▼';
+    font-size: 1.2em;
+    font-family: 'Aprova';
+    color: var(--dark-gray);
+    position: absolute;
+    right:10px; top:10px;
+  }
+
+  select {
+    width: 100%;
+    height: 40px;
+    font-size: 1em;
+    font-family: 'Aprova';
+    border-radius: 5px;
+    box-shadow: 0px 3px 4px rgba(88, 53, 94, 0.13);
+    border: none;
+    appearance: none;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
 }
+

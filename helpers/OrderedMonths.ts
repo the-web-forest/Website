@@ -2,6 +2,6 @@ import Months from '../core/const/Month';
 
 export default function OrderedMonths() {
   return Months.sort((a, b) =>
-    a.seqNumber > b.seqNumber ? 1 : b.seqNumber > a.seqNumber ? -1 : 0,
+    a.order > b.order ? 1 : b.order > a.order ? -1 : 0,
   );
 }
