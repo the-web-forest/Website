@@ -24,6 +24,11 @@
     padding-bottom: 2em;
 }
 
+.slider { 
+  display: flex;
+  justify-content: center;
+}
+
 @media screen and (max-width: 1024px) {
     .carousel {
         padding: 0em;

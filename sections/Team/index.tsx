@@ -36,6 +36,7 @@ const TeamSection = () => {
   const getVisibleSlides = (): number => {
     const BREAKPOINTS = {
       MINI: 400,
+      SMALL: 500,
       MEDIUM: 700,
       LARGE: 1200,
     };
@@ -50,6 +51,10 @@ const TeamSection = () => {
     };
 
     if (width <= BREAKPOINTS.MINI) {
+      return ITEMS_PER_BLOCK.ONE;
+    }
+
+    if (width <= BREAKPOINTS.SMALL) {
       return ITEMS_PER_BLOCK.TWO;
     }
 
