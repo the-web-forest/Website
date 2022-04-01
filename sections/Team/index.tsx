@@ -88,7 +88,7 @@ const TeamSection = () => {
       >
         <Slider>
           {members.map((x, i) => (
-            <Slide key={i} index={i}>
+            <Slide className={styles.slider} key={i} index={i}>
               <MemberCard
                 profilePictureUrl={x.profilePictureUrl}
                 description={x.description}
