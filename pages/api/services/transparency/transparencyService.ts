@@ -1,7 +1,7 @@
 import { GoogleSpreadsheet, GoogleSpreadsheetRow } from 'google-spreadsheet';
 import RowData from '../../domain/rowData';
 import MonthDataDto from './dtos/monthData.dto';
-import MonthDto from './dtos/months.dto';
+import MonthSheetDto from './dtos/monthSheet.dto';
 export default class TransparencyService {
   private doc: GoogleSpreadsheet;
   private baseGoogleImageUrl: string =
@@ -31,14 +31,14 @@ export default class TransparencyService {
     };
   }
 
-  async getAllMonths(): Promise<MonthDto[]> {
+  async getAllMonths(): Promise<MonthSheetDto[]> {
     await this.initDocs();
     const sheetsIds = Object.values(this.doc.sheetsById);
-    const sheets: MonthDto[] = [];
+    const sheets: MonthSheetDto[] = [];
     sheetsIds.forEach(sheet => {
       if (this.isPrivateSheetByName(sheet.title)) return;
       sheets.push(
-        new MonthDto({
+        new MonthSheetDto({
           id: sheet.sheetId.toString(),
           title: sheet.title,
         }),

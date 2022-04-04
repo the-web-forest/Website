@@ -24,7 +24,8 @@
 }
 
 #catarseLogo {    
-    width: 350px;
+    max-width: 350px;
+    min-width: 250px;
     background-position: left;
     background-size: cover;
     background-repeat: no-repeat;
