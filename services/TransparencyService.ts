@@ -1,10 +1,16 @@
 import axios from 'axios';
-import MonthDto from '../pages/api/services/transparency/dtos/months.dto';
+import MonthDataDto from '../pages/api/services/transparency/dtos/monthData.dto';
+import YearDto from '../pages/api/services/transparency/dtos/year.dto';
 
 export default class TransparencyService {
-  async getAllMonts(): Promise<MonthDto[]> {
+  async getAllSheets(): Promise<YearDto[]> {
+    return (await axios.get<YearDto[]>(`/api/handlers/transparent/months/list`))
+      .data;
+  }
+
+  async getSheetData(id: string): Promise<MonthDataDto> {
     return (
-      await axios.get<MonthDto[]>(`/api/handlers/transparent/months/list`)
+      await axios.get<MonthDataDto>(`/api/handlers/transparent/months/${id}`)
     ).data;
   }
 }

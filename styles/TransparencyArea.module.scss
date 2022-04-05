@@ -1,11 +1,33 @@
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
 .container {
   font-family: 'Aprova';
+  background-color: var(--gray-white);
   min-height: 80vh;
   padding: 8rem 8.68rem;
   flex: 1;
   display: flex;
-  flex-direction: column;
+  flex-direction: column; 
 }
+
+
+.load {
+  display: flex;
+  justify-content: center;
+  svg {
+    justify-self: center;
+    align-self: center;
+    animation: rotation 2s infinite linear;
+  }
+}
+
 
 .head {
   font-family: "Aprova";
@@ -20,8 +42,37 @@
 .filter {
   margin: 24px 0px;
   display: flex;
+  width: 500px;
+  justify-content: space-between;
   & > label:first-child {
     margin-right: 40px;
   }
- 
+  .select {
+    width: 169px;
+  }
+}
+
+
+@media screen and (max-width: 1024px) {
+  .container {
+    padding: 5em 0em;
+
+    .head {
+      padding: 0em 1.2em;
+    }
+
+    .filter {
+      padding: 0em 1.2em;
+      width: 100%;
+      flex-direction: column;
+      & > .select:first-child {
+        margin-bottom: 25px;
+      }
+      .select {
+        width: 100%;
+      }
+    }
+
+  }
+
 }

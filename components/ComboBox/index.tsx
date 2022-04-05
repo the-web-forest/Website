@@ -7,7 +7,7 @@ import {
 import ISelectOptionsEntity from '../../core/entities/SelectOptionsEntity';
 import style from './style.module.scss';
 
-interface ComboBoxProps extends React.HTMLAttributes<HTMLSelectElement> {
+interface ComboBoxProps extends React.HTMLProps<HTMLSelectElement> {
   placeHolder: string;
   selectedState: Dispatch<SetStateAction<any>>;
   options: ISelectOptionsEntity[];
@@ -17,14 +17,19 @@ const ComboBox = ({
   placeHolder,
   options,
   selectedState,
+  onChange,
   ...rest
 }: ComboBoxProps) => {
   const selectChange = useCallback(
-    (event: React.ChangeEvent<HTMLSelectElement>) => {
+    async (event: React.ChangeEvent<HTMLSelectElement>) => {
       const value = event.target.value;
       selectedState(value);
+      if (onChange) {
+        console.log('KCT', value);
+        onChange(event);
+      }
     },
-    [selectedState],
+    [onChange, selectedState],
   );
 
   return (
