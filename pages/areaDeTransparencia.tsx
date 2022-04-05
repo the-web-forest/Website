@@ -55,7 +55,6 @@ const TransparencyArea: NextPage = () => {
 
   const getDataTable = useCallback(async () => {
     setLoadTable(true);
-    console.log('EXECUTEIO');
     const { months } = sheetList.find(sheet => sheet.year == selectedYear) || {
       months: [],
     };

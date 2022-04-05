@@ -8,7 +8,6 @@ export default class GetSheetDataUseCase {
   ) {}
 
   async run(id: string): Promise<MonthDataDto> {
-    console.log('ZZZZ');
     return this.transparencyService.getSheetData(id);
   }
 }
