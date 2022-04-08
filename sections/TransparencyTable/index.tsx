@@ -1,4 +1,3 @@
-import { useCallback } from 'react';
 import RowData from '../../pages/api/domain/rowData';
 import style from './style.module.scss';
 

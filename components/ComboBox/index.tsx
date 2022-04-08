@@ -1,9 +1,4 @@
-import {
-  Dispatch,
-  SelectHTMLAttributes,
-  SetStateAction,
-  useCallback,
-} from 'react';
+import { Dispatch, SetStateAction, useCallback } from 'react';
 import ISelectOptionsEntity from '../../core/entities/SelectOptionsEntity';
 import style from './style.module.scss';
 
@@ -25,7 +20,6 @@ const ComboBox = ({
       const value = event.target.value;
       selectedState(value);
       if (onChange) {
-        console.log('KCT', value);
         onChange(event);
       }
     },

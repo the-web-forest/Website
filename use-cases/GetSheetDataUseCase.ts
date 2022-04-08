@@ -1,5 +1,4 @@
 import MonthDataDto from '../pages/api/services/transparency/dtos/monthData.dto';
-import YearDto from '../pages/api/services/transparency/dtos/year.dto';
 import TransparencyService from '../services/TransparencyService';
 
 export default class GetSheetDataUseCase {
