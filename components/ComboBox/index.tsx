@@ -13,6 +13,7 @@ const ComboBox = ({
   options,
   selectedState,
   onChange,
+  value,
   ...rest
 }: ComboBoxProps) => {
   const selectChange = useCallback(
@@ -28,7 +29,7 @@ const ComboBox = ({
 
   return (
     <label className={style.label}>
-      <select onChange={selectChange} defaultValue="" {...rest}>
+      <select onChange={selectChange} value={value} {...rest}>
         <option value="" disabled>
           {placeHolder}
         </option>

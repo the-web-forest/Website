@@ -15,13 +15,16 @@ import YearDto from './api/services/transparency/dtos/year.dto';
 import { AiOutlineLoading3Quarters } from 'react-icons/ai';
 
 const TransparencyArea: NextPage = () => {
-  const [selectedMonth, setMonth] = useState<number>();
-  const [selectedYear, setYear] = useState<number>();
+  const [selectedMonth, setMonth] = useState<number | string>(
+    new Date().getMonth() + 1,
+  );
+  const [selectedYear, setYear] = useState<number | string>(
+    new Date().getFullYear(),
+  );
   const [sheetList, setSheetList] = useState<YearDto[]>([]);
   const [dataTable, setDataTable] = useState<RowData[]>([]);
   const [loadTable, setLoadTable] = useState<boolean>(false);
-  const [firstLoad, setFirstLoad] = useState<boolean>(true);
-  const isMounth = useRef(false);
+
   const getAllYearsAndMonths = useCallback(async () => {
     const listMonthUseCase = new GetAllSheetsUseCase();
     const data = await listMonthUseCase.run();
@@ -58,9 +61,13 @@ const TransparencyArea: NextPage = () => {
     const { months } = sheetList.find(sheet => sheet.year == selectedYear) || {
       months: [],
     };
-    if (!months) return;
     const id = months.find(month => month.number == selectedMonth)?.id;
-    if (!id) return;
+    if (!id) {
+      setLoadTable(false);
+      setMonth('');
+      setYear('');
+      return;
+    }
     const data = await new GetSheetDataUseCase().run(id);
     const rowData: RowData[] = data.data.map(row => row);
     setLoadTable(false);
@@ -72,12 +79,8 @@ const TransparencyArea: NextPage = () => {
   }, [getAllYearsAndMonths]);
 
   useEffect(() => {
-    if (isMounth.current && !!selectedYear && !!selectedMonth) {
-      getDataTable();
-    } else {
-      isMounth.current = true;
-    }
-  }, [getDataTable, selectedMonth, selectedYear]);
+    !!sheetList.length && getDataTable();
+  }, [getDataTable, selectedMonth, selectedYear, sheetList]);
 
   return (
     <>
@@ -96,6 +99,7 @@ const TransparencyArea: NextPage = () => {
               options={comboBoxYear()}
               selectedState={setYear}
               placeHolder="Ano"
+              value={selectedYear}
             />
           </div>
           <div className={styles.select}>
@@ -103,18 +107,19 @@ const TransparencyArea: NextPage = () => {
               options={comboBoxMonth()}
               selectedState={setMonth}
               placeHolder="Mês"
-              disabled={!selectedYear}
+              value={selectedMonth}
             />
           </div>
         </div>
-        {!!loadTable && (
+        {!!loadTable ? (
           <div className={styles.load}>
             <AiOutlineLoading3Quarters size={40} />
           </div>
+        ) : (
+          <div className={styles.tableSection}>
+            <TransparencyTable rowData={dataTable} />
+          </div>
         )}
-        <div className={styles.tableSection}>
-          <TransparencyTable rowData={dataTable} />
-        </div>
       </section>
       <FooterSection />
     </>
