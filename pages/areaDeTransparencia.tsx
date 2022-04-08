@@ -1,5 +1,5 @@
 import { NextPage } from 'next';
-import { useCallback, useEffect, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import ComboBox from '../components/ComboBox';
 import Header from '../components/header';
 import Title from '../components/Title';
@@ -21,7 +21,7 @@ const TransparencyArea: NextPage = () => {
   const [dataTable, setDataTable] = useState<RowData[]>([]);
   const [loadTable, setLoadTable] = useState<boolean>(false);
   const [firstLoad, setFirstLoad] = useState<boolean>(true);
-
+  const isMounth = useRef(false);
   const getAllYearsAndMonths = useCallback(async () => {
     const listMonthUseCase = new GetAllSheetsUseCase();
     const data = await listMonthUseCase.run();
@@ -72,10 +72,10 @@ const TransparencyArea: NextPage = () => {
   }, [getAllYearsAndMonths]);
 
   useEffect(() => {
-    if (firstLoad) {
-      setFirstLoad(false);
+    if (isMounth.current && !!selectedYear && !!selectedMonth) {
+      getDataTable();
     } else {
-      if (!!selectedYear && !!selectedMonth) getDataTable();
+      isMounth.current = true;
     }
   }, [getDataTable, selectedMonth, selectedYear]);
 
