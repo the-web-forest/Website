@@ -41,6 +41,9 @@ const FooterSection = () => {
         >
           Fórum
         </a>
+        <a target="_blank" rel="noreferrer" href="/transparencia">
+          Área de Transparência
+        </a>
       </div>
     </div>
   );
