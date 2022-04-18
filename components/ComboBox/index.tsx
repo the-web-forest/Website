@@ -1,50 +1,45 @@
-import {
-  Dispatch,
-  SelectHTMLAttributes,
-  SetStateAction,
-  useCallback,
-} from 'react';
+import { Dispatch, SetStateAction, useCallback } from 'react';
+import ISelectOptionsEntity from '../../core/entities/SelectOptionsEntity';
 import style from './style.module.scss';
 
-interface ComboBoxProps extends React.HTMLAttributes<HTMLSelectElement> {
+interface ComboBoxProps extends React.HTMLProps<HTMLSelectElement> {
   placeHolder: string;
   selectedState: Dispatch<SetStateAction<any>>;
-  options: {
-    label: string;
-    value: any;
-  }[];
+  options: ISelectOptionsEntity[];
 }
 
 const ComboBox = ({
   placeHolder,
   options,
   selectedState,
+  onChange,
+  value,
   ...rest
 }: ComboBoxProps) => {
   const selectChange = useCallback(
-    (event: React.ChangeEvent<HTMLSelectElement>) => {
+    async (event: React.ChangeEvent<HTMLSelectElement>) => {
       const value = event.target.value;
       selectedState(value);
+      if (onChange) {
+        onChange(event);
+      }
     },
-    [selectedState],
+    [onChange, selectedState],
   );
 
   return (
-    <select
-      onChange={selectChange}
-      defaultValue=""
-      id={style.comboBox}
-      {...rest}
-    >
-      <option value="" disabled>
-        {placeHolder}
-      </option>
-      {options.map(option => (
-        <option key={option.value} value={option.value}>
-          {option.label}
+    <label className={style.label}>
+      <select onChange={selectChange} value={value} {...rest}>
+        <option value="" disabled>
+          {placeHolder}
         </option>
-      ))}
-    </select>
+        {options.map(option => (
+          <option key={option.value} value={option.value}>
+            {option.label}
+          </option>
+        ))}
+      </select>
+    </label>
   );
 };
 

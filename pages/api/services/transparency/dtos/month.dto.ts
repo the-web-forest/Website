@@ -1,6 +1,7 @@
 export default class MonthDto {
+  number!: number;
+  name!: string;
   id!: string;
-  title!: string;
 
   constructor(data: Partial<MonthDto>) {
     Object.assign(this, data);
