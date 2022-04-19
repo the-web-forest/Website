@@ -4,9 +4,7 @@
   height: 40px;
   width: 100%;
   &::after {
-    content: '▼';
-    font-size: 1.2em;
-    font-family: 'Aprova';
+    content: url(../../public/icons/caret-down-fill.svg);
     color: var(--dark-gray);
     position: absolute;
     right:10px; top:10px;
@@ -17,6 +15,7 @@
     height: 40px;
     font-size: 1em;
     font-family: 'Aprova';
+    background-color: var(--white);
     border-radius: 5px;
     box-shadow: 0px 3px 4px rgba(88, 53, 94, 0.13);
     border: none;
