@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import SocialMediaIcon from '../../components/SocialMediaIcon';
 import Settings from '../../core/settings';
 import { gaButtonClick } from '../../libs/GoogleAnalytics';
@@ -33,17 +34,18 @@ const FooterSection = () => {
       </div>
 
       <div id={styles.linksBlock}>
-        <a
-          onClick={() => gaButtonClick('forum')}
-          target="_blank"
-          rel="noreferrer"
-          href={Settings.FORUM_URL}
-        >
-          Fórum
-        </a>
-        <a target="_blank" rel="noreferrer" href="/transparencia">
-          Área de Transparência
-        </a>
+        <Link href={Settings.FORUM_URL}>
+          <a
+            onClick={() => gaButtonClick('forum')}
+            target="_blank"
+            rel="noreferrer"
+          >
+            Fórum
+          </a>
+        </Link>
+        <Link href="/transparencia">
+          <a rel="noreferrer">Área de Transparência</a>
+        </Link>
       </div>
     </div>
   );

@@ -39,12 +39,6 @@ export default class MemberService {
         description: 'UI/UX',
         linkedInUrl: 'https://www.linkedin.com/in/herbertreis/',
       }),
-      new Member({
-        profilePictureUrl: '/images/team/murillo.jpeg',
-        name: 'Murillo Torres',
-        description: 'Marketing',
-        linkedInUrl: 'https://www.linkedin.com/in/murillottorres/',
-      }),
     ];
   }
 }
