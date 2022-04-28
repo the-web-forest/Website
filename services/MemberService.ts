@@ -48,7 +48,7 @@ export default class MemberService {
       new Member({
         profilePictureUrl: 'images/team/larissa.jpeg',
         name: 'Larissa Isabela',
-        description: 'Midias sociais / Redação',
+        description: 'Mídias sociais / Redação',
         linkedInUrl:
           'https://www.linkedin.com/in/larissa-isabela-alves-da-silva',
       }),
