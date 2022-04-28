@@ -39,6 +39,19 @@ export default class MemberService {
         description: 'UI/UX',
         linkedInUrl: 'https://www.linkedin.com/in/herbertreis/',
       }),
+      new Member({
+        profilePictureUrl: '/images/team/guilherme.jpeg',
+        name: 'Guilherme Vieira',
+        description: 'Dev Frontend',
+        linkedInUrl: 'https://www.linkedin.com/in/guilherme-vieira-78428317a/',
+      }),
+      new Member({
+        profilePictureUrl: 'images/team/larissa.jpeg',
+        name: 'Larissa Isabela',
+        description: '',
+        linkedInUrl:
+          'https://www.linkedin.com/in/larissa-isabela-alves-da-silva',
+      }),
     ];
   }
 }

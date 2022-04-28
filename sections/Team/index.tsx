@@ -1,21 +1,20 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import MemberCard from '../../components/MemberCard';
 import styles from './style.module.css';
-import {
-  CarouselProvider,
-  Slider,
-  Slide,
-  ButtonBack,
-  ButtonNext,
-} from 'pure-react-carousel';
+import { CarouselProvider, Slider, Slide } from 'pure-react-carousel';
 import 'pure-react-carousel/dist/react-carousel.es.css';
-import { useEffect, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import GetAllMembersUseCase from '../../use-cases/GetAllMembersUseCase';
 
 const TeamSection = () => {
   const getAllMembersUseCase = new GetAllMembersUseCase();
-  const [members] = useState(getAllMembersUseCase.run() || []);
   const [width, setWidth] = useState(0);
   const DEFAULT_SLIDES_INTERVAL = 3000;
+
+  const members = useMemo(
+    () => getAllMembersUseCase.run(),
+    [getAllMembersUseCase],
+  );
 
   const getWindowDimensions = () => {
     const { innerWidth: width, innerHeight: height } = window;
