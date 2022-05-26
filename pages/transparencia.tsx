@@ -34,14 +34,13 @@ const TransparencyArea: NextPage = () => {
   const comboBoxMonth = useCallback(() => {
     const orderMonths = sheetList.filter(sheet => sheet.year == selectedYear);
     if (orderMonths.length > 0) {
-      const monthOptions = orderMonths[0]?.months.map(
+      return orderMonths[0]?.months.map(
         month =>
           ({
             label: month.name,
             value: month.number,
           } as ISelectOptionsEntity),
       );
-      return monthOptions;
     } else {
       return [];
     }
@@ -71,6 +70,7 @@ const TransparencyArea: NextPage = () => {
     const data = await new GetSheetDataUseCase().run(id);
     const rowData: RowData[] = data.data.map(row => row);
     setLoadTable(false);
+
     setDataTable(rowData);
   }, [selectedMonth, selectedYear, sheetList]);
 
@@ -79,8 +79,10 @@ const TransparencyArea: NextPage = () => {
   }, [getAllYearsAndMonths]);
 
   useEffect(() => {
-    !!sheetList.length && getDataTable();
-  }, [getDataTable, selectedMonth, selectedYear, sheetList]);
+    if (!!selectedMonth && !!selectedYear) {
+      getDataTable();
+    }
+  }, [getDataTable, selectedMonth, selectedYear]);
 
   return (
     <>
