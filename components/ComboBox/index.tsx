@@ -19,6 +19,7 @@ const ComboBox = ({
   const selectChange = useCallback(
     async (event: React.ChangeEvent<HTMLSelectElement>) => {
       const value = event.target.value;
+      console.log(value);
       selectedState(value);
       if (onChange) {
         onChange(event);
