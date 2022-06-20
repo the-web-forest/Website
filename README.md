@@ -1,13 +1,6 @@
-
-  
-
 <p  align="center">
-
-<a  href="https://www.webforest.eco/"  target="blank"><img  src="https://www.webforest.eco/images/logo.svg"  width="200"  alt="WebForest Logo"  /></a>
-
+<a  href="https://www.webforest.eco/" target="blank"><img  src="https://www.webforest.eco/images/logo.svg"  width="200"  alt="WebForest Logo"/></a>
 </p>
-
-  
 
 <p  align="center">A collection of microservices that supports the Web Forest ecosystem.</p>
 
