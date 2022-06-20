@@ -21,6 +21,7 @@ const TransparencyArea: NextPage = () => {
   const [selectedYear, setYear] = useState<number | string>(
     new Date().getFullYear(),
   );
+
   const [sheetList, setSheetList] = useState<YearDto[]>([]);
   const [dataTable, setDataTable] = useState<RowData[]>([]);
   const [loadTable, setLoadTable] = useState<boolean>(false);
@@ -60,17 +61,22 @@ const TransparencyArea: NextPage = () => {
     const { months } = sheetList.find(sheet => sheet.year == selectedYear) || {
       months: [],
     };
+
+    const hasMonthsLoaded = months.length;
+
+    if (!hasMonthsLoaded) {
+      return;
+    }
+
     const id = months.find(month => month.number == selectedMonth)?.id;
+
     if (!id) {
       setLoadTable(false);
-      setMonth('');
-      setYear('');
       return;
     }
     const data = await new GetSheetDataUseCase().run(id);
     const rowData: RowData[] = data.data.map(row => row);
     setLoadTable(false);
-
     setDataTable(rowData);
   }, [selectedMonth, selectedYear, sheetList]);
 
