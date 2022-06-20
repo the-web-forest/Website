@@ -5,9 +5,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "lint": "next lint"
   },
   "dependencies": {
     "@types/google-spreadsheet": "^3.1.5",
@@ -25,12 +23,6 @@
     "@babel/core": "^7.16.5",
     "@eslint/create-config": "^0.1.2",
     "@next/eslint-plugin-next": "^12.1.0",
-    "@storybook/addon-actions": "^6.4.9",
-    "@storybook/addon-essentials": "^6.4.9",
-    "@storybook/addon-links": "^6.4.9",
-    "@storybook/addon-postcss": "^2.0.0",
-    "@storybook/preset-scss": "^1.0.3",
-    "@storybook/react": "^6.4.9",
     "@types/node": "16.11.12",
     "@types/react": "17.0.37",
     "@typescript-eslint/eslint-plugin": "^5.15.0",
@@ -43,7 +35,6 @@
     "eslint-plugin-next": "^0.0.0",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react-hooks": "^4.3.0",
-    "eslint-plugin-storybook": "^0.5.3",
     "prettier": "^2.5.1",
     "sass-loader": "^12.4.0",
     "style-loader": "^2.0.0",
