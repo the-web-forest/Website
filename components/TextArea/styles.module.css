@@ -1,0 +1,21 @@
+#container {
+    width: 100%;
+    padding: 10px;
+    font-size: 1.2em;
+    color: var(--dark-gray);
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 16px;
+    font-family: 'Aprova';
+    font-style: normal;
+    font-weight: normal;
+}
+
+#container:focus {
+    outline: none;
+}
+
+.error {
+    background-color: var(--soft-red);
+    color: var(--red) !important;
+}

@@ -1,0 +1,63 @@
+#container {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    padding: 4em 8.68em;
+}
+
+#photo {
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-right: 5%;
+    width: 379px;
+    height: 304px;
+    background-image: url('/images/donateTeamPhoto.webp');
+}
+
+#description {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+#catarseLogo {    
+    max-width: 350px;
+    min-width: 250px;
+    background-position: left;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 90px;
+    background-image: url('/images/logo-catarse.svg');
+}
+
+@media screen and (max-width:1020px) {
+    #container {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    #photo {
+        background-position: center top;
+        width: 100%;
+        margin: 0;
+        background-size: cover;
+        height: 220px;
+    }
+
+    #description {
+        padding: 0 1.68rem;
+        align-items: flex-start;
+    }
+
+    #catarseLogo {
+        margin: 10px 0;
+    }
+
+    #description > a {
+        margin-top: 10px;
+    }
+
+}
