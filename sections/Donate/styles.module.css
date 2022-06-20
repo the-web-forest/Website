@@ -8,10 +8,11 @@
 #photo {
     background-position: top center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     margin-right: 5%;
     width: 379px;
-    height: 304px;
+    height: 204px;
+    margin-top: 50px;
     background-image: url('/images/donateTeamPhoto.webp');
 }
 
@@ -45,6 +46,7 @@
         margin: 0;
         background-size: cover;
         height: 220px;
+        background-size: contain;
     }
 
     #description {
