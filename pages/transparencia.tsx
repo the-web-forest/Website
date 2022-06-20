@@ -15,7 +15,6 @@ import YearDto from './api/services/transparency/dtos/year.dto';
 import { AiOutlineLoading3Quarters } from 'react-icons/ai';
 
 const TransparencyArea: NextPage = () => {
-  
   const [selectedMonth, setMonth] = useState<number | string>(
     new Date().getMonth() + 1,
   );

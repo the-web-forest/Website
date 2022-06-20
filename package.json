@@ -1,5 +1,5 @@
 {
-  "name": "wf-gaia",
+  "name": "webforest-website",
   "private": true,
   "scripts": {
     "dev": "next dev",

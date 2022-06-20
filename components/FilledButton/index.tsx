@@ -24,20 +24,17 @@ const FilledButton = ({
   width = 'auto',
 }: FilledButtonProps) => {
   const getWrapper = (elem: JSX.Element) => {
-    switch (type) {
-      case 'link':
-        return (
-          <a href={url} target={target}>
-            {elem}
-          </a>
-        );
-      case 'function':
-        return (
-          <a onClick={() => (onClickFunction ? onClickFunction() : null)}>
-            {elem}
-          </a>
-        );
+    if (type == 'link') {
+      return (
+        <a href={url} target={target}>
+          {elem}
+        </a>
+      );
     }
+
+    return (
+      <a onClick={() => (onClickFunction ? onClickFunction() : null)}>{elem}</a>
+    );
   };
 
   const getMiddle = (): JSX.Element => {
