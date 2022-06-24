@@ -11,10 +11,7 @@ const TeamSection = () => {
   const [width, setWidth] = useState(0);
   const DEFAULT_SLIDES_INTERVAL = 3000;
 
-  const members = useMemo(
-    () => getAllMembersUseCase.run(),
-    [getAllMembersUseCase],
-  );
+  const members = getAllMembersUseCase.run();
 
   const getWindowDimensions = () => {
     const { innerWidth: width, innerHeight: height } = window;

@@ -52,6 +52,13 @@ export default class MemberService {
         linkedInUrl:
           'https://www.linkedin.com/in/larissa-isabela-alves-da-silva',
       }),
+      new Member({
+        profilePictureUrl: 'images/team/beatriz.jpeg',
+        name: 'Beatriz Santos',
+        description: 'Mídias sociais / Redação',
+        linkedInUrl:
+          'https://www.linkedin.com/in/beatriz-santos-silva-322827192',
+      }),
     ];
   }
 }
