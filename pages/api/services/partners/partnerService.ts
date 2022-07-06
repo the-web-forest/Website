@@ -1,10 +1,8 @@
 import { GoogleSpreadsheet, GoogleSpreadsheetRow } from 'google-spreadsheet';
-import NewsDto from './dtos/news.dto';
+import PartnerDto from './dtos/partner.dto';
 
-export default class NewsService {
+export default class PartnerService {
   private doc: GoogleSpreadsheet;
-  private baseGoogleImageUrl: string =
-    'https://drive.google.com/uc?export=view&id=';
 
   constructor() {
     this.doc = new GoogleSpreadsheet(process.env.NEXT_FIREBASE_DATA_SHEET_ID);
@@ -18,19 +16,18 @@ export default class NewsService {
     await this.doc.loadInfo();
   }
 
-  async getAllNews(): Promise<NewsDto[]> {
+  async getAllPartners(): Promise<PartnerDto[]> {
     await this.initDocs();
-    const newsSheet = this.doc.sheetsByTitle['NEWS'];
+    const newsSheet = this.doc.sheetsByTitle['PARTNERS'];
     const rows = await newsSheet.getRows();
-    return rows.map(row => this.googleRowToRowData(row)).filter(n => !!n.title);
+    return rows.map(row => this.googleRowToRowData(row)).filter(n => !!n.name);
   }
 
-  private googleRowToRowData(row: GoogleSpreadsheetRow): NewsDto {
-    return new NewsDto({
-      date: row.DATE,
-      title: row.TITLE,
-      link: row.LINK,
-      imageUrl: row.IMAGE_URL,
+  private googleRowToRowData(row: GoogleSpreadsheetRow): PartnerDto {
+    return new PartnerDto({
+      name: row.NAME,
+      photoUrl: row.PHOTO_URL,
+      url: row.URL,
     });
   }
 }
