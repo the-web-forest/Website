@@ -8,11 +8,8 @@ export default class GetAllMembersUseCase {
     this.memberService = new MemberService();
   }
 
-  run(): Member[] {
-    const allMembers = this.memberService.getAllMembers();
-    return allMembers
-      .map(member => ({ member, sort: Math.random() }))
-      .sort((a, b) => a.sort - b.sort)
-      .map(({ member }) => member);
+  async run(): Promise<Member[]> {
+    const allMembers = await this.memberService.getAllMembers();
+    return allMembers;
   }
 }
