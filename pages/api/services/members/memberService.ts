@@ -1,7 +1,7 @@
 import { GoogleSpreadsheet, GoogleSpreadsheetRow } from 'google-spreadsheet';
-import NewsDto from './dtos/news.dto';
+import MemberDto from './member.dto';
 
-export default class NewsService {
+export default class MemberService {
   private doc: GoogleSpreadsheet;
   private baseGoogleImageUrl: string =
     'https://drive.google.com/uc?export=view&id=';
@@ -18,19 +18,19 @@ export default class NewsService {
     await this.doc.loadInfo();
   }
 
-  async getAllNews(): Promise<NewsDto[]> {
+  async getAllMembers(): Promise<MemberDto[]> {
     await this.initDocs();
-    const newsSheet = this.doc.sheetsByTitle['NEWS'];
-    const rows = await newsSheet.getRows();
-    return rows.map(row => this.googleRowToRowData(row)).filter(n => !!n.title);
+    const membersSheet = this.doc.sheetsByTitle['MEMBERS'];
+    const rows = await membersSheet.getRows();
+    return rows.map(row => this.googleRowToRowData(row)).filter(n => !!n.name);
   }
 
-  private googleRowToRowData(row: GoogleSpreadsheetRow): NewsDto {
-    return new NewsDto({
-      date: row.DATE,
-      title: row.TITLE,
-      link: row.LINK,
-      imageUrl: row.IMAGE_URL,
+  private googleRowToRowData(row: GoogleSpreadsheetRow): MemberDto {
+    return new MemberDto({
+      name: row.NAME,
+      description: row.DESCRIPTION,
+      profilePictureUrl: row.PHOTO_URL,
+      linkedInUrl: row.LINKEDIN_URL,
     });
   }
 }

@@ -3,15 +3,23 @@ import MemberCard from '../../components/MemberCard';
 import styles from './style.module.css';
 import { CarouselProvider, Slider, Slide } from 'pure-react-carousel';
 import 'pure-react-carousel/dist/react-carousel.es.css';
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useState } from 'react';
 import GetAllMembersUseCase from '../../use-cases/GetAllMembersUseCase';
+import Member from '../../core/domain/Member';
+import ArrayHelper from '../../helpers/ArrayHelper';
 
 const TeamSection = () => {
   const getAllMembersUseCase = new GetAllMembersUseCase();
   const [width, setWidth] = useState(0);
+  const [members, setMembers] = useState<Member[]>([]);
   const DEFAULT_SLIDES_INTERVAL = 3000;
 
-  const members = getAllMembersUseCase.run();
+  const loadMembers = async () => {
+    if (members && members.length) return;
+    const loadedMembers = await getAllMembersUseCase.run();
+    const shuffledMembers = ArrayHelper.shuffle(loadedMembers);
+    setMembers(shuffledMembers);
+  };
 
   const getWindowDimensions = () => {
     const { innerWidth: width, innerHeight: height } = window;
@@ -24,6 +32,7 @@ const TeamSection = () => {
   };
 
   useEffect(() => {
+    loadMembers();
     handleWindowResize();
     window.addEventListener('resize', handleWindowResize);
     return () => window.removeEventListener('resize', handleWindowResize);
@@ -83,6 +92,7 @@ const TeamSection = () => {
         isIntrinsicHeight={true}
       >
         <Slider>
+          {!members.length && <div>Carregando...</div>}
           {members.map((x, i) => (
             <Slide key={i} index={i} innerClassName={styles.innerSlide}>
               <MemberCard
