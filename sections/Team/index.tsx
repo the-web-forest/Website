@@ -7,6 +7,7 @@ import { useEffect, useState } from 'react';
 import GetAllMembersUseCase from '../../use-cases/GetAllMembersUseCase';
 import Member from '../../core/domain/Member';
 import ArrayHelper from '../../helpers/ArrayHelper';
+import { StyledCarouselProvider } from './styles';
 
 const TeamSection = () => {
   const getAllMembersUseCase = new GetAllMembersUseCase();
@@ -80,7 +81,8 @@ const TeamSection = () => {
         <div id={styles.title}>Quem faz</div>
       </div>
 
-      <CarouselProvider
+      <StyledCarouselProvider
+        id="caroulsel"
         naturalSlideWidth={100}
         naturalSlideHeight={200}
         totalSlides={members.length}
@@ -91,20 +93,26 @@ const TeamSection = () => {
         isPlaying={true}
         isIntrinsicHeight={true}
       >
+        {' '}
+        {/** @ts-ignore */}
         <Slider>
           {!members.length && <div>Carregando...</div>}
           {members.map((x, i) => (
-            <Slide key={i} index={i} innerClassName={styles.innerSlide}>
-              <MemberCard
-                profilePictureUrl={x.profilePictureUrl}
-                description={x.description}
-                linkedInUrl={x.linkedInUrl}
-                name={x.name}
-              />
-            </Slide>
+            <>
+              {' '}
+              {/** @ts-ignore */}
+              <Slide key={i} index={i} innerClassName={styles.innerSlide}>
+                <MemberCard
+                  profilePictureUrl={x.profilePictureUrl}
+                  description={x.description}
+                  linkedInUrl={x.linkedInUrl}
+                  name={x.name}
+                />
+              </Slide>
+            </>
           ))}
         </Slider>
-      </CarouselProvider>
+      </StyledCarouselProvider>
     </section>
   );
 };
