@@ -68,11 +68,17 @@ const ContactSection = () => {
   return (
     <section id="contact">
       <div id={styles.container}>
-        <div id={styles.title}>
+        <div
+          id={styles.title}
+          style={{ fontSize: '1.25em', marginBottom: '10px' }}
+        >
           {messageSent ? 'Entre em contato' : 'Mensagem enviada com sucesso!'}
         </div>
         <div className={styles.email}>
-          <a href={`mailto:${Settings.CONTACT_EMAIL}`}>
+          <a
+            href={`mailto:${Settings.CONTACT_EMAIL}`}
+            style={{ fontSize: '2em' }}
+          >
             {Settings.CONTACT_EMAIL}
           </a>
         </div>
