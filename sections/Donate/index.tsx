@@ -2,6 +2,7 @@ import FilledButton, { FilledColor } from '../../components/FilledButton';
 import Title from '../../components/Title';
 import Settings from '../../core/settings';
 import { gaButtonClick } from '../../libs/GoogleAnalytics';
+import { CatarseLogo } from './logo-catarse';
 import styles from './styles.module.css';
 
 const text = 'Apoie nosso projeto e invista no meio ambiente';
@@ -17,7 +18,7 @@ const DonateSection = () => {
       <div id={styles.container}>
         <div id={styles.photo} />
         <div id={styles.description}>
-          <div id={styles.catarseLogo} />
+          <CatarseLogo />
           <Title text={text} color="#4c4c4c" />
           <FilledButton
             onClickFunction={donateButtonFunction}
