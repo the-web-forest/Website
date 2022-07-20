@@ -47,7 +47,6 @@ export const DescriptionSection = styled.div`
   @media screen and (max-width: 1000px) {
     padding: 25px;
   }
-
 `;
 
 export const CardPartner = styled.div`
