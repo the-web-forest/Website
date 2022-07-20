@@ -109,14 +109,8 @@ const PartnersSection: React.FC = () => {
               {' '}
               {/** @ts-ignore */}
               <Slide key={i} index={i} innerClassName={styles.innerSlide}>
-                <CardPartner>
-                  <a href={partner.url}>
-                    <img
-                      src={partner.photoUrl}
-                      alt={partner.name}
-                      width={200}
-                    />
-                  </a>
+                <CardPartner href={partner.url}>
+                  <img src={partner.photoUrl} alt={partner.name} width={200} />
                 </CardPartner>
               </Slide>
             </>

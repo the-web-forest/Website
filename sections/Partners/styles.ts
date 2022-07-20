@@ -42,4 +42,5 @@ export const CardPartner = styled.a`
   overflow: hidden;
   display: flex;
   align-items: center;
+  justify-content: center;
 `;
