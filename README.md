@@ -86,5 +86,3 @@ We currently use the following technologies:
     </td>
   </tr>
 </table>
-
-
