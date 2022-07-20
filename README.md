@@ -42,6 +42,8 @@ We currently use the following technologies:
 - Email - [contato@webforest.eco](mailto:contato@webforest.eco)
 
 ## Contributors 🤝
+
+An special thanks for the following people who contributed to this project:
 <table>
   <tr>
     <td align="center">
