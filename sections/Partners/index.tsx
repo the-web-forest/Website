@@ -14,7 +14,7 @@ import Title from '../../components/Title';
 
 const PARTNERS_TITLE = 'Nossos parceiros e apoiadores';
 const PARTNES_SUBTITLE =
-  'Seja um de nossos apoiadores nosso planeta precisa de instituições e pessoas como você, com vontade de cuidar das gerações futuras cosntruindo um mundo melhor.';
+  'Seja um de nossos apoiadores! Nosso planeta precisa de instituições e organizações com vontade de cuidar das gerações futuras!';
 
 const PartnersSection: React.FC = () => {
   const getAllPartnersUseCase = new GetAllPartnersUseCase();
