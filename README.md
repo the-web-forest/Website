@@ -40,3 +40,44 @@ We currently use the following technologies:
 - Website - https://www.webforest.eco
 - Instagram - [@web_forest](https://www.instagram.com/web_forest/)
 - Email - [contato@webforest.eco](mailto:contato@webforest.eco)
+
+## Contributors 🤝
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/Barros42">
+        <img src="https://avatars.githubusercontent.com/u/34094891?v=4" width="100px;" alt="Barros Picture on GitHub"/><br>
+        <sub>
+          <b>Barros</b>
+        </sub>
+      </a>
+    </td>
+  </tr>
+</table>
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/DevBacega">
+        <img src="https://avatars.githubusercontent.com/u/54642509?v=4" width="100px;" alt="DevBacega Picture on GitHub"/><br>
+        <sub>
+          <b>Vitor Bacega</b>
+        </sub>
+      </a>
+    </td>
+  </tr>
+</table>
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/guilhermevieira010797">
+        <img src="https://avatars.githubusercontent.com/u/69274738?v=4" width="100px;" alt="guilhermevieira010797 Picture on GitHub"/><br>
+        <sub>
+          <b>Guilherme Vieira</b>
+        </sub>
+      </a>
+    </td>
+  </tr>
+</table>
+
+
+
