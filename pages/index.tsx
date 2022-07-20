@@ -10,6 +10,7 @@ import TeamSection from '../sections/Team';
 import styles from '../styles/Home.module.css';
 import AboutSection from '../sections/About';
 import DonateSection from '../sections/Donate';
+import PartnersSection from '../sections/Partners';
 
 const Home: NextPage = () => {
   return (
@@ -22,6 +23,7 @@ const Home: NextPage = () => {
       <NewsSection />
       <AboutSection />
       <TeamSection />
+      <PartnersSection />
       <ContactSection />
       <FooterSection />
     </div>
