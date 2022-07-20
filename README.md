@@ -42,9 +42,7 @@ We currently use the following technologies:
 - Email - [contato@webforest.eco](mailto:contato@webforest.eco)
 
 ## Contributors 🤝
-<table style="border:1px solid black;
-  display:inline-block; 
-  margin:20px;">
+<table>
   <tr>
     <td align="center">
       <a href="https://github.com/Barros42">
@@ -54,31 +52,19 @@ We currently use the following technologies:
         </sub>
       </a>
     </td>
-  </tr>
-</table>
-<table style="border:1px solid black;
-  display:inline-block; 
-  margin:20px;">
-  <tr>
-    <td align="center">
-      <a href="https://github.com/DevBacega">
-        <img src="https://avatars.githubusercontent.com/u/54642509?v=4" width="100px;" alt="DevBacega Picture on GitHub"/><br>
-        <sub>
-          <b>Vitor Bacega</b>
-        </sub>
-      </a>
-    </td>
-  </tr>
-</table>
-<table style="border:1px solid black;
-  display:inline-block; 
-  margin:20px;">
-  <tr>
     <td align="center">
       <a href="https://github.com/guilhermevieira010797">
         <img src="https://avatars.githubusercontent.com/u/69274738?v=4" width="100px;" alt="guilhermevieira010797 Picture on GitHub"/><br>
         <sub>
           <b>Guilherme Vieira</b>
+        </sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/DevBacega">
+        <img src="https://avatars.githubusercontent.com/u/54642509?v=4" width="100px;" alt="DevBacega Picture on GitHub"/><br>
+        <sub>
+          <b>Vitor Bacega</b>
         </sub>
       </a>
     </td>
