@@ -42,7 +42,9 @@ We currently use the following technologies:
 - Email - [contato@webforest.eco](mailto:contato@webforest.eco)
 
 ## Contributors 🤝
-<table>
+<table style="border:1px solid black;
+  display:inline-block; 
+  margin:20px;">
   <tr>
     <td align="center">
       <a href="https://github.com/Barros42">
@@ -53,6 +55,10 @@ We currently use the following technologies:
       </a>
     </td>
   </tr>
+</table>
+<table style="border:1px solid black;
+  display:inline-block; 
+  margin:20px;">
   <tr>
     <td align="center">
       <a href="https://github.com/DevBacega">
@@ -63,6 +69,10 @@ We currently use the following technologies:
       </a>
     </td>
   </tr>
+</table>
+<table style="border:1px solid black;
+  display:inline-block; 
+  margin:20px;">
   <tr>
     <td align="center">
       <a href="https://github.com/guilhermevieira010797">
