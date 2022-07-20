@@ -38,9 +38,13 @@ export const CardPartner = styled.a`
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
   background-color: #fff;
   width: 260px;
-  height: 178px;
+  height: 180px;
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
+
+  img {
+    width: 90%;
+  }
 `;
