@@ -31,9 +31,26 @@ export const DescriptionSection = styled.div`
     width: 100%;
     text-align: flex-start;
   }
+
+  @media screen and (max-width: 400px) {
+    padding: 25px;
+  }
+
+  @media screen and (max-width: 500px) {
+    padding: 25px;
+  }
+
+  @media screen and (max-width: 700px) {
+    padding: 25px;
+  }
+
+  @media screen and (max-width: 1000px) {
+    padding: 25px;
+  }
+
 `;
 
-export const CardPartner = styled.a`
+export const CardPartner = styled.div`
   border-radius: 4px;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
   background-color: #fff;
@@ -43,8 +60,33 @@ export const CardPartner = styled.a`
   display: flex;
   align-items: center;
   justify-content: center;
+  background-image: url('https://drive.google.com/uc?export=view&id=1XoFPx7Ioay7tCiosBSQEMrm1PVPNJSsZ');
+  background-position: center center;
+  background-size: cover;
+  cursor: pointer;
+  background-repeat: no-repeat;
 
-  img {
-    width: 90%;
+  @media screen and (max-width: 400px) {
+    padding: 25px;
+  }
+
+  @media screen and (max-width: 500px) {
+    width: 180px;
+    height: 120px;
+  }
+
+  @media screen and (max-width: 700px) {
+    width: 200px;
+    height: 150px;
+  }
+
+  @media screen and (max-width: 1200px) {
+    width: 250px;
+    height: 150px;
+  }
+
+  @media screen and (max-width: 1500px) {
+    width: 250px;
+    height: 110px;
   }
 `;

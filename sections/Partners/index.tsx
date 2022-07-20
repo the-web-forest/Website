@@ -109,9 +109,11 @@ const PartnersSection: React.FC = () => {
               {' '}
               {/** @ts-ignore */}
               <Slide key={i} index={i} innerClassName={styles.innerSlide}>
-                <CardPartner href={partner.url} target="_blank">
-                  <img src={partner.photoUrl} alt={partner.name} width={200} />
-                </CardPartner>
+                <CardPartner
+                  onClick={() => window.open(partner.url, '_BLANK')}
+                  style={{ backgroundImage: `url('${partner.photoUrl}')` }}
+                  title={partner.name}
+                />
               </Slide>
             </>
           ))}
