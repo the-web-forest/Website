@@ -97,7 +97,7 @@ const PartnersSection: React.FC = () => {
               {/** @ts-ignore */}
               <Slide key={i} index={i}>
                 <a href={partner.url}>
-                  <img src={partner.photoUrl} alt={partner.name} />
+                  <img src={partner.photoUrl} alt={partner.name} width={300} />
                 </a>
               </Slide>
             </>
