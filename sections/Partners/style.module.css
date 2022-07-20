@@ -1,0 +1,18 @@
+.carousel {
+  width: 100%;
+  padding-left: 10em;
+  padding-right: 10em;
+  box-sizing: border-box;
+  padding-bottom: 2em;
+}
+
+.innerSlide {
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (max-width: 1024px) {
+  .carousel {
+    padding: 0em;
+  }
+}

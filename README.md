@@ -42,8 +42,6 @@ We currently use the following technologies:
 - Email - [contato@webforest.eco](mailto:contato@webforest.eco)
 
 ## Contributors 🤝
-
-An special thanks for the following people who contributed to this project:
 <table>
   <tr>
     <td align="center">
@@ -67,6 +65,22 @@ An special thanks for the following people who contributed to this project:
         <img src="https://avatars.githubusercontent.com/u/54642509?v=4" width="100px;" alt="DevBacega Picture on GitHub"/><br>
         <sub>
           <b>Vitor Bacega</b>
+        </sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/nittosantos">
+        <img src="https://avatars.githubusercontent.com/u/44413839?v=4" width="100px;" alt="NittoSantos Picture on GitHub"/><br>
+        <sub>
+          <b>Nitto Santos</b>
+        </sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/Jjokiba">
+        <img src="https://avatars.githubusercontent.com/u/53917449?v=4" width="100px;" alt="Jjokiba Picture on GitHub"/><br>
+        <sub>
+          <b>Jjokiba</b>
         </sub>
       </a>
     </td>
