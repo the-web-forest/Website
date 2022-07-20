@@ -53,8 +53,6 @@ We currently use the following technologies:
       </a>
     </td>
   </tr>
-</table>
-<table>
   <tr>
     <td align="center">
       <a href="https://github.com/DevBacega">
@@ -65,8 +63,6 @@ We currently use the following technologies:
       </a>
     </td>
   </tr>
-</table>
-<table>
   <tr>
     <td align="center">
       <a href="https://github.com/guilhermevieira010797">
