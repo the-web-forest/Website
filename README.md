@@ -69,6 +69,14 @@ We currently use the following technologies:
       </a>
     </td>
     <td align="center">
+      <a href="https://github.com/nittosantos">
+        <img src="https://avatars.githubusercontent.com/u/44413839?v=4" width="100px;" alt="NittoSantos Picture on GitHub"/><br>
+        <sub>
+          <b>Nitto Santos</b>
+        </sub>
+      </a>
+    </td>
+    <td align="center">
       <a href="https://github.com/Jjokiba">
         <img src="https://avatars.githubusercontent.com/u/53917449?v=4" width="100px;" alt="Jjokiba Picture on GitHub"/><br>
         <sub>
