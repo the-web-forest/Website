@@ -1,9 +1,20 @@
 import { Slider, Slide } from 'pure-react-carousel';
+import styles from './style.module.css';
 import 'pure-react-carousel/dist/react-carousel.es.css';
 import React, { useEffect, useState } from 'react';
 import GetAllPartnersUseCase from '../../use-cases/GetAllPartnersUseCase';
 import Partners from '../../core/domain/Partners';
-import { StyledCarouselProvider } from './styles';
+import {
+  StyledCarouselProvider,
+  DescriptionSection,
+  Container,
+  CardPartner,
+} from './styles';
+import Title from '../../components/Title';
+
+const PARTNERS_TITLE = 'Nossos parceiros e apoiadores';
+const PARTNES_SUBTITLE =
+  'Seja um de nossos apoiadores nosso planeta precisa de instituições e pessoas como você, com vontade de cuidar das gerações futuras cosntruindo um mundo melhor.';
 
 const PartnersSection: React.FC = () => {
   const getAllPartnersUseCase = new GetAllPartnersUseCase();
@@ -71,10 +82,11 @@ const PartnersSection: React.FC = () => {
   };
 
   return (
-    <>
-      <div>
-        <div>Quem faz</div>
-      </div>
+    <Container>
+      <DescriptionSection>
+        <Title text={PARTNERS_TITLE} color="#4D4D4D" />
+        <span>{PARTNES_SUBTITLE}</span>
+      </DescriptionSection>
 
       <StyledCarouselProvider
         id="caroulsel"
@@ -82,6 +94,7 @@ const PartnersSection: React.FC = () => {
         naturalSlideHeight={200}
         totalSlides={partners.length}
         infinite={true}
+        className={styles.carousel}
         visibleSlides={getVisibleSlides()}
         interval={DEFAULT_SLIDES_INTERVAL}
         isPlaying={true}
@@ -95,16 +108,22 @@ const PartnersSection: React.FC = () => {
             <>
               {' '}
               {/** @ts-ignore */}
-              <Slide key={i} index={i}>
-                <a href={partner.url}>
-                  <img src={partner.photoUrl} alt={partner.name} width={300} />
-                </a>
+              <Slide key={i} index={i} innerClassName={styles.innerSlide}>
+                <CardPartner>
+                  <a href={partner.url}>
+                    <img
+                      src={partner.photoUrl}
+                      alt={partner.name}
+                      width={200}
+                    />
+                  </a>
+                </CardPartner>
               </Slide>
             </>
           ))}
         </Slider>
       </StyledCarouselProvider>
-    </>
+    </Container>
   );
 };
 
