@@ -83,7 +83,7 @@ export const CardPartner = styled.div`
     height: 150px;
   }
 
-  @media screen and (max-width: 1500px) {
+  @media screen and (max-width: 1600px) {
     width: 250px;
     height: 110px;
   }
