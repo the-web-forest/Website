@@ -52,18 +52,6 @@ We currently use the following technologies:
         </sub>
       </a>
     </td>
-  </tr>
-  <tr>
-    <td align="center">
-      <a href="https://github.com/DevBacega">
-        <img src="https://avatars.githubusercontent.com/u/54642509?v=4" width="100px;" alt="DevBacega Picture on GitHub"/><br>
-        <sub>
-          <b>Vitor Bacega</b>
-        </sub>
-      </a>
-    </td>
-  </tr>
-  <tr>
     <td align="center">
       <a href="https://github.com/guilhermevieira010797">
         <img src="https://avatars.githubusercontent.com/u/69274738?v=4" width="100px;" alt="guilhermevieira010797 Picture on GitHub"/><br>
@@ -72,8 +60,23 @@ We currently use the following technologies:
         </sub>
       </a>
     </td>
+    <td align="center">
+      <a href="https://github.com/DevBacega">
+        <img src="https://avatars.githubusercontent.com/u/54642509?v=4" width="100px;" alt="DevBacega Picture on GitHub"/><br>
+        <sub>
+          <b>Vitor Bacega</b>
+        </sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/Jjokiba">
+        <img src="https://avatars.githubusercontent.com/u/53917449?v=4" width="100px;" alt="Jjokiba Picture on GitHub"/><br>
+        <sub>
+          <b>Jjokiba</b>
+        </sub>
+      </a>
+    </td>
   </tr>
 </table>
-
 
 
