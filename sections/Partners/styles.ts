@@ -59,7 +59,6 @@ export const CardPartner = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url('https://drive.google.com/uc?export=view&id=1XoFPx7Ioay7tCiosBSQEMrm1PVPNJSsZ');
   background-position: center center;
   background-size: cover;
   cursor: pointer;
