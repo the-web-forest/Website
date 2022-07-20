@@ -8,7 +8,7 @@ export const CatarseLogo: FC = () => (
     xmlSpace="preserve"
     width="1280"
     height="746.66669"
-    viewBox="0 0 1280 746.66669"
+    viewBox="330 0 1280 746.66669"
     style={{
       width: '300px',
       height: '150px',

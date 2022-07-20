@@ -1,63 +1,62 @@
 #container {
-    display: flex;
-    width: 100%;
-    flex-direction: row;
-    padding: 4em 8.68em;
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  padding: 4em 8.68em;
 }
 
 #photo {
-    background-position: top center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    margin-right: 5%;
-    width: 379px;
-    height: 204px;
-    margin-top: 50px;
-    background-image: url('/images/donateTeamPhoto.webp');
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-right: 5%;
+  width: 380px;
+  height: 340px;
+  margin-top: 50px;
+  background-image: url('/images/donateImg.webp');
 }
 
 #description {
-    flex: 1;
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+
+#catarseLogo {
+  width: 200px;
+  height: 150px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url('/images/logo-catarse.svg');
+}
+
+@media screen and (max-width: 1020px) {
+  #container {
     flex-direction: column;
-}
+    padding: 0;
+  }
 
-#catarseLogo {    
-    width: 200px;
-    height: 150px;
+  #photo {
+    background-position: center top;
+    width: 100%;
+    margin: 0;
+    background-size: cover;
+    height: 220px;
     background-size: contain;
-    background-repeat: no-repeat;
-    background-image: url('/images/logo-catarse.svg');
-}
+  }
 
-@media screen and (max-width:1020px) {
-    #container {
-        flex-direction: column;
-        padding: 0;
-    }
+  #description {
+    padding: 0 1.68rem;
+    align-items: flex-start;
+  }
 
-    #photo {
-        background-position: center top;
-        width: 100%;
-        margin: 0;
-        background-size: cover;
-        height: 220px;
-        background-size: contain;
-    }
+  #catarseLogo {
+    margin: 10px 0;
+  }
 
-    #description {
-        padding: 0 1.68rem;
-        align-items: flex-start;
-    }
-
-    #catarseLogo {
-        margin: 10px 0;
-    }
-
-    #description > a {
-        margin-top: 10px;
-    }
-
+  #description > a {
+    margin-top: 10px;
+  }
 }
