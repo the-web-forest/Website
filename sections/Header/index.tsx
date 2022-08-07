@@ -3,7 +3,7 @@ import DonateButton from '../../components/FilledButton';
 import HeaderButton from '../../components/HeaderButton';
 import Settings from '../../core/settings';
 import styles from './styles.module.css';
-import { HiMenu } from 'react-icons/hi';
+import { HiMenu, HiX } from 'react-icons/hi';
 import { gaButtonClick } from '../../libs/GoogleAnalytics';
 
 const HeaderSection = () => {
@@ -28,13 +28,18 @@ const HeaderSection = () => {
             </div>
 
             <div
-              className={`${styles.headerMenu} ${
-                isMenuOpen ? styles.isMenuOpen : ''
-              }`}
+              className={[
+                styles.headerMenu,
+                isMenuOpen ? styles.isMenuOpen : '',
+              ].join(' ')}
             >
-              <div className={styles.headerMenuMobile} onClick={toggleMenu}>
-                <HiMenu size={24} />
-              </div>
+              <button
+                className={styles.headerMenuMobile}
+                onClick={toggleMenu}
+                tabIndex={-1}
+              >
+                {isMenuOpen ? <HiX size={24} /> : <HiMenu size={24} />}
+              </button>
               <nav className={styles.menuOptionsNav}>
                 <ul className={styles.menuOptions}>
                   <HeaderButton
