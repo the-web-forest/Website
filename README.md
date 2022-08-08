@@ -84,5 +84,13 @@ We currently use the following technologies:
         </sub>
       </a>
     </td>
+    <td align="center">
+      <a href="https://github.com/stenicodecio">
+        <img src="https://avatars.githubusercontent.com/u/34843942?v=4" width="100px;" alt="Décio's Picture on GitHub"/><br>
+        <sub>
+          <b>Décio Stenico</b>
+        </sub>
+      </a>
+    </td>
   </tr>
 </table>

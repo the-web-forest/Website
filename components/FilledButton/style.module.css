@@ -1,20 +1,15 @@
 .container {
     background-color: var(--orange);
     color: var(--white);
-    height: 40px;
     border-radius: 5px;
     text-align: center;
     display: inline-block;
-    line-height: 40px;
-    cursor: pointer;
-    font-family: 'Aprova';
-    padding: 0px 18px 0px 18px;
-    font-size: 1em;
+    padding: 0.65rem 1.15rem;
+    transition: filter 500ms;
 }
 
 .container:hover {
     filter: brightness(90%);
-    transition: filter 500ms linear;
 }
 
 .darkGreen {
