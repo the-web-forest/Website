@@ -1,56 +1,13 @@
-#container {
-    background-color: var(--white);
-    color: var(--dark-gray);
-    height: 40px;
-    text-align: center;
-    flex-direction: column;
-    cursor: pointer;
-    font-family: 'Aprova';
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    font-size: 1em;
-    padding: 0px 10px 0px 10px;
-    
+.menuItem {
+  list-style: none;
 }
 
-#container:hover #text {
-    opacity: 0.9;
-    color: var(--black);
+.menuLink {
+  display: block;
+  padding: 1rem;
+  transition: color 0.3s;
 }
 
-#container:hover #dot{
-    display: block;
+.menuLink:hover {
+  color: var(--black);
 }
-
-#container.selected #text {
-    color: var(--black);
-}
-
-#container.selected #dot {
-    display: block;
-}
-
-#text {
-    height: 20px;
-    justify-content: center;
-    align-self: stretch;
-    align-items: center;
-}
-
-#selected {
-    align-self: stretch;
-    height: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#dot {
-    display: none;
-    width: 10px;
-    height: 10px;
-    background-color: var(--green-lime);
-    border-radius: 100%;
-}
-
