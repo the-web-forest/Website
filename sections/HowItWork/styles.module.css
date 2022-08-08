@@ -24,11 +24,6 @@
 }
 
 @media screen and (max-width: 1024px) {
-  .container {
-    padding: 0 1.68rem;
-    height: auto;
-  }
-
   .howItWorksInner {
     text-align: center;
   }
