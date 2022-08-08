@@ -10,7 +10,7 @@
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1450px;
   margin: auto;
   padding: 0 2rem;
 }
@@ -45,6 +45,13 @@
 
 .headerMenuMobile svg {
   display: block;
+}
+
+@media screen and (min-width: 901px) {
+  .headerMenu {
+    flex: 1;
+    padding: 0 2rem;
+  }
 }
 
 @media screen and (max-width: 900px) {
