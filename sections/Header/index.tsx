@@ -13,8 +13,8 @@ const HeaderSection = () => {
   };
 
   return (
-    <header id="inicio">
-      <div className={styles.header}>
+    <div className={styles.header}>
+      <header>
         <div className={styles.container}>
           <div className={styles.headerInner}>
             <div className={styles.headerLogo}>
@@ -44,24 +44,36 @@ const HeaderSection = () => {
                 <ul className={styles.menuOptions}>
                   <HeaderButton
                     text="Início"
-                    onClick={() => gaButtonClick('inicio')}
+                    onClick={() => {
+                      gaButtonClick('inicio');
+                      setIsMenuOpen(false);
+                    }}
                     selected
-                    url={`${Settings.APP_URL}#inicio`}
+                    url={`#`}
                   />
                   <HeaderButton
                     text="Apoie"
-                    onClick={() => gaButtonClick('apoie')}
-                    url={`${Settings.APP_URL}#support`}
+                    onClick={() => {
+                      gaButtonClick('apoie');
+                      setIsMenuOpen(false);
+                    }}
+                    url={`#support`}
                   />
                   <HeaderButton
                     text="Quem Somos"
-                    onClick={() => gaButtonClick('quem-somos')}
-                    url={`${Settings.APP_URL}#team`}
+                    onClick={() => {
+                      gaButtonClick('quem-somos');
+                      setIsMenuOpen(false);
+                    }}
+                    url={`#team`}
                   />
                   <HeaderButton
                     text="Contato"
-                    onClick={() => gaButtonClick('contato')}
-                    url={`${Settings.APP_URL}#contact`}
+                    onClick={() => {
+                      gaButtonClick('contato');
+                      setIsMenuOpen(false);
+                    }}
+                    url={`#contact`}
                   />
                 </ul>
               </nav>
@@ -76,8 +88,8 @@ const HeaderSection = () => {
             </div>
           </div>
         </div>
-      </div>
-    </header>
+      </header>
+    </div>
   );
 };
 
