@@ -34,7 +34,7 @@ const TopicIcon = ({ Icon }: TopicIconProp) => (
 );
 
 interface Topic {
-  icon: any;
+  icon: JSX.Element;
   title: string;
   description: string;
 }
