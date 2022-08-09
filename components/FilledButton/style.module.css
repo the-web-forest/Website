@@ -6,6 +6,8 @@
     display: inline-block;
     padding: 0.65rem 1.15rem;
     transition: filter 500ms;
+    border: none;
+    cursor: pointer;
 }
 
 .container:hover {
