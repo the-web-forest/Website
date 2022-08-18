@@ -19,11 +19,11 @@ const HeaderButton = ({
   };
 
   return (
-    <a {...rest} href={url} target={target}>
-      <div id={styles.container} className={getClassName()}>
-        <div id={styles.text}>{text}</div>
-      </div>
-    </a>
+    <li className={styles.menuItem}>
+      <a {...rest} href={url} target={target} className={styles.menuLink}>
+        {text}
+      </a>
+    </li>
   );
 };
 
