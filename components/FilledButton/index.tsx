@@ -39,9 +39,12 @@ const FilledButton = ({
 
   const getMiddle = (): JSX.Element => {
     return (
-      <div className={`${styles.container} ${styles[color]}`} style={{ width }}>
+      <button
+        className={`${styles.container} ${styles[color]}`}
+        style={{ width }}
+      >
         {text}
-      </div>
+      </button>
     );
   };
 
