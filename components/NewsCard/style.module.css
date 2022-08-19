@@ -21,9 +21,8 @@
     width: 100%;
     height: 25%;
     padding: 10px;
-     font-family: 'Aprova', sans-serif;
+    font-family: 'Aprova', sans-serif;
     font-style: normal;
-    font-weight: normal;
     font-size: 1.2em;
     font-weight: 300;
     overflow: hidden;
@@ -47,8 +46,7 @@
     height: 17%;
     color: var(--blue);
     padding: 10px;
-    padding-top: 0;
-     font-family: 'Aprova', sans-serif;
+    font-family: 'Aprova', sans-serif;
     font-size: 1.7em;
     text-decoration: underline;
     padding-top: 7px;
