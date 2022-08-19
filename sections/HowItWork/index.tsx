@@ -33,13 +33,13 @@ const TopicIcon = ({ Icon }: TopicIconProp) => (
   />
 );
 
-interface Topic {
+interface TopicInterface {
   icon: JSX.Element;
   title: string;
   description: string;
 }
 
-const topics: Array<Topic> = [
+const topics: Array<TopicInterface> = [
   {
     icon: <TopicIcon Icon={FaDonate} />,
     title: 'Faça uma doação online de qualquer valor',
@@ -67,7 +67,7 @@ const HowItWork = () => {
         <div className={styles.howItWorksInner}>
           <Title text="Como a Web Forest funciona?" color="#4C4C4C" />
           <div className={styles.howItWorksTopics}>
-            {topics.map((topic: Topic) => {
+            {topics.map((topic: TopicInterface) => {
               return (
                 <Topic
                   Icon={topic.icon}
