@@ -8,7 +8,7 @@
 
 #container #title {
     color: var(--dark-gray);
-    font-family: 'Aprova';
+     font-family: 'Aprova', sans-serif;;
     font-style: normal;
     font-weight: 300;
     font-size: 2.8em;
