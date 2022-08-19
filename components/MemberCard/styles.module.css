@@ -18,7 +18,7 @@
 
 #memberCard #name {
     color: var(--dark-gray);
-     font-family: 'Aprova', sans-serif;;
+     font-family: 'Aprova', sans-serif;
     text-align: center;
     font-style: normal;
     font-weight: 400;
@@ -27,7 +27,7 @@
 
 #memberCard #description {
     color: var(--dark-gray);
-     font-family: 'Aprova', sans-serif;;
+     font-family: 'Aprova', sans-serif;
     text-align: center;
     font-style: normal;
     font-weight: 400;

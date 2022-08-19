@@ -24,7 +24,7 @@ export const DescriptionSection = styled.div`
 
   span {
     color: var(--dark-gray);
-     font-family: 'Aprova', sans-serif;;
+     font-family: 'Aprova', sans-serif;
     font-style: normal;
     font-weight: 300;
     font-size: 1rem;
