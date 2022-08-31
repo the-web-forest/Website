@@ -1,89 +1,56 @@
-#container {
-    width: 90%;
-    height: 17em;
-    background: var(--white);
-    border: 1px solid var(--soft-gray);
-    box-sizing: border-box;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.06);
-    border-radius: 4px;
+.news {
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  overflow: hidden;
+  display: block;
+  transition: box-shadow 0.3s;
+  will-change: transition;
 }
 
-#container #photo {
-    background-image: url('/images/news-placeholder.png');
-    background-size: cover;
-    background-position: top center;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 50%;
+.news:hover {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
-#container #title {
-    width: 100%;
-    height: 25%;
-    padding: 10px;
-    font-family: 'Aprova';
-    font-style: normal;
-    font-weight: normal;
-    font-size: 1.2em;
-    font-weight: 300;
-    overflow: hidden;
-    white-space: inherit;
-    text-overflow: ellipsis;
-    color: var(--dark-gray);
+.newsImage {
+  height: 200px;
+  overflow: hidden;
+  position: relative;
 }
 
-#container #date {
-    font-family: 'Aprova';
-    width: 100%;
-    height: 8%;
-    display: flex;
-    padding: 10px;
-    padding-top: 0;
-    color: var(--dark-gray);
+.newsImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-#container #link {
-    width: 100%;
-    height: 17%;
-    color: var(--blue);
-    padding: 10px;
-    padding-top: 0;
-    font-family: 'Aprova';
-    font-size: 1.7em;
-    text-decoration: underline;
-    padding-top: 7px;
-    cursor: pointer;
+.newsContent {
+  padding: 0.5rem;
 }
 
-#container #link:hover{
-    opacity: .9;
+.newsTitle {
+  font-size: .9em;
+  font-weight: 700;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  min-height: 36px;
 }
 
-
-@media screen and (max-width: 1024px) {
-
-    #container #link {
-        font-size: 1.4em;
-    }
-
+.newsDate {
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
 }
 
-@media screen and (max-width: 1400px) {
-
-    #container {
-        width: 90%;
-        margin-left: 5%;
-    }
-
-    #container #link {
-        font-size: 1.4em;
-    }
-
-}
-
-@media screen and (max-width: 1600px) {
-    #container #title {
-        font-size: .9em;
-        font-weight: bold;
-    }
+.newsButton {
+  margin-top: 0.5rem;
+  color: var(--dark-green);
+  background: #00635d1a;
+  border-radius: 5px;
+  display: inline-block;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 0.5rem;
 }
