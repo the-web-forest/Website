@@ -14,22 +14,25 @@ const donateButtonFunction = () => {
 
 const DonateSection = () => {
   return (
-    <section id="support">
-      <div id={styles.container}>
-        <div id={styles.photo} />
-        <div id={styles.description}>
-          <CatarseLogo />
-          <Title text={text} color="#4c4c4c" />
+    <div className={styles.donate} id="support">
+      <div className={styles.container}>
+        <div className={styles.donateInner}>
+          <img
+            className={styles.donateLogo}
+            src="images/logo-catarse-branco.png"
+            alt="Logo Catarse"
+            title="Logo Catarse"
+          />
+          <Title text={text} color="#FEFEFE" />
           <FilledButton
             onClickFunction={donateButtonFunction}
-            color={FilledColor.darkGreen}
-            width="154px"
+            color={FilledColor.orange}
             type="function"
             text="Saiba Mais"
           />
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 

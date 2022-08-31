@@ -16,7 +16,7 @@ export default class ListMonthsUseCase {
 
   private getAllAvaiableYears(dataList: MonthSheetDto[]): YearDto[] {
     const yearList: YearDto[] = [];
-    dataList.map(value => {
+    dataList.forEach(value => {
       const yearValue = this.getYearFromString(value.title);
       const alreadyExists = yearList.find(
         year => year.year === parseInt(yearValue),
@@ -31,7 +31,7 @@ export default class ListMonthsUseCase {
     dataList: MonthSheetDto[],
     years: YearDto[],
   ): YearDto[] {
-    dataList.map(data => {
+    dataList.forEach(data => {
       const year = this.getYearFromString(data.title);
       const month = this.getMonthFromString(data.title);
       const monthNumber = MonthHelper.getMonthNumberByMonthName(month);
@@ -50,7 +50,7 @@ export default class ListMonthsUseCase {
 
   private orderYearAndMonthData(dataList: YearDto[]): YearDto[] {
     dataList = dataList.sort((a, b) => a.year - b.year);
-    dataList.map(year => {
+    dataList.forEach(year => {
       year.months = year.months.sort((a, b) => a.number - b.number);
     });
     return dataList;

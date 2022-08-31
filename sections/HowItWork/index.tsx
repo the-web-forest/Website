@@ -33,26 +33,51 @@ const TopicIcon = ({ Icon }: TopicIconProp) => (
   />
 );
 
+interface TopicInterface {
+  icon: JSX.Element;
+  title: string;
+  description: string;
+}
+
+const topics: Array<TopicInterface> = [
+  {
+    icon: <TopicIcon Icon={FaDonate} />,
+    title: 'Faça uma doação online de qualquer valor',
+    description:
+      'Sua doação é feita digitalmente e pode ser de qualquer valor.',
+  },
+  {
+    icon: <TopicIcon Icon={FaTree} />,
+    title: 'Utilizaremos o valor para plantar árvores reais',
+    description:
+      'Utilizamos os recursos arrecadados para financiar plantação de árvores reais e instituições ambientais.',
+  },
+  {
+    icon: <TopicIcon Icon={FaShareAlt} />,
+    title: 'Acompanhe e compartilhe suas ações na Web Forest',
+    description:
+      'Compartilhe suas ações na Web Forest e estimule seus amigos e empresas a apoiar nosso projeto sem fins lucrativos.',
+  },
+];
+
 const HowItWork = () => {
   return (
-    <div className={styles.container}>
-      <Title text="Como a Web Forest funciona?" color="#4C4C4C" />
-      <div className={styles.topicSection}>
-        <Topic
-          Icon={<TopicIcon Icon={FaDonate} />}
-          Title={makeDonationTitle}
-          description={DESCRIPTIONS.ONE}
-        />
-        <Topic
-          Icon={<TopicIcon Icon={FaTree} />}
-          Title={growTreeTitle}
-          description={DESCRIPTIONS.TWO}
-        />
-        <Topic
-          Icon={<TopicIcon Icon={FaShareAlt} />}
-          Title={shareTitle}
-          description={DESCRIPTIONS.THREE}
-        />
+    <div className={styles.howItWorks}>
+      <div className={styles.container}>
+        <div className={styles.howItWorksInner}>
+          <Title text="Como a Web Forest funciona?" color="#4C4C4C" />
+          <div className={styles.howItWorksTopics}>
+            {topics.map((topic: TopicInterface) => {
+              return (
+                <Topic
+                  Icon={topic.icon}
+                  Title={topic.title}
+                  description={topic.description}
+                />
+              );
+            })}
+          </div>
+        </div>
       </div>
     </div>
   );

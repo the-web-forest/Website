@@ -2,6 +2,17 @@
 <a  href="https://www.webforest.eco/" target="blank"><img  src="https://www.webforest.eco/images/logo.svg"  width="200"  alt="WebForest Logo"/></a>
 </p>
 
+[![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=the-web-forest_Website&metric=ncloc)](https://sonarcloud.io/summary/new_code?id=the-web-forest_Website)
+[![Technical Debt](https://sonarcloud.io/api/project_badges/measure?project=the-web-forest_Website&metric=sqale_index)](https://sonarcloud.io/summary/new_code?id=the-web-forest_Website)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=the-web-forest_Website&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=the-web-forest_Website)
+[![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=the-web-forest_Website&metric=reliability_rating)](https://sonarcloud.io/summary/new_code?id=the-web-forest_Website)
+[![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=the-web-forest_Website&metric=duplicated_lines_density)](https://sonarcloud.io/summary/new_code?id=the-web-forest_Website)
+[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=the-web-forest_Website&metric=vulnerabilities)](https://sonarcloud.io/summary/new_code?id=the-web-forest_Website)
+[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=the-web-forest_Website&metric=bugs)](https://sonarcloud.io/summary/new_code?id=the-web-forest_Website)
+[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=the-web-forest_Website&metric=security_rating)](https://sonarcloud.io/summary/new_code?id=the-web-forest_Website)
+[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=the-web-forest_Website&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=the-web-forest_Website)
+[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=the-web-forest_Website&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=the-web-forest_Website)
+
 <p  align="center">A collection of microservices that supports the Web Forest ecosystem.</p>
 
 ## Philosophy 🌳
@@ -81,6 +92,14 @@ We currently use the following technologies:
         <img src="https://avatars.githubusercontent.com/u/53917449?v=4" width="100px;" alt="Jjokiba Picture on GitHub"/><br>
         <sub>
           <b>Jjokiba</b>
+        </sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/stenicodecio">
+        <img src="https://avatars.githubusercontent.com/u/34843942?v=4" width="100px;" alt="Décio's Picture on GitHub"/><br>
+        <sub>
+          <b>Décio Stenico</b>
         </sub>
       </a>
     </td>

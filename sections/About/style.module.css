@@ -9,7 +9,7 @@
 
 #container #title {
     color: var(--white);
-    font-family: 'Aprova';
+     font-family: 'Aprova', sans-serif;
     font-style: normal;
     font-weight: 600;
     font-size: 40px;

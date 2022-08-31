@@ -1,62 +1,45 @@
-#container {
-  display: flex;
-  width: 100%;
-  flex-direction: row;
-  padding: 4em 8.68em;
-}
-
-#photo {
-  background-position: top center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  margin-right: 5%;
-  width: 380px;
-  height: 340px;
-  margin-top: 50px;
+.donate {
   background-image: url('/images/donateImg.webp');
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  box-shadow: 0px -70px 80px -55px rgb(0 0 0 / 80%) inset, -70px 0 80px -55px rgb(0 0 0 / 80%) inset;
+  padding: 6rem 0;
+  position: relative;
 }
 
-#description {
-  flex: 1;
+.donate:before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.65);
+  z-index: 1;
+}
+
+.container {
+  max-width: 1450px;
+  margin: auto;
+  padding: 0 2rem;
+}
+
+.donateInner {
   display: flex;
-  align-items: flex-start;
-  justify-content: space-evenly;
+  gap: 2rem;
   flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  color: #FFF !important;
+  position: relative;
+  z-index: 2;
 }
 
-#catarseLogo {
-  width: 200px;
-  height: 150px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-image: url('/images/logo-catarse.svg');
+.donateLogo {
+  max-height: 60px;
 }
 
-@media screen and (max-width: 1020px) {
-  #container {
-    flex-direction: column;
-    padding: 0;
-  }
-
-  #photo {
-    background-position: center top;
-    width: 100%;
-    margin: 0;
-    background-size: cover;
-    height: 220px;
-    background-size: contain;
-  }
-
-  #description {
-    padding: 0 1.68rem;
-    align-items: flex-start;
-  }
-
-  #catarseLogo {
-    margin: 10px 0;
-  }
-
-  #description > a {
-    margin-top: 10px;
-  }
+.donate button {
+  padding: 1rem 1.5rem !important;
+  font-size: 1.1rem;
+  font-weight: 400;
 }
