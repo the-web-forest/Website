@@ -1,26 +1,16 @@
-import { CarouselProvider, Slide, Slider } from 'pure-react-carousel';
 import { useEffect, useState } from 'react';
+import { FaAngleRight, FaAngleLeft } from 'react-icons/fa';
 import NewsCard from '../../components/NewsCard';
 import News from '../../core/domain/News';
 import GetAllNewsUseCase from '../../use-cases/GetAllNewsUseCase';
 import styles from './styles.module.css';
+import { Swiper, SwiperSlide, useSwiper } from 'swiper/react';
+import 'swiper/css';
 
 const NewsSection = () => {
   const getAllNewsUseCase = new GetAllNewsUseCase();
   const [news, setNews] = useState<News[]>([]);
-
-  const [width, setWidth] = useState(0);
-  const DEFAULT_SLIDES_INTERVAL = 3000;
-
-  const getWindowDimensions = () => {
-    const { innerWidth: width, innerHeight: height } = window;
-    return { width, height };
-  };
-
-  const handleWindowResize = () => {
-    const dimensions = getWindowDimensions();
-    setWidth(dimensions.width);
-  };
+  const [slideIndex, setSlideIndex] = useState<number>(0);
 
   const loadNews = async () => {
     if (news && news.length) return;
@@ -29,75 +19,89 @@ const NewsSection = () => {
   };
 
   useEffect(() => {
-    handleWindowResize();
     loadNews();
-    window.addEventListener('resize', handleWindowResize);
-    return () => window.removeEventListener('resize', handleWindowResize);
   });
 
-  const getVisibleSlides = (): number => {
-    const BREAKPOINTS = {
-      MINI: 400,
-      MEDIUM: 700,
-      LARGE: 1200,
-    };
+  const SwiperButtonPrev = ({ children }: any) => {
+    const swiper = useSwiper();
+    return (
+      <button
+        className={styles.newsPrev}
+        disabled={swiper.isBeginning}
+        onClick={() =>
+          !swiper.isBeginning &&
+          (swiper.slidePrev(), setSlideIndex(slideIndex + 1))
+        }
+      >
+        {children}
+      </button>
+    );
+  };
 
-    const ITEMS_PER_BLOCK = {
-      ONE: 1,
-      TWO: 2,
-      THREE: 3,
-      FOUR: 4,
-    };
+  const SwiperButtonNext = ({ children }: any) => {
+    const swiper = useSwiper();
 
-    if (width <= BREAKPOINTS.MINI) {
-      return ITEMS_PER_BLOCK.ONE;
-    }
+    return (
+      <button
+        className={styles.newsNext}
+        disabled={swiper.isEnd}
+        onClick={() => {
+          if (!swiper.isEnd) {
+            swiper.slideNext();
+            setSlideIndex(slideIndex - 1);
+          }
+        }}
+      >
+        {children}
+      </button>
+    );
+  };
 
-    if (width <= BREAKPOINTS.MEDIUM) {
-      return ITEMS_PER_BLOCK.TWO;
-    }
-
-    if (width <= BREAKPOINTS.LARGE) {
-      return ITEMS_PER_BLOCK.THREE;
-    }
-
-    return ITEMS_PER_BLOCK.FOUR;
+  const swiperProps: any = {
+    centeredSlides: true,
+    centeredSlidesBounds: true,
+    centerInsufficientSlides: true,
+    slidesPerView: 'auto',
+    freeMode: true,
+    spaceBetween: 32,
+    onSlideChange: (swiper: any) => setSlideIndex(swiper.activeIndex),
   };
 
   return (
     <>
-      <div id={styles.container}>
-        <div id={styles.title}>
-          O que está acontecendo com <br /> <u>o meio ambiente?</u>{' '}
-        </div>
-      </div>
+      <div className={styles.news}>
+        <div className={styles.container}>
+          <div className={styles.newsInner}>
+            <div className={styles.newsTitle}>
+              O que está acontecendo com <br /> <u>o meio ambiente?</u>{' '}
+            </div>
 
-      <div id={styles.newsSection}>
-        <CarouselProvider
-          naturalSlideWidth={100}
-          naturalSlideHeight={125}
-          totalSlides={news.length}
-          infinite={true}
-          visibleSlides={getVisibleSlides()}
-          className={styles.carousel}
-          interval={DEFAULT_SLIDES_INTERVAL}
-          isPlaying={true}
-          isIntrinsicHeight={true}
-        >
-          <Slider>
-            {!news.length && <div>Carregando...</div> }
-            {news.map((x, i) => (
-              <Slide className={styles.newsSlide} key={i} index={i}>
-                <NewsCard
-                  title={x.title}
-                  date={x.date}
-                  newsUrl={x.link}
-                  photoUrl={x.photoUrl}
-                />
-              </Slide>
-            ))}
-          </Slider>
-        </CarouselProvider>
+            {!news.length && <div>Carregando...</div>}
+
+            {news.length && (
+              <>
+                <Swiper {...swiperProps}>
+                  <SwiperButtonPrev>
+                    <FaAngleLeft />
+                  </SwiperButtonPrev>
+                  {news.map((slide, i) => (
+                    <SwiperSlide className={styles.newsSlide} key={i}>
+                      <NewsCard
+                        title={slide.title}
+                        date={slide.date}
+                        newsUrl={slide.link}
+                        photoUrl={slide.photoUrl}
+                      />
+                    </SwiperSlide>
+                  ))}
+                  <SwiperButtonNext>
+                    <FaAngleRight />
+                  </SwiperButtonNext>
+                </Swiper>
+              </>
+            )}
+          </div>
+        </div>
       </div>
     </>
   );
