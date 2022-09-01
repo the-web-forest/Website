@@ -8,35 +8,23 @@ interface NewsCardProps {
 }
 
 const NewsCard = ({ photoUrl, title, date, newsUrl }: NewsCardProps) => {
-  const openNews = () => {
-    window.open(newsUrl, '_blank');
-  };
-
-  const getTitle = () => {
-    const MAX_LENGTH = 55;
-    let formatedTitle = title;
-    if (title.length > MAX_LENGTH) {
-      formatedTitle = `${title.slice(0, 50)}...`;
-    }
-    return formatedTitle;
-  };
-
-  const getStyle = () => {
-    const withPhoto = { backgroundImage: `url(${photoUrl})` };
-    return photoUrl ? withPhoto : {};
-  };
-
+  {
+    /* TODO: 
+    - Adicionar um novo campo "altTitle", com a descrição da imagem da notícia
+    - Rever link acessível
+  */
+  }
   return (
-    <div title={title} id={styles.container}>
-      <div title={title} style={getStyle()} id={styles.photo} />
-      <div title={title} id={styles.title}>
-        {getTitle()}
+    <a href={newsUrl} target="_blank" rel="nofollow" className={styles.news}>
+      <div className={styles.newsImage}>
+        <img src={photoUrl} alt={title} title={title} />
       </div>
-      <div id={styles.date}>{date}</div>
-      <div onClick={() => openNews()} id={styles.link}>
-        Saiba mais
+      <div className={styles.newsContent}>
+        <div className={styles.newsTitle}>{title}</div>
+        <div className={styles.newsDate}>{date}</div>
+        <div className={styles.newsButton}>Saiba mais</div>
       </div>
-    </div>
+    </a>
   );
 };
 
