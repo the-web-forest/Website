@@ -12,6 +12,29 @@ const HeaderSection = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const menus = [
+    {
+      title: 'Início',
+      id: 'inicio',
+      link: '#home',
+    },
+    {
+      title: 'Apoie',
+      id: 'apoie',
+      link: '#support',
+    },
+    {
+      title: 'Quem Somos',
+      id: 'quem-somos',
+      link: '#team',
+    },
+    {
+      title: 'Contato',
+      id: 'contato',
+      link: '#contact',
+    },
+  ];
+
   return (
     <div className={styles.header}>
       <header>
@@ -42,39 +65,17 @@ const HeaderSection = () => {
               </button>
               <nav className={styles.menuOptionsNav}>
                 <ul className={styles.menuOptions}>
-                  <HeaderButton
-                    text="Início"
-                    onClick={() => {
-                      gaButtonClick('inicio');
-                      setIsMenuOpen(false);
-                    }}
-                    selected
-                    url={`#`}
-                  />
-                  <HeaderButton
-                    text="Apoie"
-                    onClick={() => {
-                      gaButtonClick('apoie');
-                      setIsMenuOpen(false);
-                    }}
-                    url={`#support`}
-                  />
-                  <HeaderButton
-                    text="Quem Somos"
-                    onClick={() => {
-                      gaButtonClick('quem-somos');
-                      setIsMenuOpen(false);
-                    }}
-                    url={`#team`}
-                  />
-                  <HeaderButton
-                    text="Contato"
-                    onClick={() => {
-                      gaButtonClick('contato');
-                      setIsMenuOpen(false);
-                    }}
-                    url={`#contact`}
-                  />
+                  {menus.map(menu => (
+                    <HeaderButton
+                      key={menu.id}
+                      text={menu.title}
+                      onClick={() => {
+                        gaButtonClick(menu.id);
+                        setIsMenuOpen(false);
+                      }}
+                      url={`${Settings.APP_URL}${menu.link}`}
+                    />
+                  ))}
                 </ul>
               </nav>
             </div>
