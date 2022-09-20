@@ -2,13 +2,12 @@ import FilledButton, { FilledColor } from '../../components/FilledButton';
 import Title from '../../components/Title';
 import Settings from '../../core/settings';
 import { gaButtonClick } from '../../libs/GoogleAnalytics';
-import { CatarseLogo } from './logo-catarse';
 import styles from './styles.module.css';
 
-const text = 'Apoie nosso projeto e invista no meio ambiente';
+const text = 'Plante uma árvore e invista no meio ambiente';
 
 const donateButtonFunction = () => {
-  gaButtonClick('saiba-mais');
+  gaButtonClick('Plante-uma-arvore"');
   window.open(Settings.DONATE_URL, '_blank');
 };
 
@@ -17,18 +16,12 @@ const DonateSection = () => {
     <div className={styles.donate} id="support">
       <div className={styles.container}>
         <div className={styles.donateInner}>
-          <img
-            className={styles.donateLogo}
-            src="images/logo-catarse-branco.png"
-            alt="Logo Catarse"
-            title="Logo Catarse"
-          />
           <Title text={text} color="#FEFEFE" />
           <FilledButton
             onClickFunction={donateButtonFunction}
             color={FilledColor.orange}
             type="function"
-            text="Saiba Mais"
+            text="Plante uma árvore"
           />
         </div>
       </div>
