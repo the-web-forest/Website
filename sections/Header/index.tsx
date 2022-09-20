@@ -82,7 +82,7 @@ const HeaderSection = () => {
 
             <div className={styles.headerTrailing}>
               <DonateButton
-                text="Faça uma Doação"
+                text="Plantar uma árvore"
                 url={Settings.DONATE_URL}
                 target="_blank"
               />

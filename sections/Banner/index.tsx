@@ -9,14 +9,14 @@ const BannerSection = () => {
       <div className={styles.container}>
         <div className={styles.bannerInner}>
           <div className={styles.bannerTitle}>
-            <Title text="Floresta Digital Impacto Real" color="#fff" />
+            <Title text="Floresta Digital Impactos Real" color="#fff" />
           </div>
           <div className={styles.bannerSubtitle}>
-            Faça sua doação agora e ajude a mudar o cenário ambiental no país.{' '}
+            Plante uma árvore agora e ajude a mudar o cenário ambiental no país.{' '}
           </div>
           <div>
             <DonateButton
-              text="Faça uma Doação"
+              text="Plantar Agora"
               url={Settings.DONATE_URL}
               target="_blank"
             />
