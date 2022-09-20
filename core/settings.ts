@@ -1,6 +1,6 @@
 export default class Settings {
   public static APP_NAME = 'Web Forest';
-  public static DONATE_URL = 'https://apoie.webforest.eco';
+  public static DONATE_URL = 'https://portal.webforest.eco';
   public static APP_URL = process.env.NEXT_PUBLIC_SERVER_URL;
   public static FACEBOOK_URL = 'https://facebook.com';
   public static INSTAGRAM_URL = 'https://www.instagram.com/web_forest';
