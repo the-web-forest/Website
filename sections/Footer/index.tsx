@@ -46,6 +46,9 @@ const FooterSection = () => {
         <Link href="/transparencia">
           <a rel="noreferrer">Área de Transparência</a>
         </Link>
+        <Link href="/validar-certificado">
+          <a rel="noreferrer">Autenticidade de Certificado</a>
+        </Link>
       </div>
     </div>
   );

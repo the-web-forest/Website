@@ -1,0 +1,14 @@
+.container {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - 150px);
+    margin-top: 80px;
+    padding: 2% 5% 80px 5%;
+    
+    @media (max-width: 750px) {
+        flex-direction: column;
+        min-height: calc(100vh - 60px);
+        padding: 0 5% 5% 5%;
+    }
+}
