@@ -11,7 +11,15 @@ const ValidacaoCertificado: NextPage = () => {
       <Header />
       <HeaderSection />
       <div id="container" className={styles.container}>
-        
+        <div className={styles.box}>
+          <h2>Autenticidade de Certificado</h2>
+          <div className={styles.inputGroup}>
+            <label htmlFor="numero-certificado">Número do Certificado</label>
+            <br />
+            <input id="numero-certificado" placeholder="Insira o número de autenticação" type="text" className={styles.input} />
+          </div>
+          <button type="button" className={styles.button}>Autenticar Certificado</button>
+        </div>
       </div>
       <FooterSection />
     </>
