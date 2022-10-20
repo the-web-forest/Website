@@ -1,7 +1,7 @@
 .container {
   width: 100vw;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   min-height: calc(100vh - 150px);
   margin-top: 80px;
   padding: 2% 5% 80px 5%;
@@ -16,8 +16,10 @@
 }
 
 .box {
-  width: 35vw;
-  height: 20vw;
+  width: 38vw;
+  height: 22vw;
+  max-height: 307px;
+  max-width: 536px;
   background: #ECECEC;
   border-radius: 8px;
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
@@ -26,14 +28,17 @@
   justify-content: center;
   align-items: center;
 
-  @media (max-width: 1000px) {
-    width: 35vw;
-    height: 25vw;
+  @media (max-width: 1300px) {
+    height: 28vw;
+  }
+
+  @media (max-width: 700px) {
+    height: 35vw;
   }
 }
 
 .input {
-  width: 23vw;
+  width: 25vw;
   line-height: 38px;
   box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.13);
   border-radius: 4px;
@@ -54,4 +59,40 @@
 
 .inputGroup {
   margin: 2.5rem 0 2.5rem 0;
+}
+
+.information {
+  width: 38vw;
+  max-width: 536px;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+  opacity: 0;
+  transition: all .2s;
+  height: 8vw;
+  margin-top: 1rem;
+  padding: 1rem;
+
+  span {
+    color: #FFFFFF;
+  }
+
+  @media (max-width: 1300px) {
+    height: 8vw;
+  }
+
+  @media (max-width: 700px) {
+    height: 25vw;
+  }
+
+  &.open {
+    opacity: 1;
+  }
+
+  &.success {
+    background: #65A944;
+  }
+
+  &.fail {
+    background: #B11A1A;
+  }
 }
