@@ -2,7 +2,7 @@ import Certificate from '../core/domain/Certificate';
 import webforestApiClient from '../external/webforestApiClient';
 
 export default class CertificatesService {
-  async getByCode(code: string): Promise<Certificate | string> {
+  async getByCode(code: string): Promise<Certificate | number> {
     try {
       const response = await webforestApiClient.get('/CertificateValidate?CertificateId=' + code);
 
@@ -16,10 +16,11 @@ export default class CertificatesService {
 
       return foundCertificate;
     } catch (err: any) {
-      if (err.response.status === 404)
-        return "O número de autenticação digitado é inválido.";
-      else
-        return "Erro ao tentar encontrar o certificado, contacte o suporte.";
+      try {
+        return err.response.status;
+      } catch {
+        return 400;
+      }
     }
   }
 }
