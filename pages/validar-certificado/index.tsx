@@ -14,8 +14,11 @@ import styles from './styles.module.scss';
 const ValidacaoCertificado: NextPage = () => {
   const codeInputRef = useRef<HTMLInputElement>(null);
   const certificatesService = new CertificatesService();
+
   const [infoClasses, setInfoClasses] = useState<string[]>([]);
   const [infoMessage, setInfoMessage] = useState<JSX.Element>(<></>);
+  const [inputErrorMessage, setInputErrorMessage] = useState<string>('');
+  const [isLoading, setIsLoading] = useState<boolean>(false);
 
   const success = (nome: string, dataEmissao: Date, url: string): JSX.Element =>
     <div className={styles.infotext}>
@@ -53,6 +56,14 @@ const ValidacaoCertificado: NextPage = () => {
     }
     </>;
 
+  function inputError(error: string) {
+    let classes = [];;
+    classes?.push(styles.fail);
+    setInfoClasses(classes);
+
+    setInputErrorMessage(error);
+  }
+
   function showInfoSuccess(nome: string, dataEmissao: Date, url: string) {
     let classes = [];;
     classes?.push(styles.open, styles.success);
@@ -70,7 +81,11 @@ const ValidacaoCertificado: NextPage = () => {
   }
   
   async function handleVerifyCode() {
+    setIsLoading(true);
     if (codeInputRef?.current?.value !== undefined && codeInputRef?.current?.value !== '') {
+      if (inputErrorMessage !== '')
+        setInputErrorMessage('');
+
       let resultadoBusca = await certificatesService.getByCode(codeInputRef?.current?.value);
 
       if (typeof(resultadoBusca) === 'number')
@@ -79,7 +94,8 @@ const ValidacaoCertificado: NextPage = () => {
         showInfoSuccess(resultadoBusca.name, resultadoBusca.createtAt, resultadoBusca.certificateUrl);
     }
     else
-      console.log('Digite algo');
+      inputError('Digite algo para realizar a pesquisa');
+    setIsLoading(false);
   }
   
   return (
@@ -88,23 +104,32 @@ const ValidacaoCertificado: NextPage = () => {
       <HeaderSection />
       <div id="container" className={styles.container}>
         <div className={styles.box}>
-          <h2>Autenticidade de Certificado</h2>
-          <div className={styles.inputGroup}>
-            <label htmlFor="numero-certificado">Número do Certificado</label>
-            <br />
-            <input 
-              id="numero-certificado" 
-              placeholder="Insira o número de autenticação" 
-              type="text" 
-              className={infoClasses.join(' ').trim() + ' ' + styles.input} 
-              ref={codeInputRef}/>
-          </div>
-          <button 
-            type="button" 
-            className={styles.button} 
-            onClick={handleVerifyCode}>
-            Autenticar Certificado
-          </button>
+          {
+            isLoading ? 
+              <></>
+            :
+            <>
+              <span className={styles.title}>Autenticidade de Certificado</span>
+              <div className={styles.inputGroup}>
+                <label htmlFor="numero-certificado">Número do Certificado</label>
+                <br />
+                <input 
+                  id="numero-certificado" 
+                  placeholder="Insira o número de autenticação" 
+                  type="text" 
+                  className={infoClasses.join(' ').trim() + ' ' + styles.input} 
+                  ref={codeInputRef}/>
+                <br />
+                <span className={styles.inputError}>{inputErrorMessage}</span>
+              </div>
+              <button 
+                type="button" 
+                className={styles.button} 
+                onClick={handleVerifyCode}>
+                Autenticar Certificado
+              </button>
+            </>
+          }
         </div>
         <div className={infoClasses.join(' ').trim() + ' ' + styles.information}>
           {infoMessage}
