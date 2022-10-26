@@ -1,0 +1,135 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 100vw;
+  min-height: calc(100vh - 150px);
+  margin-top: 80px;
+  padding: 2% 5% 80px 5%;
+
+  @media (max-width: 750px) {
+    min-height: calc(100vh - 60px);
+    padding: 0 5% 5% 5%;
+  }
+
+  .box {
+    width: 38vw;
+    height: 22vw;
+    max-height: 307px;
+    max-width: 536px;
+    background: #ECECEC;
+    border-radius: 8px;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
+    @media (max-width: 1300px) {
+      height: 28vw;
+    }
+  
+    @media (max-width: 700px) {
+      height: 35vw;
+    }
+
+    .title {
+      font-weight: 600;
+      font-size: 30px;
+      line-height: 37px;
+    }
+
+    .inputGroup {
+      margin: 2.5rem 0 2.5rem 0;
+
+      .input {
+        width: 23vw;
+        line-height: 38px;
+        box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.13);
+        border-radius: 4px;
+        border: none;
+        padding: 0 5px 0 5px;
+        outline-style: none;
+      
+        &.success {
+          background: #EEFBE8;
+          border: 1px solid #65A944;
+        }
+      
+        &.fail {
+          background: #FFD1D1;
+          border: 1px solid #A00E01;
+        }
+      }
+
+      .inputError {
+        color: #A00E01;
+        opacity: 0.5;
+        font-size: 14px;
+      }
+    }
+
+    .button {
+      color: #FFFFFF;
+      height: 38px;
+      background: #65A944;
+      border: 1px solid #65A944;
+      box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.13);
+      border-radius: 4px;
+      padding: 0 15px 0 15px;
+      cursor: pointer;
+    }
+  }
+
+  .information {
+    width: 38vw;
+    max-width: 536px;
+    max-height: 96px;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+    opacity: 0;
+    transition: all .5s;
+    height: 8vw;
+    margin-top: 1rem;
+    padding: 1rem;
+    color: #FFFFFF;
+  
+    .infotext {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  
+      .first {
+        width: 90%;
+      }
+  
+      .second {
+        text-align: center;
+        text-decoration-line: underline;
+      }
+    }
+  
+    @media (max-width: 1300px) {
+      height: 8vw;
+    }
+  
+    @media (max-width: 700px) {
+      height: 25vw;
+    }
+  
+    &.open {
+      opacity: 1;
+    }
+  
+    &.success {
+      background: #65A944;
+    }
+  
+    &.fail {
+      background: #B11A1A;
+    }
+  }
+}
