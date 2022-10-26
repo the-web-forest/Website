@@ -4,6 +4,7 @@ import { useRef, useState } from 'react';
 import Header from '../../components/header';
 import FooterSection from '../../sections/Footer';
 import HeaderSection from '../../sections/Header';
+import Loading from '../../components/Loading';
 
 import CertificatesService from '../../services/CertificatesService';
 
@@ -122,7 +123,7 @@ const ValidacaoCertificado: NextPage = () => {
       <div id="container" className={styles.container}>
         <div className={styles.box}>
           {isLoading ? (
-            <></>
+            <Loading/>
           ) : (
             <>
               <span className={styles.title}>Autenticidade de Certificado</span>
