@@ -112,8 +112,7 @@ const ValidacaoCertificado: NextPage = () => {
     } else inputError('Digite algo para realizar a pesquisa');
     setIsLoading(false);
 
-    if (codeInputRef.current !== null )
-      codeInputRef.current.value = value ?? '';
+    if (codeInputRef.current !== null) codeInputRef.current.value = value ?? '';
   }
 
   return (
@@ -123,7 +122,7 @@ const ValidacaoCertificado: NextPage = () => {
       <div id="container" className={styles.container}>
         <div className={styles.box}>
           {isLoading ? (
-            <Loading/>
+            <Loading />
           ) : (
             <>
               <span className={styles.title}>Autenticidade de Certificado</span>
