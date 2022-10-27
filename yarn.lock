@@ -2680,6 +2680,11 @@ minimist@^1.2.0, minimist@^1.2.6:
   resolved "https://registry.yarnpkg.com/minimist/-/minimist-1.2.6.tgz#8637a5b759ea0d6e98702cfb3a9283323c93af44"
   integrity sha512-Jsjnk4bw3YJqYzbdyBiNsPWHPfO++UGG749Cxs6peCu5Xg4nrena6OVxOYxrQTqww0Jmwt+Ref8rggumkTLz9Q==
 
+moment@^2.29.4:
+  version "2.29.4"
+  resolved "https://registry.yarnpkg.com/moment/-/moment-2.29.4.tgz#3dbe052889fe7c1b2ed966fcb3a77328964ef108"
+  integrity sha512-5LC9SOxjSc2HF6vO2CyuTDNivEdoz2IvyJJGj6X8DJ0eFyfszE0QiEd+iXmBvUP3WHxSjFH/vIsA0EN00cgr8w==
+
 ms@2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/ms/-/ms-2.0.0.tgz#5608aeadfc00be6c2901df5f9861788de0d597c8"
@@ -3217,6 +3222,11 @@ react-dom@17.0.2:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
     scheduler "^0.20.2"
+
+react-hotjar@^5.2.0:
+  version "5.2.0"
+  resolved "https://registry.yarnpkg.com/react-hotjar/-/react-hotjar-5.2.0.tgz#ffcfda7eeea6e2816fde6c18a050901674b25f8e"
+  integrity sha512-HLP87fOvEMjstFoJ63M9SAUJQPXcOoT3vT6jZfv4QmKQI5PWIH/ao+eiTkWfvXqnv3WlOi9t7y9EmvLAgqs8hQ==
 
 react-icons@^4.3.1:
   version "4.4.0"
