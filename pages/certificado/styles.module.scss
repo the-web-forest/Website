@@ -8,16 +8,15 @@
   margin-top: 80px;
 
   @media (max-width: 750px) {
-    min-height: calc(100vh - 60px);
+    min-height: calc(100vh - 350px);
     padding: 0 5% 5% 5%;
   }
 
   .box {
-    width: 38vw;
-    height: 22vw;
-    max-height: 307px;
-    max-width: 536px;
+    width: 36vw;
+    height: auto;
     background: #ECECEC;
+    padding: 2rem;
     border-radius: 8px;
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
     
@@ -26,12 +25,20 @@
     justify-content: center;
     align-items: center;
   
-    @media (max-width: 1300px) {
-      height: 28vw;
+    @media (max-width: 1600px) {
+      width: 40vw;
+    }
+
+    @media (max-width: 1110px) {
+      width: 56vw;
+    }
+
+    @media (max-width: 900px) {
+      width: 66vw;
     }
   
     @media (max-width: 700px) {
-      height: 35vw;
+      width: 76vw;
     }
 
     .title {
@@ -51,7 +58,27 @@
         border: none;
         padding: 0 5px 0 5px;
         outline-style: none;
-      
+
+        @media (max-width: 1600px) {
+          width: 23vw;
+        }
+
+        @media (max-width: 1300px) {
+          width: 30vw;
+        }
+
+        @media (max-width: 900px) {
+          width: 33vw;
+        }
+
+        @media (max-width: 700px) {
+          width: 53vw;
+        }
+        
+        @media (max-width: 520px) {
+          width: 63vw;
+        }
+
         &.success {
           background: #EEFBE8;
           border: 1px solid #65A944;
@@ -79,23 +106,29 @@
       border-radius: 4px;
       padding: 0 15px 0 15px;
       cursor: pointer;
+
+      @media (max-width: 365px) {
+        height: 16vw;
+      }
     }
   }
 
   .information {
-    width: 38vw;
-    max-width: 536px;
-    max-height: 96px;
+    width: 36vw;
+    height: auto;
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
     border-radius: 8px;
 
     transition: all .5s;
-    height: 8vw;
     margin-top: 1rem;
     padding: 1rem;
     color: #FFFFFF;
     display: none;
   
+    @media (max-width: 700px) {
+      width: 76vw;
+    }
+
     .infotext {
       display: flex;
       justify-content: center;
@@ -109,14 +142,6 @@
         text-align: center;
         text-decoration-line: underline;
       }
-    }
-  
-    @media (max-width: 1300px) {
-      height: 8vw;
-    }
-  
-    @media (max-width: 700px) {
-      height: 25vw;
     }
   
     &.open {
