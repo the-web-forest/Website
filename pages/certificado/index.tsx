@@ -72,7 +72,6 @@ const ValidacaoCertificado: NextPage = () => {
     let classes = [];
     classes?.push(styles.fail);
     setInfoClasses(classes);
-
     setInputErrorMessage(error);
   }
 
