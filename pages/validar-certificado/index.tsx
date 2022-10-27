@@ -4,6 +4,7 @@ import { useRef, useState } from 'react';
 import Header from '../../components/header';
 import FooterSection from '../../sections/Footer';
 import HeaderSection from '../../sections/Header';
+import Loading from '../../components/Loading';
 
 import CertificatesService from '../../services/CertificatesService';
 
@@ -94,15 +95,12 @@ const ValidacaoCertificado: NextPage = () => {
 
   async function handleVerifyCode() {
     setIsLoading(true);
-    if (
-      codeInputRef?.current?.value !== undefined &&
-      codeInputRef?.current?.value !== ''
-    ) {
+    const value = codeInputRef?.current?.value;
+
+    if (value !== undefined && value !== '') {
       if (inputErrorMessage !== '') setInputErrorMessage('');
 
-      let resultadoBusca = await certificatesService.getByCode(
-        codeInputRef?.current?.value,
-      );
+      let resultadoBusca = await certificatesService.getByCode(value);
 
       if (typeof resultadoBusca === 'number') showInfoError(resultadoBusca);
       else
@@ -113,6 +111,8 @@ const ValidacaoCertificado: NextPage = () => {
         );
     } else inputError('Digite algo para realizar a pesquisa');
     setIsLoading(false);
+
+    if (codeInputRef.current !== null) codeInputRef.current.value = value ?? '';
   }
 
   return (
@@ -122,7 +122,7 @@ const ValidacaoCertificado: NextPage = () => {
       <div id="container" className={styles.container}>
         <div className={styles.box}>
           {isLoading ? (
-            <></>
+            <Loading />
           ) : (
             <>
               <span className={styles.title}>Autenticidade de Certificado</span>
