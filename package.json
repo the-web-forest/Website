@@ -2,13 +2,15 @@
   "name": "webforest-website",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "env-cmd -f .env.development next dev",
+    "start": "env-cmd -f .env.development next start",
+    "start-prod": "env-cmd -f .env.production next start",
     "build": "next build",
-    "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
     "axios": "^0.26.1",
+    "env-cmd": "^10.1.0",
     "google-spreadsheet": "^3.2.0",
     "moment": "^2.29.4",
     "next": "12.0.7",
