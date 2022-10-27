@@ -7,6 +7,7 @@ export default class Settings {
   public static LINKEDIN_URL = 'https://www.linkedin.com/company/77021618';
   public static CONTACT_EMAIL = 'contato@webforest.eco';
   public static FORUM_URL = 'https://www.reddit.com/r/webforest/';
+  public static URL_WEBFOREST_API = process.env.NEXT_PUBLIC_URL_WEBFOREST_API;
 
   public static isProduction(): boolean {
     return process.env.NEXT_PUBLIC_APP_ENV == 'production';
