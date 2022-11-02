@@ -35,7 +35,12 @@ const ValidacaoCertificado: NextPage = () => {
         <span>Data de Emissão: {moment(dataEmissao).format('DD/MM/YYYY')}</span>
       </div>
       <div>
-        <a href={url} target="_blank" rel="noopener noreferrer" className={styles.downloadbutton}>
+        <a
+          href={url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={styles.downloadbutton}
+        >
           Baixar uma cópia
         </a>
       </div>
@@ -126,9 +131,7 @@ const ValidacaoCertificado: NextPage = () => {
             <>
               <span className={styles.title}>Autenticidade de Certificado</span>
               <div className={styles.inputGroup}>
-                <label htmlFor="numero-certificado">
-                  ID do Certificado
-                </label>
+                <label htmlFor="numero-certificado">ID do Certificado</label>
                 <br />
                 <input
                   id="numero-certificado"
