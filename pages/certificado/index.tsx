@@ -27,15 +27,20 @@ const ValidacaoCertificado: NextPage = () => {
     url: string,
   ): JSX.Element => (
     <div className={styles.infotext}>
-      <div className={styles.first}>
-        <span>Certificado Válido</span>
+      <div>
+        <span className={styles.infotitle}>Certificado Válido</span>
         <br />
         <span>Nome: {nome}</span>
         <br />
         <span>Data de Emissão: {moment(dataEmissao).format('DD/MM/YYYY')}</span>
       </div>
-      <div className={styles.second}>
-        <a href={url} target="_blank" rel="noopener noreferrer">
+      <div>
+        <a
+          href={url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={styles.downloadbutton}
+        >
           Baixar uma cópia
         </a>
       </div>
@@ -47,11 +52,11 @@ const ValidacaoCertificado: NextPage = () => {
       {status === 404 ? (
         <div>
           <div>
-            <span>Certificado Inválido</span>
+            <span className={styles.infotitle}>Certificado Inválido</span>
             <br />
-            <span>O número de autenticação digitado é inválido</span>
+            <span>O ID do certificado é inválido.</span>
             <br />
-            <span>Revise as informações inseridas e tente novamente</span>
+            <span>Revise as informações inseridas e tente novamente.</span>
           </div>
         </div>
       ) : (
@@ -61,7 +66,7 @@ const ValidacaoCertificado: NextPage = () => {
             <br />
             <span>
               Ocorreu um erro ao tentar encontrar o certificado, contacte o
-              suporte
+              suporte.
             </span>
           </div>
         </div>
@@ -108,7 +113,7 @@ const ValidacaoCertificado: NextPage = () => {
           resultadoBusca.createtAt,
           resultadoBusca.certificateUrl,
         );
-    } else inputError('Digite algo para realizar a pesquisa');
+    } else inputError('Insira o ID do certificado');
     setIsLoading(false);
 
     if (codeInputRef.current !== null) codeInputRef.current.value = value ?? '';
@@ -126,13 +131,11 @@ const ValidacaoCertificado: NextPage = () => {
             <>
               <span className={styles.title}>Autenticidade de Certificado</span>
               <div className={styles.inputGroup}>
-                <label htmlFor="numero-certificado">
-                  Número do Certificado
-                </label>
+                <label htmlFor="numero-certificado">ID do Certificado</label>
                 <br />
                 <input
                   id="numero-certificado"
-                  placeholder="Insira o número de autenticação"
+                  placeholder="O ID está disponível no certificado"
                   type="text"
                   className={infoClasses.join(' ').trim() + ' ' + styles.input}
                   ref={codeInputRef}
