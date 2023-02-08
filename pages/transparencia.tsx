@@ -13,6 +13,7 @@ import GetSheetDataUseCase from '../use-cases/GetSheetDataUseCase';
 import RowData from './api/domain/rowData';
 import YearDto from './api/services/transparency/dtos/year.dto';
 import { AiOutlineLoading3Quarters } from 'react-icons/ai';
+import { months } from 'moment';
 
 const TransparencyArea: NextPage = () => {
   const [selectedMonth, setMonth] = useState<number | string>(
@@ -24,6 +25,7 @@ const TransparencyArea: NextPage = () => {
 
   const [sheetList, setSheetList] = useState<YearDto[]>([]);
   const [dataTable, setDataTable] = useState<RowData[]>([]);
+  const [nameMonth, setNameMonth] = useState<string>('');
   const [loadTable, setLoadTable] = useState<boolean>(false);
 
   const getAllYearsAndMonths = useCallback(async () => {
@@ -61,15 +63,17 @@ const TransparencyArea: NextPage = () => {
     const { months } = sheetList.find(sheet => sheet.year == selectedYear) || {
       months: [],
     };
-
     const hasMonthsLoaded = months.length;
 
     if (!hasMonthsLoaded) {
       return;
     }
-
     const id = months.find(month => month.number == selectedMonth)?.id;
+    const name = months.find(month => month.number == selectedMonth)?.name;
 
+    if (name) {
+      setNameMonth(name);
+    }
     if (!id) {
       setLoadTable(false);
       return;
@@ -89,7 +93,7 @@ const TransparencyArea: NextPage = () => {
       getDataTable();
     }
   }, [getDataTable, selectedMonth, selectedYear]);
-
+  console.log(sheetList);
   return (
     <>
       <Header title="Área de Transparência" />
@@ -125,7 +129,13 @@ const TransparencyArea: NextPage = () => {
           </div>
         ) : (
           <div className={styles.tableSection}>
-            <TransparencyTable rowData={dataTable} />
+            {dataTable.length === 0 ? (
+              <p>{`Nenhum lançamento no mês de ${nameMonth} do ano de ${selectedYear}`}</p>
+            ) : (
+              <>
+                <TransparencyTable rowData={dataTable} />
+              </>
+            )}
           </div>
         )}
       </section>
