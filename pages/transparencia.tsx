@@ -13,7 +13,6 @@ import GetSheetDataUseCase from '../use-cases/GetSheetDataUseCase';
 import RowData from './api/domain/rowData';
 import YearDto from './api/services/transparency/dtos/year.dto';
 import { AiOutlineLoading3Quarters } from 'react-icons/ai';
-import { months } from 'moment';
 
 const TransparencyArea: NextPage = () => {
   const [selectedMonth, setMonth] = useState<number | string>(
@@ -93,7 +92,7 @@ const TransparencyArea: NextPage = () => {
       getDataTable();
     }
   }, [getDataTable, selectedMonth, selectedYear]);
-  console.log(sheetList);
+
   return (
     <>
       <Header title="Área de Transparência" />
