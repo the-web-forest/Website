@@ -78,7 +78,7 @@ const TeamSection = () => {
   return (
     <section id="team">
       <div id={styles.container}>
-        <div id={styles.title}>Quem faz</div>
+        <h2 id={styles.title}>Quem faz</h2>
       </div>
 
       <StyledCarouselProvider

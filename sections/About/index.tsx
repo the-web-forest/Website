@@ -19,14 +19,14 @@ const AboutSection = () => {
   return (
     <section id="about">
       <div id={styles.container}>
-        <div id={styles.title}>
+        <h2 id={styles.title}>
           Quem somos nós e <br /> como atuamos
-        </div>
-        <div id={styles.cards}>
+        </h2>
+        <ul id={styles.cards}>
           <AboutCard icon={0} title={TITLE.ONE} text={TEXT.ONE} />
           <AboutCard icon={1} title={TITLE.TWO} text={TEXT.TWO} />
           <AboutCard icon={2} title={TITLE.THREE} text={TEXT.THREE} />
-        </div>
+        </ul>
       </div>
     </section>
   );

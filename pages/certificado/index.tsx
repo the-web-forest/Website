@@ -129,7 +129,7 @@ const ValidacaoCertificado: NextPage = () => {
             <Loading />
           ) : (
             <>
-              <span className={styles.title}>Autenticidade de Certificado</span>
+              <h1 className={styles.title}>Autenticidade de Certificado</h1>
               <div className={styles.inputGroup}>
                 <label htmlFor="numero-certificado">ID do Certificado</label>
                 <br />
