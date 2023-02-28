@@ -96,7 +96,11 @@ const TransparencyArea: NextPage = () => {
       <HeaderSection />
       <section className={styles.container}>
         <div className={styles.head}>
-          <Title text="Área de Transparência" color="var(--dark-gray)" />
+          <Title
+            text="Área de Transparência"
+            color="var(--dark-gray)"
+            as="h1"
+          />
           <span>
             Escolha o mês e o ano para visualizar o extrato de doações
           </span>

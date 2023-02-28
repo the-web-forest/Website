@@ -65,8 +65,8 @@ const HowItWork = () => {
     <div className={styles.howItWorks}>
       <div className={styles.container}>
         <div className={styles.howItWorksInner}>
-          <Title text="Como a Web Forest funciona?" color="#4C4C4C" />
-          <div className={styles.howItWorksTopics}>
+          <Title text="Como a Web Forest funciona?" color="#4C4C4C" as="h2" />
+          <ul className={styles.howItWorksTopics}>
             {topics.map((topic: TopicInterface) => {
               return (
                 <Topic
@@ -76,7 +76,7 @@ const HowItWork = () => {
                 />
               );
             })}
-          </div>
+          </ul>
         </div>
       </div>
     </div>

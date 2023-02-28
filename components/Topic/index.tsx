@@ -8,13 +8,13 @@ interface TopicProps {
 
 const Topic = ({ Icon, Title, description }: TopicProps) => {
   return (
-    <div className={styles.topic}>
+    <li className={styles.topic}>
       <div className={styles.topicHeader}>
         <div className={styles.topicIcon}>{Icon}</div>
-        <div className={styles.topicTitle}>{Title}</div>
+        <h3 className={styles.topicTitle}>{Title}</h3>
       </div>
-      <div className={styles.topicDescription}>{description}</div>
-    </div>
+      <p className={styles.topicDescription}>{description}</p>
+    </li>
   );
 };
 

@@ -16,7 +16,7 @@ const DonateSection = () => {
     <div className={styles.donate} id="support">
       <div className={styles.container}>
         <div className={styles.donateInner}>
-          <Title text={text} color="#FEFEFE" />
+          <Title text={text} color="#FEFEFE" as="h1" />
           <FilledButton
             onClickFunction={donateButtonFunction}
             color={FilledColor.orange}

@@ -20,8 +20,10 @@ const NewsCard = ({ photoUrl, title, date, newsUrl }: NewsCardProps) => {
         <img src={photoUrl} alt={title} title={title} />
       </div>
       <div className={styles.newsContent}>
-        <div className={styles.newsTitle}>{title}</div>
-        <div className={styles.newsDate}>{date}</div>
+        <div>
+          <p className={styles.newsTitle}>{title}</p>
+          <span className={styles.newsDate}>{date}</span>
+        </div>
         <div className={styles.newsButton}>Saiba mais</div>
       </div>
     </a>

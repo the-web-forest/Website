@@ -72,9 +72,9 @@ const NewsSection = () => {
       <div className={styles.news}>
         <div className={styles.container}>
           <div className={styles.newsInner}>
-            <div className={styles.newsTitle}>
+            <h2 className={styles.newsTitle}>
               O que está acontecendo com <br /> <u>o meio ambiente?</u>{' '}
-            </div>
+            </h2>
 
             {!news.length && <div>Carregando...</div>}
 
