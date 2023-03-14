@@ -26,9 +26,9 @@ const ValidacaoCertificado: NextPage = () => {
     dataEmissao: Date,
     url: string,
   ): JSX.Element => (
-    <div className={styles.infotext}>
+    <div className={styles.infoText}>
       <div>
-        <span className={styles.infotitle}>Certificado Válido</span>
+        <span className={styles.infoTitle}>Certificado Válido</span>
         <br />
         <span>Nome: {nome}</span>
         <br />
@@ -39,7 +39,7 @@ const ValidacaoCertificado: NextPage = () => {
           href={url}
           target="_blank"
           rel="noopener noreferrer"
-          className={styles.downloadbutton}
+          className={styles.downloadButton}
         >
           Baixar uma cópia
         </a>
@@ -52,9 +52,9 @@ const ValidacaoCertificado: NextPage = () => {
       {status === 404 ? (
         <div>
           <div>
-            <span className={styles.infotitle}>Certificado Inválido</span>
+            <span className={styles.infoTitle}>Certificado Inválido</span>
             <br />
-            <span>O ID do certificado é inválido.</span>
+            <span>O Código do certificado é inválido.</span>
             <br />
             <span>Revise as informações inseridas e tente novamente.</span>
           </div>
@@ -113,7 +113,7 @@ const ValidacaoCertificado: NextPage = () => {
           resultadoBusca.createtAt,
           resultadoBusca.certificateUrl,
         );
-    } else inputError('Insira o ID do certificado');
+    } else inputError('Insira o Código do certificado');
     setIsLoading(false);
 
     if (codeInputRef.current !== null) codeInputRef.current.value = value ?? '';
@@ -129,13 +129,15 @@ const ValidacaoCertificado: NextPage = () => {
             <Loading />
           ) : (
             <>
-              <span className={styles.title}>Autenticidade de Certificado</span>
+              <h1 className={styles.title}>Autenticidade de Certificado</h1>
               <div className={styles.inputGroup}>
-                <label htmlFor="numero-certificado">ID do Certificado</label>
+                <label htmlFor="numero-certificado">
+                  Código do Certificado
+                </label>
                 <br />
                 <input
                   id="numero-certificado"
-                  placeholder="O ID está disponível no certificado"
+                  placeholder="O Código está disponível no certificado"
                   type="text"
                   className={infoClasses.join(' ').trim() + ' ' + styles.input}
                   ref={codeInputRef}
