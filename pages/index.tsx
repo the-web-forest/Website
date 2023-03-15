@@ -15,7 +15,10 @@ import PartnersSection from '../sections/Partners';
 const Home: NextPage = () => {
   return (
     <div className={styles.container}>
-      <Header />
+      <Header
+        title=" Floresta Virtual"
+        description="Uma floresta virtual que transforma ações digitais em impactos reais"
+      />
       <HeaderSection />
       <BannerSection />
       <HowItWorkSection />

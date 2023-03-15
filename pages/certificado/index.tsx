@@ -121,7 +121,10 @@ const ValidacaoCertificado: NextPage = () => {
 
   return (
     <>
-      <Header />
+      <Header
+        title="Certificados"
+        description="Área de Certificados da Web Forest"
+      />
       <HeaderSection />
       <div id="container" className={styles.container}>
         <div className={styles.box}>
