@@ -4,17 +4,29 @@ import Settings from '../core/settings';
 
 interface HeaderData {
   title?: string;
+  description?: string;
 }
 
 const Header = (props: HeaderData) => {
   const getTitle = (): string => {
     let title = Settings.APP_NAME;
 
-    if (props.title) title = `${props.title} - ${title}`;
+    if (props.title) title = `${title} - ${props.title} `;
 
     if (Settings.isDevelopment()) title = `DEV - ${title}`;
 
     return title;
+  };
+
+  const getDescription = (): string => {
+    let description = Settings.APP_NAME;
+
+    if (props.description)
+      description = `${description} - ${props.description} `;
+
+    if (Settings.isDevelopment()) description = `DEV - ${description}`;
+
+    return description;
   };
 
   const renderTags = () => {
@@ -48,15 +60,12 @@ const Header = (props: HeaderData) => {
                      `,
         }}
       />
-      <meta name="description" content={Settings.APP_NAME} />
+      <meta name="description" content={getTitle()} />
       <link rel="icon" href="/favicon.ico" />
-      <meta property="og:title" content="Web Forest - Floresta Virtual" />
+      <meta property="og:title" content={getTitle()} />
       <meta property="og:site_name" content={Settings.APP_NAME} />
       <meta property="og:url" content={Settings.APP_URL} />
-      <meta
-        property="og:description"
-        content="Web Forest - Uma floresta virtual que transforma ações digitais em impactos reais"
-      />
+      <meta property="og:description" content={getDescription()} />
       <meta property="og:type" content="website" />
       <meta
         property="og:image"
