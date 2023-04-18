@@ -1,47 +1,41 @@
 {
-  "env": {
-    "browser": true,
-    "es2021": true,
-    "node": true
-  },
-  "extends": ["plugin:@next/next/recommended"],
-  "parser": "@typescript-eslint/parser",
-  "parserOptions": {
-    "ecmaFeatures": {
-      "jsx": true
-    },
-    "ecmaVersion": "latest",
-    "sourceType": "module"
-  },
-  "plugins": ["react", "react-hooks", "@typescript-eslint", "prettier"],
-  "rules": {
-    "react-hooks/rules-of-hooks": "error",
-    "jsx-a11y/anchor-is-valid": "off",
-    "@typescript-eslint/ban-types": "off",
-    "lines-between-class-members": "off",
-    "react/jsx-props-no-spreading": "off",
-    "consistent-return": "warn",
-    "no-shadow": "off",
-    "no-useless-constructor": "off",
-    "react/prop-types": "off",
-    "no-use-before-define": "off",
-    "react-hooks/exhaustive-deps": "warn",
-    "react/require-default-props": "off",
-    "react/jsx-filename-extension": [1, { "extensions": [".tsx"] }],
-    "import/prefer-default-export": "off",
-    "react/react-in-jsx-scope": "off",
-    "object-curly-newline": "off",
-    "@next/next/no-img-element": "off",
-    "prettier/prettier": [
-      "error",
-      {
-        "endOfLine": "auto"
-      }
-    ]
-  },
-  "settings": {
-    "import/resolver": {
-      "typescript": {}
-    }
-  }
+	"env": {
+		"browser": true,
+		"es2021": true,
+		"node": true
+	},
+	"extends": ["plugin:@next/next/recommended", "plugin:prettier/recommended"],
+	"parser": "@typescript-eslint/parser",
+	"parserOptions": {
+		"ecmaFeatures": {
+			"jsx": true
+		},
+		"ecmaVersion": "latest",
+		"sourceType": "module"
+	},
+	"plugins": ["react", "react-hooks", "@typescript-eslint", "prettier"],
+	"rules": {
+		"react-hooks/rules-of-hooks": "error",
+		"jsx-a11y/anchor-is-valid": "off",
+		"@typescript-eslint/ban-types": "off",
+		"lines-between-class-members": "off",
+		"react/jsx-props-no-spreading": "off",
+		"consistent-return": "warn",
+		"no-shadow": "off",
+		"no-useless-constructor": "off",
+		"react/prop-types": "off",
+		"no-use-before-define": "off",
+		"react-hooks/exhaustive-deps": "warn",
+		"react/require-default-props": "off",
+		"react/jsx-filename-extension": [1, { "extensions": [".tsx"] }],
+		"import/prefer-default-export": "off",
+		"react/react-in-jsx-scope": "off",
+		"object-curly-newline": "off",
+		"@next/next/no-img-element": "off"
+	},
+	"settings": {
+		"import/resolver": {
+			"typescript": {}
+		}
+	}
 }

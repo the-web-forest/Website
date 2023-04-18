@@ -1,0 +1,17 @@
+#container {
+	color: var(--dark-gray);
+	height: 40px;
+	text-align: center;
+	display: inline-block;
+	line-height: 40px;
+	cursor: pointer;
+	font-family: 'Aprova', sans-serif;
+	letter-spacing: 1px;
+	padding: 0px 18px 0px 18px;
+	font-size: 0.9em;
+}
+
+#container:hover {
+	opacity: 0.9;
+	color: var(--black);
+}

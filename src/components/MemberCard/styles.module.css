@@ -1,0 +1,49 @@
+#memberCard {
+	width: 180px;
+	height: 300px;
+	margin-right: 10px;
+	display: flex;
+	flex-direction: column;
+}
+
+#memberCard #profilePicture {
+	width: 150px;
+	height: 150px;
+	background-image: url('/images/placeholder-person.png');
+	background-position: center center;
+	background-size: contain;
+	border-radius: 100%;
+	margin: 15px;
+}
+
+#memberCard #name {
+	color: var(--dark-gray);
+	font-family: 'Aprova', sans-serif;
+	text-align: center;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 1.4em;
+}
+
+#memberCard #description {
+	color: var(--dark-gray);
+	font-family: 'Aprova', sans-serif;
+	text-align: center;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 1em;
+}
+
+#memberCard #linkedinTeam {
+	width: 35px;
+	height: 35px;
+	margin: auto;
+	background-image: url('/icons/linkedin.svg');
+	background-position: center center;
+	background-size: contain;
+	cursor: pointer;
+}
+
+#memberCard #linkedinTeam:hover {
+	opacity: 0.8;
+}
