@@ -1,0 +1,90 @@
+.table {
+	width: 100%;
+	align-items: center;
+	padding: 1.2em 1em;
+	border-bottom: 1px solid var(--dark-gray);
+	background-color: var(--white);
+
+	div {
+		justify-content: space-between;
+		display: flex;
+		flex-direction: row;
+		div {
+			display: flex;
+			flex-direction: column;
+			& > span:first-child {
+				margin-bottom: 10px;
+			}
+
+			.head {
+				color: var(--dark-gray);
+			}
+
+			.value {
+				color: var(--english-violet);
+				font-weight: 600;
+			}
+		}
+
+		.columnDate {
+			width: 90px;
+		}
+		.columnDescription {
+			width: 250px;
+		}
+		.columnCategory {
+			width: 100px;
+		}
+		.columnType {
+			width: 110px;
+		}
+		.columnValue {
+			width: 100px;
+		}
+		.columnObs {
+			width: 250px;
+		}
+	}
+	.columnMobileValue {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	.table {
+		display: flex;
+		flex-direction: row;
+		div {
+			flex-direction: column;
+			justify-content: start;
+			align-items: start;
+
+			div {
+				flex-direction: row;
+
+				& > span:first-child {
+					margin-right: 10px;
+				}
+			}
+
+			.columnValue {
+				display: none;
+			}
+		}
+		.columnMobileValue {
+			display: flex;
+			text-align: center;
+			align-items: center;
+			font-size: 1.2em;
+			margin-left: auto;
+			.head {
+				color: var(--dark-gray);
+			}
+
+			.value {
+				color: var(--english-violet);
+				font-weight: 600;
+			}
+		}
+	}
+}

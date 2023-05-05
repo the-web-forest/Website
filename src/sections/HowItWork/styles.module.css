@@ -1,0 +1,36 @@
+.howItWorks {
+	padding: 2rem 0;
+}
+
+.container {
+	max-width: 1450px;
+	margin: auto;
+	padding: 0 2rem;
+}
+
+.howItWorksInner {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+	align-items: center;
+}
+
+.howItWorksTopics {
+	display: flex;
+	justify-content: space-between;
+	flex: 1;
+	width: 100%;
+	gap: 2rem;
+}
+
+@media screen and (max-width: 1024px) {
+	.howItWorksInner {
+		text-align: center;
+	}
+
+	.howItWorksTopics {
+		gap: 3rem;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+}

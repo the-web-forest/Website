@@ -1,0 +1,23 @@
+:root {
+	--primary-color: #00635d;
+	--gray-background: #ececec;
+	--english-violet: #58355e;
+	--brow-sugar: #a06348;
+
+	--dark-gray: #4c4c4c;
+	--dark-gray-text: #4d4d4d;
+	--soft-gray: #e5e5e5;
+	--soft-red: #ffb6b6;
+	--green-lime: #28ab38;
+	--bud-green: #63af53;
+	--dark-green: #00635d;
+
+	--orange: #ea9b02;
+	--orange-hover: #b67901;
+	--white: #fff;
+	--gray-white: #f8f8f8;
+	--red: red;
+	--blue: #508fe7;
+	--black: black;
+	--green: green;
+}
