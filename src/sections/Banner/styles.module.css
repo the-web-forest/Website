@@ -1,0 +1,45 @@
+.container {
+	max-width: 1450px;
+	margin: auto;
+	padding: 0 2rem;
+}
+
+.banner {
+	margin-top: 90px;
+	background-image: url('/images/Banner.png');
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	padding: 4.5rem 0;
+}
+
+.bannerInner {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+
+.bannerTitle {
+	max-width: 350px;
+}
+
+.bannerSubtitle {
+	font-size: 2em;
+	font-weight: 400;
+	color: #fff;
+}
+
+@media screen and (max-width: 1024px) {
+	.banner {
+		padding: 2.5rem 0;
+		margin-top: 56px;
+	}
+
+	.bannerTitle {
+		max-width: 230px;
+	}
+
+	.bannerSubtitle {
+		font-size: 1.1rem;
+	}
+}

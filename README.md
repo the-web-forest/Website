@@ -27,11 +27,7 @@ You will get access to a lot of virtual trees and you will buy them and plant th
 
 And how the virtual trees will be transformed into real trees? This is easy! By the end of every month, we will repass the raised money to others NGOs that plant real trees. This process will convert virtual trees into real trees.
 
-  
-
 Did you like the project? Consider supporting us: [Click Here](http://apoie.webforest.eco)
-
-  
 
 ## Description 🌲
 
@@ -39,13 +35,11 @@ Did you like the project? Consider supporting us: [Click Here](http://apoie.webf
 
 ## Our Stack 💻
 
-  
-
 We currently use the following technologies:
 
 - [.NextJS](https://nextjs.org/)
 - [Vercel](https://vercel.com/)
-  
+
 ## Stay in touch 📧
 
 - Website - https://www.webforest.eco
@@ -53,6 +47,7 @@ We currently use the following technologies:
 - Email - [contato@webforest.eco](mailto:contato@webforest.eco)
 
 ## Contributors 🤝
+
 <table>
   <tr>
     <td align="center">
@@ -100,6 +95,14 @@ We currently use the following technologies:
         <img src="https://avatars.githubusercontent.com/u/34843942?v=4" width="100px;" alt="Décio's Picture on GitHub"/><br>
         <sub>
           <b>Décio Stenico</b>
+        </sub>
+      </a>
+    </td>    
+    <td align="center">
+      <a href="https://github.com/viniciuscasarin">
+        <img src="https://avatars.githubusercontent.com/u/24192460?v=4" width="100px;" alt="Vinícius Picture on GitHub"/><br>
+        <sub>
+          <b>Vinícius Casarin</b>
         </sub>
       </a>
     </td>

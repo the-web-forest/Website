@@ -1,0 +1,46 @@
+.donate {
+	background-image: url('/images/donateImg.webp');
+	background-size: cover;
+	background-position: center center;
+	background-attachment: fixed;
+	box-shadow: 0px -70px 80px -55px rgb(0 0 0 / 80%) inset,
+		-70px 0 80px -55px rgb(0 0 0 / 80%) inset;
+	padding: 6rem 0;
+	position: relative;
+}
+
+.donate:before {
+	content: '';
+	position: absolute;
+	inset: 0;
+	background: rgba(0, 0, 0, 0.65);
+	z-index: 1;
+}
+
+.container {
+	max-width: 1450px;
+	margin: auto;
+	padding: 0 2rem;
+}
+
+.donateInner {
+	display: flex;
+	gap: 2rem;
+	flex-direction: column;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+	color: #fff !important;
+	position: relative;
+	z-index: 2;
+}
+
+.donateLogo {
+	max-height: 60px;
+}
+
+.donate button {
+	padding: 1rem 1.5rem !important;
+	font-size: 1.1rem;
+	font-weight: 400;
+}

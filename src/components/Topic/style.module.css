@@ -1,0 +1,39 @@
+.topic {
+	display: flex;
+	flex-direction: column;
+	color: var(--dark-gray);
+	max-width: 350px;
+	gap: 0.5rem;
+	flex: 1;
+}
+
+.topicHeader {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+}
+
+.topicTitle {
+	font-weight: 600;
+	font-size: 1.2rem;
+}
+
+.topicDescription {
+	font-weight: 400;
+}
+
+@media screen and (max-width: 1020px) {
+	.topic {
+		text-align: center;
+		flex: auto;
+	}
+
+	.topicHeader {
+		gap: 0.5rem;
+		flex-direction: column;
+	}
+
+	.topicDescription {
+		font-size: 1em;
+	}
+}

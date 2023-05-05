@@ -1,0 +1,23 @@
+.container {
+	background-color: var(--orange);
+	color: var(--white);
+	border-radius: 5px;
+	text-align: center;
+	display: inline-block;
+	padding: 0.65rem 1.15rem;
+	transition: filter 500ms;
+	border: none;
+	cursor: pointer;
+}
+
+.container:hover {
+	filter: brightness(90%);
+}
+
+.darkGreen {
+	background-color: var(--dark-green);
+}
+
+.orange {
+	background-color: var(--orange);
+}
